@@ -1,0 +1,11 @@
+D:\DACN\Winform_TinhTienPhuTroi\Winform_TinhTienPhuTroi\bin\Debug\Winform_TinhTienPhuTroi.exe.config
+D:\DACN\Winform_TinhTienPhuTroi\Winform_TinhTienPhuTroi\bin\Debug\Winform_TinhTienPhuTroi.exe
+D:\DACN\Winform_TinhTienPhuTroi\Winform_TinhTienPhuTroi\bin\Debug\Winform_TinhTienPhuTroi.pdb
+D:\DACN\Winform_TinhTienPhuTroi\Winform_TinhTienPhuTroi\obj\Debug\Winform_TinhTienPhuTroi.csprojResolveAssemblyReference.cache
+D:\DACN\Winform_TinhTienPhuTroi\Winform_TinhTienPhuTroi\obj\Debug\Winform_TinhTienPhuTroi.DangKy.resources
+D:\DACN\Winform_TinhTienPhuTroi\Winform_TinhTienPhuTroi\obj\Debug\Winform_TinhTienPhuTroi.DangNhap.resources
+D:\DACN\Winform_TinhTienPhuTroi\Winform_TinhTienPhuTroi\obj\Debug\Winform_TinhTienPhuTroi.Home.resources
+D:\DACN\Winform_TinhTienPhuTroi\Winform_TinhTienPhuTroi\obj\Debug\Winform_TinhTienPhuTroi.Properties.Resources.resources
+D:\DACN\Winform_TinhTienPhuTroi\Winform_TinhTienPhuTroi\obj\Debug\Winform_TinhTienPhuTroi.csproj.GenerateResource.Cache
+D:\DACN\Winform_TinhTienPhuTroi\Winform_TinhTienPhuTroi\obj\Debug\Winform_TinhTienPhuTroi.exe
+D:\DACN\Winform_TinhTienPhuTroi\Winform_TinhTienPhuTroi\obj\Debug\Winform_TinhTienPhuTroi.pdb
