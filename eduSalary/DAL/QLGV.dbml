@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_GIAOVIEN" Class="QLGVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-QP6JP84;Initial Catalog=DB_GIAOVIEN;Persist Security Info=True;User ID=sa" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="DB_GIAOVIENConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BACLUONG" Member="BACLUONGs">
+    <Type Name="BACLUONG">
+      <Column Name="MASOCD" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BAC" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HESOLUONG" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="BACLUONG_GIAOVIEN" Member="GIAOVIENs" ThisKey="MASOCD,BAC" OtherKey="MASOCD,BAC" Type="GIAOVIEN" />
+      <Association Name="CHUCDANH_BACLUONG" Member="CHUCDANH" ThisKey="MASOCD" OtherKey="MASOCD" Type="CHUCDANH" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUYENTRUYCAP" Member="QUYENTRUYCAPs">
+    <Type Name="QUYENTRUYCAP">
+      <Column Name="MAQTC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENQTC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="QUYENTRUYCAP_GIAOVIEN" Member="GIAOVIENs" ThisKey="MAQTC" OtherKey="MAQTC" Type="GIAOVIEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BANGCAP" Member="BANGCAPs">
+    <Type Name="BANGCAP">
+      <Column Name="MABC" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENBC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="BANGCAP_CHITIETBANGCAP" Member="CHITIETBANGCAPs" ThisKey="MABC" OtherKey="MABC" Type="CHITIETBANGCAP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHITIETBANGCAP" Member="CHITIETBANGCAPs">
+    <Type Name="CHITIETBANGCAP">
+      <Column Name="MABC" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MAGV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NGAYCAP" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="BANGCAP_CHITIETBANGCAP" Member="BANGCAP" ThisKey="MABC" OtherKey="MABC" Type="BANGCAP" IsForeignKey="true" />
+      <Association Name="GIAOVIEN_CHITIETBANGCAP" Member="GIAOVIEN" ThisKey="MAGV" OtherKey="MAGV" Type="GIAOVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHITIETCHUCVU" Member="CHITIETCHUCVUs">
+    <Type Name="CHITIETCHUCVU">
+      <Column Name="MACV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MAGV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="CHUCVU_CHITIETCHUCVU" Member="CHUCVU" ThisKey="MACV" OtherKey="MACV" Type="CHUCVU" IsForeignKey="true" />
+      <Association Name="GIAOVIEN_CHITIETCHUCVU" Member="GIAOVIEN" ThisKey="MAGV" OtherKey="MAGV" Type="GIAOVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHUCDANH" Member="CHUCDANHs">
+    <Type Name="CHUCDANH">
+      <Column Name="MASOCD" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HANGCD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="CHUCDANH_BACLUONG" Member="BACLUONGs" ThisKey="MASOCD" OtherKey="MASOCD" Type="BACLUONG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHUCVU" Member="CHUCVUs">
+    <Type Name="CHUCVU">
+      <Column Name="MACV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="CHUCVU_CHITIETCHUCVU" Member="CHITIETCHUCVUs" ThisKey="MACV" OtherKey="MACV" Type="CHITIETCHUCVU" />
+      <Association Name="CHUCVU_DINHMUCTIETDAY" Member="DINHMUCTIETDAY" ThisKey="MACV" OtherKey="MACV" Type="DINHMUCTIETDAY" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHUNHIEM" Member="CHUNHIEMs">
+    <Type Name="CHUNHIEM">
+      <Column Name="MALP" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MAGV" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NAMHOC" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="GIAOVIEN_CHUNHIEM" Member="GIAOVIEN" ThisKey="MAGV" OtherKey="MAGV" Type="GIAOVIEN" IsForeignKey="true" />
+      <Association Name="LOPHOC_CHUNHIEM" Member="LOPHOC" ThisKey="MALP" OtherKey="MALP" Type="LOPHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHUYENMON" Member="CHUYENMONs">
+    <Type Name="CHUYENMON">
+      <Column Name="MACM" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENCM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="CHUYENMON_GIAOVIEN" Member="GIAOVIENs" ThisKey="MACM" OtherKey="MACM" Type="GIAOVIEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DINHMUCTIETDAY" Member="DINHMUCTIETDAYs">
+    <Type Name="DINHMUCTIETDAY">
+      <Column Name="MACV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SODINHMUCTIETDAY" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="CHUCVU_DINHMUCTIETDAY" Member="CHUCVU" ThisKey="MACV" OtherKey="MACV" Type="CHUCVU" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GIAOVIEN" Member="GIAOVIENs">
+    <Type Name="GIAOVIEN">
+      <Column Name="MAGV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NGAYSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MATKHAU" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="GIOITINH" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SODIENTHOAI" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CCCD" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NGAYVAOTRUONG" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NGAYVAODANG" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DONVICONGTAC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DANTOC" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TONGIAO" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="THAMNIEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MASOCD" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="BAC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MACM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MAQTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="GIAOVIEN_CHITIETBANGCAP" Member="CHITIETBANGCAPs" ThisKey="MAGV" OtherKey="MAGV" Type="CHITIETBANGCAP" />
+      <Association Name="GIAOVIEN_CHITIETCHUCVU" Member="CHITIETCHUCVUs" ThisKey="MAGV" OtherKey="MAGV" Type="CHITIETCHUCVU" />
+      <Association Name="GIAOVIEN_CHUNHIEM" Member="CHUNHIEMs" ThisKey="MAGV" OtherKey="MAGV" Type="CHUNHIEM" />
+      <Association Name="BACLUONG_GIAOVIEN" Member="BACLUONG" ThisKey="MASOCD,BAC" OtherKey="MASOCD,BAC" Type="BACLUONG" IsForeignKey="true" />
+      <Association Name="CHUYENMON_GIAOVIEN" Member="CHUYENMON" ThisKey="MACM" OtherKey="MACM" Type="CHUYENMON" IsForeignKey="true" />
+      <Association Name="QUYENTRUYCAP_GIAOVIEN" Member="QUYENTRUYCAP" ThisKey="MAQTC" OtherKey="MAQTC" Type="QUYENTRUYCAP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOPHOC" Member="LOPHOCs">
+    <Type Name="LOPHOC">
+      <Column Name="MALP" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENLP" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SISO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KHIEMKHUYET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="LOPHOC_CHUNHIEM" Member="CHUNHIEM" ThisKey="MALP" OtherKey="MALP" Type="CHUNHIEM" Cardinality="One" />
+    </Type>
+  </Table>
+</Database>

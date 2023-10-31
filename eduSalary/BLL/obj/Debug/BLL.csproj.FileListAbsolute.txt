@@ -1,0 +1,12 @@
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\BLL.dll
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\BLL.pdb
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.dll
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.pdb
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\DTO.dll
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\DTO.pdb
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\DAL.dll
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\DAL.pdb
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\DAL.dll.config

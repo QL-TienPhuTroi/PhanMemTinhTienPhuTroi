@@ -1,0 +1,6 @@
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\DTO\bin\Debug\DTO.dll
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\DTO\bin\Debug\DTO.pdb
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\DTO\obj\Debug\DTO.dll
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\DTO\obj\Debug\DTO.pdb
