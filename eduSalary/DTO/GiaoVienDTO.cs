@@ -11,7 +11,6 @@ namespace DTO
         public string magv { get; set; }
         public string hoten {  get; set; }  
         public DateTime ngaysinh { get; set; }
-        public string matkhau { get; set; }
         public string gioitinh { get; set; }
         public string diachi { get; set; }
         public string sodienthoai { get; set; }
@@ -26,6 +25,5 @@ namespace DTO
         public string masocd { get; set; }
         public int bac { get; set; }
         public int macm { get; set; }
-        public int maqtc { get; set; }
     }
 }

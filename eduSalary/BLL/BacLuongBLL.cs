@@ -12,10 +12,22 @@ namespace BLL
     {
         BacLuongDAL bl_dal = new BacLuongDAL();
 
+        //------------------ LẤY DỮ LIỆU BẬC LƯƠNG
+        public List<BacLuongDTO> getDataBacLuong()
+        {
+            return bl_dal.getDataBacLuong();
+        }
+
         //------------------ LẤY DỮ LIỆU BẬC LƯƠNG THEO MÃ SỐ CHỨC DANH VÀ BẬC
         public List<BacLuongDTO> getDataBacLuongTheoMa(string pMaSoCD, int pBac)
         {
             return bl_dal.getDataBacLuongTheoMa(pMaSoCD, pBac);
+        }
+
+        //------------------ LẤY DỮ LIỆU BẬC LƯƠNG THEO MÃ SỐ CHỨC DANH VÀ BẬC
+        public List<BacLuongDTO> getDataBacLuongTheoMaCD(string pMaSoCD)
+        {
+            return bl_dal.getDataBacLuongTheoMaCD(pMaSoCD);
         }
     }
 }

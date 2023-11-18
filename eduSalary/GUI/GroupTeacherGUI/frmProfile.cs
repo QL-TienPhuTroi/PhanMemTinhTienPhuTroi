@@ -1,14 +1,18 @@
 ﻿using BLL;
 using DTO;
+using ReaLTaiizor.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI.Properties;
 
 namespace GUI.GroupTeacherGUI
 {
@@ -76,6 +80,29 @@ namespace GUI.GroupTeacherGUI
             lbChuyenMon.Text = lstCM[0].tencm;
             lbHangCD.Text = lstCD[0].hangcd;
             lbHeSoLuong.Text = lstBL[0].hesoluong.ToString();
+
+            //string pPath = "Resources\\" + getCharName(lbHoTen.Text).ToString() + ".png";
+            //setPictureAvatar(pPath);
+
+        }
+
+        private void setPictureAvatar(string pPath)
+        {
+            //ResourceManager resourceManager = new ResourceManager("Properties.Resources", Assembly.GetExecutingAssembly());
+
+            //Image avatar = (Image)resourceManager.GetObject(pPath);
+            //picAvatar.Image = avatar;
+
+            string fullPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, pPath);
+            Image newImage = Image.FromFile(fullPath);
+            picAvatar.Image = newImage;
+        }
+
+        public char getCharName(string pHoTen)
+        {
+            string[] names = pHoTen.Split(' ');
+            char[] c = names[names.Length - 1].ToCharArray();
+            return c[0];
         }
     }
 }

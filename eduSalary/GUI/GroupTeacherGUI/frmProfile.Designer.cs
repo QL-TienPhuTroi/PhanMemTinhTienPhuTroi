@@ -76,9 +76,9 @@
             this.dungeonHeaderLabel2 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.picAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -128,7 +128,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.crownLabel11);
             this.guna2CustomGradientPanel1.Controls.Add(this.crownLabel7);
             this.guna2CustomGradientPanel1.Controls.Add(this.crownLabel1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.picAvatar);
             this.guna2CustomGradientPanel1.Controls.Add(this.dungeonHeaderLabel2);
             this.guna2CustomGradientPanel1.Controls.Add(this.dungeonHeaderLabel1);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -258,12 +258,11 @@
             // 
             // lbDiaChi
             // 
-            this.lbDiaChi.AutoSize = true;
             this.lbDiaChi.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
             this.lbDiaChi.Location = new System.Drawing.Point(845, 579);
             this.lbDiaChi.Name = "lbDiaChi";
-            this.lbDiaChi.Size = new System.Drawing.Size(99, 20);
+            this.lbDiaChi.Size = new System.Drawing.Size(654, 60);
             this.lbDiaChi.TabIndex = 2;
             this.lbDiaChi.Text = "Kiên Giang";
             // 
@@ -654,18 +653,18 @@
             this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(1445, 2);
             this.guna2CustomGradientPanel4.TabIndex = 4;
             // 
-            // guna2CirclePictureBox1
+            // picAvatar
             // 
-            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::GUI.Properties.Resources.D;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(68, 63);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(175, 175);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 1;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.picAvatar.FillColor = System.Drawing.Color.Transparent;
+            this.picAvatar.Image = global::GUI.Properties.Resources.D;
+            this.picAvatar.ImageRotate = 0F;
+            this.picAvatar.Location = new System.Drawing.Point(68, 63);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picAvatar.Size = new System.Drawing.Size(175, 175);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAvatar.TabIndex = 1;
+            this.picAvatar.TabStop = false;
             // 
             // frmProfile
             // 
@@ -680,7 +679,7 @@
             this.Name = "frmProfile";
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -689,7 +688,7 @@
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox picAvatar;
         private ReaLTaiizor.Controls.CrownLabel crownLabel1;
         private ReaLTaiizor.Controls.CrownLabel lbNgayVaoTruong;
         private ReaLTaiizor.Controls.CrownLabel crownLabel5;

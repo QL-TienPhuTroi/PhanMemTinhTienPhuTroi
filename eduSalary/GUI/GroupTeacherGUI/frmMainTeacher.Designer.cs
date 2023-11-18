@@ -33,26 +33,26 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.btnFrmTeacherProfile = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dungeonHeaderLabel2 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.lbHello = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlBody = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.dungeonHeaderLabel4 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            this.dungeonHeaderLabel3 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.line2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.line1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.dungeonHeaderLabel3 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.dungeonHeaderLabel4 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pnlMenu.SuspendLayout();
-            this.guna2CustomGradientPanel3.SuspendLayout();
-            this.guna2CustomGradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2CustomGradientPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -116,6 +116,31 @@
             this.guna2GradientButton1.TabIndex = 10;
             this.guna2GradientButton1.Text = "KÊ KHAI THÔNG TIN GIÁO VIÊN";
             this.guna2GradientButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnLogout.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnLogout.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::GUI.Properties.Resources.logout1;
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnLogout.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnLogout.Location = new System.Drawing.Point(75, 799);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.PressedColor = System.Drawing.Color.PeachPuff;
+            this.btnLogout.PressedDepth = 0;
+            this.btnLogout.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnLogout.Size = new System.Drawing.Size(373, 62);
+            this.btnLogout.TabIndex = 10;
+            this.btnLogout.Text = "ĐĂNG XUẤT";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2GradientButton3
             // 
@@ -201,6 +226,18 @@
             this.lbHello.TabIndex = 9;
             this.lbHello.Text = "Chào buổi sáng! Tấn Đạt";
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.logo_white;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(162, 28);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(200, 125);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 8;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // pnlBody
             // 
             this.pnlBody.Location = new System.Drawing.Point(439, 246);
@@ -215,46 +252,6 @@
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1500, 225);
             this.guna2CustomGradientPanel3.TabIndex = 12;
-            // 
-            // guna2CustomGradientPanel4
-            // 
-            this.guna2CustomGradientPanel4.BorderRadius = 20;
-            this.guna2CustomGradientPanel4.Controls.Add(this.dungeonHeaderLabel4);
-            this.guna2CustomGradientPanel4.Controls.Add(this.guna2PictureBox2);
-            this.guna2CustomGradientPanel4.Controls.Add(this.dungeonHeaderLabel3);
-            this.guna2CustomGradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(130)))), ((int)(((byte)(9)))));
-            this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(130)))), ((int)(((byte)(9)))));
-            this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(72)))));
-            this.guna2CustomGradientPanel4.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(72)))));
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(3, 23);
-            this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(371, 190);
-            this.guna2CustomGradientPanel4.TabIndex = 1;
-            // 
-            // dungeonHeaderLabel4
-            // 
-            this.dungeonHeaderLabel4.AutoSize = true;
-            this.dungeonHeaderLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonHeaderLabel4.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dungeonHeaderLabel4.ForeColor = System.Drawing.Color.White;
-            this.dungeonHeaderLabel4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dungeonHeaderLabel4.Location = new System.Drawing.Point(6, 8);
-            this.dungeonHeaderLabel4.Name = "dungeonHeaderLabel4";
-            this.dungeonHeaderLabel4.Size = new System.Drawing.Size(359, 80);
-            this.dungeonHeaderLabel4.TabIndex = 3;
-            this.dungeonHeaderLabel4.Text = "Số tiết dạy trong \r\ntuần:";
-            // 
-            // dungeonHeaderLabel3
-            // 
-            this.dungeonHeaderLabel3.AutoSize = true;
-            this.dungeonHeaderLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonHeaderLabel3.Font = new System.Drawing.Font("Consolas", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dungeonHeaderLabel3.ForeColor = System.Drawing.Color.White;
-            this.dungeonHeaderLabel3.Location = new System.Drawing.Point(22, 84);
-            this.dungeonHeaderLabel3.Name = "dungeonHeaderLabel3";
-            this.dungeonHeaderLabel3.Size = new System.Drawing.Size(96, 108);
-            this.dungeonHeaderLabel3.TabIndex = 0;
-            this.dungeonHeaderLabel3.Text = "0";
             // 
             // line2
             // 
@@ -278,42 +275,17 @@
             this.line1.Size = new System.Drawing.Size(1950, 6);
             this.line1.TabIndex = 14;
             // 
-            // btnLogout
+            // dungeonHeaderLabel3
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnLogout.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnLogout.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Image = global::GUI.Properties.Resources.logout1;
-            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnLogout.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnLogout.Location = new System.Drawing.Point(75, 799);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.PressedColor = System.Drawing.Color.PeachPuff;
-            this.btnLogout.PressedDepth = 0;
-            this.btnLogout.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnLogout.Size = new System.Drawing.Size(373, 62);
-            this.btnLogout.TabIndex = 10;
-            this.btnLogout.Text = "ĐĂNG XUẤT";
-            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.logo_white;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(162, 28);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(200, 125);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 8;
-            this.guna2PictureBox1.TabStop = false;
+            this.dungeonHeaderLabel3.AutoSize = true;
+            this.dungeonHeaderLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonHeaderLabel3.Font = new System.Drawing.Font("Consolas", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dungeonHeaderLabel3.ForeColor = System.Drawing.Color.White;
+            this.dungeonHeaderLabel3.Location = new System.Drawing.Point(22, 84);
+            this.dungeonHeaderLabel3.Name = "dungeonHeaderLabel3";
+            this.dungeonHeaderLabel3.Size = new System.Drawing.Size(96, 108);
+            this.dungeonHeaderLabel3.TabIndex = 0;
+            this.dungeonHeaderLabel3.Text = "0";
             // 
             // guna2PictureBox2
             // 
@@ -327,6 +299,34 @@
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 2;
             this.guna2PictureBox2.TabStop = false;
+            // 
+            // dungeonHeaderLabel4
+            // 
+            this.dungeonHeaderLabel4.AutoSize = true;
+            this.dungeonHeaderLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.dungeonHeaderLabel4.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dungeonHeaderLabel4.ForeColor = System.Drawing.Color.White;
+            this.dungeonHeaderLabel4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dungeonHeaderLabel4.Location = new System.Drawing.Point(6, 8);
+            this.dungeonHeaderLabel4.Name = "dungeonHeaderLabel4";
+            this.dungeonHeaderLabel4.Size = new System.Drawing.Size(359, 80);
+            this.dungeonHeaderLabel4.TabIndex = 3;
+            this.dungeonHeaderLabel4.Text = "Số tiết dạy trong \r\ntuần:";
+            // 
+            // guna2CustomGradientPanel4
+            // 
+            this.guna2CustomGradientPanel4.BorderRadius = 20;
+            this.guna2CustomGradientPanel4.Controls.Add(this.dungeonHeaderLabel4);
+            this.guna2CustomGradientPanel4.Controls.Add(this.guna2PictureBox2);
+            this.guna2CustomGradientPanel4.Controls.Add(this.dungeonHeaderLabel3);
+            this.guna2CustomGradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(130)))), ((int)(((byte)(9)))));
+            this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(130)))), ((int)(((byte)(9)))));
+            this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(72)))));
+            this.guna2CustomGradientPanel4.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(72)))));
+            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(3, 23);
+            this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
+            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(371, 190);
+            this.guna2CustomGradientPanel4.TabIndex = 1;
             // 
             // frmMainTeacher
             // 
@@ -346,11 +346,11 @@
             this.Style = MetroFramework.MetroColorStyle.Pink;
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2CustomGradientPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2CustomGradientPanel4.ResumeLayout(false);
             this.guna2CustomGradientPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,12 +369,12 @@
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel pnlBody;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel line2;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel line1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLogout;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel3;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel line2;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel line1;
-        private Guna.UI2.WinForms.Guna2GradientButton btnLogout;
     }
 }

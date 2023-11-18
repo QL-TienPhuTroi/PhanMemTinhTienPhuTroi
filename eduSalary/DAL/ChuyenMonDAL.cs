@@ -16,6 +16,22 @@ namespace DAL
 
         }
 
+        //------------------ LẤY DỮ LIỆU CHUYÊN MÔN
+        public List<ChuyenMonDTO> getDataChuyenMon()
+        {
+            var query = from cm in qlgv.CHUYENMONs select cm;
+
+            var chuyenmons = query.ToList().ConvertAll(nv => new ChuyenMonDTO()
+            {
+                macm = nv.MACM,
+                tencm = nv.TENCM
+            });
+
+            List<ChuyenMonDTO> lst_cm = chuyenmons.ToList();
+
+            return lst_cm;
+        }
+
         //------------------ LẤY DỮ LIỆU CHUYÊN MÔN THEO MÃ CHUYÊN MÔN
         public List<ChuyenMonDTO> getDataChuyenMonTheoMa(int pMaCM)
         {

@@ -16,6 +16,7 @@ namespace GUI
     public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
         GiaoVienBLL gv_bll = new GiaoVienBLL();
+        TaiKhoanBLL tk_bll = new TaiKhoanBLL();
 
         public frmLogin()
         {
@@ -104,7 +105,7 @@ namespace GUI
             }
             else
             {
-                if(gv_bll.isSuccessLogin(pCode, pPassword))
+                if(tk_bll.isSuccessLogin(pCode, pPassword))
                 {
                     rememberPS(pCode, pPassword);
                     frmLoading fLoading = new frmLoading(pCode, pPassword);

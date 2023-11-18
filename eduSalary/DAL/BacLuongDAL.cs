@@ -16,10 +16,44 @@ namespace DAL
 
         }
 
+        //------------------ LẤY DỮ LIỆU BẬC LƯƠNG
+        public List<BacLuongDTO> getDataBacLuong()
+        {
+            var query = from bl in qlgv.BACLUONGs select bl;
+
+            var bacluongs = query.ToList().ConvertAll(nv => new BacLuongDTO()
+            {
+                masocd = nv.MASOCD,
+                bac = nv.BAC,
+                hesoluong = (decimal)nv.HESOLUONG
+            });
+
+            List<BacLuongDTO> lst_bl = bacluongs.ToList();
+
+            return lst_bl;
+        }
+
         //------------------ LẤY DỮ LIỆU BẬC LƯƠNG THEO MÃ SỐ CHỨC DANH VÀ BẬC
         public List<BacLuongDTO> getDataBacLuongTheoMa(string pMaSoCD, int pBac)
         {
             var query = from bl in qlgv.BACLUONGs where bl.MASOCD == pMaSoCD && bl.BAC == pBac select bl;
+
+            var bacluongs = query.ToList().ConvertAll(nv => new BacLuongDTO()
+            {
+                masocd = nv.MASOCD,
+                bac = nv.BAC,
+                hesoluong = (decimal)nv.HESOLUONG
+            });
+
+            List<BacLuongDTO> lst_bl = bacluongs.ToList();
+
+            return lst_bl;
+        }
+
+        //------------------ LẤY DỮ LIỆU BẬC LƯƠNG THEO MÃ SỐ CHỨC DANH VÀ BẬC
+        public List<BacLuongDTO> getDataBacLuongTheoMaCD(string pMaSoCD)
+        {
+            var query = from bl in qlgv.BACLUONGs where bl.MASOCD == pMaSoCD select bl;
 
             var bacluongs = query.ToList().ConvertAll(nv => new BacLuongDTO()
             {

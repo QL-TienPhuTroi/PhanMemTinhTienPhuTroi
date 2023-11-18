@@ -23,7 +23,7 @@ namespace GUI.GroupTeacherGUI
             pCode = Code;
             pPass = Pass;
             fProfile = new frmProfile(pCode);
-            pHoTen = gv_bll.getNameGiaoVien(pCode, pPass);
+            pHoTen = gv_bll.getNameGiaoVien(pCode);
             setSize();
             this.Load += FrmMainTeacher_Load;
             btnFrmTeacherProfile.Click += BtnFrmTeacherProfile_Click;

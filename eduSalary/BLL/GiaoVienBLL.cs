@@ -23,6 +23,18 @@ namespace BLL
             return gv_dal.getDataGiaoVien();
         }
 
+        //------------------ LẤY DỮ LIỆU GIÁO VIÊN ĐƯỢC LỌC
+        public List<GiaoVienLocDTO> getDataGiaoVienLoc()
+        {
+            return gv_dal.getDataGiaoVienLoc();
+        }
+
+        //------------------ TÌM GIÁO VIÊN ĐƯỢC LỌC
+        public List<GiaoVienLocDTO> findDataGiaoVienLoc(string pValue)
+        {
+            return gv_dal.findDataGiaoVienLoc(pValue);
+        }
+
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN THEO MÃ GIÁO VIÊN
         public List<GiaoVienDTO> getDataGiaoVienTheoMa(string pMaGV)
         {
@@ -30,15 +42,33 @@ namespace BLL
         }
 
         //------------------ LẤY TÊN GIÁO VIÊN
-        public string getNameGiaoVien(string pCode, string pPass)
+        public string getNameGiaoVien(string pCode)
         {
-            return gv_dal.getNameGiaoVien(pCode, pPass);
+            return gv_dal.getNameGiaoVien(pCode);
         }
 
-        //------------------ KIỂM TRA ĐĂNG NHẬP THÀNH CÔNG
-        public bool isSuccessLogin(string pCode, string pPass)
+        //------------------ THÊM GIÁO VIÊN
+        public void addGV(GiaoVienDTO gv)
         {
-            return gv_dal.isSuccessLogin(pCode, pPass);
+            gv_dal.addGV(gv);
+        }
+
+        //------------------ XÓA GIÁO VIÊN
+        public bool removeGV(string pMaGV)
+        {
+            return gv_dal.removeGV(pMaGV);
+        }
+
+        //------------------ SỬA GIÁO VIÊN
+        public void editGV(GiaoVienDTO gv)
+        {
+            gv_dal.editGV(gv); 
+        }
+
+        //------------------ KIỂM TRA KHÓA CHÍNH
+        public bool checkPK(string pMaGV)
+        {            
+            return gv_dal.checkPK(pMaGV);
         }
     }
 }

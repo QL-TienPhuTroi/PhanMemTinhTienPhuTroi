@@ -12,6 +12,12 @@ namespace BLL
     {
         ChucDanhDAL cd_dal = new ChucDanhDAL();
 
+        //------------------ LẤY DỮ LIỆU CHỨC DANH
+        public List<ChucDanhDTO> getDataChucDanh()
+        {
+            return cd_dal.getDataChucDanh();
+        }
+
         //------------------ LẤY DỮ LIỆU CHỨC DANH THEO MÃ SỐ CHỨC DANH
         public List<ChucDanhDTO> getDataChucDanhTheoMa(string pMaSoCD)
         {

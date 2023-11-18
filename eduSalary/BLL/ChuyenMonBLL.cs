@@ -13,6 +13,12 @@ namespace BLL
     {
         ChuyenMonDAL cm_dal = new ChuyenMonDAL();
 
+        //------------------ LẤY DỮ LIỆU CHUYÊN MÔN
+        public List<ChuyenMonDTO> getDataChuyenMon()
+        {
+            return cm_dal.getDataChuyenMon();
+        }
+
         //------------------ LẤY DỮ LIỆU CHUYÊN MÔN THEO MÃ CHUYÊN MÔN
         public List<ChuyenMonDTO> getDataChuyenMonTheoMa(int pMaCM)
         {

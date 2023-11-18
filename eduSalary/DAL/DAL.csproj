@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="BacLuongDAL.cs" />
     <Compile Include="ChucDanhDAL.cs" />
+    <Compile Include="ChucVuDAL.cs" />
     <Compile Include="ChuyenMonDAL.cs" />
     <Compile Include="GiaoVienDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,6 +61,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLGV.dbml</DependentUpon>
     </Compile>
+    <Compile Include="TaiKhoanDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
