@@ -26,6 +26,9 @@ namespace GUI.GroupAminGUI
         frmPosition fPosition = new frmPosition();
         frmCareerTitles fCareerTitles = new frmCareerTitles();
         frmSalaryGrade fSalaryGrade = new frmSalaryGrade();
+        frmClassroom fClassroom = new frmClassroom();
+
+        frmAssigningHomeroom fAssigningHomeroom = new frmAssigningHomeroom();
 
         public frmMainAdmin(string Code, string Pass)
         {
@@ -49,8 +52,13 @@ namespace GUI.GroupAminGUI
             btnPosition.Click += BtnPosition_Click;
             btnCareerTitles.Click += BtnCareerTitles_Click;
             btnSalaryGrade.Click += BtnSalaryGrade_Click;
+            btnClassroom.Click += BtnClassroom_Click;
+
+            btnHomeroomTeacher.Click += BtnHomeroomTeacher_Click;
+            btnTeachingAssignment.Click += BtnTeachingAssignment_Click;
 
             btnLogout.Click += BtnLogout_Click;
+            btnExit.Click += BtnExit_Click;
 
             this.Load += FrmMainAdmin_Load;
 
@@ -63,6 +71,7 @@ namespace GUI.GroupAminGUI
         {
             lbQuantityTeacher.Text = getQuantityTeacher().ToString();
             loadGreeting();
+            setSizeFrom();
         }
 
         private void BtnTeacher_Click(object sender, EventArgs e)
@@ -103,6 +112,26 @@ namespace GUI.GroupAminGUI
             fSalaryGrade.Dock = DockStyle.Fill;
             pnlBody.Controls.Add(fSalaryGrade);
             fSalaryGrade.Show();
+        }
+
+        private void BtnClassroom_Click(object sender, EventArgs e)
+        {
+            lbFrmName.Text = "QUẢN LÝ LỚP HỌC";
+            pnlBody.Controls.Clear();
+            fClassroom.TopLevel = false;
+            fClassroom.Dock = DockStyle.Fill;
+            pnlBody.Controls.Add(fClassroom);
+            fClassroom.Show();
+        }
+
+        private void BtnTeachingAssignment_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void BtnHomeroomTeacher_Click(object sender, EventArgs e)
+        {
+            fAssigningHomeroom.ShowDialog();
         }
 
         private void BtnManager_Click(object sender, EventArgs e)
@@ -161,6 +190,11 @@ namespace GUI.GroupAminGUI
             this.Hide();
             frmLogin.Show();
             this.Close();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void TimerNavigationMenu1_Tick(object sender, EventArgs e)
@@ -222,6 +256,11 @@ namespace GUI.GroupAminGUI
         {
             string[] names = pHoTen.Split(' ');
             return names[names.Length - 2] + " " + names[names.Length - 1];
+        }
+
+        private void setSizeFrom()
+        {
+            this.Size = new Size(1536, 816);
         }
     }
 }

@@ -77,6 +77,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UI">
+      <HintPath>..\UI\bin\Debug\UI.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -98,11 +101,23 @@
     <Compile Include="GroupAminGUI\frmAddTeacher.Designer.cs">
       <DependentUpon>frmAddTeacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupAminGUI\frmAssigningHomeroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAssigningHomeroom.Designer.cs">
+      <DependentUpon>frmAssigningHomeroom.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupAminGUI\frmCareerTitles.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GroupAminGUI\frmCareerTitles.Designer.cs">
       <DependentUpon>frmCareerTitles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmClassroom.Designer.cs">
+      <DependentUpon>frmClassroom.cs</DependentUpon>
     </Compile>
     <Compile Include="GroupAminGUI\frmDetailedProfile.cs">
       <SubType>Form</SubType>
@@ -110,11 +125,23 @@
     <Compile Include="GroupAminGUI\frmDetailedProfile.Designer.cs">
       <DependentUpon>frmDetailedProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupAminGUI\frmEditHomerooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditHomerooms.Designer.cs">
+      <DependentUpon>frmEditHomerooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupAminGUI\frmEditTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GroupAminGUI\frmEditTeacher.Designer.cs">
       <DependentUpon>frmEditTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddHomerooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddHomerooms.Designer.cs">
+      <DependentUpon>frmAddHomerooms.cs</DependentUpon>
     </Compile>
     <Compile Include="GroupAminGUI\frmMainAdmin.cs">
       <SubType>Form</SubType>
@@ -163,14 +190,26 @@
     <EmbeddedResource Include="GroupAminGUI\frmAddTeacher.resx">
       <DependentUpon>frmAddTeacher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmAssigningHomeroom.resx">
+      <DependentUpon>frmAssigningHomeroom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmCareerTitles.resx">
       <DependentUpon>frmCareerTitles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmClassroom.resx">
+      <DependentUpon>frmClassroom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmDetailedProfile.resx">
       <DependentUpon>frmDetailedProfile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmEditHomerooms.resx">
+      <DependentUpon>frmEditHomerooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmEditTeacher.resx">
       <DependentUpon>frmEditTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmAddHomerooms.resx">
+      <DependentUpon>frmAddHomerooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmMainAdmin.resx">
       <DependentUpon>frmMainAdmin.cs</DependentUpon>
@@ -354,6 +393,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout_pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher_male.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

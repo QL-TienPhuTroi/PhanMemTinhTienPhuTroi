@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,6 +54,7 @@ namespace GUI.GroupAminGUI
             pCode = dgvTeacher.CurrentRow.Cells[0].Value.ToString();
             fEdit = new frmEditTeacher(pCode);
             fEdit.ShowDialog();
+            loadDataTeacher();
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)
@@ -75,6 +77,7 @@ namespace GUI.GroupAminGUI
         {
             fAdd = new frmAddTeacher();
             fAdd.ShowDialog();
+            loadDataTeacher();
         }
 
         private void BtnLoad_Click(object sender, EventArgs e)

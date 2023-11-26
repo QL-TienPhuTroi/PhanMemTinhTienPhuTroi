@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using DTO;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BLL
 {
@@ -39,6 +40,12 @@ namespace BLL
         public List<GiaoVienDTO> getDataGiaoVienTheoMa(string pMaGV)
         {
             return gv_dal.getDataGiaoVienTheoMa(pMaGV);
+        }
+
+        //------------------ LẤY DỮ LIỆU GIÁO VIÊN KHÔNG TỒN TẠI TRONG CHỦ NHIỆM
+        public List<GiaoVienDTO> getDataGiaoVienKhongTonTai(string pNamHoc)
+        {
+            return gv_dal.getDataGiaoVienKhongTonTai(pNamHoc);
         }
 
         //------------------ LẤY TÊN GIÁO VIÊN

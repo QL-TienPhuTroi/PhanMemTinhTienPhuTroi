@@ -117,6 +117,37 @@ namespace DAL
             return lst_gv;
         }
 
+        //------------------ LẤY DỮ LIỆU GIÁO VIÊN KHÔNG TỒN TẠI TRONG CHỦ NHIỆM
+        public List<GiaoVienDTO> getDataGiaoVienKhongTonTai(string pNamHoc)
+        {
+            var query = qlgv.GIAOVIENs.Where(gv => !qlgv.CHUNHIEMs.Any(cn => cn.MAGV == gv.MAGV && cn.NAMHOC == pNamHoc && cn.TRANGTHAI == true) && qlgv.CHITIETCHUCVUs.Any(ctcv => ctcv.MAGV == gv.MAGV && ctcv.MACV == 4));
+
+            var giaoviens = query.ToList().ConvertAll(nv => new GiaoVienDTO()
+            {
+                magv = nv.MAGV,
+                hoten = nv.HOTEN,
+                ngaysinh = (DateTime)nv.NGAYSINH,
+                gioitinh = nv.GIOITINH,
+                diachi = nv.DIACHI,
+                sodienthoai = nv.SODIENTHOAI,
+                cccd = nv.CCCD,
+                email = nv.EMAIL,
+                ngayvaotruong = (DateTime)nv.NGAYVAOTRUONG,
+                ngayvaodang = (DateTime)nv.NGAYVAODANG,
+                donvicongtac = nv.DONVICONGTAC,
+                dantoc = nv.DANTOC,
+                tongiao = nv.TONGIAO,
+                thamnien = (int)nv.THAMNIEN,
+                masocd = nv.MASOCD,
+                bac = nv.BAC,
+                macm = nv.MACM
+            });
+
+            List<GiaoVienDTO> lst_gv = giaoviens.ToList();
+
+            return lst_gv;
+        }
+
         //------------------ LẤY TÊN GIÁO VIÊN
         public string getNameGiaoVien(string pCode)
         {

@@ -29,19 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainAdmin));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dropDownMenu2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAssignment = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnHomeroomTeacher = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTeachingAssignment = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dropDownMenu1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnManager = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTeacher = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
@@ -62,7 +68,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbHello = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbFrmName = new ReaLTaiizor.Controls.BigLabel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -72,18 +80,13 @@
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.dungeonHeaderLabel4 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbQuantityTeacher = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.timerNavigationMenu2 = new System.Windows.Forms.Timer(this.components);
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnAssignment = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnManager = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.guna2Panel16.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel15.SuspendLayout();
             this.dropDownMenu2.SuspendLayout();
@@ -101,15 +104,13 @@
             this.guna2Panel11.SuspendLayout();
             this.guna2Panel12.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pnlBody.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel4.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.guna2Panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -137,14 +138,72 @@
             this.guna2Panel3.Location = new System.Drawing.Point(0, 201);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.guna2Panel3.Size = new System.Drawing.Size(400, 568);
             this.guna2Panel3.TabIndex = 1;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.guna2Panel16);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 186);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel2.MaximumSize = new System.Drawing.Size(400, 186);
+            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(400, 62);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(400, 62);
+            this.flowLayoutPanel2.TabIndex = 3;
+            // 
+            // guna2Panel16
+            // 
+            this.guna2Panel16.Controls.Add(this.btnLogout);
+            this.guna2Panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel16.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel16.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2Panel16.Name = "guna2Panel16";
+            this.guna2Panel16.Size = new System.Drawing.Size(400, 62);
+            this.guna2Panel16.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnLogout.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BorderRadius = 10;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnLogout.HoverState.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.HoverState.Image = global::GUI.Properties.Resources.logout2;
+            this.btnLogout.Image = global::GUI.Properties.Resources.logout_pink;
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnLogout.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLogout.Location = new System.Drawing.Point(0, 0);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.PressedColor = System.Drawing.Color.PeachPuff;
+            this.btnLogout.PressedDepth = 0;
+            this.btnLogout.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnLogout.Size = new System.Drawing.Size(400, 62);
+            this.btnLogout.TabIndex = 11;
+            this.btnLogout.Text = "ĐĂNG XUẤT";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.guna2Panel15);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 124);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 124);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(400, 186);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(400, 62);
@@ -200,7 +259,7 @@
             this.dropDownMenu2.Controls.Add(this.guna2Panel13);
             this.dropDownMenu2.Controls.Add(this.guna2Panel14);
             this.dropDownMenu2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dropDownMenu2.Location = new System.Drawing.Point(0, 62);
+            this.dropDownMenu2.Location = new System.Drawing.Point(10, 62);
             this.dropDownMenu2.Margin = new System.Windows.Forms.Padding(0);
             this.dropDownMenu2.MaximumSize = new System.Drawing.Size(400, 186);
             this.dropDownMenu2.MinimumSize = new System.Drawing.Size(400, 62);
@@ -217,6 +276,40 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(400, 62);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btnAssignment
+            // 
+            this.btnAssignment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnAssignment.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAssignment.BorderRadius = 10;
+            this.btnAssignment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAssignment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAssignment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAssignment.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAssignment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAssignment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAssignment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAssignment.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAssignment.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnAssignment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnAssignment.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAssignment.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnAssignment.HoverState.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnAssignment.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAssignment.HoverState.Image = global::GUI.Properties.Resources.angle_down;
+            this.btnAssignment.Image = global::GUI.Properties.Resources.angle_down_pink;
+            this.btnAssignment.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnAssignment.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnAssignment.Location = new System.Drawing.Point(0, 0);
+            this.btnAssignment.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAssignment.Name = "btnAssignment";
+            this.btnAssignment.PressedColor = System.Drawing.Color.PeachPuff;
+            this.btnAssignment.PressedDepth = 0;
+            this.btnAssignment.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAssignment.Size = new System.Drawing.Size(400, 62);
+            this.btnAssignment.TabIndex = 11;
+            this.btnAssignment.Text = "PHÂN CÔNG";
+            this.btnAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2Panel13
             // 
@@ -304,7 +397,7 @@
             this.dropDownMenu1.Controls.Add(this.guna2Panel11);
             this.dropDownMenu1.Controls.Add(this.guna2Panel12);
             this.dropDownMenu1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dropDownMenu1.Location = new System.Drawing.Point(0, 0);
+            this.dropDownMenu1.Location = new System.Drawing.Point(10, 0);
             this.dropDownMenu1.Margin = new System.Windows.Forms.Padding(0);
             this.dropDownMenu1.MaximumSize = new System.Drawing.Size(400, 568);
             this.dropDownMenu1.MinimumSize = new System.Drawing.Size(400, 62);
@@ -321,6 +414,40 @@
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(400, 62);
             this.guna2Panel4.TabIndex = 0;
+            // 
+            // btnManager
+            // 
+            this.btnManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnManager.BorderColor = System.Drawing.Color.Transparent;
+            this.btnManager.BorderRadius = 10;
+            this.btnManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManager.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManager.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnManager.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnManager.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnManager.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnManager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnManager.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnManager.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnManager.HoverState.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnManager.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnManager.HoverState.Image = global::GUI.Properties.Resources.angle_down;
+            this.btnManager.Image = global::GUI.Properties.Resources.angle_down_pink;
+            this.btnManager.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnManager.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnManager.Location = new System.Drawing.Point(0, 0);
+            this.btnManager.Margin = new System.Windows.Forms.Padding(0);
+            this.btnManager.Name = "btnManager";
+            this.btnManager.PressedColor = System.Drawing.Color.PeachPuff;
+            this.btnManager.PressedDepth = 0;
+            this.btnManager.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnManager.Size = new System.Drawing.Size(400, 62);
+            this.btnManager.TabIndex = 11;
+            this.btnManager.Text = "DANH MỤC QUẢN LÝ";
+            this.btnManager.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2Panel5
             // 
@@ -663,6 +790,18 @@
             this.bigLabel1.TabIndex = 15;
             this.bigLabel1.Text = "Administrator:";
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.logo_white;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(29, 49);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(150, 100);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 13;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.Controls.Add(this.guna2PictureBox2);
@@ -679,13 +818,26 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1118, 49);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::GUI.Properties.Resources.apps;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(41, 9);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 7;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // lbFrmName
             // 
             this.lbFrmName.AutoSize = true;
             this.lbFrmName.BackColor = System.Drawing.Color.Transparent;
             this.lbFrmName.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFrmName.ForeColor = System.Drawing.Color.White;
-            this.lbFrmName.Location = new System.Drawing.Point(86, 12);
+            this.lbFrmName.Location = new System.Drawing.Point(86, 15);
             this.lbFrmName.Name = "lbFrmName";
             this.lbFrmName.Size = new System.Drawing.Size(129, 27);
             this.lbFrmName.TabIndex = 6;
@@ -785,40 +937,6 @@
             this.dungeonHeaderLabel4.TabIndex = 3;
             this.dungeonHeaderLabel4.Text = "Số lượng giáo viên hiện\r\ncó:";
             // 
-            // lbQuantityTeacher
-            // 
-            this.lbQuantityTeacher.AutoSize = true;
-            this.lbQuantityTeacher.BackColor = System.Drawing.Color.Transparent;
-            this.lbQuantityTeacher.Font = new System.Drawing.Font("Consolas", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuantityTeacher.ForeColor = System.Drawing.Color.White;
-            this.lbQuantityTeacher.Location = new System.Drawing.Point(22, 84);
-            this.lbQuantityTeacher.Name = "lbQuantityTeacher";
-            this.lbQuantityTeacher.Size = new System.Drawing.Size(96, 108);
-            this.lbQuantityTeacher.TabIndex = 0;
-            this.lbQuantityTeacher.Text = "0";
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.guna2Panel16);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 186);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel2.MaximumSize = new System.Drawing.Size(400, 186);
-            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(400, 62);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(400, 62);
-            this.flowLayoutPanel2.TabIndex = 3;
-            // 
-            // guna2Panel16
-            // 
-            this.guna2Panel16.Controls.Add(this.btnLogout);
-            this.guna2Panel16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel16.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel16.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2Panel16.Name = "guna2Panel16";
-            this.guna2Panel16.Size = new System.Drawing.Size(400, 62);
-            this.guna2Panel16.TabIndex = 0;
-            // 
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -832,133 +950,17 @@
             this.guna2PictureBox3.TabIndex = 2;
             this.guna2PictureBox3.TabStop = false;
             // 
-            // guna2PictureBox2
+            // lbQuantityTeacher
             // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::GUI.Properties.Resources.apps;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(41, 6);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 7;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnLogout.BorderColor = System.Drawing.Color.Transparent;
-            this.btnLogout.BorderRadius = 10;
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogout.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogout.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogout.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnLogout.HoverState.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnLogout.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.HoverState.Image = global::GUI.Properties.Resources.logout2;
-            this.btnLogout.Image = global::GUI.Properties.Resources.logout_pink;
-            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnLogout.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnLogout.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnLogout.Location = new System.Drawing.Point(0, 0);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.PressedColor = System.Drawing.Color.PeachPuff;
-            this.btnLogout.PressedDepth = 0;
-            this.btnLogout.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnLogout.Size = new System.Drawing.Size(400, 62);
-            this.btnLogout.TabIndex = 11;
-            this.btnLogout.Text = "ĐĂNG XUẤT";
-            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnAssignment
-            // 
-            this.btnAssignment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnAssignment.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAssignment.BorderRadius = 10;
-            this.btnAssignment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAssignment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAssignment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAssignment.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAssignment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAssignment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAssignment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnAssignment.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnAssignment.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnAssignment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnAssignment.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnAssignment.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnAssignment.HoverState.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnAssignment.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAssignment.HoverState.Image = global::GUI.Properties.Resources.angle_down;
-            this.btnAssignment.Image = global::GUI.Properties.Resources.angle_down_pink;
-            this.btnAssignment.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnAssignment.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnAssignment.Location = new System.Drawing.Point(0, 0);
-            this.btnAssignment.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAssignment.Name = "btnAssignment";
-            this.btnAssignment.PressedColor = System.Drawing.Color.PeachPuff;
-            this.btnAssignment.PressedDepth = 0;
-            this.btnAssignment.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAssignment.Size = new System.Drawing.Size(400, 62);
-            this.btnAssignment.TabIndex = 11;
-            this.btnAssignment.Text = "PHÂN CÔNG";
-            this.btnAssignment.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // btnManager
-            // 
-            this.btnManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnManager.BorderColor = System.Drawing.Color.Transparent;
-            this.btnManager.BorderRadius = 10;
-            this.btnManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnManager.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnManager.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnManager.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnManager.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnManager.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnManager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnManager.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnManager.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnManager.HoverState.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnManager.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnManager.HoverState.Image = global::GUI.Properties.Resources.angle_down;
-            this.btnManager.Image = global::GUI.Properties.Resources.angle_down_pink;
-            this.btnManager.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnManager.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnManager.Location = new System.Drawing.Point(0, 0);
-            this.btnManager.Margin = new System.Windows.Forms.Padding(0);
-            this.btnManager.Name = "btnManager";
-            this.btnManager.PressedColor = System.Drawing.Color.PeachPuff;
-            this.btnManager.PressedDepth = 0;
-            this.btnManager.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnManager.Size = new System.Drawing.Size(400, 62);
-            this.btnManager.TabIndex = 11;
-            this.btnManager.Text = "DANH MỤC QUẢN LÝ";
-            this.btnManager.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.logo_white;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(29, 49);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(150, 100);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 13;
-            this.guna2PictureBox1.TabStop = false;
+            this.lbQuantityTeacher.AutoSize = true;
+            this.lbQuantityTeacher.BackColor = System.Drawing.Color.Transparent;
+            this.lbQuantityTeacher.Font = new System.Drawing.Font("Consolas", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQuantityTeacher.ForeColor = System.Drawing.Color.White;
+            this.lbQuantityTeacher.Location = new System.Drawing.Point(22, 84);
+            this.lbQuantityTeacher.Name = "lbQuantityTeacher";
+            this.lbQuantityTeacher.Size = new System.Drawing.Size(96, 108);
+            this.lbQuantityTeacher.TabIndex = 0;
+            this.lbQuantityTeacher.Text = "0";
             // 
             // frmMainAdmin
             // 
@@ -969,11 +971,14 @@
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMainAdmin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmMainAdmin";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.guna2Panel16.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2Panel15.ResumeLayout(false);
             this.dropDownMenu2.ResumeLayout(false);
@@ -992,17 +997,15 @@
             this.guna2Panel12.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.pnlBody.ResumeLayout(false);
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel4.ResumeLayout(false);
             this.guna2CustomGradientPanel4.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.guna2Panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

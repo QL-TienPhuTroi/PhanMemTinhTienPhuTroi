@@ -74,6 +74,7 @@ namespace GUI.GroupAminGUI
 
                 gv_bll.addGV(gv_dto);
                 MessageBox.Show("GIÁO VIÊN " + gv_dto.hoten + " ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                this.Close();
             }
             catch (Exception ex) 
             {

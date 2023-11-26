@@ -50,8 +50,10 @@
     <Compile Include="BacLuongBLL.cs" />
     <Compile Include="ChucDanhBLL.cs" />
     <Compile Include="ChucVuBLL.cs" />
+    <Compile Include="ChuNhiemBLL.cs" />
     <Compile Include="ChuyenMonBLL.cs" />
     <Compile Include="GiaoVienBLL.cs" />
+    <Compile Include="LopHocBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoanBLL.cs" />
   </ItemGroup>
