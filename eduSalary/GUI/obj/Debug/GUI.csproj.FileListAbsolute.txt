@@ -41,3 +41,5 @@ C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\UI.pdb
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmEditHomerooms.resources
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddHomerooms.resources
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmHomeAdmin.resources
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmTeachingAssignment.resources

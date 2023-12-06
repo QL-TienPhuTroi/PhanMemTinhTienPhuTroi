@@ -171,7 +171,7 @@ namespace DAL
             gvs.EMAIL = gv.email;
             gvs.NGAYVAOTRUONG = gv.ngayvaotruong;
             gvs.NGAYVAODANG = gv.ngayvaodang;
-            gvs.DONVICONGTAC = gv.donvicongtac;
+            gvs.DONVICONGTAC = gv.donvicongtac; 
             gvs.DANTOC = gv.dantoc;
             gvs.TONGIAO = gv.tongiao;
             gvs.THAMNIEN = gv.thamnien;
@@ -220,6 +220,13 @@ namespace DAL
             gvs.MACM = gv.macm;
 
             qlgv.SubmitChanges();
+        }
+
+        //------------------ KIỂM TRA GIỚI TÍNH GIÁO VIÊN
+        public bool checkGenderTeacher(string pMaGV)
+        {
+            var query = from gv in qlgv.GIAOVIENs where gv.MAGV == pMaGV && gv.GIOITINH == "Nam" select gv;
+            return query.Any();
         }
 
         //------------------ KIỂM TRA KHÓA CHÍNH

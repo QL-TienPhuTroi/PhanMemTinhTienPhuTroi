@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlChoose = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.picStatus = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,6 +45,7 @@
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlChoose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStatus)).BeginInit();
             this.panel1.SuspendLayout();
@@ -52,13 +54,16 @@
             // 
             // pnlChoose
             // 
-            this.pnlChoose.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlChoose.BackColor = System.Drawing.Color.Transparent;
+            this.pnlChoose.BorderRadius = 8;
             this.pnlChoose.Controls.Add(this.picStatus);
             this.pnlChoose.Controls.Add(this.panel1);
             this.pnlChoose.Controls.Add(this.btnEdit);
             this.pnlChoose.Controls.Add(this.btnDelete);
             this.pnlChoose.Controls.Add(this.btnAdd);
             this.pnlChoose.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlChoose.FillColor = System.Drawing.SystemColors.Control;
+            this.pnlChoose.FillColor2 = System.Drawing.SystemColors.Control;
             this.pnlChoose.Location = new System.Drawing.Point(5, 5);
             this.pnlChoose.Name = "pnlChoose";
             this.pnlChoose.Size = new System.Drawing.Size(251, 366);
@@ -269,11 +274,15 @@
             this.btnAdd.Size = new System.Drawing.Size(65, 65);
             this.btnAdd.TabIndex = 13;
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            // 
             // ClassroomUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlChoose);
             this.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.Name = "ClassroomUI";
@@ -306,5 +315,6 @@
         private Guna.UI2.WinForms.Guna2Button btnEdit;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

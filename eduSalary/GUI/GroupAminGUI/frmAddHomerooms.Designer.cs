@@ -36,7 +36,7 @@
             this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             this.btnAssigning = new Guna.UI2.WinForms.Guna2Button();
             this.cboTeacher = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cboYear = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lbYear = new ReaLTaiizor.Controls.BigLabel();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,23 +145,20 @@
             this.cboTeacher.Size = new System.Drawing.Size(290, 36);
             this.cboTeacher.TabIndex = 4;
             // 
-            // cboYear
+            // lbYear
             // 
-            this.cboYear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbYear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboYear.BackColor = System.Drawing.Color.Transparent;
-            this.cboYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboYear.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboYear.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboYear.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboYear.ItemHeight = 30;
-            this.cboYear.Location = new System.Drawing.Point(213, 192);
-            this.cboYear.Name = "cboYear";
-            this.cboYear.Size = new System.Drawing.Size(290, 36);
-            this.cboYear.TabIndex = 4;
+            this.lbYear.AutoSize = true;
+            this.lbYear.BackColor = System.Drawing.Color.Transparent;
+            this.lbYear.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lbYear.Location = new System.Drawing.Point(208, 201);
+            this.lbYear.Name = "lbYear";
+            this.lbYear.Size = new System.Drawing.Size(129, 27);
+            this.lbYear.TabIndex = 2;
+            this.lbYear.Text = "2023-2024";
             // 
             // frmAddHomerooms
             // 
@@ -169,9 +166,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(540, 342);
-            this.Controls.Add(this.cboYear);
             this.Controls.Add(this.cboTeacher);
             this.Controls.Add(this.btnAssigning);
+            this.Controls.Add(this.lbYear);
             this.Controls.Add(this.bigLabel3);
             this.Controls.Add(this.bigLabel2);
             this.Controls.Add(this.lbTenLP);
@@ -196,6 +193,6 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel3;
         private Guna.UI2.WinForms.Guna2Button btnAssigning;
         private Guna.UI2.WinForms.Guna2ComboBox cboTeacher;
-        private Guna.UI2.WinForms.Guna2ComboBox cboYear;
+        private ReaLTaiizor.Controls.BigLabel lbYear;
     }
 }

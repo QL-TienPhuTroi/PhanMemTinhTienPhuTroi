@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoading));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.timeLine = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.timerLoading = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.timerLoading = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +49,18 @@
             this.guna2Panel1.Size = new System.Drawing.Size(525, 407);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // timeLine
+            // 
+            this.timeLine.BorderRadius = 6;
+            this.timeLine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.timeLine.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.timeLine.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.timeLine.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.timeLine.Location = new System.Drawing.Point(-8, 397);
+            this.timeLine.Name = "timeLine";
+            this.timeLine.Size = new System.Drawing.Size(120, 11);
+            this.timeLine.TabIndex = 10;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -61,15 +73,6 @@
             this.label1.Size = new System.Drawing.Size(416, 85);
             this.label1.TabIndex = 9;
             this.label1.Text = "LOADING...";
-            // 
-            // timeLine
-            // 
-            this.timeLine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.timeLine.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.timeLine.Location = new System.Drawing.Point(0, 396);
-            this.timeLine.Name = "timeLine";
-            this.timeLine.Size = new System.Drawing.Size(120, 11);
-            this.timeLine.TabIndex = 10;
             // 
             // guna2PictureBox1
             // 

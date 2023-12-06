@@ -22,5 +22,11 @@ namespace BLL
         {
             return lp_dal.getDataLopHoc();
         }
+
+        //------------------ LẤY DỮ LIỆU LỚP HỌC THEO KHỐI
+        public List<LopHocDTO> getDataLopHocTheoKhoi(string pValue)
+        {
+            return lp_dal.getDataLopHocTheoKhoi(pValue);
+        }
     }
 }

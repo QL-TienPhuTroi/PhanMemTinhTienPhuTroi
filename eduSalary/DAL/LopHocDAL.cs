@@ -33,5 +33,23 @@ namespace DAL
 
             return lst_lp;
         }
+
+        //------------------ LẤY DỮ LIỆU LỚP HỌC THEO KHỐI
+        public List<LopHocDTO> getDataLopHocTheoKhoi(string pValue)
+        {
+            var query = from lp in qlgv.LOPHOCs orderby lp.TENLP where lp.TENLP.Contains(pValue) select lp;
+
+            var lophocs = query.ToList().ConvertAll(lp => new LopHocDTO()
+            {
+                malp = lp.MALP,
+                tenlp = lp.TENLP,
+                siso = (int)lp.SISO,
+                khiemkhuyet = (bool)lp.KHIEMKHUYET
+            });
+
+            List<LopHocDTO> lst_lp = lophocs.ToList();
+
+            return lst_lp;
+        }
     }
 }

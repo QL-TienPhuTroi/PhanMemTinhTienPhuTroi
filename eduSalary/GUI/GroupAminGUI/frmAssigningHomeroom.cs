@@ -34,12 +34,60 @@ namespace GUI.GroupAminGUI
             InitializeComponent();
             this.Load += FrmAssigningHomeroom_Load;
             cboYear.SelectedIndexChanged += CboYear_SelectedIndexChanged;
+            rdoAll.CheckedChanged += RdoAll_CheckedChanged;
+            rdo10.CheckedChanged += Rdo10_CheckedChanged;
+            rdo11.CheckedChanged += Rdo11_CheckedChanged;
+            rdo12.CheckedChanged += Rdo12_CheckedChanged;
+            btnRefresh.Click += BtnRefresh_Click;
+        }
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+            loadYear();
+            rdoAll.Checked = true;
+            rdo10.Checked = false;
+            rdo11.Checked = false;
+            rdo12.Checked = false;
+            loadClassrommAllItems();
+        }
+
+        private void Rdo12_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdo12.Checked)
+            {
+                loadClassrommAllItems();
+            }
+        }
+
+        private void Rdo11_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdo11.Checked)
+            {
+                loadClassrommAllItems();
+            }
+        }
+
+        private void Rdo10_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdo10.Checked)
+            {
+                loadClassrommAllItems();
+            }
+        }
+
+        private void RdoAll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoAll.Checked)
+            {
+                loadClassrommAllItems();
+            }
         }
 
         private void FrmAssigningHomeroom_Load(object sender, EventArgs e)
         {
             setSizeFrom();
             loadYear();
+            rdoAll.Checked = true;
             loadClassrommAllItems();
         }
 
@@ -51,7 +99,23 @@ namespace GUI.GroupAminGUI
         private void loadClassrommAllItems()
         {
             List<LopHocDTO> classroom = new List<LopHocDTO>();
-            classroom = lp_bll.getDataLopHoc();
+
+            if (rdoAll.Checked)
+            {
+                classroom = lp_bll.getDataLopHoc();
+            }
+            else if (rdo10.Checked)
+            {
+                classroom = lp_bll.getDataLopHocTheoKhoi("10");
+            }
+            else if (rdo11.Checked)
+            {
+                classroom = lp_bll.getDataLopHocTheoKhoi("11");
+            }
+            else
+            {
+                classroom = lp_bll.getDataLopHocTheoKhoi("12");
+            }
 
             flpLopHoc.Controls.Clear();
 
@@ -77,13 +141,21 @@ namespace GUI.GroupAminGUI
                     cn_now = cn_bll.findTeacherNow(classroom[i].malp, cboYear.SelectedItem.ToString());
                     pHoTen = gv_bll.getNameGiaoVien(cn_now.magv);
 
-                    classroomItems[i].PTrangThai = Properties.Resources.teacher_male;
+                    if (gv_bll.checkGenderTeacher(cn_now.magv))
+                    {
+                        classroomItems[i].PTrangThai = Properties.Resources.teacher_male;
+                    }
+                    else
+                    {
+                        classroomItems[i].PTrangThai = Properties.Resources.teacher_female;
+                    }
+
                     classroomItems[i].PHoTen = pHoTen.ToUpper();
                 }
                 else
                 {
                     classroomItems[i].PTrangThai = Properties.Resources.cross;
-                    classroomItems[i].PHoTen = "-- Unknown --";
+                    classroomItems[i].PHoTen = "LỚP CHƯA CÓ GVCN";
                 }
 
                 if (flpLopHoc.Controls.Count < 0)
@@ -157,6 +229,8 @@ namespace GUI.GroupAminGUI
             int y1, y2;
             string schoolYear = string.Empty;
             
+            cboYear.Items.Clear();
+
             for(int i = 2021; i < year + 1; i++) 
             {
                 schoolYear = i + "-" + (i + 1);

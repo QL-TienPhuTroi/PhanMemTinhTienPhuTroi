@@ -143,6 +143,12 @@
     <Compile Include="GroupAminGUI\frmAddHomerooms.Designer.cs">
       <DependentUpon>frmAddHomerooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupAminGUI\frmHomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmHomeAdmin.Designer.cs">
+      <DependentUpon>frmHomeAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupAminGUI\frmMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,12 @@
     </Compile>
     <Compile Include="GroupAminGUI\frmTeacher.Designer.cs">
       <DependentUpon>frmTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmTeachingAssignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmTeachingAssignment.Designer.cs">
+      <DependentUpon>frmTeachingAssignment.cs</DependentUpon>
     </Compile>
     <Compile Include="GroupTeacherGUI\frmMainTeacher.cs">
       <SubType>Form</SubType>
@@ -211,6 +223,9 @@
     <EmbeddedResource Include="GroupAminGUI\frmAddHomerooms.resx">
       <DependentUpon>frmAddHomerooms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmHomeAdmin.resx">
+      <DependentUpon>frmHomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmMainAdmin.resx">
       <DependentUpon>frmMainAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmTeacher.resx">
       <DependentUpon>frmTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmTeachingAssignment.resx">
+      <DependentUpon>frmTeachingAssignment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupTeacherGUI\frmMainTeacher.resx">
       <DependentUpon>frmMainTeacher.cs</DependentUpon>
@@ -399,6 +417,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\teacher_male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\training.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\afternoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\morning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\night.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher_female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

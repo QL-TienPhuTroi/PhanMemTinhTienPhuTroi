@@ -22,6 +22,8 @@ namespace GUI.GroupAminGUI
 
         GiaoVienBLL gv_bll = new GiaoVienBLL();
 
+        frmHomeAdmin fHomeAdmin = new frmHomeAdmin();
+
         frmTeacher fTeacher = new frmTeacher();
         frmPosition fPosition = new frmPosition();
         frmCareerTitles fCareerTitles = new frmCareerTitles();
@@ -45,8 +47,10 @@ namespace GUI.GroupAminGUI
             timerNavigationMenu1.Tick += TimerNavigationMenu1_Tick;
             timerNavigationMenu2.Tick += TimerNavigationMenu2_Tick;
 
+            btnHome.Click += BtnHome_Click;
             btnManager.Click += BtnManager_Click;
             btnAssignment.Click += BtnAssignment_Click;
+            btnExtraness.Click += BtnExtraness_Click;
 
             btnTeacher.Click += BtnTeacher_Click;
             btnPosition.Click += BtnPosition_Click;
@@ -69,10 +73,16 @@ namespace GUI.GroupAminGUI
 
         private void FrmMainAdmin_Load(object sender, EventArgs e)
         {
-            lbQuantityTeacher.Text = getQuantityTeacher().ToString();
+            lbFrmName.Text = "HELLO ^_^";
+            pnlBody.Controls.Clear();
+            fHomeAdmin.TopLevel = false;
+            fHomeAdmin.Dock = DockStyle.Fill;
+            pnlBody.Controls.Add(fHomeAdmin);
+            fHomeAdmin.Show();
+
             loadGreeting();
             setSizeFrom();
-        }
+        }           
 
         private void BtnTeacher_Click(object sender, EventArgs e)
         {
@@ -134,54 +144,84 @@ namespace GUI.GroupAminGUI
             fAssigningHomeroom.ShowDialog();
         }
 
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            if (expand2)
+            {
+                timerNavigationMenu2.Start();
+                TimerNavigationMenu2_Tick(sender, e);
+            }
+
+            if (expand1)
+            {
+                timerNavigationMenu1.Start();
+                TimerNavigationMenu1_Tick(sender, e);
+            }
+
+
+            pnlHome.Visible = true;
+            pnlManager.Visible = false;
+            pnlAssignment.Visible = false;
+            pnlExtraness.Visible = false;
+
+            lbFrmName.Text = "HELLO ^_^";
+            pnlBody.Controls.Clear();
+            fHomeAdmin.TopLevel = false;
+            fHomeAdmin.Dock = DockStyle.Fill;
+            pnlBody.Controls.Add(fHomeAdmin);
+            fHomeAdmin.Show();
+        }
+
         private void BtnManager_Click(object sender, EventArgs e)
         {
             timerNavigationMenu1.Start();
 
-            if (!expand1)
+            if (expand2)
             {
-                btnManager.FillColor = Color.FromArgb(255, 192, 255);
-                btnManager.FillColor2 = Color.FromArgb(239, 65, 102);
-                btnManager.ForeColor = Color.White;
-                btnManager.Image = Properties.Resources.angle_down;
-            }
-            else
-            {
-                btnManager.FillColor = Color.FromArgb(255, 192, 255);
-                btnManager.FillColor2 = Color.FromArgb(255, 192, 255);
-                btnManager.ForeColor = Color.FromArgb(239, 65, 102);
-                btnManager.Image = Properties.Resources.angle_down_pink;
+                timerNavigationMenu2.Start();
+                TimerNavigationMenu2_Tick(sender, e);
             }
 
-            btnAssignment.FillColor = Color.FromArgb(255, 192, 255);
-            btnAssignment.FillColor2 = Color.FromArgb(255, 192, 255);
-            btnAssignment.ForeColor = Color.FromArgb(239, 65, 102);
-            btnAssignment.Image = Properties.Resources.angle_down_pink;
+            pnlHome.Visible = false;
+            pnlManager.Visible = true;
+            pnlAssignment.Visible = false;
+            pnlExtraness.Visible = false;
         }
 
         private void BtnAssignment_Click(object sender, EventArgs e)
         {
             timerNavigationMenu2.Start();
-
-            if (!expand2)
+                        
+            if (expand1)
             {
-                btnAssignment.FillColor = Color.FromArgb(255, 192, 255);
-                btnAssignment.FillColor2 = Color.FromArgb(239, 65, 102);
-                btnAssignment.ForeColor = Color.White;
-                btnAssignment.Image = Properties.Resources.angle_down;
-            }
-            else
-            {
-                btnAssignment.FillColor = Color.FromArgb(255, 192, 255);
-                btnAssignment.FillColor2 = Color.FromArgb(255, 192, 255);
-                btnAssignment.ForeColor = Color.FromArgb(239, 65, 102);
-                btnAssignment.Image = Properties.Resources.angle_down_pink;
+                timerNavigationMenu1.Start();
+                TimerNavigationMenu1_Tick(sender, e);
             }
 
-            btnManager.FillColor = Color.FromArgb(255, 192, 255);
-            btnManager.FillColor2 = Color.FromArgb(255, 192, 255);
-            btnManager.ForeColor = Color.FromArgb(239, 65, 102);
-            btnManager.Image = Properties.Resources.angle_down_pink;
+            pnlManager.Visible = false;
+            pnlHome.Visible = false;
+            pnlAssignment.Visible = true;
+            pnlExtraness.Visible = false;
+        }
+
+        private void BtnExtraness_Click(object sender, EventArgs e)
+        {
+            if (expand2)
+            {
+                timerNavigationMenu2.Start();
+                TimerNavigationMenu2_Tick(sender, e);
+            }
+
+            if (expand1)
+            {
+                timerNavigationMenu1.Start();
+                TimerNavigationMenu1_Tick(sender, e);
+            }
+
+            pnlHome.Visible = false;
+            pnlManager.Visible = false;
+            pnlAssignment.Visible = false;
+            pnlExtraness.Visible = true;
         }
 
         private void BtnLogout_Click(object sender, EventArgs e)
@@ -243,13 +283,8 @@ namespace GUI.GroupAminGUI
 
         private void loadGreeting()
         {
-            string pName = getName();
+            string pName = getName().ToUpper();
             lbHello.Text = pName;
-        }
-
-        private int getQuantityTeacher()
-        {
-            return gv_bll.getDataGiaoVien().Count;
         }
 
         public string getName()

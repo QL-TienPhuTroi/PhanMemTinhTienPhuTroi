@@ -31,14 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssigningHomeroom));
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.cboYear = new Guna.UI2.WinForms.Guna2ComboBox();
             this.bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.flpLopHoc = new System.Windows.Forms.FlowLayoutPanel();
+            this.rdo10 = new ReaLTaiizor.Controls.FoxRadioButton();
+            this.rdo11 = new ReaLTaiizor.Controls.FoxRadioButton();
+            this.rdo12 = new ReaLTaiizor.Controls.FoxRadioButton();
+            this.rdoAll = new ReaLTaiizor.Controls.FoxRadioButton();
+            this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -49,8 +53,6 @@
             this.guna2CustomGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel1.Controls.Add(this.bigLabel1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2ControlBox1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2ControlBox2);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnExit);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
@@ -73,36 +75,6 @@
             this.bigLabel1.TabIndex = 9;
             this.bigLabel1.Text = "PHÂN CÔNG CHỦ NHIỆM";
             // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Animated = true;
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.BlanchedAlmond;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1302, 0);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 49);
-            this.guna2ControlBox1.TabIndex = 8;
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Animated = true;
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.guna2ControlBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.BlanchedAlmond;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1362, 0);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 49);
-            this.guna2ControlBox2.TabIndex = 7;
-            // 
             // btnExit
             // 
             this.btnExit.Animated = true;
@@ -123,7 +95,14 @@
             this.guna2CustomGradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel2.Controls.Add(this.btnRefresh);
+            this.guna2CustomGradientPanel2.Controls.Add(this.rdo12);
+            this.guna2CustomGradientPanel2.Controls.Add(this.rdo11);
+            this.guna2CustomGradientPanel2.Controls.Add(this.rdoAll);
+            this.guna2CustomGradientPanel2.Controls.Add(this.rdo10);
             this.guna2CustomGradientPanel2.Controls.Add(this.cboYear);
+            this.guna2CustomGradientPanel2.Controls.Add(this.bigLabel3);
             this.guna2CustomGradientPanel2.Controls.Add(this.bigLabel2);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2GroupBox1);
             this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
@@ -140,6 +119,7 @@
             // 
             this.cboYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboYear.BackColor = System.Drawing.Color.Transparent;
+            this.cboYear.BorderRadius = 5;
             this.cboYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboYear.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -192,6 +172,115 @@
             this.flpLopHoc.Size = new System.Drawing.Size(1454, 530);
             this.flpLopHoc.TabIndex = 0;
             // 
+            // rdo10
+            // 
+            this.rdo10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.rdo10.BorderColor = System.Drawing.Color.White;
+            this.rdo10.Checked = false;
+            this.rdo10.CheckedColor = System.Drawing.Color.White;
+            this.rdo10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdo10.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.rdo10.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.rdo10.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.rdo10.EnabledCalc = true;
+            this.rdo10.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdo10.ForeColor = System.Drawing.Color.White;
+            this.rdo10.HoverBorderColor = System.Drawing.Color.White;
+            this.rdo10.Location = new System.Drawing.Point(361, 35);
+            this.rdo10.Name = "rdo10";
+            this.rdo10.Size = new System.Drawing.Size(145, 36);
+            this.rdo10.TabIndex = 3;
+            this.rdo10.Text = "Khối 10";
+            // 
+            // rdo11
+            // 
+            this.rdo11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.rdo11.BorderColor = System.Drawing.Color.White;
+            this.rdo11.Checked = false;
+            this.rdo11.CheckedColor = System.Drawing.Color.White;
+            this.rdo11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdo11.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.rdo11.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.rdo11.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.rdo11.EnabledCalc = true;
+            this.rdo11.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdo11.ForeColor = System.Drawing.Color.White;
+            this.rdo11.HoverBorderColor = System.Drawing.Color.White;
+            this.rdo11.Location = new System.Drawing.Point(548, 35);
+            this.rdo11.Name = "rdo11";
+            this.rdo11.Size = new System.Drawing.Size(145, 36);
+            this.rdo11.TabIndex = 3;
+            this.rdo11.Text = "Khối 11";
+            // 
+            // rdo12
+            // 
+            this.rdo12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.rdo12.BorderColor = System.Drawing.Color.White;
+            this.rdo12.Checked = false;
+            this.rdo12.CheckedColor = System.Drawing.Color.White;
+            this.rdo12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdo12.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.rdo12.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.rdo12.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.rdo12.EnabledCalc = true;
+            this.rdo12.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdo12.ForeColor = System.Drawing.Color.White;
+            this.rdo12.HoverBorderColor = System.Drawing.Color.White;
+            this.rdo12.Location = new System.Drawing.Point(735, 35);
+            this.rdo12.Name = "rdo12";
+            this.rdo12.Size = new System.Drawing.Size(145, 36);
+            this.rdo12.TabIndex = 3;
+            this.rdo12.Text = "Khối 12";
+            // 
+            // rdoAll
+            // 
+            this.rdoAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.rdoAll.BorderColor = System.Drawing.Color.White;
+            this.rdoAll.Checked = false;
+            this.rdoAll.CheckedColor = System.Drawing.Color.White;
+            this.rdoAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdoAll.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.rdoAll.DisabledCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.rdoAll.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.rdoAll.EnabledCalc = true;
+            this.rdoAll.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoAll.ForeColor = System.Drawing.Color.White;
+            this.rdoAll.HoverBorderColor = System.Drawing.Color.White;
+            this.rdoAll.Location = new System.Drawing.Point(174, 35);
+            this.rdoAll.Name = "rdoAll";
+            this.rdoAll.Size = new System.Drawing.Size(145, 36);
+            this.rdoAll.TabIndex = 3;
+            this.rdoAll.Text = "Tất cả";
+            // 
+            // bigLabel3
+            // 
+            this.bigLabel3.AutoSize = true;
+            this.bigLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel3.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel3.ForeColor = System.Drawing.Color.White;
+            this.bigLabel3.Location = new System.Drawing.Point(65, 35);
+            this.bigLabel3.Name = "bigLabel3";
+            this.bigLabel3.Size = new System.Drawing.Size(77, 27);
+            this.bigLabel3.TabIndex = 1;
+            this.bigLabel3.Text = "Khối:";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BorderRadius = 5;
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.FillColor = System.Drawing.Color.White;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Image = global::GUI.Properties.Resources.refresh1;
+            this.btnRefresh.Location = new System.Drawing.Point(1376, 26);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(45, 45);
+            this.btnRefresh.TabIndex = 4;
+            // 
             // frmAssigningHomeroom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -217,8 +306,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox btnExit;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
@@ -226,5 +313,11 @@
         private System.Windows.Forms.FlowLayoutPanel flpLopHoc;
         private ReaLTaiizor.Controls.BigLabel bigLabel2;
         private Guna.UI2.WinForms.Guna2ComboBox cboYear;
+        private ReaLTaiizor.Controls.FoxRadioButton rdo10;
+        private ReaLTaiizor.Controls.FoxRadioButton rdo12;
+        private ReaLTaiizor.Controls.FoxRadioButton rdo11;
+        private ReaLTaiizor.Controls.FoxRadioButton rdoAll;
+        private ReaLTaiizor.Controls.BigLabel bigLabel3;
+        private Guna.UI2.WinForms.Guna2Button btnRefresh;
     }
 }

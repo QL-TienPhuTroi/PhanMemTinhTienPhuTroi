@@ -38,7 +38,7 @@ namespace GUI.GroupAminGUI
             {
                 cn_dto.malp = pMaLP;
                 cn_dto.magv = cboTeacher.SelectedValue.ToString();
-                cn_dto.namhoc = cboYear.SelectedItem.ToString();
+                cn_dto.namhoc = pNamHoc;
                 cn_dto.trangthai = true;
 
                 cn_bll.addCN(cn_dto);
@@ -57,7 +57,6 @@ namespace GUI.GroupAminGUI
         private void FrmHomerooms_Load(object sender, EventArgs e)
         {
             setLB();
-            loadYear();
             loadTeacher();
         }
 
@@ -71,20 +70,7 @@ namespace GUI.GroupAminGUI
         private void setLB()
         {
             lbTenLP.Text = pTenLP;
-        }
-
-        private void loadYear()
-        {
-            int year = DateTime.Now.Year;
-            string schoolYear = string.Empty;
-
-            for (int i = 2021; i < year + 1; i++)
-            {
-                schoolYear = i + "-" + (i + 1);
-                cboYear.Items.Add(schoolYear);
-            }
-
-            cboYear.Text = pNamHoc;
+            lbYear.Text = pNamHoc;
         }
 
     }

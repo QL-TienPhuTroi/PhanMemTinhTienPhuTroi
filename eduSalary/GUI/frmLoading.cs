@@ -45,7 +45,7 @@ namespace GUI
                 else
                 {
                     frmMainTeacher fMainTeacher = new frmMainTeacher(pCode, pPass);
-                    fMainTeacher.Show();
+                    fMainTeacher.Show();                    
                     this.Close();
                 }
             }

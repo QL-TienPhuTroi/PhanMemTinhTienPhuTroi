@@ -72,6 +72,12 @@ namespace BLL
             gv_dal.editGV(gv); 
         }
 
+        //------------------ KIỂM TRA GIỚI TÍNH GIÁO VIÊN
+        public bool checkGenderTeacher(string pMaGV)
+        {
+            return gv_dal.checkGenderTeacher(pMaGV);
+        }
+
         //------------------ KIỂM TRA KHÓA CHÍNH
         public bool checkPK(string pMaGV)
         {            
