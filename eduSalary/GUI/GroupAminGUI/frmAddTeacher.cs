@@ -39,6 +39,7 @@ namespace GUI.GroupAminGUI
             loadDataChucDanh();
             loadDataChuyenMon();
             loadDataBacLuong();
+            loadDataTrangThai();
         }
 
         private void BtnFinish_Click(object sender, EventArgs e)
@@ -48,6 +49,14 @@ namespace GUI.GroupAminGUI
             try
             {
                 gv_dto.magv = pMaGV;
+                if(cboTrangThai.SelectedItem.ToString() == "Đang dạy")
+                {
+                    gv_dto.trangthai = true;
+                }
+                else
+                {
+                    gv_dto.trangthai = false;
+                }
                 gv_dto.hoten = txtHoTen.Text;
                 gv_dto.ngaysinh = DateTime.Parse(dtpNgaySinh.Value.ToString());
                 if (rdoNam.Checked)
@@ -73,7 +82,7 @@ namespace GUI.GroupAminGUI
                 gv_dto.macm = int.Parse(cboChuyenMon.SelectedValue.ToString());
 
                 gv_bll.addGV(gv_dto);
-                MessageBox.Show("GIÁO VIÊN " + gv_dto.hoten + " ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                MessageBox.Show("GIÁO VIÊN " + gv_dto.hoten.ToUpper() + " ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
                 this.Close();
             }
             catch (Exception ex) 
@@ -102,6 +111,15 @@ namespace GUI.GroupAminGUI
             cboChuyenMon.DataSource = cm_bll.getDataChuyenMon();
             cboChuyenMon.DisplayMember = "TENCM";
             cboChuyenMon.ValueMember = "MACM";
+        }
+
+        private void loadDataTrangThai()
+        {
+            cboTrangThai.Items.Clear();
+            cboTrangThai.Items.Add("Đang dạy");
+            cboTrangThai.Items.Add("Nghỉ dạy");
+
+            cboTrangThai.SelectedIndex = 0;
         }
 
         private string createCode()

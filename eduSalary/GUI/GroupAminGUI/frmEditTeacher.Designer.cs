@@ -73,6 +73,8 @@
             this.bigLabel7 = new ReaLTaiizor.Controls.BigLabel();
             this.txtHoTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
+            this.cboTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.bigLabel19 = new ReaLTaiizor.Controls.BigLabel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -162,6 +164,8 @@
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.AutoScroll = true;
+            this.guna2GradientPanel3.Controls.Add(this.cboTrangThai);
+            this.guna2GradientPanel3.Controls.Add(this.bigLabel19);
             this.guna2GradientPanel3.Controls.Add(this.panel1);
             this.guna2GradientPanel3.Controls.Add(this.cboChuyenMon);
             this.guna2GradientPanel3.Controls.Add(this.cboBac);
@@ -239,9 +243,9 @@
             this.cboBac.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBac.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboBac.ItemHeight = 30;
-            this.cboBac.Location = new System.Drawing.Point(700, 673);
+            this.cboBac.Location = new System.Drawing.Point(723, 673);
             this.cboBac.Name = "cboBac";
-            this.cboBac.Size = new System.Drawing.Size(324, 36);
+            this.cboBac.Size = new System.Drawing.Size(301, 36);
             this.cboBac.TabIndex = 5;
             // 
             // cboMSCD
@@ -440,13 +444,13 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(700, 288);
+            this.txtEmail.Location = new System.Drawing.Point(723, 288);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(324, 54);
+            this.txtEmail.Size = new System.Drawing.Size(301, 54);
             this.txtEmail.TabIndex = 1;
             // 
             // bigLabel9
@@ -473,13 +477,13 @@
             this.txtThamNien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThamNien.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThamNien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThamNien.Location = new System.Drawing.Point(700, 564);
+            this.txtThamNien.Location = new System.Drawing.Point(723, 564);
             this.txtThamNien.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtThamNien.Name = "txtThamNien";
             this.txtThamNien.PasswordChar = '\0';
             this.txtThamNien.PlaceholderText = "";
             this.txtThamNien.SelectedText = "";
-            this.txtThamNien.Size = new System.Drawing.Size(324, 54);
+            this.txtThamNien.Size = new System.Drawing.Size(301, 54);
             this.txtThamNien.TabIndex = 1;
             // 
             // txtDanToc
@@ -494,13 +498,13 @@
             this.txtDanToc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDanToc.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDanToc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDanToc.Location = new System.Drawing.Point(700, 475);
+            this.txtDanToc.Location = new System.Drawing.Point(723, 475);
             this.txtDanToc.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDanToc.Name = "txtDanToc";
             this.txtDanToc.PasswordChar = '\0';
             this.txtDanToc.PlaceholderText = "";
             this.txtDanToc.SelectedText = "";
-            this.txtDanToc.Size = new System.Drawing.Size(324, 54);
+            this.txtDanToc.Size = new System.Drawing.Size(301, 54);
             this.txtDanToc.TabIndex = 1;
             // 
             // bigLabel17
@@ -761,6 +765,34 @@
             this.bigLabel1.TabIndex = 0;
             this.bigLabel1.Text = "Họ tên:";
             // 
+            // cboTrangThai
+            // 
+            this.cboTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.cboTrangThai.BorderRadius = 10;
+            this.cboTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTrangThai.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboTrangThai.ItemHeight = 30;
+            this.cboTrangThai.Location = new System.Drawing.Point(723, 762);
+            this.cboTrangThai.Name = "cboTrangThai";
+            this.cboTrangThai.Size = new System.Drawing.Size(299, 36);
+            this.cboTrangThai.TabIndex = 9;
+            // 
+            // bigLabel19
+            // 
+            this.bigLabel19.AutoSize = true;
+            this.bigLabel19.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel19.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel19.Location = new System.Drawing.Point(545, 771);
+            this.bigLabel19.Name = "bigLabel19";
+            this.bigLabel19.Size = new System.Drawing.Size(155, 27);
+            this.bigLabel19.TabIndex = 8;
+            this.bigLabel19.Text = "Tình trạng:";
+            // 
             // frmEditTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -829,5 +861,7 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel7;
         private Guna.UI2.WinForms.Guna2TextBox txtHoTen;
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
+        private Guna.UI2.WinForms.Guna2ComboBox cboTrangThai;
+        private ReaLTaiizor.Controls.BigLabel bigLabel19;
     }
 }

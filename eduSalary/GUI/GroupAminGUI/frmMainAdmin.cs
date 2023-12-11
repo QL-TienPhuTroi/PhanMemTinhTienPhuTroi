@@ -31,6 +31,7 @@ namespace GUI.GroupAminGUI
         frmClassroom fClassroom = new frmClassroom();
 
         frmAssigningHomeroom fAssigningHomeroom = new frmAssigningHomeroom();
+        frmTeachingAssignment fTeacherAssignment = new frmTeachingAssignment();
 
         public frmMainAdmin(string Code, string Pass)
         {
@@ -136,7 +137,7 @@ namespace GUI.GroupAminGUI
 
         private void BtnTeachingAssignment_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            fTeacherAssignment.ShowDialog();
         }
 
         private void BtnHomeroomTeacher_Click(object sender, EventArgs e)

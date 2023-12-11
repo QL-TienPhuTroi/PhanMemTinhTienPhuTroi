@@ -19,13 +19,11 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU CHỨC DANH
         public List<ChucDanhDTO> getDataChucDanh()
         {
-            var query = from cd in qlgv.CHUCDANHNNs select cd;
-
-            var chucdanhs = query.ToList().ConvertAll(nv => new ChucDanhDTO()
+            var chucdanhs = from cd in qlgv.CHUCDANHNNs select new ChucDanhDTO()
             {
-                masocd = nv.MASOCD,
-                hangcd = nv.HANGCD
-            });
+                masocd = cd.MASOCD,
+                hangcd = cd.HANGCD
+            };
 
             List<ChucDanhDTO> lst_cd = chucdanhs.ToList();
 
@@ -35,13 +33,11 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU CHỨC DANH THEO MÃ SỐ CHỨC DANH
         public List<ChucDanhDTO> getDataChucDanhTheoMa(string pMaSoCD)
         {
-            var query = from cd in qlgv.CHUCDANHNNs where cd.MASOCD == pMaSoCD select cd;
-
-            var chucdanhs = query.ToList().ConvertAll(nv => new ChucDanhDTO()
+            var chucdanhs = from cd in qlgv.CHUCDANHNNs where cd.MASOCD == pMaSoCD select new ChucDanhDTO()
             {
-                masocd = nv.MASOCD,
-                hangcd = nv.HANGCD
-            });
+                masocd = cd.MASOCD,
+                hangcd = cd.HANGCD
+            };
 
             List<ChucDanhDTO> lst_cd = chucdanhs.ToList();
 

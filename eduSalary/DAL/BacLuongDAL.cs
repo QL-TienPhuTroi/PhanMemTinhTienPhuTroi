@@ -19,14 +19,12 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU BẬC LƯƠNG
         public List<BacLuongDTO> getDataBacLuong()
         {
-            var query = from bl in qlgv.BACLUONGs select bl;
-
-            var bacluongs = query.ToList().ConvertAll(nv => new BacLuongDTO()
+            var bacluongs = from bl in qlgv.BACLUONGs select new BacLuongDTO()
             {
-                masocd = nv.MASOCD,
-                bac = nv.BAC,
-                hesoluong = (decimal)nv.HESOLUONG
-            });
+                masocd = bl.MASOCD,
+                bac = bl.BAC,
+                hesoluong = (decimal)bl.HESOLUONG
+            };
 
             List<BacLuongDTO> lst_bl = bacluongs.ToList();
 
@@ -36,14 +34,12 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU BẬC LƯƠNG THEO MÃ SỐ CHỨC DANH VÀ BẬC
         public List<BacLuongDTO> getDataBacLuongTheoMa(string pMaSoCD, int pBac)
         {
-            var query = from bl in qlgv.BACLUONGs where bl.MASOCD == pMaSoCD && bl.BAC == pBac select bl;
-
-            var bacluongs = query.ToList().ConvertAll(nv => new BacLuongDTO()
+            var bacluongs = from bl in qlgv.BACLUONGs where bl.MASOCD == pMaSoCD && bl.BAC == pBac select new BacLuongDTO()
             {
-                masocd = nv.MASOCD,
-                bac = nv.BAC,
-                hesoluong = (decimal)nv.HESOLUONG
-            });
+                masocd = bl.MASOCD,
+                bac = bl.BAC,
+                hesoluong = (decimal)bl.HESOLUONG
+            };
 
             List<BacLuongDTO> lst_bl = bacluongs.ToList();
 
@@ -53,14 +49,12 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU BẬC LƯƠNG THEO MÃ SỐ CHỨC DANH VÀ BẬC
         public List<BacLuongDTO> getDataBacLuongTheoMaCD(string pMaSoCD)
         {
-            var query = from bl in qlgv.BACLUONGs where bl.MASOCD == pMaSoCD select bl;
-
-            var bacluongs = query.ToList().ConvertAll(nv => new BacLuongDTO()
+            var bacluongs = from bl in qlgv.BACLUONGs where bl.MASOCD == pMaSoCD select new BacLuongDTO()
             {
-                masocd = nv.MASOCD,
-                bac = nv.BAC,
-                hesoluong = (decimal)nv.HESOLUONG
-            });
+                masocd = bl.MASOCD,
+                bac = bl.BAC,
+                hesoluong = (decimal)bl.HESOLUONG
+            };
 
             List<BacLuongDTO> lst_bl = bacluongs.ToList();
 

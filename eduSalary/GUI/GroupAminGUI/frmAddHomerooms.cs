@@ -46,6 +46,7 @@ namespace GUI.GroupAminGUI
                 string pHoTen = gv_bll.getNameGiaoVien(cn_dto.magv);
 
                 MessageBox.Show("GIÁO VIÊN " + pHoTen.ToUpper() + " ĐÃ ĐƯỢC PHÂN LÀM CHỦ NHIỆM LỚP " + pTenLP, "PHẦN MỀM TÍNH PHỤ TRỘI");
+
                 this.Close();
             }
             catch (Exception ex)

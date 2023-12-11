@@ -95,11 +95,29 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupAminGUI\frmAddDetailTeaching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddDetailTeaching.Designer.cs">
+      <DependentUpon>frmAddDetailTeaching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddPosition.Designer.cs">
+      <DependentUpon>frmAddPosition.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupAminGUI\frmAddTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GroupAminGUI\frmAddTeacher.Designer.cs">
       <DependentUpon>frmAddTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddTeaching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddTeaching.Designer.cs">
+      <DependentUpon>frmAddTeaching.cs</DependentUpon>
     </Compile>
     <Compile Include="GroupAminGUI\frmAssigningHomeroom.cs">
       <SubType>Form</SubType>
@@ -124,6 +142,12 @@
     </Compile>
     <Compile Include="GroupAminGUI\frmDetailedProfile.Designer.cs">
       <DependentUpon>frmDetailedProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmDetailLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmDetailLesson.Designer.cs">
+      <DependentUpon>frmDetailLesson.cs</DependentUpon>
     </Compile>
     <Compile Include="GroupAminGUI\frmEditHomerooms.cs">
       <SubType>Form</SubType>
@@ -199,8 +223,17 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmAddDetailTeaching.resx">
+      <DependentUpon>frmAddDetailTeaching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmAddPosition.resx">
+      <DependentUpon>frmAddPosition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmAddTeacher.resx">
       <DependentUpon>frmAddTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmAddTeaching.resx">
+      <DependentUpon>frmAddTeaching.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmAssigningHomeroom.resx">
       <DependentUpon>frmAssigningHomeroom.cs</DependentUpon>
@@ -213,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmDetailedProfile.resx">
       <DependentUpon>frmDetailedProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmDetailLesson.resx">
+      <DependentUpon>frmDetailLesson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmEditHomerooms.resx">
       <DependentUpon>frmEditHomerooms.cs</DependentUpon>

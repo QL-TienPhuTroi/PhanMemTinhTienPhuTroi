@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassroomAssignmentUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClassroomAssignmentUI.Designer.cs">
+      <DependentUpon>ClassroomAssignmentUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClassroomUI.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ClassroomAssignmentUI.resx">
+      <DependentUpon>ClassroomAssignmentUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClassroomUI.resx">
       <DependentUpon>ClassroomUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\writing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-right.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,14 +19,12 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU TÀI KHOẢN
         public List<TaiKhoanDTO> getDataTaiKhoan()
         {
-            var query = from tk in qlgv.TAIKHOANs select tk;
-
-            var taikhoans = query.ToList().ConvertAll(tk => new TaiKhoanDTO()
+            var taikhoans = from tk in qlgv.TAIKHOANs select new TaiKhoanDTO()
             {
                 magv = tk.MAGV,
                 matkhau = tk.MATKHAU,
                 maqtc = tk.MAQTC
-            });
+            };
 
             List<TaiKhoanDTO> lst_tk = taikhoans.ToList();
 

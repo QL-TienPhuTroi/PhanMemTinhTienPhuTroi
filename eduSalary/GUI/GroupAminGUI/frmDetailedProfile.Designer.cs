@@ -55,7 +55,7 @@
             this.lbMaGV = new ReaLTaiizor.Controls.CrownLabel();
             this.lbDonViCongTac = new ReaLTaiizor.Controls.CrownLabel();
             this.crownLabel23 = new ReaLTaiizor.Controls.CrownLabel();
-            this.crownLabel2 = new ReaLTaiizor.Controls.CrownLabel();
+            this.lbTinhTrang = new ReaLTaiizor.Controls.CrownLabel();
             this.crownLabel22 = new ReaLTaiizor.Controls.CrownLabel();
             this.crownLabel37 = new ReaLTaiizor.Controls.CrownLabel();
             this.crownLabel31 = new ReaLTaiizor.Controls.CrownLabel();
@@ -140,7 +140,7 @@
             this.panel1.Controls.Add(this.lbMaGV);
             this.panel1.Controls.Add(this.lbDonViCongTac);
             this.panel1.Controls.Add(this.crownLabel23);
-            this.panel1.Controls.Add(this.crownLabel2);
+            this.panel1.Controls.Add(this.lbTinhTrang);
             this.panel1.Controls.Add(this.crownLabel22);
             this.panel1.Controls.Add(this.crownLabel37);
             this.panel1.Controls.Add(this.crownLabel31);
@@ -406,16 +406,16 @@
             this.crownLabel23.TabIndex = 25;
             this.crownLabel23.Text = "Hạng chức danh:";
             // 
-            // crownLabel2
+            // lbTinhTrang
             // 
-            this.crownLabel2.AutoSize = true;
-            this.crownLabel2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.crownLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.crownLabel2.Location = new System.Drawing.Point(155, 29);
-            this.crownLabel2.Name = "crownLabel2";
-            this.crownLabel2.Size = new System.Drawing.Size(81, 20);
-            this.crownLabel2.TabIndex = 8;
-            this.crownLabel2.Text = "Đang dạy";
+            this.lbTinhTrang.AutoSize = true;
+            this.lbTinhTrang.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lbTinhTrang.Location = new System.Drawing.Point(155, 29);
+            this.lbTinhTrang.Name = "lbTinhTrang";
+            this.lbTinhTrang.Size = new System.Drawing.Size(81, 20);
+            this.lbTinhTrang.TabIndex = 8;
+            this.lbTinhTrang.Text = "Đang dạy";
             // 
             // crownLabel22
             // 
@@ -652,7 +652,7 @@
         private ReaLTaiizor.Controls.CrownLabel lbMaGV;
         private ReaLTaiizor.Controls.CrownLabel lbDonViCongTac;
         private ReaLTaiizor.Controls.CrownLabel crownLabel23;
-        private ReaLTaiizor.Controls.CrownLabel crownLabel2;
+        private ReaLTaiizor.Controls.CrownLabel lbTinhTrang;
         private ReaLTaiizor.Controls.CrownLabel crownLabel22;
         private ReaLTaiizor.Controls.CrownLabel crownLabel37;
         private ReaLTaiizor.Controls.CrownLabel crownLabel31;

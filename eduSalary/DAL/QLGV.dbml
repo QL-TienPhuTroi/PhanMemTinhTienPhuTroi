@@ -9,13 +9,13 @@
       <Association Name="CHUCDANHNN_BACLUONG" Member="CHUCDANHNN" ThisKey="MASOCD" OtherKey="MASOCD" Type="CHUCDANHNN" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
-    <Type Name="TAIKHOAN">
-      <Column Name="MAGV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MATKHAU" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
-      <Column Name="MAQTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="GIAOVIEN_TAIKHOAN" Member="GIAOVIEN" ThisKey="MAGV" OtherKey="MAGV" Type="GIAOVIEN" IsForeignKey="true" />
-      <Association Name="QUYENTRUYCAP_TAIKHOAN" Member="QUYENTRUYCAP" ThisKey="MAQTC" OtherKey="MAQTC" Type="QUYENTRUYCAP" IsForeignKey="true" />
+  <Table Name="dbo.THOIGIANDAY" Member="THOIGIANDAYs">
+    <Type Name="THOIGIANDAY">
+      <Column Name="MATG" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENTIET" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GIOBATDAU" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="GIOKETTHUC" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Association Name="THOIGIANDAY_CHITIETLICHDAY" Member="CHITIETLICHDAYs" ThisKey="MATG" OtherKey="TIETDAY" Type="CHITIETLICHDAY" />
     </Type>
   </Table>
   <Table Name="dbo.BANGCAP" Member="BANGCAPs">
@@ -44,6 +44,16 @@
       <Column Name="MAGV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="CHUCVU_CHITIETCHUCVU" Member="CHUCVU" ThisKey="MACV" OtherKey="MACV" Type="CHUCVU" IsForeignKey="true" />
       <Association Name="GIAOVIEN_CHITIETCHUCVU" Member="GIAOVIEN" ThisKey="MAGV" OtherKey="MAGV" Type="GIAOVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHITIETLICHDAY" Member="CHITIETLICHDAYs">
+    <Type Name="CHITIETLICHDAY">
+      <Column Name="MALICH" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="THU" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="NGAYDAY" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TIETDAY" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="THOIGIANDAY_CHITIETLICHDAY" Member="THOIGIANDAY" ThisKey="TIETDAY" OtherKey="MATG" Type="THOIGIANDAY" IsForeignKey="true" />
+      <Association Name="LICHDAY_CHITIETLICHDAY" Member="LICHDAY" ThisKey="MALICH" OtherKey="MALICH" Type="LICHDAY" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CHUCDANHNN" Member="CHUCDANHNNs">
@@ -88,6 +98,7 @@
   <Table Name="dbo.GIAOVIEN" Member="GIAOVIENs">
     <Type Name="GIAOVIEN">
       <Column Name="MAGV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TRANGTHAI" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="NGAYSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="GIOITINH" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
@@ -104,24 +115,25 @@
       <Column Name="MASOCD" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="BAC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="MACM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="GIAOVIEN_TAIKHOAN" Member="TAIKHOAN" ThisKey="MAGV" OtherKey="MAGV" Type="TAIKHOAN" Cardinality="One" />
       <Association Name="GIAOVIEN_CHITIETBANGCAP" Member="CHITIETBANGCAPs" ThisKey="MAGV" OtherKey="MAGV" Type="CHITIETBANGCAP" />
       <Association Name="GIAOVIEN_CHITIETCHUCVU" Member="CHITIETCHUCVUs" ThisKey="MAGV" OtherKey="MAGV" Type="CHITIETCHUCVU" />
       <Association Name="GIAOVIEN_CHUNHIEM" Member="CHUNHIEMs" ThisKey="MAGV" OtherKey="MAGV" Type="CHUNHIEM" />
-      <Association Name="GIAOVIEN_LICHDAY" Member="LICHDAY" ThisKey="MAGV" OtherKey="MAGV" Type="LICHDAY" Cardinality="One" />
+      <Association Name="GIAOVIEN_LICHDAY" Member="LICHDAYs" ThisKey="MAGV" OtherKey="MAGV" Type="LICHDAY" />
+      <Association Name="GIAOVIEN_TAIKHOAN" Member="TAIKHOAN" ThisKey="MAGV" OtherKey="MAGV" Type="TAIKHOAN" Cardinality="One" />
       <Association Name="BACLUONG_GIAOVIEN" Member="BACLUONG" ThisKey="MASOCD,BAC" OtherKey="MASOCD,BAC" Type="BACLUONG" IsForeignKey="true" />
       <Association Name="CHUYENMON_GIAOVIEN" Member="CHUYENMON" ThisKey="MACM" OtherKey="MACM" Type="CHUYENMON" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.LICHDAY" Member="LICHDAYs">
     <Type Name="LICHDAY">
-      <Column Name="MAGV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="NGAYTRONGTUAN" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
-      <Column Name="TIETBATDAU" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TIETKETTHUC" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="BUOI" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="MALICH" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MAGV" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="MAMH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="MALP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="THOIGIANBATDAU" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="THOIGIANKETTHUC" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NAMHOC" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="LICHDAY_CHITIETLICHDAY" Member="CHITIETLICHDAYs" ThisKey="MALICH" OtherKey="MALICH" Type="CHITIETLICHDAY" />
       <Association Name="GIAOVIEN_LICHDAY" Member="GIAOVIEN" ThisKey="MAGV" OtherKey="MAGV" Type="GIAOVIEN" IsForeignKey="true" />
       <Association Name="LOPHOC_LICHDAY" Member="LOPHOC" ThisKey="MALP" OtherKey="MALP" Type="LOPHOC" IsForeignKey="true" />
       <Association Name="MONHOC_LICHDAY" Member="MONHOC" ThisKey="MAMH" OtherKey="MAMH" Type="MONHOC" IsForeignKey="true" />
@@ -149,6 +161,15 @@
       <Column Name="MAQTC" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TENQTC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="QUYENTRUYCAP_TAIKHOAN" Member="TAIKHOANs" ThisKey="MAQTC" OtherKey="MAQTC" Type="TAIKHOAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
+    <Type Name="TAIKHOAN">
+      <Column Name="MAGV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MATKHAU" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="MAQTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="GIAOVIEN_TAIKHOAN" Member="GIAOVIEN" ThisKey="MAGV" OtherKey="MAGV" Type="GIAOVIEN" IsForeignKey="true" />
+      <Association Name="QUYENTRUYCAP_TAIKHOAN" Member="QUYENTRUYCAP" ThisKey="MAQTC" OtherKey="MAQTC" Type="QUYENTRUYCAP" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

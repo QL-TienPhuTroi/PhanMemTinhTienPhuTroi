@@ -64,7 +64,7 @@ namespace GUI.GroupAminGUI
 
             if (gv_bll.removeGV(pMaGV))
             {
-                MessageBox.Show("ĐÃ XÓA THÀNH CÔNG GIÁO VIÊN " + pTenGV, "PHẦN MỀM TÍNH PHỤ TRỘI");
+                MessageBox.Show("ĐÃ XÓA THÀNH CÔNG GIÁO VIÊN " + pTenGV.ToUpper(), "PHẦN MỀM TÍNH PHỤ TRỘI");
                 loadDataTeacher();
             }
             else

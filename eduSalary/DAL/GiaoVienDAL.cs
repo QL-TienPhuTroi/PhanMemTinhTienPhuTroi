@@ -22,28 +22,27 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN
         public List<GiaoVienDTO> getDataGiaoVien()
         {
-            var query = from gv in qlgv.GIAOVIENs select gv;
-
-            var giaoviens = query.ToList().ConvertAll(nv => new GiaoVienDTO()
+            var giaoviens = from gv in qlgv.GIAOVIENs where gv.TRANGTHAI == true select new GiaoVienDTO()
             {
-                magv = nv.MAGV,
-                hoten = nv.HOTEN,
-                ngaysinh = (DateTime)nv.NGAYSINH,
-                gioitinh = nv.GIOITINH,
-                diachi = nv.DIACHI,
-                sodienthoai = nv.SODIENTHOAI,
-                cccd = nv.CCCD,
-                email = nv.EMAIL,
-                ngayvaotruong = (DateTime)nv.NGAYVAOTRUONG,
-                ngayvaodang = (DateTime)nv.NGAYVAODANG,
-                donvicongtac = nv.DONVICONGTAC,
-                dantoc = nv.DANTOC,
-                tongiao = nv.TONGIAO,
-                thamnien = (int)nv.THAMNIEN,
-                masocd = nv.MASOCD,
-                bac = nv.BAC,
-                macm = nv.MACM
-            });
+                magv = gv.MAGV,
+                trangthai = (bool)gv.TRANGTHAI,
+                hoten = gv.HOTEN,
+                ngaysinh = (DateTime)gv.NGAYSINH,
+                gioitinh = gv.GIOITINH,
+                diachi = gv.DIACHI,
+                sodienthoai = gv.SODIENTHOAI,
+                cccd = gv.CCCD,
+                email = gv.EMAIL,
+                ngayvaotruong = (DateTime)gv.NGAYVAOTRUONG,
+                ngayvaodang = (DateTime)gv.NGAYVAODANG,
+                donvicongtac = gv.DONVICONGTAC,
+                dantoc = gv.DANTOC,
+                tongiao = gv.TONGIAO,
+                thamnien = (int)gv.THAMNIEN,
+                masocd = gv.MASOCD,
+                bac = gv.BAC,
+                macm = gv.MACM
+            };
 
             List<GiaoVienDTO> lst_gv = giaoviens.ToList();
 
@@ -53,15 +52,13 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN ĐƯỢC LỌC
         public List<GiaoVienLocDTO> getDataGiaoVienLoc()
         {
-            var query = from gv in qlgv.GIAOVIENs select gv;
-
-            var giaoviens = query.ToList().ConvertAll(nv => new GiaoVienLocDTO()
+            var giaoviens = from gv in qlgv.GIAOVIENs  where gv.TRANGTHAI == true select new GiaoVienLocDTO()
             {
-                magv = nv.MAGV,
-                hoten = nv.HOTEN,
-                ngaysinh = (DateTime)nv.NGAYSINH,
-                gioitinh = nv.GIOITINH,
-            });
+                magv = gv.MAGV,
+                hoten = gv.HOTEN,
+                ngaysinh = (DateTime)gv.NGAYSINH,
+                gioitinh = gv.GIOITINH,
+            };
 
             List<GiaoVienLocDTO> lst_gv = giaoviens.ToList();
 
@@ -71,15 +68,13 @@ namespace DAL
         //------------------ TÌM GIÁO VIÊN ĐƯỢC LỌC
         public List<GiaoVienLocDTO> findDataGiaoVienLoc(string pValue)
         {
-            var query = from gv in qlgv.GIAOVIENs where gv.MAGV.Contains(pValue) || gv.HOTEN.Contains(pValue) select gv;
-
-            var giaoviens = query.ToList().ConvertAll(nv => new GiaoVienLocDTO() 
+            var giaoviens = from gv in qlgv.GIAOVIENs where gv.MAGV.Contains(pValue) || gv.HOTEN.Contains(pValue) && gv.TRANGTHAI == true select new GiaoVienLocDTO() 
             {
-                magv = nv.MAGV,
-                hoten = nv.HOTEN,
-                ngaysinh = (DateTime)nv.NGAYSINH,
-                gioitinh = nv.GIOITINH,
-            });
+                magv = gv.MAGV,
+                hoten = gv.HOTEN,
+                ngaysinh = (DateTime)gv.NGAYSINH,
+                gioitinh = gv.GIOITINH,
+            };
 
             List<GiaoVienLocDTO> lst_gv = giaoviens.ToList();
 
@@ -89,28 +84,57 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN THEO MÃ GIÁO VIÊN
         public List<GiaoVienDTO> getDataGiaoVienTheoMa(string pMaGV)
         {
-            var query = from gv in qlgv.GIAOVIENs where gv.MAGV == pMaGV select gv;
-
-            var giaoviens = query.ToList().ConvertAll(nv => new GiaoVienDTO()
+            var giaoviens = from gv in qlgv.GIAOVIENs where gv.MAGV == pMaGV && gv.TRANGTHAI == true select new GiaoVienDTO()
             {
-                magv = nv.MAGV,
-                hoten = nv.HOTEN,
-                ngaysinh = (DateTime)nv.NGAYSINH,
-                gioitinh = nv.GIOITINH,
-                diachi = nv.DIACHI,
-                sodienthoai = nv.SODIENTHOAI,
-                cccd = nv.CCCD,
-                email = nv.EMAIL,
-                ngayvaotruong = (DateTime)nv.NGAYVAOTRUONG,
-                ngayvaodang = (DateTime)nv.NGAYVAODANG,
-                donvicongtac = nv.DONVICONGTAC,
-                dantoc = nv.DANTOC,
-                tongiao = nv.TONGIAO,
-                thamnien = (int)nv.THAMNIEN,
-                masocd = nv.MASOCD,
-                bac = nv.BAC,
-                macm = nv.MACM,
-            });
+                magv = gv.MAGV,
+                trangthai = (bool)gv.TRANGTHAI,
+                hoten = gv.HOTEN,
+                ngaysinh = (DateTime)gv.NGAYSINH,
+                gioitinh = gv.GIOITINH,
+                diachi = gv.DIACHI,
+                sodienthoai = gv.SODIENTHOAI,
+                cccd = gv.CCCD,
+                email = gv.EMAIL,
+                ngayvaotruong = (DateTime)gv.NGAYVAOTRUONG,
+                ngayvaodang = (DateTime)gv.NGAYVAODANG,
+                donvicongtac = gv.DONVICONGTAC,
+                dantoc = gv.DANTOC,
+                tongiao = gv.TONGIAO,
+                thamnien = (int)gv.THAMNIEN,
+                masocd = gv.MASOCD,
+                bac = gv.BAC,
+                macm = gv.MACM,
+            };
+
+            List<GiaoVienDTO> lst_gv = giaoviens.ToList();
+
+            return lst_gv;
+        }
+
+        //------------------ LẤY DỮ LIỆU GIÁO VIÊN THEO TÊN CHUYÊN MÔN
+        public List<GiaoVienDTO> getDataGiaoVienTheoCM(string pTenMH)
+        {
+            var giaoviens = from gv in qlgv.GIAOVIENs join cm in qlgv.CHUYENMONs on gv.MACM equals cm.MACM where cm.TENCM == pTenMH && gv.TRANGTHAI == true join ctcv in qlgv.CHITIETCHUCVUs on gv.MAGV equals ctcv.MAGV where ctcv.MACV == 4 select new GiaoVienDTO()
+            {
+                magv = gv.MAGV,
+                trangthai = (bool)gv.TRANGTHAI,
+                hoten = gv.HOTEN,
+                ngaysinh = (DateTime)gv.NGAYSINH,
+                gioitinh = gv.GIOITINH,
+                diachi = gv.DIACHI,
+                sodienthoai = gv.SODIENTHOAI,
+                cccd = gv.CCCD,
+                email = gv.EMAIL,
+                ngayvaotruong = (DateTime)gv.NGAYVAOTRUONG,
+                ngayvaodang = (DateTime)gv.NGAYVAODANG,
+                donvicongtac = gv.DONVICONGTAC,
+                dantoc = gv.DANTOC,
+                tongiao = gv.TONGIAO,
+                thamnien = (int)gv.THAMNIEN,
+                masocd = gv.MASOCD,
+                bac = gv.BAC,
+                macm = gv.MACM,
+            };
 
             List<GiaoVienDTO> lst_gv = giaoviens.ToList();
 
@@ -120,33 +144,34 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN KHÔNG TỒN TẠI TRONG CHỦ NHIỆM
         public List<GiaoVienDTO> getDataGiaoVienKhongTonTai(string pNamHoc)
         {
-            var query = qlgv.GIAOVIENs.Where(gv => !qlgv.CHUNHIEMs.Any(cn => cn.MAGV == gv.MAGV && cn.NAMHOC == pNamHoc && cn.TRANGTHAI == true) && qlgv.CHITIETCHUCVUs.Any(ctcv => ctcv.MAGV == gv.MAGV && ctcv.MACV == 4));
+            var query = qlgv.GIAOVIENs.Where(gv => !qlgv.CHUNHIEMs.Any(cn => cn.MAGV == gv.MAGV && cn.NAMHOC == pNamHoc && cn.TRANGTHAI == true) && qlgv.CHITIETCHUCVUs.Any(ctcv => ctcv.MAGV == gv.MAGV && ctcv.MACV == 4) && gv.TRANGTHAI == true);
 
-            var giaoviens = query.ToList().ConvertAll(nv => new GiaoVienDTO()
+            var giaoviens = query.ToList().ConvertAll(gv => new GiaoVienDTO()
             {
-                magv = nv.MAGV,
-                hoten = nv.HOTEN,
-                ngaysinh = (DateTime)nv.NGAYSINH,
-                gioitinh = nv.GIOITINH,
-                diachi = nv.DIACHI,
-                sodienthoai = nv.SODIENTHOAI,
-                cccd = nv.CCCD,
-                email = nv.EMAIL,
-                ngayvaotruong = (DateTime)nv.NGAYVAOTRUONG,
-                ngayvaodang = (DateTime)nv.NGAYVAODANG,
-                donvicongtac = nv.DONVICONGTAC,
-                dantoc = nv.DANTOC,
-                tongiao = nv.TONGIAO,
-                thamnien = (int)nv.THAMNIEN,
-                masocd = nv.MASOCD,
-                bac = nv.BAC,
-                macm = nv.MACM
+                magv = gv.MAGV,
+                trangthai = (bool)gv.TRANGTHAI,
+                hoten = gv.HOTEN,
+                ngaysinh = (DateTime)gv.NGAYSINH,
+                gioitinh = gv.GIOITINH,
+                diachi = gv.DIACHI,
+                sodienthoai = gv.SODIENTHOAI,
+                cccd = gv.CCCD,
+                email = gv.EMAIL,
+                ngayvaotruong = (DateTime)gv.NGAYVAOTRUONG,
+                ngayvaodang = (DateTime)gv.NGAYVAODANG,
+                donvicongtac = gv.DONVICONGTAC,
+                dantoc = gv.DANTOC,
+                tongiao = gv.TONGIAO,
+                thamnien = (int)gv.THAMNIEN,
+                masocd = gv.MASOCD,
+                bac = gv.BAC,
+                macm = gv.MACM
             });
 
             List<GiaoVienDTO> lst_gv = giaoviens.ToList();
 
             return lst_gv;
-        }
+        }                
 
         //------------------ LẤY TÊN GIÁO VIÊN
         public string getNameGiaoVien(string pCode)
@@ -162,6 +187,7 @@ namespace DAL
             GIAOVIEN gvs = new GIAOVIEN();
 
             gvs.MAGV = gv.magv;
+            gvs.TRANGTHAI = gv.trangthai;
             gvs.HOTEN = gv.hoten;
             gvs.NGAYSINH = gv.ngaysinh;
             gvs.GIOITINH = gv.gioitinh;
@@ -202,6 +228,7 @@ namespace DAL
             GIAOVIEN gvs = qlgv.GIAOVIENs.Where(t => t.MAGV == gv.magv).FirstOrDefault();
 
             gvs.MAGV = gv.magv;
+            gvs.TRANGTHAI = gv.trangthai;
             gvs.HOTEN = gv.hoten;
             gvs.NGAYSINH = gv.ngaysinh;
             gvs.GIOITINH = gv.gioitinh;

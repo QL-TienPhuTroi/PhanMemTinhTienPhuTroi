@@ -291,6 +291,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTeachingAssignment";
             this.Padding = new System.Windows.Forms.Padding(15);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmTeachingAssignment";
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();

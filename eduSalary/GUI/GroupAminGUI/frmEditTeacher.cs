@@ -43,6 +43,14 @@ namespace GUI.GroupAminGUI
             try
             {
                 gv_dto.magv = pMaGV;
+                if (cboTrangThai.SelectedItem.ToString() == "Đang dạy")
+                {
+                    gv_dto.trangthai = true;
+                }
+                else
+                {
+                    gv_dto.trangthai = false;
+                }
                 gv_dto.hoten = txtHoTen.Text;
                 gv_dto.ngaysinh = DateTime.Parse(dtpNgaySinh.Value.ToString());
                 if (rdoNam.Checked)
@@ -68,7 +76,7 @@ namespace GUI.GroupAminGUI
                 gv_dto.macm = int.Parse(cboChuyenMon.SelectedValue.ToString());
 
                 gv_bll.editGV(gv_dto);
-                MessageBox.Show("GIÁO VIÊN " + gv_dto.hoten + " ĐÃ ĐƯỢC CẬP NHẬT THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                MessageBox.Show("GIÁO VIÊN " + gv_dto.hoten.ToUpper() + " ĐÃ ĐƯỢC CẬP NHẬT THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
                 this.Close();
             }
             catch (Exception ex)
@@ -82,6 +90,7 @@ namespace GUI.GroupAminGUI
             loadDataChucDanh();
             loadDataChuyenMon();
             loadDataBacLuong();
+            loadDataTrangThai();
             loadData();
         }
 
@@ -91,6 +100,14 @@ namespace GUI.GroupAminGUI
 
 
             txtHoTen.Text = lst_gv[0].hoten;
+            if (lst_gv[0].trangthai)
+            {
+                cboTrangThai.Text = "Đang dạy";
+            }
+            else
+            {
+                cboTrangThai.Text = "Nghỉ dạy";
+            }
             dtpNgaySinh.Text = lst_gv[0].ngaysinh.ToString();
             if(lst_gv[0].gioitinh == "Nam")
             {
@@ -136,6 +153,13 @@ namespace GUI.GroupAminGUI
             cboChuyenMon.DataSource = cm_bll.getDataChuyenMon();
             cboChuyenMon.DisplayMember = "TENCM";
             cboChuyenMon.ValueMember = "MACM";
+        }
+
+        private void loadDataTrangThai()
+        {
+            cboTrangThai.Items.Clear(); ;
+            cboTrangThai.Items.Add("Đang dạy");
+            cboTrangThai.Items.Add("Nghỉ dạy");
         }
     }
 }

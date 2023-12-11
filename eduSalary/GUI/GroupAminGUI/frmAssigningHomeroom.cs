@@ -175,6 +175,7 @@ namespace GUI.GroupAminGUI
                     {
                         fAddHomerooms = new frmAddHomerooms(wdg.PMaLP, wdg.PTenLP, cboYear.SelectedItem.ToString());
                         fAddHomerooms.ShowDialog();
+                        loadClassrommAllItems();
                     }
                     else
                     {
@@ -202,6 +203,7 @@ namespace GUI.GroupAminGUI
                             {
 
                                 MessageBox.Show("GIÁO VIÊN " + pHoTen.ToUpper() + " ĐÃ KHÔNG CÒN LÀ CHỦ NHIỆM LỚP!", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                                loadClassrommAllItems();
                             }
                             else
                             {
@@ -216,8 +218,18 @@ namespace GUI.GroupAminGUI
                 {
                     var wdg = (ClassroomUI)ss;
 
-                    fEditHomerooms = new frmEditHomerooms(wdg.PMaLP, wdg.PTenLP, cboYear.SelectedItem.ToString());
-                    fEditHomerooms.ShowDialog();
+                    cn_old = cn_bll.findTeacherNow(wdg.PMaLP, cboYear.SelectedItem.ToString());
+
+                    if (cn_old == null)
+                    {
+                        MessageBox.Show("LỚP CHƯA CÓ GIÁO VIÊN CHỦ NHIỆM!", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                    }
+                    else
+                    {
+                        fEditHomerooms = new frmEditHomerooms(wdg.PMaLP, wdg.PTenLP, cboYear.SelectedItem.ToString());
+                        fEditHomerooms.ShowDialog();
+                        loadClassrommAllItems();
+                    }
                 };
             }
         }

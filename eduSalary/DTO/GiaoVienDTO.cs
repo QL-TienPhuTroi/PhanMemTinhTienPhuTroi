@@ -9,6 +9,7 @@ namespace DTO
     public class GiaoVienDTO
     {
         public string magv { get; set; }
+        public bool trangthai { get; set; }
         public string hoten {  get; set; }  
         public DateTime ngaysinh { get; set; }
         public string gioitinh { get; set; }

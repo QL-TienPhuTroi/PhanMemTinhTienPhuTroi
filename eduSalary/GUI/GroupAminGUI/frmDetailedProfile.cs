@@ -52,6 +52,14 @@ namespace GUI.GroupAminGUI
 
 
             lbMaGV.Text = lstGV[0].magv;
+            if (lstGV[0].trangthai)
+            {
+                lbTinhTrang.Text = "Đang dạy";
+            }
+            else
+            {
+                lbTinhTrang.Text = "Nghỉ dạy";
+            }
             lbHoTen.Text = lstGV[0].hoten;
             lbNgaySinh.Text = lstGV[0].ngaysinh.ToString("dd/MM/yyyy");
             lbGioiTinh.Text = lstGV[0].gioitinh;
