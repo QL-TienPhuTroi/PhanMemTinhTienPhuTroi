@@ -23,6 +23,8 @@ namespace GUI.GroupAminGUI
         frmAddDetailTeaching fAddDetailTeaching;
 
         private string pMaLP, pTenLP, pNamHoc, pMaLich, pTenMH, pMaGV;
+        private int pMaMH;
+        private DateTime pThoiGianBatDau;
 
         public frmAddTeaching(string _malp, string _tenlp, string _namhoc)
         {
@@ -43,8 +45,10 @@ namespace GUI.GroupAminGUI
             pMaLich = dgvTeachingSchedule.CurrentRow.Cells[0].Value.ToString();
             pMaGV = dgvTeachingSchedule.CurrentRow.Cells[1].Value.ToString();
             pTenMH = dgvTeachingSchedule.CurrentRow.Cells[2].Value.ToString();
+            pThoiGianBatDau = DateTime.Parse(dgvTeachingSchedule.CurrentRow.Cells[4].Value.ToString());
+            pMaMH = int.Parse(cboMH.SelectedValue.ToString());
 
-            fAddDetailTeaching = new frmAddDetailTeaching(pMaLich, pTenLP, pTenMH, pMaGV);
+            fAddDetailTeaching = new frmAddDetailTeaching(pMaLich, pMaLP, pTenLP, pTenMH, pMaGV, pThoiGianBatDau, pMaMH);
             fAddDetailTeaching.ShowDialog();
         }
 

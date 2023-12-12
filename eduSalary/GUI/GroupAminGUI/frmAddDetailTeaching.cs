@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,19 +20,22 @@ namespace GUI.GroupAminGUI
         ChiTietLichDayBLL ctld_bll = new ChiTietLichDayBLL();
         ChiTietLichDayDTO ctld_dto = new ChiTietLichDayDTO();
 
-        string pMaLich, pTenLP, pTenMH, pMaGV;
-        DateTime pNgayDay;
-        int pTietDay;
+        string pMaLich, pMaLP, pTenLP, pTenMH, pMaGV;
+        DateTime pNgayDay, pThoiGianBatDau;
+        int pTietDay, pMaMH;
 
         frmDetailLesson fDetailLesson = new frmDetailLesson();
 
-        public frmAddDetailTeaching(string _malich, string _tenlop, string _tenmh, string _magv)
+        public frmAddDetailTeaching(string _malich, string _malop,string _tenlop, string _tenmh, string _magv, DateTime _thoigianbatdau, int _mamh)
         {
             InitializeComponent();
             pMaLich = _malich;
+            pMaLP = _malop;
             pTenLP = _tenlop;
             pTenMH = _tenmh;
             pMaGV = _magv;
+            pMaMH = _mamh;
+            pThoiGianBatDau = _thoigianbatdau;
             this.Load += FrmAddDetailTeaching_Load;
             lbDetail.Click += LbDetail_Click;
             btnFinish.Click += BtnFinish_Click;
@@ -65,18 +69,39 @@ namespace GUI.GroupAminGUI
         {
             try
             {
-                for (int i = 0; i <= 36; i++)
-                {
-                    ctld_dto.malich = pMaLich;
-                    ctld_dto.thu = GetDayOfWeek(dtpThu.Value);
-                    ctld_dto.ngayday = dtpThu.Value.AddDays(i * 7);
-                    ctld_dto.tietday = int.Parse(cboLesson.SelectedValue.ToString());
+                DateTime pNgayDay = dtpThu.Value;
+                int pTietDay = int.Parse(cboLesson.SelectedValue.ToString());
+                string _tenmhcl = ctld_bll.getNameLessonCungLop(pMaLP, pNgayDay, pTietDay);
+                string _tenmhkl = ctld_bll.getNameLessonKhacLop(pMaGV, pNgayDay, pTietDay);
+                string _tenlp = ctld_bll.getNameClassroom(pNgayDay, pTietDay);
 
-                    ctld_bll.addCTLD(ctld_dto);
+                if(ctld_bll.checkTrungMon(pMaMH, pNgayDay, pTietDay))
+                {
+                    MessageBox.Show("MÔN " + pTenMH.ToUpper() + " ĐÃ ĐƯỢC PHÂN LỊCH VÀO TIẾT " + pTietDay + " CỦA LỚP " + pTenLP + " NÀY RỒI!", "PHẦN MỀM TÍNH PHỤ TRỘI");
                 }
-                MessageBox.Show("LỊCH DẠY ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
-                loadDataDetailTeaching();
-                loadLesson();
+                else if (ctld_bll.checkTrungLichCungLop(pMaLP, pNgayDay, pTietDay))
+                {
+                    MessageBox.Show("KHÔNG THỂ THÊM LỊCH DẠY MÔN " + pTenMH.ToUpper() + " DO TRÙNG LỊCH VỚI MÔN " + _tenmhcl.ToUpper(), "PHẦN MỀM TÍNH PHỤ TRỘI");
+                }
+                else if (ctld_bll.checkTrungLichKhacLop(pMaGV, pNgayDay, pTietDay))
+                {
+                    MessageBox.Show("KHÔNG THỂ THÊM LỊCH DẠY DO GIÁO VIÊN " + gv_bll.getNameGiaoVien(pMaGV).ToUpper() + " ĐANG DẠY MÔN " + _tenmhkl.ToUpper() + " Ở LỚP " + _tenlp.ToUpper(), "PHẦN MỀM TÍNH PHỤ TRỘI");
+                }
+                else
+                {
+                    for (int i = 0; i <= 36; i++)
+                    {
+                        ctld_dto.malich = pMaLich;
+                        ctld_dto.thu = GetDayOfWeek(pNgayDay);
+                        ctld_dto.ngayday = pNgayDay.AddDays(i * 7);
+                        ctld_dto.tietday = pTietDay;
+
+                        ctld_bll.addCTLD(ctld_dto);
+                    }
+                    MessageBox.Show("LỊCH DẠY ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                    loadDataDetailTeaching();
+                    loadLesson();
+                }
             }
             catch (Exception ex)
             {
@@ -94,6 +119,7 @@ namespace GUI.GroupAminGUI
             txtMaLD.Text = pMaLich;
             lbTitle.Text = "CHI TIẾT KẾ HOẠCH PHÂN CÔNG GIÁO VIÊN LỚP " + pTenLP;
             lbLesson.Text = "MÔN: " + pTenMH.ToUpper() + " - GIÁO VIÊN: " + gv_bll.getNameGiaoVien(pMaGV).ToUpper();
+            dtpThu.Value = pThoiGianBatDau;
             loadLesson();
             loadDataDetailTeaching();
         }

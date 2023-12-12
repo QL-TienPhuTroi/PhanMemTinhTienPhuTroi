@@ -52,11 +52,62 @@ namespace DAL
             return lst_ctld;
         }
 
-        //------------------ LẤY DỮ LIỆU CHI TIẾT LỊCH DẠY THEO MÃ LỊCH
-        public bool checkTrungLich(DateTime pNgayDay, int pTietDay)
+        //------------------ KIỂM TRA TRÙNG MÔN
+        public bool checkTrungMon(int pMaMH, DateTime pNgayDay, int pTietDay)
         {
-            var query = from ctld in qlgv.CHITIETLICHDAYs where ctld.NGAYDAY == pNgayDay && ctld.TIETDAY == pTietDay select ctld;
+            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH where ld.MAMH == pMaMH && ctld.NGAYDAY == pNgayDay && ctld.TIETDAY == pTietDay select ctld;
             return query.Any();
+        }
+
+        //------------------ KIỂM TRA TRÙNG LỊCH CÙNG LỚP
+        public bool checkTrungLichCungLop(string pMaLop, DateTime pNgayDay, int pTietDay)
+        {
+            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH where ld.MALP == pMaLop && ctld.NGAYDAY == pNgayDay && ctld.TIETDAY == pTietDay select ctld;
+            return query.Any();
+        }
+
+        //------------------ KIỂM TRA TRÙNG LỊCH KHÁC LỚP
+        public bool checkTrungLichKhacLop(string pMaGV, DateTime pNgayDay, int pTietDay)
+        {
+            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH where ld.MAGV == pMaGV && ctld.NGAYDAY == pNgayDay && ctld.TIETDAY == pTietDay select ctld;
+            return query.Any();
+        }
+
+        //------------------ LẤY TÊN MÔN HỌC CÙNG LỚP
+        public string getNameLessonCungLop(string pMaLop, DateTime pNgayDay, int pTietDay)
+        {
+            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH join mh in qlgv.MONHOCs on ld.MAMH equals mh.MAMH where ld.MALP == pMaLop && ctld.NGAYDAY == pNgayDay && ctld.TIETDAY == pTietDay select mh.TENMH;
+            return query.FirstOrDefault();
+        }
+
+        //------------------ LẤY TÊN MÔN HỌC KHÁC LỚP LỚP
+        public string getNameLessonKhacLop(string pMaGV, DateTime pNgayDay, int pTietDay)
+        {
+            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH join mh in qlgv.MONHOCs on ld.MAMH equals mh.MAMH where ld.MAGV == pMaGV && ctld.NGAYDAY == pNgayDay && ctld.TIETDAY == pTietDay select mh.TENMH;
+            return query.FirstOrDefault();
+        }
+
+        //------------------ LẤY TÊN MÔN HỌC
+        public string getNameClassroom(DateTime pNgayDay, int pTietDay)
+        {
+            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH join lp in qlgv.LOPHOCs on ld.MALP equals lp.MALP where ctld.NGAYDAY == pNgayDay && ctld.TIETDAY == pTietDay select lp.TENLP;
+            return query.FirstOrDefault();
+        }
+
+        public DateTime FindStartOfWeek(DateTime ngayBatKy)
+        {
+            DateTime ngayDauTuan = Enumerable.Range(-(int)ngayBatKy.DayOfWeek, 7)
+                                              .Select(offset => ngayBatKy.AddDays(offset))
+                                              .First();
+
+            return ngayDauTuan;
+        }
+
+        //------------------ ĐẾM SỐ TIẾT TRONG 1 TUẦN CỦA GIÁO VIÊN
+        public int getCountLessonInWeek(string pMaGV, DateTime pNgayDauTuan)
+        {
+            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH where ld.MAGV == pMaGV && ctld.NGAYDAY >= pNgayDauTuan && ctld.NGAYDAY <= pNgayDauTuan.AddDays(6) select ctld;
+            return query.Count();
         }
 
         //------------------ THÊM CHI TIẾT LỊCH DẠY

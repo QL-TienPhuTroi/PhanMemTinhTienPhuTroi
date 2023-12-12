@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BLL
 {
@@ -29,10 +30,51 @@ namespace BLL
             return ctld_dal.getDataChiTietLichDay(pMaLich);
         }
 
-        //------------------ LẤY DỮ LIỆU CHI TIẾT LỊCH DẠY THEO MÃ LỊCH
-        public bool checkTrungLich(DateTime pNgayDay, int pTietDay)
+        //------------------ KIỂM TRA TRÙNG MÔN
+        public bool checkTrungMon(int pMaMH, DateTime pNgayDay, int pTietDay)
         {
-            return ctld_dal.checkTrungLich(pNgayDay, pTietDay);
+            return ctld_dal.checkTrungMon(pMaMH, pNgayDay, pTietDay);
+        }
+
+        //------------------ KIỂM TRA TRÙNG LỊCH CÙNG LỚP
+        public bool checkTrungLichCungLop(string pMaLop, DateTime pNgayDay, int pTietDay)
+        {
+            return ctld_dal.checkTrungLichCungLop(pMaLop, pNgayDay, pTietDay);
+        }
+
+        //------------------ KIỂM TRA TRÙNG LỊCH KHÁC LỚP
+        public bool checkTrungLichKhacLop(string pMaGV, DateTime pNgayDay, int pTietDay)
+        {
+            return ctld_dal.checkTrungLichKhacLop(pMaGV, pNgayDay, pTietDay);
+        }
+
+        //------------------ LẤY TÊN MÔN HỌC CÙNG LỚP
+        public string getNameLessonCungLop(string pMaLop, DateTime pNgayDay, int pTietDay)
+        {
+            return ctld_dal.getNameLessonCungLop(pMaLop, pNgayDay, pTietDay);
+        }
+
+        //------------------ LẤY TÊN MÔN HỌC KHÁC LỚP LỚP
+        public string getNameLessonKhacLop(string pMaGV, DateTime pNgayDay, int pTietDay)
+        {
+            return ctld_dal.getNameLessonKhacLop(pMaGV, pNgayDay, pTietDay);
+        }
+
+        //------------------ LẤY TÊN MÔN HỌC
+        public string getNameClassroom(DateTime pNgayDay, int pTietDay)
+        {
+            return ctld_dal.getNameClassroom(pNgayDay, pTietDay);
+        }
+
+        public DateTime FindStartOfWeek(DateTime ngayBatKy)
+        {
+            return ctld_dal.FindStartOfWeek(ngayBatKy);
+        }
+
+        //------------------ ĐẾM SỐ TIẾT TRONG 1 TUẦN CỦA GIÁO VIÊN
+        public int getCountLessonInWeek(string pMaGV, DateTime pNgayDauTuan)
+        {
+            return ctld_dal.getCountLessonInWeek(pMaGV, pNgayDauTuan);
         }
 
         //------------------ THÊM CHI TIẾT LỊCH DẠY
