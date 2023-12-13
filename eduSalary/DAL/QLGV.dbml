@@ -5,6 +5,7 @@
       <Column Name="MASOCD" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="BAC" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="HESOLUONG" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MUCLUONGCOSO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Association Name="BACLUONG_GIAOVIEN" Member="GIAOVIENs" ThisKey="MASOCD,BAC" OtherKey="MASOCD,BAC" Type="GIAOVIEN" />
       <Association Name="CHUCDANHNN_BACLUONG" Member="CHUCDANHNN" ThisKey="MASOCD" OtherKey="MASOCD" Type="CHUCDANHNN" IsForeignKey="true" />
     </Type>
@@ -68,7 +69,7 @@
       <Column Name="MACV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TENCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="CHUCVU_CHITIETCHUCVU" Member="CHITIETCHUCVUs" ThisKey="MACV" OtherKey="MACV" Type="CHITIETCHUCVU" />
-      <Association Name="CHUCVU_DINHMUCTIETDAY" Member="DINHMUCTIETDAY" ThisKey="MACV" OtherKey="MACV" Type="DINHMUCTIETDAY" Cardinality="One" />
+      <Association Name="CHUCVU_DINHMUCTIETDAY" Member="DINHMUCTIETDAYs" ThisKey="MACV" OtherKey="MACV" Type="DINHMUCTIETDAY" />
     </Type>
   </Table>
   <Table Name="dbo.CHUNHIEM" Member="CHUNHIEMs">
@@ -91,7 +92,7 @@
   <Table Name="dbo.DINHMUCTIETDAY" Member="DINHMUCTIETDAYs">
     <Type Name="DINHMUCTIETDAY">
       <Column Name="MACV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SODINHMUCTIETDAY" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SODINHMUCTIETDAY" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="CHUCVU_DINHMUCTIETDAY" Member="CHUCVU" ThisKey="MACV" OtherKey="MACV" Type="CHUCVU" IsForeignKey="true" />
     </Type>
   </Table>
@@ -119,6 +120,7 @@
       <Association Name="GIAOVIEN_CHITIETCHUCVU" Member="CHITIETCHUCVUs" ThisKey="MAGV" OtherKey="MAGV" Type="CHITIETCHUCVU" />
       <Association Name="GIAOVIEN_CHUNHIEM" Member="CHUNHIEMs" ThisKey="MAGV" OtherKey="MAGV" Type="CHUNHIEM" />
       <Association Name="GIAOVIEN_LICHDAY" Member="LICHDAYs" ThisKey="MAGV" OtherKey="MAGV" Type="LICHDAY" />
+      <Association Name="GIAOVIEN_PHUTROI" Member="PHUTROI" ThisKey="MAGV" OtherKey="MAGV" Type="PHUTROI" Cardinality="One" />
       <Association Name="GIAOVIEN_TAIKHOAN" Member="TAIKHOAN" ThisKey="MAGV" OtherKey="MAGV" Type="TAIKHOAN" Cardinality="One" />
       <Association Name="BACLUONG_GIAOVIEN" Member="BACLUONG" ThisKey="MASOCD,BAC" OtherKey="MASOCD,BAC" Type="BACLUONG" IsForeignKey="true" />
       <Association Name="CHUYENMON_GIAOVIEN" Member="CHUYENMON" ThisKey="MACM" OtherKey="MACM" Type="CHUYENMON" IsForeignKey="true" />
@@ -154,6 +156,16 @@
       <Column Name="MAMH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TENMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="MONHOC_LICHDAY" Member="LICHDAYs" ThisKey="MAMH" OtherKey="MAMH" Type="LICHDAY" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHUTROI" Member="PHUTROIs">
+    <Type Name="PHUTROI">
+      <Column Name="MAGV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TONGTIETDAY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOGIODAYTHEM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LUONGGIODAY" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TIENPHUTROI" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="GIAOVIEN_PHUTROI" Member="GIAOVIEN" ThisKey="MAGV" OtherKey="MAGV" Type="GIAOVIEN" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.QUYENTRUYCAP" Member="QUYENTRUYCAPs">

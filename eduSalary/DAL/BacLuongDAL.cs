@@ -23,7 +23,8 @@ namespace DAL
             {
                 masocd = bl.MASOCD,
                 bac = bl.BAC,
-                hesoluong = (decimal)bl.HESOLUONG
+                hesoluong = (decimal)bl.HESOLUONG,
+                mucluongcoso = (decimal)bl.MUCLUONGCOSO
             };
 
             List<BacLuongDTO> lst_bl = bacluongs.ToList();
@@ -38,7 +39,8 @@ namespace DAL
             {
                 masocd = bl.MASOCD,
                 bac = bl.BAC,
-                hesoluong = (decimal)bl.HESOLUONG
+                hesoluong = (decimal)bl.HESOLUONG,
+                mucluongcoso = (decimal)bl.MUCLUONGCOSO
             };
 
             List<BacLuongDTO> lst_bl = bacluongs.ToList();
@@ -53,12 +55,29 @@ namespace DAL
             {
                 masocd = bl.MASOCD,
                 bac = bl.BAC,
-                hesoluong = (decimal)bl.HESOLUONG
+                hesoluong = (decimal)bl.HESOLUONG,
+                mucluongcoso = (decimal)bl.MUCLUONGCOSO
             };
 
             List<BacLuongDTO> lst_bl = bacluongs.ToList();
 
             return lst_bl;
+        }
+
+        //------------------ LẤY MỨC LƯƠNG CƠ SỞ
+        public decimal getMucLuongCoSo(string pMaSoCD, int pBac)
+        {
+            var bacluongs = from bl in qlgv.BACLUONGs where bl.MASOCD == pMaSoCD && bl.BAC == pBac select bl.MUCLUONGCOSO;
+
+            return (decimal)bacluongs.FirstOrDefault();
+        }
+
+        //------------------ LẤY HỆ SỐ LƯƠNG
+        public decimal getHeSoLuong(string pMaSoCD, int pBac)
+        {
+            var bacluongs = from bl in qlgv.BACLUONGs where bl.MASOCD == pMaSoCD && bl.BAC == pBac select bl.HESOLUONG;
+
+            return (decimal)bacluongs.FirstOrDefault();
         }
     }
 }

@@ -34,6 +34,7 @@ namespace GUI.GroupAminGUI
             dgvSalaryGrade.Columns[0].HeaderText = "Mã số chức danh";
             dgvSalaryGrade.Columns[1].HeaderText = "Bậc";
             dgvSalaryGrade.Columns[2].HeaderText = "Hệ số lương";
+            dgvSalaryGrade.Columns[3].HeaderText = "Mức lương cơ sở";
         }
     }
 }

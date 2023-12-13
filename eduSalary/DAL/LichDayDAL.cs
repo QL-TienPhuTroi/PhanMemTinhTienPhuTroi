@@ -68,6 +68,8 @@ namespace DAL
                 namhoc = ld.NAMHOC
             };
 
+            lichdays = lichdays.OrderBy(ld => ld.thoigianbatdau);
+
             List<LichDayLocDTO> lst_ld = lichdays.ToList();
 
             return lst_ld;

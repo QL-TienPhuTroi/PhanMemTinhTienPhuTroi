@@ -57,6 +57,7 @@
     <Compile Include="LichDayBLL.cs" />
     <Compile Include="LopHocBLL.cs" />
     <Compile Include="MonHocBLL.cs" />
+    <Compile Include="PhuTroiBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoanBLL.cs" />
     <Compile Include="ThoiGianDayBLL.cs" />

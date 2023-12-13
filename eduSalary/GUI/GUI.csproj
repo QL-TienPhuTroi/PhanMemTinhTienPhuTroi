@@ -167,6 +167,12 @@
     <Compile Include="GroupAminGUI\frmAddHomerooms.Designer.cs">
       <DependentUpon>frmAddHomerooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupAminGUI\frmExtraness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmExtraness.Designer.cs">
+      <DependentUpon>frmExtraness.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupAminGUI\frmHomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmAddHomerooms.resx">
       <DependentUpon>frmAddHomerooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmExtraness.resx">
+      <DependentUpon>frmExtraness.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmHomeAdmin.resx">
       <DependentUpon>frmHomeAdmin.cs</DependentUpon>

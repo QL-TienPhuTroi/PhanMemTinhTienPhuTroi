@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using System.Runtime.Remoting.Contexts;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DAL
 {
@@ -253,6 +254,20 @@ namespace DAL
         public bool checkGenderTeacher(string pMaGV)
         {
             var query = from gv in qlgv.GIAOVIENs where gv.MAGV == pMaGV && gv.GIOITINH == "Nam" select gv;
+            return query.Any();
+        }
+
+        //------------------ KIỂM TRA CHỨC VỤ HIỆU TRƯỞNG
+        public bool checkHT(string pMaGV)
+        {
+            var query = from gv in qlgv.GIAOVIENs join ctcv in qlgv.CHITIETCHUCVUs on gv.MAGV equals ctcv.MAGV where ctcv.MAGV == pMaGV && ctcv.MACV == 1 select gv;
+            return query.Any();
+        }
+
+        //------------------ KIỂM TRA CHỨC VỤ HIỆU PHÓ
+        public bool checkHP(string pMaGV)
+        {
+            var query = from gv in qlgv.GIAOVIENs join ctcv in qlgv.CHITIETCHUCVUs on gv.MAGV equals ctcv.MAGV where ctcv.MAGV == pMaGV && ctcv.MACV == 2 select gv;
             return query.Any();
         }
 

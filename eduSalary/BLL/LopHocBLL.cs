@@ -28,5 +28,11 @@ namespace BLL
         {
             return lp_dal.getDataLopHocTheoKhoi(pValue);
         }
+
+        //------------------ KIỂM TRA LỚP KHUYÊT TẬT
+        public bool isDisabilities()
+        {
+            return lp_dal.isDisabilities();
+        }
     }
 }

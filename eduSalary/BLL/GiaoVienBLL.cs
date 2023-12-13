@@ -84,6 +84,18 @@ namespace BLL
             return gv_dal.checkGenderTeacher(pMaGV);
         }
 
+        //------------------ KIỂM TRA CHỨC VỤ HIỆU TRƯỞNG
+        public bool checkHT(string pMaGV)
+        {
+            return gv_dal.checkHT(pMaGV);
+        }
+
+        //------------------ KIỂM TRA CHỨC VỤ HIỆU PHÓ
+        public bool checkHP(string pMaGV)
+        {
+            return gv_dal.checkHP(pMaGV);
+        }
+
         //------------------ KIỂM TRA KHÓA CHÍNH
         public bool checkPK(string pMaGV)
         {            

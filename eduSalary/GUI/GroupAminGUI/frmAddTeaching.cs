@@ -48,8 +48,10 @@ namespace GUI.GroupAminGUI
             pThoiGianBatDau = DateTime.Parse(dgvTeachingSchedule.CurrentRow.Cells[4].Value.ToString());
             pMaMH = int.Parse(cboMH.SelectedValue.ToString());
 
-            fAddDetailTeaching = new frmAddDetailTeaching(pMaLich, pMaLP, pTenLP, pTenMH, pMaGV, pThoiGianBatDau, pMaMH);
+            this.Hide();
+            fAddDetailTeaching = new frmAddDetailTeaching(pMaLich, pMaLP, pTenLP, pTenMH, pMaGV, pThoiGianBatDau, pMaMH, pNamHoc);
             fAddDetailTeaching.ShowDialog();
+            this.Show();
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)

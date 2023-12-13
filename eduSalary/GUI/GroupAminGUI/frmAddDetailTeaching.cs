@@ -18,15 +18,20 @@ namespace GUI.GroupAminGUI
         ThoiGianDayBLL tgd_bll =new ThoiGianDayBLL();
         GiaoVienBLL gv_bll =new GiaoVienBLL();
         ChiTietLichDayBLL ctld_bll = new ChiTietLichDayBLL();
+        ChuNhiemBLL cn_bll = new ChuNhiemBLL();
+        BacLuongBLL bl_bll = new BacLuongBLL();
+        LopHocBLL lp_bll = new LopHocBLL();
         ChiTietLichDayDTO ctld_dto = new ChiTietLichDayDTO();
+        PhuTroiBLL pt_bll = new PhuTroiBLL();
+        PhuTroiDTO pt_dto = new PhuTroiDTO();
 
-        string pMaLich, pMaLP, pTenLP, pTenMH, pMaGV;
+        string pMaLich, pMaLP, pTenLP, pTenMH, pMaGV, pNamHoc;
         DateTime pNgayDay, pThoiGianBatDau;
         int pTietDay, pMaMH;
 
         frmDetailLesson fDetailLesson = new frmDetailLesson();
 
-        public frmAddDetailTeaching(string _malich, string _malop,string _tenlop, string _tenmh, string _magv, DateTime _thoigianbatdau, int _mamh)
+        public frmAddDetailTeaching(string _malich, string _malop,string _tenlop, string _tenmh, string _magv, DateTime _thoigianbatdau, int _mamh, string _namhoc)
         {
             InitializeComponent();
             pMaLich = _malich;
@@ -35,6 +40,7 @@ namespace GUI.GroupAminGUI
             pTenMH = _tenmh;
             pMaGV = _magv;
             pMaMH = _mamh;
+            pNamHoc = _namhoc;
             pThoiGianBatDau = _thoigianbatdau;
             this.Load += FrmAddDetailTeaching_Load;
             lbDetail.Click += LbDetail_Click;
@@ -101,6 +107,7 @@ namespace GUI.GroupAminGUI
                     MessageBox.Show("LỊCH DẠY ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
                     loadDataDetailTeaching();
                     loadLesson();
+                    calExtraness();
                 }
             }
             catch (Exception ex)
@@ -171,6 +178,103 @@ namespace GUI.GroupAminGUI
             dgvDetailTeachingSchedule.Columns[1].HeaderText = "Thứ";
             dgvDetailTeachingSchedule.Columns[2].HeaderText = "Ngày dạy";
             dgvDetailTeachingSchedule.Columns[3].HeaderText = "Tiết dạy";
+        }
+
+        private void calExtraness()
+        {
+            List<GiaoVienDTO> lst_Teacher = new List<GiaoVienDTO>();
+            lst_Teacher = gv_bll.getDataGiaoVien();
+
+            for(int i = 0; i < lst_Teacher.Count; i++) 
+            {
+                decimal pHeSoLuong = bl_bll.getHeSoLuong(lst_Teacher[i].masocd, lst_Teacher[i].bac);
+                decimal pMucLuongCoSo = bl_bll.getMucLuongCoSo(lst_Teacher[i].masocd, lst_Teacher[i].bac);
+                decimal pTongLuong = (pHeSoLuong * pMucLuongCoSo) * 12;
+
+                pt_dto.magv = lst_Teacher[i].magv;
+                pt_dto.tongtietday = ctld_bll.getCountLessonInYear(lst_Teacher[i].magv);
+                if (gv_bll.checkHT(lst_Teacher[i].magv))
+                {
+                    if (pt_dto.tongtietday <= 2 * 36)
+                    {
+                        pt_dto.sogiodaythem = 0;
+                    }
+                    else
+                    {
+                        float pSoGioDayThem = (pt_dto.tongtietday - 72) * 45 / 60;
+                        pt_dto.sogiodaythem = pSoGioDayThem;
+                    }
+
+                    pt_dto.luonggioday = (pTongLuong / (2 * 36)) * 52;
+                }
+                else if (gv_bll.checkHP(lst_Teacher[i].magv))
+                {
+                    if (pt_dto.tongtietday <= 4 * 36)
+                    {
+                        pt_dto.sogiodaythem = 0;
+                    }
+                    else
+                    {
+                        float pSoGioDayThem = (pt_dto.tongtietday - 144) * 45 / 60;
+                        pt_dto.sogiodaythem = pSoGioDayThem;
+                    }
+
+                    pt_dto.luonggioday = (pTongLuong / (4 * 36)) * 52;
+                }
+                else if (cn_bll.checkHomeroom(lst_Teacher[i].magv, pNamHoc))
+                {
+                    if (pt_dto.tongtietday <= 13 * 36)
+                    {
+                        pt_dto.sogiodaythem = 0;
+                    }
+                    else
+                    {
+                        float pSoGioDayThem = (pt_dto.tongtietday - 468) * 45 / 60;
+                        pt_dto.sogiodaythem = pSoGioDayThem;
+                    }
+
+                    pt_dto.luonggioday = (pTongLuong / (13 * 36)) * 52;
+                }
+                else if (cn_bll.checkHomeroomKT(lst_Teacher[i].magv, pNamHoc))
+                {
+                    if (pt_dto.tongtietday <= 14 * 36)
+                    {
+                        pt_dto.sogiodaythem = 0;
+                    }
+                    else
+                    {
+                        float pSoGioDayThem = (pt_dto.tongtietday - 504) * 45 / 60;
+                        pt_dto.sogiodaythem = pSoGioDayThem;
+                    }
+
+                    pt_dto.luonggioday = (pTongLuong / (14 * 36)) * 52;
+                }
+                else
+                {
+                    if (pt_dto.tongtietday <= 17 * 36)
+                    {
+                        pt_dto.sogiodaythem = 0;
+                    }
+                    else
+                    {
+                        float pSoGioDayThem = (pt_dto.tongtietday - 612) * 45 / 60;
+                        pt_dto.sogiodaythem = pSoGioDayThem;
+                    }
+
+                    pt_dto.luonggioday = (pTongLuong / (17 * 36)) * 52;
+                }
+
+                pt_dto.tienphutroi = (decimal)pt_dto.sogiodaythem * pt_dto.luonggioday * (decimal)1.5;
+
+                if (pt_bll.checkPK(lst_Teacher[i].magv))
+                {
+                    pt_bll.editPT(pt_dto);
+                }
+                else
+                {
+                    pt_bll.addPT(pt_dto);
+                }
+            }
         }
     }
 }

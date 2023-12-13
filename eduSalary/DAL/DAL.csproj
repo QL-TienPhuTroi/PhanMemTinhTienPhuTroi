@@ -55,6 +55,7 @@
     <Compile Include="LichDayDAL.cs" />
     <Compile Include="LopHocDAL.cs" />
     <Compile Include="MonHocDAL.cs" />
+    <Compile Include="PhuTroiDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

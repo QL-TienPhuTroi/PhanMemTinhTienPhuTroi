@@ -29,5 +29,17 @@ namespace BLL
         {
             return bl_dal.getDataBacLuongTheoMaCD(pMaSoCD);
         }
+
+        //------------------ LẤY MỨC LƯƠNG CƠ SỞ
+        public decimal getMucLuongCoSo(string pMaSoCD, int pBac)
+        {
+            return bl_dal.getMucLuongCoSo(pMaSoCD, pBac);
+        }
+
+        //------------------ LẤY HỆ SỐ LƯƠNG
+        public decimal getHeSoLuong(string pMaSoCD, int pBac)
+        {
+            return bl_dal.getHeSoLuong(pMaSoCD, pBac);
+        }
     }
 }

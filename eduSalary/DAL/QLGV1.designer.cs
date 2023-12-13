@@ -75,6 +75,9 @@ namespace DAL
     partial void InsertMONHOC(MONHOC instance);
     partial void UpdateMONHOC(MONHOC instance);
     partial void DeleteMONHOC(MONHOC instance);
+    partial void InsertPHUTROI(PHUTROI instance);
+    partial void UpdatePHUTROI(PHUTROI instance);
+    partial void DeletePHUTROI(PHUTROI instance);
     partial void InsertQUYENTRUYCAP(QUYENTRUYCAP instance);
     partial void UpdateQUYENTRUYCAP(QUYENTRUYCAP instance);
     partial void DeleteQUYENTRUYCAP(QUYENTRUYCAP instance);
@@ -233,6 +236,14 @@ namespace DAL
 			}
 		}
 		
+		public System.Data.Linq.Table<PHUTROI> PHUTROIs
+		{
+			get
+			{
+				return this.GetTable<PHUTROI>();
+			}
+		}
+		
 		public System.Data.Linq.Table<QUYENTRUYCAP> QUYENTRUYCAPs
 		{
 			get
@@ -262,6 +273,8 @@ namespace DAL
 		
 		private System.Nullable<decimal> _HESOLUONG;
 		
+		private System.Nullable<decimal> _MUCLUONGCOSO;
+		
 		private EntitySet<GIAOVIEN> _GIAOVIENs;
 		
 		private EntityRef<CHUCDANHNN> _CHUCDANHNN;
@@ -276,6 +289,8 @@ namespace DAL
     partial void OnBACChanged();
     partial void OnHESOLUONGChanging(System.Nullable<decimal> value);
     partial void OnHESOLUONGChanged();
+    partial void OnMUCLUONGCOSOChanging(System.Nullable<decimal> value);
+    partial void OnMUCLUONGCOSOChanged();
     #endregion
 		
 		public BACLUONG()
@@ -345,6 +360,26 @@ namespace DAL
 					this._HESOLUONG = value;
 					this.SendPropertyChanged("HESOLUONG");
 					this.OnHESOLUONGChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MUCLUONGCOSO", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> MUCLUONGCOSO
+		{
+			get
+			{
+				return this._MUCLUONGCOSO;
+			}
+			set
+			{
+				if ((this._MUCLUONGCOSO != value))
+				{
+					this.OnMUCLUONGCOSOChanging(value);
+					this.SendPropertyChanging();
+					this._MUCLUONGCOSO = value;
+					this.SendPropertyChanged("MUCLUONGCOSO");
+					this.OnMUCLUONGCOSOChanged();
 				}
 			}
 		}
@@ -1503,7 +1538,7 @@ namespace DAL
 		
 		private EntitySet<CHITIETCHUCVU> _CHITIETCHUCVUs;
 		
-		private EntityRef<DINHMUCTIETDAY> _DINHMUCTIETDAY;
+		private EntitySet<DINHMUCTIETDAY> _DINHMUCTIETDAYs;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1518,7 +1553,7 @@ namespace DAL
 		public CHUCVU()
 		{
 			this._CHITIETCHUCVUs = new EntitySet<CHITIETCHUCVU>(new Action<CHITIETCHUCVU>(this.attach_CHITIETCHUCVUs), new Action<CHITIETCHUCVU>(this.detach_CHITIETCHUCVUs));
-			this._DINHMUCTIETDAY = default(EntityRef<DINHMUCTIETDAY>);
+			this._DINHMUCTIETDAYs = new EntitySet<DINHMUCTIETDAY>(new Action<DINHMUCTIETDAY>(this.attach_DINHMUCTIETDAYs), new Action<DINHMUCTIETDAY>(this.detach_DINHMUCTIETDAYs));
 			OnCreated();
 		}
 		
@@ -1575,32 +1610,16 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CHUCVU_DINHMUCTIETDAY", Storage="_DINHMUCTIETDAY", ThisKey="MACV", OtherKey="MACV", IsUnique=true, IsForeignKey=false)]
-		public DINHMUCTIETDAY DINHMUCTIETDAY
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CHUCVU_DINHMUCTIETDAY", Storage="_DINHMUCTIETDAYs", ThisKey="MACV", OtherKey="MACV")]
+		public EntitySet<DINHMUCTIETDAY> DINHMUCTIETDAYs
 		{
 			get
 			{
-				return this._DINHMUCTIETDAY.Entity;
+				return this._DINHMUCTIETDAYs;
 			}
 			set
 			{
-				DINHMUCTIETDAY previousValue = this._DINHMUCTIETDAY.Entity;
-				if (((previousValue != value) 
-							|| (this._DINHMUCTIETDAY.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._DINHMUCTIETDAY.Entity = null;
-						previousValue.CHUCVU = null;
-					}
-					this._DINHMUCTIETDAY.Entity = value;
-					if ((value != null))
-					{
-						value.CHUCVU = this;
-					}
-					this.SendPropertyChanged("DINHMUCTIETDAY");
-				}
+				this._DINHMUCTIETDAYs.Assign(value);
 			}
 		}
 		
@@ -1631,6 +1650,18 @@ namespace DAL
 		}
 		
 		private void detach_CHITIETCHUCVUs(CHITIETCHUCVU entity)
+		{
+			this.SendPropertyChanging();
+			entity.CHUCVU = null;
+		}
+		
+		private void attach_DINHMUCTIETDAYs(DINHMUCTIETDAY entity)
+		{
+			this.SendPropertyChanging();
+			entity.CHUCVU = this;
+		}
+		
+		private void detach_DINHMUCTIETDAYs(DINHMUCTIETDAY entity)
 		{
 			this.SendPropertyChanging();
 			entity.CHUCVU = null;
@@ -1975,7 +2006,7 @@ namespace DAL
 		
 		private int _MACV;
 		
-		private System.Nullable<decimal> _SODINHMUCTIETDAY;
+		private decimal _SODINHMUCTIETDAY;
 		
 		private EntityRef<CHUCVU> _CHUCVU;
 		
@@ -1985,7 +2016,7 @@ namespace DAL
     partial void OnCreated();
     partial void OnMACVChanging(int value);
     partial void OnMACVChanged();
-    partial void OnSODINHMUCTIETDAYChanging(System.Nullable<decimal> value);
+    partial void OnSODINHMUCTIETDAYChanging(decimal value);
     partial void OnSODINHMUCTIETDAYChanged();
     #endregion
 		
@@ -2019,8 +2050,8 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SODINHMUCTIETDAY", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> SODINHMUCTIETDAY
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SODINHMUCTIETDAY", DbType="Decimal(18,2) NOT NULL", IsPrimaryKey=true)]
+		public decimal SODINHMUCTIETDAY
 		{
 			get
 			{
@@ -2056,12 +2087,12 @@ namespace DAL
 					if ((previousValue != null))
 					{
 						this._CHUCVU.Entity = null;
-						previousValue.DINHMUCTIETDAY = null;
+						previousValue.DINHMUCTIETDAYs.Remove(this);
 					}
 					this._CHUCVU.Entity = value;
 					if ((value != null))
 					{
-						value.DINHMUCTIETDAY = this;
+						value.DINHMUCTIETDAYs.Add(this);
 						this._MACV = value.MACV;
 					}
 					else
@@ -2144,6 +2175,8 @@ namespace DAL
 		
 		private EntitySet<LICHDAY> _LICHDAYs;
 		
+		private EntityRef<PHUTROI> _PHUTROI;
+		
 		private EntityRef<TAIKHOAN> _TAIKHOAN;
 		
 		private EntityRef<BACLUONG> _BACLUONG;
@@ -2198,6 +2231,7 @@ namespace DAL
 			this._CHITIETCHUCVUs = new EntitySet<CHITIETCHUCVU>(new Action<CHITIETCHUCVU>(this.attach_CHITIETCHUCVUs), new Action<CHITIETCHUCVU>(this.detach_CHITIETCHUCVUs));
 			this._CHUNHIEMs = new EntitySet<CHUNHIEM>(new Action<CHUNHIEM>(this.attach_CHUNHIEMs), new Action<CHUNHIEM>(this.detach_CHUNHIEMs));
 			this._LICHDAYs = new EntitySet<LICHDAY>(new Action<LICHDAY>(this.attach_LICHDAYs), new Action<LICHDAY>(this.detach_LICHDAYs));
+			this._PHUTROI = default(EntityRef<PHUTROI>);
 			this._TAIKHOAN = default(EntityRef<TAIKHOAN>);
 			this._BACLUONG = default(EntityRef<BACLUONG>);
 			this._CHUYENMON = default(EntityRef<CHUYENMON>);
@@ -2625,6 +2659,35 @@ namespace DAL
 			set
 			{
 				this._LICHDAYs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="GIAOVIEN_PHUTROI", Storage="_PHUTROI", ThisKey="MAGV", OtherKey="MAGV", IsUnique=true, IsForeignKey=false)]
+		public PHUTROI PHUTROI
+		{
+			get
+			{
+				return this._PHUTROI.Entity;
+			}
+			set
+			{
+				PHUTROI previousValue = this._PHUTROI.Entity;
+				if (((previousValue != value) 
+							|| (this._PHUTROI.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._PHUTROI.Entity = null;
+						previousValue.GIAOVIEN = null;
+					}
+					this._PHUTROI.Entity = value;
+					if ((value != null))
+					{
+						value.GIAOVIEN = this;
+					}
+					this.SendPropertyChanged("PHUTROI");
+				}
 			}
 		}
 		
@@ -3454,6 +3517,205 @@ namespace DAL
 		{
 			this.SendPropertyChanging();
 			entity.MONHOC = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PHUTROI")]
+	public partial class PHUTROI : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MAGV;
+		
+		private System.Nullable<int> _TONGTIETDAY;
+		
+		private System.Nullable<double> _SOGIODAYTHEM;
+		
+		private System.Nullable<decimal> _LUONGGIODAY;
+		
+		private System.Nullable<decimal> _TIENPHUTROI;
+		
+		private EntityRef<GIAOVIEN> _GIAOVIEN;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMAGVChanging(string value);
+    partial void OnMAGVChanged();
+    partial void OnTONGTIETDAYChanging(System.Nullable<int> value);
+    partial void OnTONGTIETDAYChanged();
+    partial void OnSOGIODAYTHEMChanging(System.Nullable<double> value);
+    partial void OnSOGIODAYTHEMChanged();
+    partial void OnLUONGGIODAYChanging(System.Nullable<decimal> value);
+    partial void OnLUONGGIODAYChanged();
+    partial void OnTIENPHUTROIChanging(System.Nullable<decimal> value);
+    partial void OnTIENPHUTROIChanged();
+    #endregion
+		
+		public PHUTROI()
+		{
+			this._GIAOVIEN = default(EntityRef<GIAOVIEN>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAGV", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MAGV
+		{
+			get
+			{
+				return this._MAGV;
+			}
+			set
+			{
+				if ((this._MAGV != value))
+				{
+					if (this._GIAOVIEN.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMAGVChanging(value);
+					this.SendPropertyChanging();
+					this._MAGV = value;
+					this.SendPropertyChanged("MAGV");
+					this.OnMAGVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TONGTIETDAY", DbType="Int")]
+		public System.Nullable<int> TONGTIETDAY
+		{
+			get
+			{
+				return this._TONGTIETDAY;
+			}
+			set
+			{
+				if ((this._TONGTIETDAY != value))
+				{
+					this.OnTONGTIETDAYChanging(value);
+					this.SendPropertyChanging();
+					this._TONGTIETDAY = value;
+					this.SendPropertyChanged("TONGTIETDAY");
+					this.OnTONGTIETDAYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOGIODAYTHEM", DbType="Float")]
+		public System.Nullable<double> SOGIODAYTHEM
+		{
+			get
+			{
+				return this._SOGIODAYTHEM;
+			}
+			set
+			{
+				if ((this._SOGIODAYTHEM != value))
+				{
+					this.OnSOGIODAYTHEMChanging(value);
+					this.SendPropertyChanging();
+					this._SOGIODAYTHEM = value;
+					this.SendPropertyChanged("SOGIODAYTHEM");
+					this.OnSOGIODAYTHEMChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LUONGGIODAY", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> LUONGGIODAY
+		{
+			get
+			{
+				return this._LUONGGIODAY;
+			}
+			set
+			{
+				if ((this._LUONGGIODAY != value))
+				{
+					this.OnLUONGGIODAYChanging(value);
+					this.SendPropertyChanging();
+					this._LUONGGIODAY = value;
+					this.SendPropertyChanged("LUONGGIODAY");
+					this.OnLUONGGIODAYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIENPHUTROI", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> TIENPHUTROI
+		{
+			get
+			{
+				return this._TIENPHUTROI;
+			}
+			set
+			{
+				if ((this._TIENPHUTROI != value))
+				{
+					this.OnTIENPHUTROIChanging(value);
+					this.SendPropertyChanging();
+					this._TIENPHUTROI = value;
+					this.SendPropertyChanged("TIENPHUTROI");
+					this.OnTIENPHUTROIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="GIAOVIEN_PHUTROI", Storage="_GIAOVIEN", ThisKey="MAGV", OtherKey="MAGV", IsForeignKey=true)]
+		public GIAOVIEN GIAOVIEN
+		{
+			get
+			{
+				return this._GIAOVIEN.Entity;
+			}
+			set
+			{
+				GIAOVIEN previousValue = this._GIAOVIEN.Entity;
+				if (((previousValue != value) 
+							|| (this._GIAOVIEN.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._GIAOVIEN.Entity = null;
+						previousValue.PHUTROI = null;
+					}
+					this._GIAOVIEN.Entity = value;
+					if ((value != null))
+					{
+						value.PHUTROI = this;
+						this._MAGV = value.MAGV;
+					}
+					else
+					{
+						this._MAGV = default(string);
+					}
+					this.SendPropertyChanged("GIAOVIEN");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	

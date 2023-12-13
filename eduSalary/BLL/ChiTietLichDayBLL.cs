@@ -77,6 +77,12 @@ namespace BLL
             return ctld_dal.getCountLessonInWeek(pMaGV, pNgayDauTuan);
         }
 
+        //------------------ ĐẾM SỐ TIẾT TRONG 1 NĂM HỌC CỦA GIÁO VIÊN
+        public int getCountLessonInYear(string pMaGV)
+        {
+            return ctld_dal.getCountLessonInYear(pMaGV);
+        }
+
         //------------------ THÊM CHI TIẾT LỊCH DẠY
         public void addCTLD(ChiTietLichDayDTO ctld)
         {

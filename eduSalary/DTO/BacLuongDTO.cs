@@ -11,5 +11,6 @@ namespace DTO
         public string masocd { get; set; }
         public int bac { get; set; }
         public decimal hesoluong { get; set; }
+        public decimal mucluongcoso { get; set; }
     }
 }

@@ -110,6 +110,13 @@ namespace DAL
             return query.Count();
         }
 
+        //------------------ ĐẾM SỐ TIẾT TRONG 1 NĂM HỌC CỦA GIÁO VIÊN
+        public int getCountLessonInYear(string pMaGV)
+        {
+            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH where ld.MAGV == pMaGV select ctld;
+            return query.Count();
+        }
+
         //------------------ THÊM CHI TIẾT LỊCH DẠY
         public void addCTLD(ChiTietLichDayDTO ctld)
         {

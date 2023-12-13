@@ -33,6 +33,8 @@ namespace GUI.GroupAminGUI
         frmAssigningHomeroom fAssigningHomeroom = new frmAssigningHomeroom();
         frmTeachingAssignment fTeacherAssignment = new frmTeachingAssignment();
 
+        frmExtraness fExtraness =new frmExtraness();
+
         public frmMainAdmin(string Code, string Pass)
         {
             InitializeComponent();
@@ -137,12 +139,16 @@ namespace GUI.GroupAminGUI
 
         private void BtnTeachingAssignment_Click(object sender, EventArgs e)
         {
+            this.Hide();
             fTeacherAssignment.ShowDialog();
+            this.Show();
         }
 
         private void BtnHomeroomTeacher_Click(object sender, EventArgs e)
         {
+            this.Hide();
             fAssigningHomeroom.ShowDialog();
+            this.Show();
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
@@ -223,6 +229,13 @@ namespace GUI.GroupAminGUI
             pnlManager.Visible = false;
             pnlAssignment.Visible = false;
             pnlExtraness.Visible = true;
+
+            lbFrmName.Text = "BẢNG LƯƠNG PHỤ TRỘI";
+            pnlBody.Controls.Clear();
+            fExtraness.TopLevel = false;
+            fExtraness.Dock = DockStyle.Fill;
+            pnlBody.Controls.Add(fExtraness);
+            fExtraness.Show();
         }
 
         private void BtnLogout_Click(object sender, EventArgs e)

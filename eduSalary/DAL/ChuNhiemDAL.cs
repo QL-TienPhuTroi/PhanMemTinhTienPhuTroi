@@ -82,5 +82,21 @@ namespace DAL
 
             return lst_cn.FirstOrDefault();
         }
+
+        //------------------ KIỂM TRA GIÁO VIÊN CÓ LÀ CHỦ NHIỆM HAY KHÔNG
+        public bool checkHomeroom(string pMaGV, string pNamHoc)
+        {
+            var query = qlgv.CHUNHIEMs.Where(t => t.MAGV == pMaGV && t.NAMHOC == pNamHoc && t.TRANGTHAI == true);
+           
+            return query.Any();
+        }
+
+        //------------------ KIỂM TRA GIÁO VIÊN CÓ LÀ CHỦ NHIỆM LỚP KHUYẾT TẬT HAY KHÔNG
+        public bool checkHomeroomKT(string pMaGV, string pNamHoc)
+        {
+            var query = from cn in qlgv.CHUNHIEMs join lp in qlgv.LOPHOCs on cn.MALP equals lp.MALP where cn.MAGV == pMaGV && cn.NAMHOC == pNamHoc && cn.TRANGTHAI == true && lp.KHIEMKHUYET == true select cn;
+
+            return query.Any();
+        }
     }
 }

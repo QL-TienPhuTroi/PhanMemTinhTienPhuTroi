@@ -47,5 +47,13 @@ namespace DAL
 
             return lst_lp;
         }
+
+        //------------------ KIỂM TRA LỚP KHUYÊT TẬT
+        public bool isDisabilities()
+        {
+            var query = from lp in qlgv.LOPHOCs where lp.KHIEMKHUYET == true select lp;
+
+            return query.Any();
+        }
     }
 }
