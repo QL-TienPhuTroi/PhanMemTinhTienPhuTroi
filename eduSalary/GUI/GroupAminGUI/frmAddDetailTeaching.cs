@@ -190,6 +190,9 @@ namespace GUI.GroupAminGUI
                 decimal pHeSoLuong = bl_bll.getHeSoLuong(lst_Teacher[i].masocd, lst_Teacher[i].bac);
                 decimal pMucLuongCoSo = bl_bll.getMucLuongCoSo(lst_Teacher[i].masocd, lst_Teacher[i].bac);
                 decimal pTongLuong = (pHeSoLuong * pMucLuongCoSo) * 12;
+                int pLuongGioday;
+                decimal sotuan = (decimal)36 / 52;
+                double sotuans = (36 / 52);
 
                 pt_dto.magv = lst_Teacher[i].magv;
                 pt_dto.tongtietday = ctld_bll.getCountLessonInYear(lst_Teacher[i].magv);
@@ -205,7 +208,8 @@ namespace GUI.GroupAminGUI
                         pt_dto.sogiodaythem = pSoGioDayThem;
                     }
 
-                    pt_dto.luonggioday = (pTongLuong / (2 * 36)) * 52;
+                    pLuongGioday = (int)((pTongLuong / (2 * 36)) * sotuan);
+                    pt_dto.luonggioday = pLuongGioday;
                 }
                 else if (gv_bll.checkHP(lst_Teacher[i].magv))
                 {
@@ -219,7 +223,8 @@ namespace GUI.GroupAminGUI
                         pt_dto.sogiodaythem = pSoGioDayThem;
                     }
 
-                    pt_dto.luonggioday = (pTongLuong / (4 * 36)) * 52;
+                    pLuongGioday = (int)((pTongLuong / (4 * 36)) * sotuan);
+                    pt_dto.luonggioday = pLuongGioday;
                 }
                 else if (cn_bll.checkHomeroom(lst_Teacher[i].magv, pNamHoc))
                 {
@@ -233,7 +238,8 @@ namespace GUI.GroupAminGUI
                         pt_dto.sogiodaythem = pSoGioDayThem;
                     }
 
-                    pt_dto.luonggioday = (pTongLuong / (13 * 36)) * 52;
+                    pLuongGioday = (int)((pTongLuong / (13 * 36)) * sotuan);
+                    pt_dto.luonggioday = pLuongGioday;
                 }
                 else if (cn_bll.checkHomeroomKT(lst_Teacher[i].magv, pNamHoc))
                 {
@@ -247,7 +253,8 @@ namespace GUI.GroupAminGUI
                         pt_dto.sogiodaythem = pSoGioDayThem;
                     }
 
-                    pt_dto.luonggioday = (pTongLuong / (14 * 36)) * 52;
+                    pLuongGioday = (int)((pTongLuong / (14 * 36)) * sotuan);
+                    pt_dto.luonggioday = pLuongGioday;
                 }
                 else
                 {
@@ -261,7 +268,8 @@ namespace GUI.GroupAminGUI
                         pt_dto.sogiodaythem = pSoGioDayThem;
                     }
 
-                    pt_dto.luonggioday = (pTongLuong / (17 * 36)) * 52;
+                    pLuongGioday = (int)((pTongLuong / (17 * 36)) * sotuan);
+                    pt_dto.luonggioday = pLuongGioday;
                 }
 
                 pt_dto.tienphutroi = (decimal)pt_dto.sogiodaythem * pt_dto.luonggioday * (decimal)1.5;
