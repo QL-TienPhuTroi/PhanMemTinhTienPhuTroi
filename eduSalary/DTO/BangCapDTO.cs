@@ -14,6 +14,6 @@ namespace DTO
         public string chuyennganh { get; set; }
         public string hocvi { get; set; }
         public string xeploai { get; set; }
-        public string ngaycap { get; set; }
+        public DateTime ngaycap { get; set; }
     }
 }

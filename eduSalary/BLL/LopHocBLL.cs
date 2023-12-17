@@ -28,11 +28,43 @@ namespace BLL
         {
             return lp_dal.getDataLopHocTheoKhoi(pValue);
         }
-
+        //------------------ LẤY DỮ LIỆU LỚP HỌC THEO MÃ
+        public List<LopHocDTO> getDataLopHocTheoMa(string pValue)
+        {
+            return lp_dal.getDataLopHocTheoMa(pValue);
+        }
         //------------------ KIỂM TRA LỚP KHUYÊT TẬT
         public bool isDisabilities()
         {
             return lp_dal.isDisabilities();
         }
+        //------------------ THÊM LỚP
+        public void addLP(LopHocDTO lp)
+        {
+            lp_dal.addLP(lp);
+        }
+
+        //------------------ XÓA LỚP 
+        public bool removeLP(string pMaLP)
+        {
+            return lp_dal.removeLP(pMaLP);
+        }
+
+        //------------------ SỬA LỚP
+        public void editLP(LopHocDTO lp)
+        {
+            lp_dal.editLP(lp);
+        }
+        //------------------ TÌM LỚP
+        public List<LopHocDTO> findDataLopHoc(string pValue)
+        {
+            return lp_dal.findDataLopHoc(pValue);
+        }
+        //------------------ KTKC
+        public bool checkPK(string pMaLP)
+        {
+            return lp_dal.checkPK(pMaLP);
+        }
+
     }
 }

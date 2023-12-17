@@ -48,11 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BacLuongBLL.cs" />
+    <Compile Include="BangCapBLL.cs" />
     <Compile Include="ChiTietLichDayBLL.cs" />
     <Compile Include="ChucDanhBLL.cs" />
     <Compile Include="ChucVuBLL.cs" />
     <Compile Include="ChuNhiemBLL.cs" />
     <Compile Include="ChuyenMonBLL.cs" />
+    <Compile Include="DinhMucTietDayBLL.cs" />
     <Compile Include="GiaoVienBLL.cs" />
     <Compile Include="LichDayBLL.cs" />
     <Compile Include="LopHocBLL.cs" />

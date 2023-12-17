@@ -15,11 +15,28 @@ namespace GUI.GroupAminGUI
     public partial class frmSalaryGrade : Form
     {
         BacLuongBLL bl_bll = new BacLuongBLL();
-
+        frmEditSalaryGrade fEdit;
+        string pCode;
+        int pBac;
         public frmSalaryGrade()
         {
             InitializeComponent();
             this.Load += FrmSalaryGrade_Load;
+            txtSearch.TextChanged += TxtSearch_TextChanged;
+            btnEdit.Click += BtnEdit_Click;
+
+        }
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            pCode = dgvSalaryGrade.CurrentRow.Cells[0].Value.ToString();
+            pBac = int.Parse(dgvSalaryGrade.CurrentRow.Cells[1].Value.ToString());
+            fEdit = new frmEditSalaryGrade(pCode, pBac);
+            fEdit.ShowDialog();
+            loadDataSalaryGrade();
+        }
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            dgvSalaryGrade.DataSource = bl_bll.findDataBangCapLoc(txtSearch.Text);
         }
 
         private void FrmSalaryGrade_Load(object sender, EventArgs e)

@@ -24,7 +24,7 @@ namespace BLL
             return bl_dal.getDataBacLuongTheoMa(pMaSoCD, pBac);
         }
 
-        //------------------ LẤY DỮ LIỆU BẬC LƯƠNG THEO MÃ SỐ CHỨC DANH VÀ BẬC
+        //------------------ LẤY DỮ LIỆU BẬC LƯƠNG THEO MÃ SỐ CHỨC DANH
         public List<BacLuongDTO> getDataBacLuongTheoMaCD(string pMaSoCD)
         {
             return bl_dal.getDataBacLuongTheoMaCD(pMaSoCD);
@@ -41,5 +41,33 @@ namespace BLL
         {
             return bl_dal.getHeSoLuong(pMaSoCD, pBac);
         }
+
+        //------------------ TÌM BẬC LƯƠNG ĐƯỢC LỌC
+        public List<BacLuongDTO> findDataBangCapLoc(string pValue)
+        {
+            return bl_dal.findDataBacLuongLoc(pValue);
+        }
+        //------------------ THÊM BẬC LƯƠNG
+        public void addBL(BacLuongDTO bl)
+        {
+            bl_dal.addBL(bl);
+        }
+        //------------------ XÓA BẬC LƯƠNG
+        public bool removeBL(string pMaSoCD, int pBac)
+        {
+            return bl_dal.removeBL(pMaSoCD, pBac);
+        }
+
+        //------------------ SỬA BẬC LƯƠNG
+        public void editBL(BacLuongDTO bl)
+        {
+            bl_dal.editBL(bl);
+        }
+        //------------------ KIẾM TRA KHÓA CHÍNH
+        public bool checkPK(string pMaSoCD)
+        {
+            return bl_dal.checkPK(pMaSoCD);
+        }
     }
 }
+

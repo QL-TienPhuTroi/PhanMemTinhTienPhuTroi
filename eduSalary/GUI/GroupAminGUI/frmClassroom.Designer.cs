@@ -38,7 +38,6 @@
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnLoad = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnEdit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnRemove = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -153,7 +152,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnLoad);
             this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Controls.Add(this.btnRemove);
             this.panel2.Controls.Add(this.btnAdd);
@@ -162,28 +160,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(648, 112);
             this.panel2.TabIndex = 4;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.BorderColor = System.Drawing.Color.Transparent;
-            this.btnLoad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoad.FillColor = System.Drawing.Color.Transparent;
-            this.btnLoad.FocusedColor = System.Drawing.Color.White;
-            this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLoad.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLoad.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnLoad.Image = global::GUI.Properties.Resources.refresh;
-            this.btnLoad.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnLoad.Location = new System.Drawing.Point(276, 15);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.PressedColor = System.Drawing.Color.White;
-            this.btnLoad.PressedDepth = 0;
-            this.btnLoad.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnLoad.Size = new System.Drawing.Size(80, 80);
-            this.btnLoad.TabIndex = 4;
             // 
             // btnEdit
             // 
@@ -199,7 +175,7 @@
             this.btnEdit.HoverState.FillColor = System.Drawing.Color.White;
             this.btnEdit.Image = global::GUI.Properties.Resources.pencil1;
             this.btnEdit.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnEdit.Location = new System.Drawing.Point(190, 15);
+            this.btnEdit.Location = new System.Drawing.Point(231, 15);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.PressedColor = System.Drawing.Color.White;
             this.btnEdit.PressedDepth = 0;
@@ -221,7 +197,7 @@
             this.btnRemove.HoverState.FillColor = System.Drawing.Color.White;
             this.btnRemove.Image = global::GUI.Properties.Resources.minus;
             this.btnRemove.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnRemove.Location = new System.Drawing.Point(104, 15);
+            this.btnRemove.Location = new System.Drawing.Point(145, 15);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.PressedColor = System.Drawing.Color.White;
             this.btnRemove.PressedDepth = 0;
@@ -243,7 +219,7 @@
             this.btnAdd.HoverState.FillColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::GUI.Properties.Resources.add;
             this.btnAdd.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnAdd.Location = new System.Drawing.Point(18, 15);
+            this.btnAdd.Location = new System.Drawing.Point(59, 15);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.PressedColor = System.Drawing.Color.White;
             this.btnAdd.PressedDepth = 0;
@@ -316,7 +292,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2CircleButton btnLoad;
         private Guna.UI2.WinForms.Guna2CircleButton btnEdit;
         private Guna.UI2.WinForms.Guna2CircleButton btnRemove;
         private Guna.UI2.WinForms.Guna2CircleButton btnAdd;

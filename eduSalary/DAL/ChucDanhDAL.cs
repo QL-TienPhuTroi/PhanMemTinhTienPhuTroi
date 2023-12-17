@@ -43,5 +43,21 @@ namespace DAL
 
             return lst_cd;
         }
+        //------------------ TÌM CHỨC DANH
+        public List<ChucDanhDTO> findDataChucDanhNNLoc(string pValue)
+        {
+            var chucdanhs = from cd in qlgv.CHUCDANHNNs
+                            where cd.MASOCD.Contains(pValue) || cd.HANGCD.Contains(pValue)
+                            select new ChucDanhDTO()
+                            {
+                                masocd = cd.MASOCD,
+                                hangcd = cd.HANGCD,
+
+                            };
+
+            List<ChucDanhDTO> lst_cd = chucdanhs.ToList();
+
+            return lst_cd;
+        }
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DTO;
 using BLL;
 using TheArtOfDevHtmlRenderer.Adapters;
+using System.Diagnostics;
 
 namespace GUI.GroupAminGUI
 {
@@ -28,7 +29,10 @@ namespace GUI.GroupAminGUI
         frmPosition fPosition = new frmPosition();
         frmCareerTitles fCareerTitles = new frmCareerTitles();
         frmSalaryGrade fSalaryGrade = new frmSalaryGrade();
+        frmLessonNorms fLessonNorms = new frmLessonNorms();
+        frmSubject fSubject = new frmSubject();
         frmClassroom fClassroom = new frmClassroom();
+        frmCertificate fCertificates = new frmCertificate();
 
         frmAssigningHomeroom fAssigningHomeroom = new frmAssigningHomeroom();
         frmTeachingAssignment fTeacherAssignment = new frmTeachingAssignment();
@@ -59,6 +63,10 @@ namespace GUI.GroupAminGUI
             btnPosition.Click += BtnPosition_Click;
             btnCareerTitles.Click += BtnCareerTitles_Click;
             btnSalaryGrade.Click += BtnSalaryGrade_Click;
+            btnLessonNorms.Click += BtnLessonNorms_Click;
+            btnDegree.Click += BtnCertificates_Click; ;
+            btnSubject.Click += BtnSubject_Click;
+
             btnClassroom.Click += BtnClassroom_Click;
 
             btnHomeroomTeacher.Click += BtnHomeroomTeacher_Click;
@@ -72,6 +80,34 @@ namespace GUI.GroupAminGUI
             pCode = Code;
             pPass = Pass;
             pHoTen = gv_bll.getNameGiaoVien(pCode); 
+        }
+
+        private void BtnCertificates_Click(object sender, EventArgs e)
+        {
+            lbFrmName.Text = "QUẢN LÝ BẰNG CẤP";
+            pnlBody.Controls.Clear();
+            fCertificates.TopLevel = false;
+            fCertificates.Dock = DockStyle.Fill;
+            pnlBody.Controls.Add(fCertificates);
+            fCertificates.Show();
+        }
+        private void BtnSubject_Click(object sender, EventArgs e)
+        {
+            lbFrmName.Text = "QUẢN LÝ MÔN HỌC";
+            pnlBody.Controls.Clear();
+            fSubject.TopLevel = false;
+            fSubject.Dock = DockStyle.Fill;
+            pnlBody.Controls.Add(fSubject);
+            fSubject.Show();
+        }
+        private void BtnLessonNorms_Click(object sender, EventArgs e)
+        {
+            lbFrmName.Text = "ĐỊNH MỨC TIẾT DẠY";
+            pnlBody.Controls.Clear();
+            fLessonNorms.TopLevel = false;
+            fLessonNorms.Dock = DockStyle.Fill;
+            pnlBody.Controls.Add(fLessonNorms);
+            fLessonNorms.Show();
         }
 
         private void FrmMainAdmin_Load(object sender, EventArgs e)

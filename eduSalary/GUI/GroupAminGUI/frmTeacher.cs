@@ -29,19 +29,19 @@ namespace GUI.GroupAminGUI
             btnAdd.Click += BtnAdd_Click;
             btnRemove.Click += BtnRemove_Click;
             btnEdit.Click += BtnEdit_Click;
-            btnLoad.Click += BtnLoad_Click;
+
             btnClearText.Click += BtnClearText_Click;
             txtSearch.TextChanged += TxtSearch_TextChanged;
         }
 
         private void TxtSearch_TextChanged(object sender, EventArgs e)
-        {
+       {
             dgvTeacher.DataSource = gv_bll.findDataGiaoVienLoc(txtSearch.Text);
 
-            dgvTeacher.Columns[0].HeaderText = "MSGV";
-            dgvTeacher.Columns[1].HeaderText = "Họ tên";
-            dgvTeacher.Columns[2].HeaderText = "Ngày sinh";
-            dgvTeacher.Columns[3].HeaderText = "Giới tính";
+            //dgvTeacher.Columns[0].HeaderText = "MSGV";
+            //dgvTeacher.Columns[1].HeaderText = "Họ tên";
+            //dgvTeacher.Columns[2].HeaderText = "Ngày sinh";
+            //dgvTeacher.Columns[3].HeaderText = "Giới tính";
         }
 
         private void BtnClearText_Click(object sender, EventArgs e)

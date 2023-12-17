@@ -23,5 +23,10 @@ namespace BLL
         {
             return cd_dal.getDataChucDanhTheoMa(pMaSoCD);
         }
+        //------------------ TÌM CHỨC DANH ĐƯỢC LỌC
+        public List<ChucDanhDTO> findDataChucDanhNNLoc(string pValue)
+        {
+            return cd_dal.findDataChucDanhNNLoc(pValue);
+        }
     }
 }

@@ -111,7 +111,37 @@ namespace DAL
 
             return lst_gv;
         }
+        //------------------ LẤY DỮ LIỆU GIÁO VIÊN THEO MÃ SỐ CHỨC DANH
+        public List<GiaoVienDTO> getDataGiaoVienTheoMaChucDanh(string pMaSoCD)
+        {
+            var giaoviens = from gv in qlgv.GIAOVIENs
+                            where gv.MASOCD == pMaSoCD && gv.TRANGTHAI == true
+                            select new GiaoVienDTO()
+                            {
+                                magv = gv.MAGV,
+                                trangthai = (bool)gv.TRANGTHAI,
+                                hoten = gv.HOTEN,
+                                ngaysinh = (DateTime)gv.NGAYSINH,
+                                gioitinh = gv.GIOITINH,
+                                diachi = gv.DIACHI,
+                                sodienthoai = gv.SODIENTHOAI,
+                                cccd = gv.CCCD,
+                                email = gv.EMAIL,
+                                ngayvaotruong = (DateTime)gv.NGAYVAOTRUONG,
+                                ngayvaodang = (DateTime)gv.NGAYVAODANG,
+                                donvicongtac = gv.DONVICONGTAC,
+                                dantoc = gv.DANTOC,
+                                tongiao = gv.TONGIAO,
+                                thamnien = (int)gv.THAMNIEN,
+                                masocd = gv.MASOCD,
+                                bac = gv.BAC,
+                                macm = gv.MACM,
+                            };
 
+            List<GiaoVienDTO> lst_gv = giaoviens.ToList();
+
+            return lst_gv;
+        }
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN THEO TÊN CHUYÊN MÔN
         public List<GiaoVienDTO> getDataGiaoVienTheoCM(string pTenMH)
         {

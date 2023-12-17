@@ -9,6 +9,6 @@ namespace DTO
     public class DinhMucTietDayDTO
     {
         public int macv { get; set; }
-        public string magv { get; set; }
+        public decimal sodinhmuctietday { get; set; }
     }
 }

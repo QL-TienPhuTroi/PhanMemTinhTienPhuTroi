@@ -138,5 +138,235 @@ namespace GUI.GroupAminGUI
                 }
             }
         }
+
+        private void guna2GradientPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbFrmName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cboChuyenMon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboBac_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboMSCD_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFinish_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoNu_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoNam_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpNgayVD_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpNgayVT_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpNgaySinh_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtThamNien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDanToc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTonGiao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDonVi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCCCD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDiaChi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bigLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

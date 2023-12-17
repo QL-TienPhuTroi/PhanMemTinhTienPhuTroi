@@ -95,17 +95,53 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupAminGUI\frmAddCareerTitles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddCareerTitles.Designer.cs">
+      <DependentUpon>frmAddCareerTitles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddCertificate.Designer.cs">
+      <DependentUpon>frmAddCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddClassroom.Designer.cs">
+      <DependentUpon>frmAddClassroom.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupAminGUI\frmAddDetailTeaching.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GroupAminGUI\frmAddDetailTeaching.Designer.cs">
       <DependentUpon>frmAddDetailTeaching.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupAminGUI\frmAddLessonNorms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddLessonNorms.Designer.cs">
+      <DependentUpon>frmAddLessonNorms.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupAminGUI\frmAddPosition.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GroupAminGUI\frmAddPosition.Designer.cs">
       <DependentUpon>frmAddPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddSalaryGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddSalaryGrade.Designer.cs">
+      <DependentUpon>frmAddSalaryGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmAddSubject.Designer.cs">
+      <DependentUpon>frmAddSubject.cs</DependentUpon>
     </Compile>
     <Compile Include="GroupAminGUI\frmAddTeacher.cs">
       <SubType>Form</SubType>
@@ -131,6 +167,12 @@
     <Compile Include="GroupAminGUI\frmCareerTitles.Designer.cs">
       <DependentUpon>frmCareerTitles.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupAminGUI\frmCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmCertificate.Designer.cs">
+      <DependentUpon>frmCertificate.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupAminGUI\frmClassroom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,11 +191,53 @@
     <Compile Include="GroupAminGUI\frmDetailLesson.Designer.cs">
       <DependentUpon>frmDetailLesson.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupAminGUI\frmEditCareerTitles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditCareerTitles.Designer.cs">
+      <DependentUpon>frmEditCareerTitles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditCertificate.Designer.cs">
+      <DependentUpon>frmEditCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditClassroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditClassroom.Designer.cs">
+      <DependentUpon>frmEditClassroom.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupAminGUI\frmEditHomerooms.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GroupAminGUI\frmEditHomerooms.Designer.cs">
       <DependentUpon>frmEditHomerooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditLessonNorms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditLessonNorms.Designer.cs">
+      <DependentUpon>frmEditLessonNorms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditPosition.Designer.cs">
+      <DependentUpon>frmEditPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditSalaryGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditSalaryGrade.Designer.cs">
+      <DependentUpon>frmEditSalaryGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmEditSubject.Designer.cs">
+      <DependentUpon>frmEditSubject.cs</DependentUpon>
     </Compile>
     <Compile Include="GroupAminGUI\frmEditTeacher.cs">
       <SubType>Form</SubType>
@@ -179,6 +263,12 @@
     <Compile Include="GroupAminGUI\frmHomeAdmin.Designer.cs">
       <DependentUpon>frmHomeAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupAminGUI\frmLessonNorms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmLessonNorms.Designer.cs">
+      <DependentUpon>frmLessonNorms.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupAminGUI\frmMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +286,12 @@
     </Compile>
     <Compile Include="GroupAminGUI\frmSalaryGrade.Designer.cs">
       <DependentUpon>frmSalaryGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmSubject.Designer.cs">
+      <DependentUpon>frmSubject.cs</DependentUpon>
     </Compile>
     <Compile Include="GroupAminGUI\frmTeacher.cs">
       <SubType>Form</SubType>
@@ -229,11 +325,29 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmAddCareerTitles.resx">
+      <DependentUpon>frmAddCareerTitles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmAddCertificate.resx">
+      <DependentUpon>frmAddCertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmAddClassroom.resx">
+      <DependentUpon>frmAddClassroom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmAddDetailTeaching.resx">
       <DependentUpon>frmAddDetailTeaching.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmAddLessonNorms.resx">
+      <DependentUpon>frmAddLessonNorms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmAddPosition.resx">
       <DependentUpon>frmAddPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmAddSalaryGrade.resx">
+      <DependentUpon>frmAddSalaryGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmAddSubject.resx">
+      <DependentUpon>frmAddSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmAddTeacher.resx">
       <DependentUpon>frmAddTeacher.cs</DependentUpon>
@@ -247,6 +361,9 @@
     <EmbeddedResource Include="GroupAminGUI\frmCareerTitles.resx">
       <DependentUpon>frmCareerTitles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmCertificate.resx">
+      <DependentUpon>frmCertificate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmClassroom.resx">
       <DependentUpon>frmClassroom.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,8 +373,29 @@
     <EmbeddedResource Include="GroupAminGUI\frmDetailLesson.resx">
       <DependentUpon>frmDetailLesson.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmEditCareerTitles.resx">
+      <DependentUpon>frmEditCareerTitles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmEditCertificate.resx">
+      <DependentUpon>frmEditCertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmEditClassroom.resx">
+      <DependentUpon>frmEditClassroom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmEditHomerooms.resx">
       <DependentUpon>frmEditHomerooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmEditLessonNorms.resx">
+      <DependentUpon>frmEditLessonNorms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmEditPosition.resx">
+      <DependentUpon>frmEditPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmEditSalaryGrade.resx">
+      <DependentUpon>frmEditSalaryGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmEditSubject.resx">
+      <DependentUpon>frmEditSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmEditTeacher.resx">
       <DependentUpon>frmEditTeacher.cs</DependentUpon>
@@ -271,6 +409,9 @@
     <EmbeddedResource Include="GroupAminGUI\frmHomeAdmin.resx">
       <DependentUpon>frmHomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmLessonNorms.resx">
+      <DependentUpon>frmLessonNorms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmMainAdmin.resx">
       <DependentUpon>frmMainAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmSalaryGrade.resx">
       <DependentUpon>frmSalaryGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmSubject.resx">
+      <DependentUpon>frmSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmTeacher.resx">
       <DependentUpon>frmTeacher.cs</DependentUpon>

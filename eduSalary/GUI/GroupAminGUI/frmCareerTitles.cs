@@ -19,6 +19,12 @@ namespace GUI.GroupAminGUI
         {
             InitializeComponent();
             this.Load += FrmCareerTitles_Load;
+            txtSearch.TextChanged += TxtSearch_TextChanged;
+        }
+
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            dgvCareerTitles.DataSource = cd_bll.findDataChucDanhNNLoc(txtSearch.Text);
         }
 
         private void FrmCareerTitles_Load(object sender, EventArgs e)

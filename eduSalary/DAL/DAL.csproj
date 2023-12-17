@@ -46,11 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BacLuongDAL.cs" />
+    <Compile Include="BangCapDAL.cs" />
     <Compile Include="ChiTietLichDayDAL.cs" />
     <Compile Include="ChucDanhDAL.cs" />
     <Compile Include="ChucVuDAL.cs" />
     <Compile Include="ChuNhiemDAL.cs" />
     <Compile Include="ChuyenMonDAL.cs" />
+    <Compile Include="DInhMucTietDayDAL.cs" />
     <Compile Include="GiaoVienDAL.cs" />
     <Compile Include="LichDayDAL.cs" />
     <Compile Include="LopHocDAL.cs" />

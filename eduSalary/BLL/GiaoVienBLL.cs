@@ -41,7 +41,11 @@ namespace BLL
         {
             return gv_dal.getDataGiaoVienTheoMa(pMaGV);
         }
-
+        //------------------ LẤY DỮ LIỆU GIÁO VIÊN THEO MÃ SỐ CHỨC DANH
+        public List<GiaoVienDTO> getDataGiaoVienTheoMaChucDanh(string pMaSoCD)
+        {
+            return gv_dal.getDataGiaoVienTheoMaChucDanh(pMaSoCD);
+        }
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN THEO TÊN CHUYÊN MÔN
         public List<GiaoVienDTO> getDataGiaoVienTheoCM(string pTenMH)
         {
