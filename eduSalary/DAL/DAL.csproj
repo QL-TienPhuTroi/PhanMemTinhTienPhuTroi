@@ -64,7 +64,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="QLGV1.designer.cs">
+    <Compile Include="QLGV.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLGV.dbml</DependentUpon>
@@ -81,7 +81,7 @@
     </None>
     <None Include="QLGV.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>QLGV1.designer.cs</LastGenOutput>
+      <LastGenOutput>QLGV.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="QLGV.dbml.layout">
