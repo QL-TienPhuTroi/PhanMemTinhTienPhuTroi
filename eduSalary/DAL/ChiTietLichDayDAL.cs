@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
+using System.Xml.Linq;
+using System.Data;
+using System.Text.RegularExpressions;
 
 namespace DAL
 {
@@ -111,10 +113,52 @@ namespace DAL
         }
 
         //------------------ ĐẾM SỐ TIẾT TRONG 1 NĂM HỌC CỦA GIÁO VIÊN
-        public int getCountLessonInYear(string pMaGV)
+        public int getCountLessonInYear(string pMaGV, string pNamHoc)
         {
-            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH where ld.MAGV == pMaGV select ctld;
+            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH where ld.MAGV == pMaGV && ld.NAMHOC == pNamHoc select ctld;
             return query.Count();
+        }
+
+        //------------------ ĐẾM SỐ TIẾT ĐÃ DẠY TRONG 1 NĂM HỌC CỦA GIÁO VIÊN
+        public int getCountLessonTeachingInYear(string pMaGV, string pNamHoc)
+        {
+            var query = from ctld in qlgv.CHITIETLICHDAYs
+                        join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH
+                        join xnld in qlgv.XACNHANLICHDAYs
+                            on new { ctld.MALICH, ctld.TIETDAY, ctld.NGAYDAY }
+                            equals new { xnld.MALICH, xnld.TIETDAY, xnld.NGAYDAY }
+                        where ld.MAGV == pMaGV && xnld.HOANTHANH == true && ld.NAMHOC == pNamHoc 
+                        select ctld;
+            return query.Count();
+        }
+
+        //------------------ LẤY DỮ LIỆU LỊCH DẠY THEO NGÀY
+        public List<ChiTietLichDayLocDTO> getDataLessonDaily(DateTime pNgayDay)
+        {
+            var chitietlichdays = from ctld in qlgv.CHITIETLICHDAYs
+                                  join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH
+                                  join gv in qlgv.GIAOVIENs on ld.MAGV equals gv.MAGV
+                                  join mh in qlgv.MONHOCs on ld.MAMH equals mh.MAMH
+                                  join lp in qlgv.LOPHOCs on ld.MALP equals lp.MALP
+                                  join xnld in qlgv.XACNHANLICHDAYs
+                                    on new{ctld.MALICH, ctld.TIETDAY, ctld.NGAYDAY}
+                                    equals new {xnld.MALICH, xnld.TIETDAY, xnld.NGAYDAY}
+                                  where ctld.NGAYDAY == pNgayDay
+                                  select new ChiTietLichDayLocDTO()
+                                  {
+                                      malich = ctld.MALICH,
+                                      magv = ld.MAGV,
+                                      hoten = gv.HOTEN,
+                                      tenmh = mh.TENMH,
+                                      tenlp = lp.TENLP,
+                                      tietday = ctld.TIETDAY,
+                                      ngayday = (DateTime)ctld.NGAYDAY,
+                                      hoanthanh = (bool)xnld.HOANTHANH,
+                                  };
+
+            List<ChiTietLichDayLocDTO> lst_ctld = chitietlichdays.ToList();
+
+            return lst_ctld;
         }
 
         //------------------ THÊM CHI TIẾT LỊCH DẠY

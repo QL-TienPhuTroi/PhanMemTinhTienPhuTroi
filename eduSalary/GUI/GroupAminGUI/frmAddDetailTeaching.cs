@@ -18,12 +18,9 @@ namespace GUI.GroupAminGUI
         ThoiGianDayBLL tgd_bll =new ThoiGianDayBLL();
         GiaoVienBLL gv_bll =new GiaoVienBLL();
         ChiTietLichDayBLL ctld_bll = new ChiTietLichDayBLL();
-        ChuNhiemBLL cn_bll = new ChuNhiemBLL();
-        BacLuongBLL bl_bll = new BacLuongBLL();
-        LopHocBLL lp_bll = new LopHocBLL();
         ChiTietLichDayDTO ctld_dto = new ChiTietLichDayDTO();
-        PhuTroiBLL pt_bll = new PhuTroiBLL();
-        PhuTroiDTO pt_dto = new PhuTroiDTO();
+        XacNhanLichDayBLL xnld_bll = new XacNhanLichDayBLL();
+        XacNhanLichDayDTO xnld_dto = new XacNhanLichDayDTO();
 
         string pMaLich, pMaLP, pTenLP, pTenMH, pMaGV, pNamHoc;
         DateTime pNgayDay, pThoiGianBatDau;
@@ -103,11 +100,20 @@ namespace GUI.GroupAminGUI
                         ctld_dto.tietday = pTietDay;
 
                         ctld_bll.addCTLD(ctld_dto);
+
+                        if (!xnld_bll.checkPK(ctld_dto.malich, ctld_dto.ngayday, ctld_dto.tietday))
+                        {
+                            xnld_dto.malich = pMaLich;
+                            xnld_dto.ngayday = ctld_dto.ngayday;
+                            xnld_dto.tietday = ctld_dto.tietday;
+                            xnld_dto.hoanthanh = false;
+
+                            xnld_bll.addXNLD(xnld_dto);
+                        }
                     }
                     MessageBox.Show("LỊCH DẠY ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
                     loadDataDetailTeaching();
                     loadLesson();
-                    calExtraness();
                 }
             }
             catch (Exception ex)
@@ -178,111 +184,6 @@ namespace GUI.GroupAminGUI
             dgvDetailTeachingSchedule.Columns[1].HeaderText = "Thứ";
             dgvDetailTeachingSchedule.Columns[2].HeaderText = "Ngày dạy";
             dgvDetailTeachingSchedule.Columns[3].HeaderText = "Tiết dạy";
-        }
-
-        private void calExtraness()
-        {
-            List<GiaoVienDTO> lst_Teacher = new List<GiaoVienDTO>();
-            lst_Teacher = gv_bll.getDataGiaoVien();
-
-            for(int i = 0; i < lst_Teacher.Count; i++) 
-            {
-                decimal pHeSoLuong = bl_bll.getHeSoLuong(lst_Teacher[i].masocd, lst_Teacher[i].bac);
-                decimal pMucLuongCoSo = bl_bll.getMucLuongCoSo(lst_Teacher[i].masocd, lst_Teacher[i].bac);
-                decimal pTongLuong = (pHeSoLuong * pMucLuongCoSo) * 12;
-                int pLuongGioday;
-                decimal sotuan = (decimal)36 / 52;
-                double sotuans = (36 / 52);
-
-                pt_dto.magv = lst_Teacher[i].magv;
-                pt_dto.tongtietday = ctld_bll.getCountLessonInYear(lst_Teacher[i].magv);
-                if (gv_bll.checkHT(lst_Teacher[i].magv))
-                {
-                    if (pt_dto.tongtietday <= 2 * 36)
-                    {
-                        pt_dto.sogiodaythem = 0;
-                    }
-                    else
-                    {
-                        float pSoGioDayThem = (pt_dto.tongtietday - 72) * 45 / 60;
-                        pt_dto.sogiodaythem = pSoGioDayThem;
-                    }
-
-                    pLuongGioday = (int)((pTongLuong / (2 * 36)) * sotuan);
-                    pt_dto.luonggioday = pLuongGioday;
-                }
-                else if (gv_bll.checkHP(lst_Teacher[i].magv))
-                {
-                    if (pt_dto.tongtietday <= 4 * 36)
-                    {
-                        pt_dto.sogiodaythem = 0;
-                    }
-                    else
-                    {
-                        float pSoGioDayThem = (pt_dto.tongtietday - 144) * 45 / 60;
-                        pt_dto.sogiodaythem = pSoGioDayThem;
-                    }
-
-                    pLuongGioday = (int)((pTongLuong / (4 * 36)) * sotuan);
-                    pt_dto.luonggioday = pLuongGioday;
-                }
-                else if (cn_bll.checkHomeroom(lst_Teacher[i].magv, pNamHoc))
-                {
-                    if (pt_dto.tongtietday <= 13 * 36)
-                    {
-                        pt_dto.sogiodaythem = 0;
-                    }
-                    else
-                    {
-                        float pSoGioDayThem = (pt_dto.tongtietday - 468) * 45 / 60;
-                        pt_dto.sogiodaythem = pSoGioDayThem;
-                    }
-
-                    pLuongGioday = (int)((pTongLuong / (13 * 36)) * sotuan);
-                    pt_dto.luonggioday = pLuongGioday;
-                }
-                else if (cn_bll.checkHomeroomKT(lst_Teacher[i].magv, pNamHoc))
-                {
-                    if (pt_dto.tongtietday <= 14 * 36)
-                    {
-                        pt_dto.sogiodaythem = 0;
-                    }
-                    else
-                    {
-                        float pSoGioDayThem = (pt_dto.tongtietday - 504) * 45 / 60;
-                        pt_dto.sogiodaythem = pSoGioDayThem;
-                    }
-
-                    pLuongGioday = (int)((pTongLuong / (14 * 36)) * sotuan);
-                    pt_dto.luonggioday = pLuongGioday;
-                }
-                else
-                {
-                    if (pt_dto.tongtietday <= 17 * 36)
-                    {
-                        pt_dto.sogiodaythem = 0;
-                    }
-                    else
-                    {
-                        float pSoGioDayThem = (pt_dto.tongtietday - 612) * 45 / 60;
-                        pt_dto.sogiodaythem = pSoGioDayThem;
-                    }
-
-                    pLuongGioday = (int)((pTongLuong / (17 * 36)) * sotuan);
-                    pt_dto.luonggioday = pLuongGioday;
-                }
-
-                pt_dto.tienphutroi = (decimal)pt_dto.sogiodaythem * pt_dto.luonggioday * (decimal)1.5;
-
-                if (pt_bll.checkPK(lst_Teacher[i].magv))
-                {
-                    pt_bll.editPT(pt_dto);
-                }
-                else
-                {
-                    pt_bll.addPT(pt_dto);
-                }
-            }
         }
     }
 }

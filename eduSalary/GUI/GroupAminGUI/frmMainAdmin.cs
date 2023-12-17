@@ -36,8 +36,8 @@ namespace GUI.GroupAminGUI
 
         frmAssigningHomeroom fAssigningHomeroom = new frmAssigningHomeroom();
         frmTeachingAssignment fTeacherAssignment = new frmTeachingAssignment();
-
-        frmExtraness fExtraness =new frmExtraness();
+        frmConfirmLesson fConfirmLesson;
+        frmExtraness fExtraness;
 
         public frmMainAdmin(string Code, string Pass)
         {
@@ -57,6 +57,7 @@ namespace GUI.GroupAminGUI
             btnHome.Click += BtnHome_Click;
             btnManager.Click += BtnManager_Click;
             btnAssignment.Click += BtnAssignment_Click;
+            btnConfirmLesson.Click += BtnConfirmLesson_Click;
             btnExtraness.Click += BtnExtraness_Click;
 
             btnTeacher.Click += BtnTeacher_Click;
@@ -120,6 +121,7 @@ namespace GUI.GroupAminGUI
             fHomeAdmin.Show();
 
             loadGreeting();
+            lbNamHoc.Text = getNamHoc();
             setSizeFrom();
         }           
 
@@ -205,6 +207,7 @@ namespace GUI.GroupAminGUI
             pnlHome.Visible = true;
             pnlManager.Visible = false;
             pnlAssignment.Visible = false;
+            pnlConfirmLesson.Visible = false;
             pnlExtraness.Visible = false;
 
             lbFrmName.Text = "HELLO ^_^";
@@ -228,6 +231,7 @@ namespace GUI.GroupAminGUI
             pnlHome.Visible = false;
             pnlManager.Visible = true;
             pnlAssignment.Visible = false;
+            pnlConfirmLesson.Visible = false;
             pnlExtraness.Visible = false;
         }
 
@@ -244,7 +248,37 @@ namespace GUI.GroupAminGUI
             pnlManager.Visible = false;
             pnlHome.Visible = false;
             pnlAssignment.Visible = true;
+            pnlConfirmLesson.Visible = false;
             pnlExtraness.Visible = false;
+        }
+
+        private void BtnConfirmLesson_Click(object sender, EventArgs e)
+        {
+            if (expand2)
+            {
+                timerNavigationMenu2.Start();
+                TimerNavigationMenu2_Tick(sender, e);
+            }
+
+            if (expand1)
+            {
+                timerNavigationMenu1.Start();
+                TimerNavigationMenu1_Tick(sender, e);
+            }
+
+            pnlHome.Visible = false;
+            pnlManager.Visible = false;
+            pnlAssignment.Visible = false;
+            pnlConfirmLesson.Visible = true;
+            pnlExtraness.Visible = false;
+
+            fConfirmLesson = new frmConfirmLesson(lbNamHoc.Text);
+            lbFrmName.Text = "XÁC NHẬN LỊCH DẠY";
+            pnlBody.Controls.Clear();
+            fConfirmLesson.TopLevel = false;
+            fConfirmLesson.Dock = DockStyle.Fill;
+            pnlBody.Controls.Add(fConfirmLesson);
+            fConfirmLesson.Show();
         }
 
         private void BtnExtraness_Click(object sender, EventArgs e)
@@ -264,8 +298,10 @@ namespace GUI.GroupAminGUI
             pnlHome.Visible = false;
             pnlManager.Visible = false;
             pnlAssignment.Visible = false;
+            pnlConfirmLesson.Visible = false;
             pnlExtraness.Visible = true;
 
+            fExtraness = new frmExtraness(lbNamHoc.Text);
             lbFrmName.Text = "BẢNG LƯƠNG PHỤ TRỘI";
             pnlBody.Controls.Clear();
             fExtraness.TopLevel = false;
@@ -341,6 +377,24 @@ namespace GUI.GroupAminGUI
         {
             string[] names = pHoTen.Split(' ');
             return names[names.Length - 2] + " " + names[names.Length - 1];
+        }
+
+        private string getNamHoc()
+        {
+            int month = DateTime.Now.Month;
+            int year = DateTime.Now.Year;
+            int y1, y2;
+            string schoolYear = string.Empty;
+
+            if(month >= 1 && month < 9) 
+            {
+                schoolYear = (year - 1) + "-" + year;
+            }
+            else
+            {
+                schoolYear = year + "-" + (year + 1);
+            }
+            return schoolYear;
         }
 
         private void setSizeFrom()

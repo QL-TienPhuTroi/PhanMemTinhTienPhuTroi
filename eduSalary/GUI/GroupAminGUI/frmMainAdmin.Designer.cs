@@ -32,16 +32,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainAdmin));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlExtraness = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlAssignment = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlManager = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlHome = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnExtraness = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnConfirmLesson = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pnlConfirmLesson = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlExtraness = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlAssignment = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlManager = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlHome = new Guna.UI2.WinForms.Guna2Panel();
             this.dropDownMenu2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnAssignment = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -73,6 +77,8 @@
             this.btnHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
+            this.lbNamHoc = new ReaLTaiizor.Controls.BigLabel();
             this.lbHello = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -92,6 +98,8 @@
             this.guna2Panel16.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel15.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.guna2Panel18.SuspendLayout();
             this.dropDownMenu2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel13.SuspendLayout();
@@ -131,12 +139,14 @@
             // 
             this.guna2Panel3.AutoScroll = true;
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.guna2Panel3.Controls.Add(this.flowLayoutPanel2);
+            this.guna2Panel3.Controls.Add(this.flowLayoutPanel1);
+            this.guna2Panel3.Controls.Add(this.flowLayoutPanel4);
+            this.guna2Panel3.Controls.Add(this.pnlConfirmLesson);
             this.guna2Panel3.Controls.Add(this.pnlExtraness);
             this.guna2Panel3.Controls.Add(this.pnlAssignment);
             this.guna2Panel3.Controls.Add(this.pnlManager);
             this.guna2Panel3.Controls.Add(this.pnlHome);
-            this.guna2Panel3.Controls.Add(this.flowLayoutPanel2);
-            this.guna2Panel3.Controls.Add(this.flowLayoutPanel1);
             this.guna2Panel3.Controls.Add(this.dropDownMenu2);
             this.guna2Panel3.Controls.Add(this.dropDownMenu1);
             this.guna2Panel3.Controls.Add(this.flowLayoutPanel3);
@@ -149,52 +159,17 @@
             this.guna2Panel3.Size = new System.Drawing.Size(400, 568);
             this.guna2Panel3.TabIndex = 1;
             // 
-            // pnlExtraness
-            // 
-            this.pnlExtraness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnlExtraness.Location = new System.Drawing.Point(0, 186);
-            this.pnlExtraness.Name = "pnlExtraness";
-            this.pnlExtraness.Size = new System.Drawing.Size(10, 62);
-            this.pnlExtraness.TabIndex = 9;
-            this.pnlExtraness.Visible = false;
-            // 
-            // pnlAssignment
-            // 
-            this.pnlAssignment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnlAssignment.Location = new System.Drawing.Point(0, 124);
-            this.pnlAssignment.Name = "pnlAssignment";
-            this.pnlAssignment.Size = new System.Drawing.Size(10, 62);
-            this.pnlAssignment.TabIndex = 9;
-            this.pnlAssignment.Visible = false;
-            // 
-            // pnlManager
-            // 
-            this.pnlManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnlManager.Location = new System.Drawing.Point(0, 62);
-            this.pnlManager.Name = "pnlManager";
-            this.pnlManager.Size = new System.Drawing.Size(10, 62);
-            this.pnlManager.TabIndex = 9;
-            this.pnlManager.Visible = false;
-            // 
-            // pnlHome
-            // 
-            this.pnlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnlHome.Location = new System.Drawing.Point(0, 0);
-            this.pnlHome.Name = "pnlHome";
-            this.pnlHome.Size = new System.Drawing.Size(10, 62);
-            this.pnlHome.TabIndex = 9;
-            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.guna2Panel16);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 248);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 310);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.MaximumSize = new System.Drawing.Size(400, 186);
             this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(400, 62);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(400, 62);
-            this.flowLayoutPanel2.TabIndex = 8;
+            this.flowLayoutPanel2.TabIndex = 12;
             // 
             // guna2Panel16
             // 
@@ -244,13 +219,13 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.guna2Panel15);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 186);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 248);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(400, 186);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(400, 62);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(400, 62);
-            this.flowLayoutPanel1.TabIndex = 7;
+            this.flowLayoutPanel1.TabIndex = 11;
             // 
             // guna2Panel15
             // 
@@ -292,6 +267,103 @@
             this.btnExtraness.TabIndex = 11;
             this.btnExtraness.Text = "TÍNH PHỤ TRỘI";
             this.btnExtraness.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.guna2Panel18);
+            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 186);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel4.MaximumSize = new System.Drawing.Size(400, 186);
+            this.flowLayoutPanel4.MinimumSize = new System.Drawing.Size(400, 62);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(400, 62);
+            this.flowLayoutPanel4.TabIndex = 10;
+            // 
+            // guna2Panel18
+            // 
+            this.guna2Panel18.Controls.Add(this.btnConfirmLesson);
+            this.guna2Panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel18.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel18.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2Panel18.Name = "guna2Panel18";
+            this.guna2Panel18.Size = new System.Drawing.Size(400, 62);
+            this.guna2Panel18.TabIndex = 0;
+            // 
+            // btnConfirmLesson
+            // 
+            this.btnConfirmLesson.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfirmLesson.BorderColor = System.Drawing.Color.Transparent;
+            this.btnConfirmLesson.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmLesson.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmLesson.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfirmLesson.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfirmLesson.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnConfirmLesson.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnConfirmLesson.FillColor = System.Drawing.Color.Transparent;
+            this.btnConfirmLesson.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnConfirmLesson.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnConfirmLesson.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmLesson.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnConfirmLesson.HoverState.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnConfirmLesson.HoverState.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnConfirmLesson.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmLesson.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnConfirmLesson.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnConfirmLesson.Location = new System.Drawing.Point(0, 0);
+            this.btnConfirmLesson.Margin = new System.Windows.Forms.Padding(0);
+            this.btnConfirmLesson.Name = "btnConfirmLesson";
+            this.btnConfirmLesson.PressedColor = System.Drawing.Color.PeachPuff;
+            this.btnConfirmLesson.PressedDepth = 0;
+            this.btnConfirmLesson.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnConfirmLesson.Size = new System.Drawing.Size(400, 62);
+            this.btnConfirmLesson.TabIndex = 11;
+            this.btnConfirmLesson.Text = "XÁC NHẬN LỊCH DẠY";
+            this.btnConfirmLesson.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // pnlConfirmLesson
+            // 
+            this.pnlConfirmLesson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pnlConfirmLesson.Location = new System.Drawing.Point(0, 186);
+            this.pnlConfirmLesson.Name = "pnlConfirmLesson";
+            this.pnlConfirmLesson.Size = new System.Drawing.Size(10, 62);
+            this.pnlConfirmLesson.TabIndex = 9;
+            this.pnlConfirmLesson.Visible = false;
+            // 
+            // pnlExtraness
+            // 
+            this.pnlExtraness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pnlExtraness.Location = new System.Drawing.Point(0, 248);
+            this.pnlExtraness.Name = "pnlExtraness";
+            this.pnlExtraness.Size = new System.Drawing.Size(10, 62);
+            this.pnlExtraness.TabIndex = 9;
+            this.pnlExtraness.Visible = false;
+            // 
+            // pnlAssignment
+            // 
+            this.pnlAssignment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pnlAssignment.Location = new System.Drawing.Point(0, 124);
+            this.pnlAssignment.Name = "pnlAssignment";
+            this.pnlAssignment.Size = new System.Drawing.Size(10, 62);
+            this.pnlAssignment.TabIndex = 9;
+            this.pnlAssignment.Visible = false;
+            // 
+            // pnlManager
+            // 
+            this.pnlManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pnlManager.Location = new System.Drawing.Point(0, 62);
+            this.pnlManager.Name = "pnlManager";
+            this.pnlManager.Size = new System.Drawing.Size(10, 62);
+            this.pnlManager.TabIndex = 9;
+            this.pnlManager.Visible = false;
+            // 
+            // pnlHome
+            // 
+            this.pnlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pnlHome.Location = new System.Drawing.Point(0, 0);
+            this.pnlHome.Name = "pnlHome";
+            this.pnlHome.Size = new System.Drawing.Size(10, 62);
+            this.pnlHome.TabIndex = 9;
             // 
             // dropDownMenu2
             // 
@@ -843,6 +915,8 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
             this.guna2Panel2.Controls.Add(this.panel2);
+            this.guna2Panel2.Controls.Add(this.bigLabel2);
+            this.guna2Panel2.Controls.Add(this.lbNamHoc);
             this.guna2Panel2.Controls.Add(this.lbHello);
             this.guna2Panel2.Controls.Add(this.bigLabel1);
             this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
@@ -859,6 +933,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(365, 1);
             this.panel2.TabIndex = 16;
+            // 
+            // bigLabel2
+            // 
+            this.bigLabel2.AutoSize = true;
+            this.bigLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel2.ForeColor = System.Drawing.Color.White;
+            this.bigLabel2.Location = new System.Drawing.Point(170, 143);
+            this.bigLabel2.Name = "bigLabel2";
+            this.bigLabel2.Size = new System.Drawing.Size(98, 23);
+            this.bigLabel2.TabIndex = 14;
+            this.bigLabel2.Text = "Năm học:";
+            // 
+            // lbNamHoc
+            // 
+            this.lbNamHoc.AutoSize = true;
+            this.lbNamHoc.BackColor = System.Drawing.Color.Transparent;
+            this.lbNamHoc.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNamHoc.ForeColor = System.Drawing.Color.White;
+            this.lbNamHoc.Location = new System.Drawing.Point(274, 143);
+            this.lbNamHoc.Name = "lbNamHoc";
+            this.lbNamHoc.Size = new System.Drawing.Size(109, 23);
+            this.lbNamHoc.TabIndex = 14;
+            this.lbNamHoc.Text = "2023-2024";
             // 
             // lbHello
             // 
@@ -1020,6 +1118,8 @@
             this.guna2Panel16.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2Panel15.ResumeLayout(false);
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.guna2Panel18.ResumeLayout(false);
             this.dropDownMenu2.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel13.ResumeLayout(false);
@@ -1066,12 +1166,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private ReaLTaiizor.Controls.BigLabel lbFrmName;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel16;
-        private Guna.UI2.WinForms.Guna2GradientButton btnLogout;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
-        private Guna.UI2.WinForms.Guna2GradientButton btnExtraness;
         private System.Windows.Forms.FlowLayoutPanel dropDownMenu2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2GradientButton btnAssignment;
@@ -1105,5 +1199,17 @@
         private Guna.UI2.WinForms.Guna2Panel pnlExtraness;
         private Guna.UI2.WinForms.Guna2Panel pnlAssignment;
         private Guna.UI2.WinForms.Guna2Panel pnlManager;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel16;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLogout;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
+        private Guna.UI2.WinForms.Guna2GradientButton btnExtraness;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel18;
+        private Guna.UI2.WinForms.Guna2GradientButton btnConfirmLesson;
+        private Guna.UI2.WinForms.Guna2Panel pnlConfirmLesson;
+        private ReaLTaiizor.Controls.BigLabel bigLabel2;
+        private ReaLTaiizor.Controls.BigLabel lbNamHoc;
     }
 }

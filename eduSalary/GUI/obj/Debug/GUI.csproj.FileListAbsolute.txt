@@ -48,6 +48,7 @@ C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddDetailTeaching.resources
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmDetailLesson.resources
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmExtraness.resources
+<<<<<<< HEAD
 D:\Ki1Nam4\DoAnChuyenNganh\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\ReaLTaiizor.dll
 D:\Ki1Nam4\DoAnChuyenNganh\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 D:\Ki1Nam4\DoAnChuyenNganh\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.frmLoading.resources
@@ -114,3 +115,7 @@ D:\Ki1Nam4\DoAnChuyenNganh\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\DAL.dl
 D:\Ki1Nam4\DoAnChuyenNganh\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\Ki1Nam4\DoAnChuyenNganh\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.exe
 D:\Ki1Nam4\DoAnChuyenNganh\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.pdb
+=======
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmConfirmLesson.resources
+>>>>>>> 9f11062ea040dd398c6f395bc212621d6b5891a8
+D:\Ki1Nam4\DoAnChuyenNganh\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmConfirmLesson.resources

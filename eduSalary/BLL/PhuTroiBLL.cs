@@ -23,10 +23,16 @@ namespace BLL
             return pt_dal.getDataPhuTroi(); 
         }
 
-        //------------------ THÊM PHỤ TRỘI
-        public void addPT(PhuTroiDTO pt)
+        //------------------ LẤY DỮ LIỆU PHỤ TRỘI
+        public List<PhuTroiDTO> getDataPhuTroi(string pNamHoc)
         {
-            pt_dal.addPT(pt);
+            return pt_dal.getDataPhuTroi(pNamHoc);
+        }
+
+        //------------------ THÊM PHỤ TRỘI
+        public void addPT(PhuTroiDTO pt, string pNamHoc)
+        {
+            pt_dal.addPT(pt, pNamHoc);
         }
 
         //------------------ XÓA PHỤ TRỘI
@@ -36,9 +42,9 @@ namespace BLL
         }
 
         //------------------ SỬA PHỤ TRỘI
-        public void editPT(PhuTroiDTO pt)
+        public void editPT(PhuTroiDTO pt, string pNamHoc)
         {
-            pt_dal.editPT(pt);
+            pt_dal.editPT(pt, pNamHoc);
         }
 
         //------------------ KIỂM TRA KHÓA CHÍNH

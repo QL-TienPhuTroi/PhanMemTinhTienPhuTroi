@@ -19,14 +19,38 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU PHỤ TRỘI
         public List<PhuTroiDTO> getDataPhuTroi()
         {
-            var phutrois = from pt in qlgv.PHUTROIs select new PhuTroiDTO()
-            {
-                magv = pt.MAGV,
-                tongtietday = (int)pt.TONGTIETDAY,
-                sogiodaythem = (float)pt.SOGIODAYTHEM,
-                luonggioday = (decimal)pt.LUONGGIODAY,
-                tienphutroi = (decimal)pt.TIENPHUTROI
-            };
+            var phutrois = from pt in qlgv.PHUTROIs
+                           select new PhuTroiDTO()
+                            {
+                                magv = pt.MAGV,
+                                tongtietday = (int)pt.TONGTIETDAY,
+                                tongtietdaday = (int)pt.TONGTIETDADAY,
+                                tongtietquydinh = (int)pt.TONGTIETQUYDINH,
+                                sogiodaythem = (float)pt.SOGIODAYTHEM,
+                                luonggioday = (decimal)pt.LUONGGIODAY,
+                                tienphutroi = (decimal)pt.TIENPHUTROI
+                            };
+
+            List<PhuTroiDTO> lst_gv = phutrois.ToList();
+
+            return lst_gv;
+        }
+
+        //------------------ LẤY DỮ LIỆU PHỤ TRỘI
+        public List<PhuTroiDTO> getDataPhuTroi(string pNamHoc)
+        {
+            var phutrois = from pt in qlgv.PHUTROIs
+                           where pt.NAMHOC == pNamHoc
+                           select new PhuTroiDTO()
+                           {
+                               magv = pt.MAGV,
+                               tongtietday = (int)pt.TONGTIETDAY,
+                               tongtietdaday = (int)pt.TONGTIETDADAY,
+                               tongtietquydinh = (int)pt.TONGTIETQUYDINH,
+                               sogiodaythem = (float)pt.SOGIODAYTHEM,
+                               luonggioday = (decimal)pt.LUONGGIODAY,
+                               tienphutroi = (decimal)pt.TIENPHUTROI
+                           };
 
             List<PhuTroiDTO> lst_gv = phutrois.ToList();
 
@@ -34,15 +58,18 @@ namespace DAL
         }
 
         //------------------ THÊM PHỤ TRỘI
-        public void addPT(PhuTroiDTO pt)
+        public void addPT(PhuTroiDTO pt, string pNamHoc)
         {
             PHUTROI pts = new PHUTROI();
 
             pts.MAGV = pt.magv;
             pts.TONGTIETDAY = pt.tongtietday;
+            pts.TONGTIETDADAY = pt.tongtietdaday;
+            pts.TONGTIETQUYDINH = pt.tongtietquydinh;
             pts.SOGIODAYTHEM = pt.sogiodaythem;
             pts.LUONGGIODAY = pt.luonggioday;
             pts.TIENPHUTROI = pt.tienphutroi;
+            pts.NAMHOC = pNamHoc;
 
             qlgv.PHUTROIs.InsertOnSubmit(pts);
             qlgv.SubmitChanges();
@@ -62,15 +89,18 @@ namespace DAL
         }
 
         //------------------ SỬA PHỤ TRỘI
-        public void editPT(PhuTroiDTO pt)
+        public void editPT(PhuTroiDTO pt, string pNamHoc)
         {
             PHUTROI pts = qlgv.PHUTROIs.Where(t => t.MAGV == pt.magv).FirstOrDefault();
 
             pts.MAGV = pt.magv;
             pts.TONGTIETDAY = pt.tongtietday;
+            pts.TONGTIETDADAY = pt.tongtietdaday;
+            pts.TONGTIETQUYDINH = pt.tongtietquydinh;
             pts.SOGIODAYTHEM = pt.sogiodaythem;
             pts.LUONGGIODAY = pt.luonggioday;
             pts.TIENPHUTROI = pt.tienphutroi;
+            pts.NAMHOC = pNamHoc;
 
             qlgv.SubmitChanges();
         }
