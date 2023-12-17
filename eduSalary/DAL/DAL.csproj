@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="TaiKhoanDAL.cs" />
     <Compile Include="ThoiGianDayDAL.cs" />
+    <Compile Include="XacNhanLichDayDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -33,14 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExtraness));
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cboYear = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClearText = new System.Windows.Forms.PictureBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.dgvExtraness = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.guna2GradientPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClearText)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
@@ -58,6 +61,46 @@
             this.guna2GradientPanel2.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1157, 142);
             this.guna2GradientPanel2.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cboYear);
+            this.panel2.Controls.Add(this.bigLabel2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(710, 20);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(648, 112);
+            this.panel2.TabIndex = 3;
+            // 
+            // cboYear
+            // 
+            this.cboYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboYear.BackColor = System.Drawing.Color.Transparent;
+            this.cboYear.BorderRadius = 5;
+            this.cboYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboYear.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboYear.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboYear.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboYear.ItemHeight = 30;
+            this.cboYear.Location = new System.Drawing.Point(196, 40);
+            this.cboYear.Name = "cboYear";
+            this.cboYear.Size = new System.Drawing.Size(290, 36);
+            this.cboYear.TabIndex = 4;
+            // 
+            // bigLabel2
+            // 
+            this.bigLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bigLabel2.AutoSize = true;
+            this.bigLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel2.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel2.Location = new System.Drawing.Point(43, 49);
+            this.bigLabel2.Name = "bigLabel2";
+            this.bigLabel2.Size = new System.Drawing.Size(116, 27);
+            this.bigLabel2.TabIndex = 3;
+            this.bigLabel2.Text = "Năm học:";
             // 
             // panel1
             // 
@@ -186,14 +229,6 @@
             this.dgvExtraness.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvExtraness.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(710, 20);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(648, 112);
-            this.panel2.TabIndex = 3;
-            // 
             // frmExtraness
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -207,6 +242,8 @@
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "BẢNG PHỤ TRỘI";
             this.guna2GradientPanel2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnClearText)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
@@ -226,5 +263,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private Guna.UI2.WinForms.Guna2DataGridView dgvExtraness;
         private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2ComboBox cboYear;
+        private ReaLTaiizor.Controls.BigLabel bigLabel2;
     }
 }

@@ -10,6 +10,8 @@ namespace DTO
     {
         public string magv { get; set; }
         public int tongtietday { get; set; }
+        public int tongtietdaday { get; set; }
+        public int tongtietquydinh { get; set; }
         public float sogiodaythem { get; set; }
         public decimal luonggioday { get; set; }
         public decimal tienphutroi { get; set; }

@@ -137,6 +137,12 @@
     <Compile Include="GroupAminGUI\frmClassroom.Designer.cs">
       <DependentUpon>frmClassroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupAminGUI\frmConfirmLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupAminGUI\frmConfirmLesson.Designer.cs">
+      <DependentUpon>frmConfirmLesson.cs</DependentUpon>
+    </Compile>
     <Compile Include="GroupAminGUI\frmDetailedProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmClassroom.resx">
       <DependentUpon>frmClassroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupAminGUI\frmConfirmLesson.resx">
+      <DependentUpon>frmConfirmLesson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupAminGUI\frmDetailedProfile.resx">
       <DependentUpon>frmDetailedProfile.cs</DependentUpon>
@@ -489,6 +498,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

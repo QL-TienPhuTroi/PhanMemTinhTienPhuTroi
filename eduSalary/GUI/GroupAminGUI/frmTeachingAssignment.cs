@@ -152,7 +152,6 @@ namespace GUI.GroupAminGUI
 
                     fAddTeaching = new frmAddTeaching(wdg.PMaLP, wdg.PTenLP, cboYear.SelectedItem.ToString());
                     fAddTeaching.ShowDialog();
-                   //loadClassrommAllItems();
                 };
             }
         }

@@ -78,9 +78,21 @@ namespace BLL
         }
 
         //------------------ ĐẾM SỐ TIẾT TRONG 1 NĂM HỌC CỦA GIÁO VIÊN
-        public int getCountLessonInYear(string pMaGV)
+        public int getCountLessonInYear(string pMaGV, string pNamHoc)
         {
-            return ctld_dal.getCountLessonInYear(pMaGV);
+            return ctld_dal.getCountLessonInYear(pMaGV, pNamHoc);
+        }
+
+        //------------------ ĐẾM SỐ TIẾT ĐÃ DẠY TRONG 1 NĂM HỌC CỦA GIÁO VIÊN
+        public int getCountLessonTeachingInYear(string pMaGV, string pNamHoc)
+        {
+            return ctld_dal.getCountLessonTeachingInYear(pMaGV, pNamHoc);
+        }
+
+        //------------------ LẤY DỮ LIỆU LỊCH DẠY THEO NGÀY
+        public List<ChiTietLichDayLocDTO> getDataLessonDaily(DateTime pNgayDay)
+        {
+            return ctld_dal.getDataLessonDaily(pNgayDay);
         }
 
         //------------------ THÊM CHI TIẾT LỊCH DẠY
