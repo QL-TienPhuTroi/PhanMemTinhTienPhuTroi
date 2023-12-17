@@ -56,6 +56,7 @@
     <Compile Include="GiaoVienLocDTO.cs" />
     <Compile Include="LichDayDTO.cs" />
     <Compile Include="LichDayLocDTO.cs" />
+    <Compile Include="LichGiangDayDTO.cs" />
     <Compile Include="LopHocDTO.cs" />
     <Compile Include="MonHocDTO.cs" />
     <Compile Include="PhuTroiDTO.cs" />

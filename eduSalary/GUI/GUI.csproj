@@ -311,17 +311,29 @@
     <Compile Include="GroupAminGUI\frmTeachingAssignment.Designer.cs">
       <DependentUpon>frmTeachingAssignment.cs</DependentUpon>
     </Compile>
-    <Compile Include="GroupTeacherGUI\frmMainTeacher.cs">
+    <Compile Include="GroupTeacherGUI\frmHomeTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GroupTeacherGUI\frmMainTeacher.Designer.cs">
-      <DependentUpon>frmMainTeacher.cs</DependentUpon>
+    <Compile Include="GroupTeacherGUI\frmHomeTeacher.Designer.cs">
+      <DependentUpon>frmHomeTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupTeacherGUI\frmMainTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupTeacherGUI\frmMainTeachers.Designer.cs">
+      <DependentUpon>frmMainTeachers.cs</DependentUpon>
     </Compile>
     <Compile Include="GroupTeacherGUI\frmProfile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GroupTeacherGUI\frmProfile.Designer.cs">
       <DependentUpon>frmProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupTeacherGUI\frmTeachingSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupTeacherGUI\frmTeachingSchedule.Designer.cs">
+      <DependentUpon>frmTeachingSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -439,11 +451,17 @@
     <EmbeddedResource Include="GroupAminGUI\frmTeachingAssignment.resx">
       <DependentUpon>frmTeachingAssignment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GroupTeacherGUI\frmMainTeacher.resx">
-      <DependentUpon>frmMainTeacher.cs</DependentUpon>
+    <EmbeddedResource Include="GroupTeacherGUI\frmHomeTeacher.resx">
+      <DependentUpon>frmHomeTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupTeacherGUI\frmMainTeachers.resx">
+      <DependentUpon>frmMainTeachers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GroupTeacherGUI\frmProfile.resx">
       <DependentUpon>frmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupTeacherGUI\frmTeachingSchedule.resx">
+      <DependentUpon>frmTeachingSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

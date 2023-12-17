@@ -98,17 +98,30 @@ namespace DAL
 
         public DateTime FindStartOfWeek(DateTime ngayBatKy)
         {
-            DateTime ngayDauTuan = Enumerable.Range(-(int)ngayBatKy.DayOfWeek, 7)
-                                              .Select(offset => ngayBatKy.AddDays(offset))
-                                              .First();
+            int daysToSubtract = ((int)ngayBatKy.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
 
-            return ngayDauTuan;
+            DateTime firstDayOfWeek = ngayBatKy.Date.AddDays(-daysToSubtract);
+
+            return firstDayOfWeek;
         }
 
         //------------------ ĐẾM SỐ TIẾT TRONG 1 TUẦN CỦA GIÁO VIÊN
-        public int getCountLessonInWeek(string pMaGV, DateTime pNgayDauTuan)
+        public int getCountLessonInWeek(string pMaGV, DateTime pNgayDauTuan, string pNamHoc)
         {
-            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH where ld.MAGV == pMaGV && ctld.NGAYDAY >= pNgayDauTuan && ctld.NGAYDAY <= pNgayDauTuan.AddDays(6) select ctld;
+            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH where ld.MAGV == pMaGV && ctld.NGAYDAY >= pNgayDauTuan && ctld.NGAYDAY <= pNgayDauTuan.AddDays(6) && ld.NAMHOC == pNamHoc select ctld;
+            return query.Count();
+        }
+
+        //------------------ ĐẾM SỐ TIẾT ĐÃ DẠY TRONG 1 NĂM HỌC CỦA GIÁO VIÊN
+        public int getCountLessonTeachingInWeek(string pMaGV, DateTime pNgayDauTuan, string pNamHoc)
+        {
+            var query = from ctld in qlgv.CHITIETLICHDAYs
+                        join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH
+                        join xnld in qlgv.XACNHANLICHDAYs
+                            on new { ctld.MALICH, ctld.TIETDAY, ctld.NGAYDAY }
+                            equals new { xnld.MALICH, xnld.TIETDAY, xnld.NGAYDAY }
+                        where ld.MAGV == pMaGV && xnld.HOANTHANH == true && ld.NAMHOC == pNamHoc && ctld.NGAYDAY >= pNgayDauTuan && ctld.NGAYDAY <= pNgayDauTuan.AddDays(6)
+                        select ctld;
             return query.Count();
         }
 

@@ -37,6 +37,27 @@ namespace DAL
         }
 
         //------------------ LẤY DỮ LIỆU PHỤ TRỘI
+        public List<PhuTroiDTO> getDataPhuTroi(string pMaGV, string pNamHoc)
+        {
+            var phutrois = from pt in qlgv.PHUTROIs
+                           where pt.MAGV == pMaGV && pt.NAMHOC == pNamHoc
+                           select new PhuTroiDTO()
+                           {
+                               magv = pt.MAGV,
+                               tongtietday = (int)pt.TONGTIETDAY,
+                               tongtietdaday = (int)pt.TONGTIETDADAY,
+                               tongtietquydinh = (int)pt.TONGTIETQUYDINH,
+                               sogiodaythem = (float)pt.SOGIODAYTHEM,
+                               luonggioday = (decimal)pt.LUONGGIODAY,
+                               tienphutroi = (decimal)pt.TIENPHUTROI
+                           };
+
+            List<PhuTroiDTO> lst_gv = phutrois.ToList();
+
+            return lst_gv;
+        }
+
+        //------------------ LẤY DỮ LIỆU PHỤ TRỘI
         public List<PhuTroiDTO> getDataPhuTroi(string pNamHoc)
         {
             var phutrois = from pt in qlgv.PHUTROIs

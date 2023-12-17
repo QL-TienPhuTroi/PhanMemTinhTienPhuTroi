@@ -23,6 +23,12 @@ namespace BLL
             return ld_dal.getDataLichDay();
         }
 
+        //------------------ LẤY DỮ LIỆU LỊCH DẠY THEO GIÁO VIÊN
+        public List<LichGiangDayDTO> getDataLichDayTheoGV(string pMaGV, DateTime pNgayDay, string pNamHoc)
+        {
+            return ld_dal.getDataLichDayTheoGV(pMaGV, pNgayDay, pNamHoc);
+        }
+
         //------------------ LẤY DỮ LIỆU LỊCH DẠY THEO LỚP
         public List<LichDayDTO> getDataLichDayTheoLop(string pMaLP, string pNamHoc)
         {

@@ -35,6 +35,28 @@ namespace DAL
             return lst_ld;
         }
 
+        //------------------ LẤY DỮ LIỆU LỊCH DẠY THEO GIÁO VIÊN
+        public List<LichGiangDayDTO> getDataLichDayTheoGV(string pMaGV, DateTime pNgayDay, string pNamHoc)
+        {
+            var lichdays = from ld in qlgv.LICHDAYs
+                           join ctld in qlgv.CHITIETLICHDAYs on ld.MALICH equals ctld.MALICH
+                           join lp in qlgv.LOPHOCs on ld.MALP equals lp.MALP
+                           join mh in qlgv.MONHOCs on ld.MAMH equals mh.MAMH
+                           where ld.MAGV == pMaGV && ld.NAMHOC == pNamHoc && ctld.NGAYDAY == pNgayDay
+                           select new LichGiangDayDTO()
+                           {
+                               magv = ld.MAGV,
+                               tenmh = mh.TENMH,
+                               tenlp = lp.TENLP,
+                               tietday = ctld.TIETDAY,
+                               namhoc = ld.NAMHOC
+                           };
+
+            List<LichGiangDayDTO> lst_ld = lichdays.ToList();
+
+            return lst_ld;
+        }
+
         //------------------ LẤY DỮ LIỆU LỊCH DẠY THEO LỚP
         public List<LichDayDTO> getDataLichDayTheoLop(string pMaLP, string pNamHoc)
         {

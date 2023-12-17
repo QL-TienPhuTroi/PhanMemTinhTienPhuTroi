@@ -33,29 +33,23 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbDate = new ReaLTaiizor.Controls.BigLabel();
             this.lbClock = new ReaLTaiizor.Controls.BigLabel();
+            this.picTime = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbHello = new ReaLTaiizor.Controls.BigLabel();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.dungeonHeaderLabel2 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            this.dungeonHeaderLabel3 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbQuantityClassroom = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.dungeonHeaderLabel4 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbQuantityTeacher = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.timerClock = new System.Windows.Forms.Timer(this.components);
-            this.picTime = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
-            this.guna2CustomGradientPanel2.SuspendLayout();
-            this.guna2CustomGradientPanel1.SuspendLayout();
-            this.guna2CustomGradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTime)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2CustomGradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +62,6 @@
             this.guna2GradientPanel1.Controls.Add(this.picTime);
             this.guna2GradientPanel1.Controls.Add(this.guna2GradientPanel2);
             this.guna2GradientPanel1.Controls.Add(this.lbHello);
-            this.guna2GradientPanel1.Controls.Add(this.guna2CustomGradientPanel2);
             this.guna2GradientPanel1.Controls.Add(this.guna2CustomGradientPanel1);
             this.guna2GradientPanel1.Controls.Add(this.guna2CustomGradientPanel4);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -105,6 +98,19 @@
             this.lbClock.TabIndex = 7;
             this.lbClock.Text = "09:49 AM";
             // 
+            // picTime
+            // 
+            this.picTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picTime.Image = global::GUI.Properties.Resources.morning;
+            this.picTime.ImageRotate = 0F;
+            this.picTime.Location = new System.Drawing.Point(437, 73);
+            this.picTime.Name = "picTime";
+            this.picTime.Size = new System.Drawing.Size(300, 285);
+            this.picTime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTime.TabIndex = 6;
+            this.picTime.TabStop = false;
+            // 
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -128,47 +134,6 @@
             this.lbHello.Size = new System.Drawing.Size(402, 57);
             this.lbHello.TabIndex = 4;
             this.lbHello.Text = "CHÀO BUỔI SÁNG!";
-            // 
-            // guna2CustomGradientPanel2
-            // 
-            this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.BorderRadius = 20;
-            this.guna2CustomGradientPanel2.Controls.Add(this.dungeonHeaderLabel2);
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2PictureBox2);
-            this.guna2CustomGradientPanel2.Controls.Add(this.dungeonHeaderLabel3);
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(1079, 411);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(497, 190);
-            this.guna2CustomGradientPanel2.TabIndex = 3;
-            // 
-            // dungeonHeaderLabel2
-            // 
-            this.dungeonHeaderLabel2.AutoSize = true;
-            this.dungeonHeaderLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonHeaderLabel2.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dungeonHeaderLabel2.ForeColor = System.Drawing.Color.White;
-            this.dungeonHeaderLabel2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dungeonHeaderLabel2.Location = new System.Drawing.Point(6, 8);
-            this.dungeonHeaderLabel2.Name = "dungeonHeaderLabel2";
-            this.dungeonHeaderLabel2.Size = new System.Drawing.Size(416, 80);
-            this.dungeonHeaderLabel2.TabIndex = 3;
-            this.dungeonHeaderLabel2.Text = "Số lượng lớp học hiện\r\ncó:";
-            // 
-            // dungeonHeaderLabel3
-            // 
-            this.dungeonHeaderLabel3.AutoSize = true;
-            this.dungeonHeaderLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.dungeonHeaderLabel3.Font = new System.Drawing.Font("Consolas", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dungeonHeaderLabel3.ForeColor = System.Drawing.Color.White;
-            this.dungeonHeaderLabel3.Location = new System.Drawing.Point(22, 84);
-            this.dungeonHeaderLabel3.Name = "dungeonHeaderLabel3";
-            this.dungeonHeaderLabel3.Size = new System.Drawing.Size(96, 108);
-            this.dungeonHeaderLabel3.TabIndex = 0;
-            this.dungeonHeaderLabel3.Text = "0";
             // 
             // guna2CustomGradientPanel1
             // 
@@ -198,6 +163,19 @@
             this.dungeonHeaderLabel1.Size = new System.Drawing.Size(416, 80);
             this.dungeonHeaderLabel1.TabIndex = 3;
             this.dungeonHeaderLabel1.Text = "Số lượng lớp học hiện\r\ncó:";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.training;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(353, 91);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // lbQuantityClassroom
             // 
@@ -240,57 +218,6 @@
             this.dungeonHeaderLabel4.TabIndex = 3;
             this.dungeonHeaderLabel4.Text = "Số lượng giáo viên hiện\r\ncó:";
             // 
-            // lbQuantityTeacher
-            // 
-            this.lbQuantityTeacher.AutoSize = true;
-            this.lbQuantityTeacher.BackColor = System.Drawing.Color.Transparent;
-            this.lbQuantityTeacher.Font = new System.Drawing.Font("Consolas", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuantityTeacher.ForeColor = System.Drawing.Color.White;
-            this.lbQuantityTeacher.Location = new System.Drawing.Point(22, 84);
-            this.lbQuantityTeacher.Name = "lbQuantityTeacher";
-            this.lbQuantityTeacher.Size = new System.Drawing.Size(96, 108);
-            this.lbQuantityTeacher.TabIndex = 0;
-            this.lbQuantityTeacher.Text = "0";
-            // 
-            // picTime
-            // 
-            this.picTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picTime.Image = global::GUI.Properties.Resources.morning;
-            this.picTime.ImageRotate = 0F;
-            this.picTime.Location = new System.Drawing.Point(437, 73);
-            this.picTime.Name = "picTime";
-            this.picTime.Size = new System.Drawing.Size(300, 285);
-            this.picTime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTime.TabIndex = 6;
-            this.picTime.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::GUI.Properties.Resources.training;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(353, 91);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(80, 80);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 2;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.training;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(353, 91);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -303,6 +230,18 @@
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 2;
             this.guna2PictureBox3.TabStop = false;
+            // 
+            // lbQuantityTeacher
+            // 
+            this.lbQuantityTeacher.AutoSize = true;
+            this.lbQuantityTeacher.BackColor = System.Drawing.Color.Transparent;
+            this.lbQuantityTeacher.Font = new System.Drawing.Font("Consolas", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQuantityTeacher.ForeColor = System.Drawing.Color.White;
+            this.lbQuantityTeacher.Location = new System.Drawing.Point(22, 84);
+            this.lbQuantityTeacher.Name = "lbQuantityTeacher";
+            this.lbQuantityTeacher.Size = new System.Drawing.Size(96, 108);
+            this.lbQuantityTeacher.TabIndex = 0;
+            this.lbQuantityTeacher.Text = "0";
             // 
             // frmHomeAdmin
             // 
@@ -318,15 +257,12 @@
             this.Text = "frmHomeAdmin";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            this.guna2CustomGradientPanel2.ResumeLayout(false);
-            this.guna2CustomGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTime)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2CustomGradientPanel4.ResumeLayout(false);
             this.guna2CustomGradientPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTime)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -343,10 +279,6 @@
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private ReaLTaiizor.Controls.DungeonHeaderLabel lbQuantityClassroom;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel3;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private ReaLTaiizor.Controls.BigLabel lbHello;
         private Guna.UI2.WinForms.Guna2PictureBox picTime;

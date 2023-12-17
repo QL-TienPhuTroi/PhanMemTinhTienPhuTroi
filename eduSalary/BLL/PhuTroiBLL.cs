@@ -24,6 +24,12 @@ namespace BLL
         }
 
         //------------------ LẤY DỮ LIỆU PHỤ TRỘI
+        public List<PhuTroiDTO> getDataPhuTroi(string pMaGV, string pNamHoc)
+        {
+            return pt_dal.getDataPhuTroi(pMaGV, pNamHoc);
+        }
+
+        //------------------ LẤY DỮ LIỆU PHỤ TRỘI
         public List<PhuTroiDTO> getDataPhuTroi(string pNamHoc)
         {
             return pt_dal.getDataPhuTroi(pNamHoc);
