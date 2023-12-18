@@ -108,6 +108,24 @@ namespace BLL
         }
 
         //------------------ XÓA CHI TIẾT LỊCH DẠY
+        public bool removeCTLD(string pMaLich)
+        {
+            return ctld_dal.removeCTLD(pMaLich);
+        }
+
+        //------------------ XÓA CHI TIẾT LỊCH DẠY
+        public bool removeCTLD(string pMaLich, DateTime pNgayDay)
+        {
+            return ctld_dal.removeCTLD(pMaLich, pNgayDay);
+        }
+
+        //------------------ XÓA CHI TIẾT LỊCH DẠY
+        public bool removeCTLD(string pMaLich, string pThu)
+        {
+            return ctld_dal.removeCTLD(pMaLich, pThu);
+        }
+
+        //------------------ XÓA CHI TIẾT LỊCH DẠY
         public bool removeCTLD(string pMaLich, DateTime pNgayDay, int pTietDay)
         {
             return ctld_dal.removeCTLD(pMaLich, pNgayDay, pTietDay);

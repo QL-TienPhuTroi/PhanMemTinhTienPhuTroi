@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddTeacher));
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbFrmName = new ReaLTaiizor.Controls.BigLabel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -53,7 +54,6 @@
             this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.bigLabel9 = new ReaLTaiizor.Controls.BigLabel();
-            this.txtThamNien = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDanToc = new Guna.UI2.WinForms.Guna2TextBox();
             this.bigLabel17 = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel19 = new ReaLTaiizor.Controls.BigLabel();
@@ -63,8 +63,6 @@
             this.bigLabel18 = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel16 = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel14 = new ReaLTaiizor.Controls.BigLabel();
-            this.txtDonVi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.bigLabel12 = new ReaLTaiizor.Controls.BigLabel();
             this.txtCCCD = new Guna.UI2.WinForms.Guna2TextBox();
             this.bigLabel8 = new ReaLTaiizor.Controls.BigLabel();
             this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
@@ -74,11 +72,11 @@
             this.txtHoTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.dtpThamNien = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2GradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel2
@@ -95,7 +93,19 @@
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1080, 49);
             this.guna2GradientPanel2.TabIndex = 2;
-            this.guna2GradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel2_Paint);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::GUI.Properties.Resources.apps;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(41, 6);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 7;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // lbFrmName
             // 
@@ -108,7 +118,6 @@
             this.lbFrmName.Size = new System.Drawing.Size(246, 27);
             this.lbFrmName.TabIndex = 6;
             this.lbFrmName.Text = "THÊM GIÁO VIÊN MỚI";
-            this.lbFrmName.Click += new System.EventHandler(this.lbFrmName_Click);
             // 
             // guna2ControlBox1
             // 
@@ -123,7 +132,6 @@
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 49);
             this.guna2ControlBox1.TabIndex = 5;
-            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // btnExit
             // 
@@ -138,7 +146,6 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(60, 49);
             this.btnExit.TabIndex = 2;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // guna2GradientPanel3
             // 
@@ -155,6 +162,7 @@
             this.guna2GradientPanel3.Controls.Add(this.dtpNgayVT);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel11);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel10);
+            this.guna2GradientPanel3.Controls.Add(this.dtpThamNien);
             this.guna2GradientPanel3.Controls.Add(this.dtpNgaySinh);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel2);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel5);
@@ -162,7 +170,6 @@
             this.guna2GradientPanel3.Controls.Add(this.bigLabel3);
             this.guna2GradientPanel3.Controls.Add(this.txtEmail);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel9);
-            this.guna2GradientPanel3.Controls.Add(this.txtThamNien);
             this.guna2GradientPanel3.Controls.Add(this.txtDanToc);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel17);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel19);
@@ -172,8 +179,6 @@
             this.guna2GradientPanel3.Controls.Add(this.bigLabel18);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel16);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel14);
-            this.guna2GradientPanel3.Controls.Add(this.txtDonVi);
-            this.guna2GradientPanel3.Controls.Add(this.bigLabel12);
             this.guna2GradientPanel3.Controls.Add(this.txtCCCD);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel8);
             this.guna2GradientPanel3.Controls.Add(this.txtSDT);
@@ -187,7 +192,6 @@
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(1060, 974);
             this.guna2GradientPanel3.TabIndex = 0;
-            this.guna2GradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel3_Paint);
             // 
             // panel1
             // 
@@ -195,7 +199,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 34);
             this.panel1.TabIndex = 7;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // cboChuyenMon
             // 
@@ -212,7 +215,6 @@
             this.cboChuyenMon.Name = "cboChuyenMon";
             this.cboChuyenMon.Size = new System.Drawing.Size(281, 36);
             this.cboChuyenMon.TabIndex = 6;
-            this.cboChuyenMon.SelectedIndexChanged += new System.EventHandler(this.cboChuyenMon_SelectedIndexChanged);
             // 
             // cboTrangThai
             // 
@@ -225,11 +227,10 @@
             this.cboTrangThai.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboTrangThai.ItemHeight = 30;
-            this.cboTrangThai.Location = new System.Drawing.Point(723, 762);
+            this.cboTrangThai.Location = new System.Drawing.Point(723, 582);
             this.cboTrangThai.Name = "cboTrangThai";
             this.cboTrangThai.Size = new System.Drawing.Size(299, 36);
             this.cboTrangThai.TabIndex = 5;
-            this.cboTrangThai.SelectedIndexChanged += new System.EventHandler(this.cboTrangThai_SelectedIndexChanged);
             // 
             // cboBac
             // 
@@ -246,7 +247,6 @@
             this.cboBac.Name = "cboBac";
             this.cboBac.Size = new System.Drawing.Size(301, 36);
             this.cboBac.TabIndex = 5;
-            this.cboBac.SelectedIndexChanged += new System.EventHandler(this.cboBac_SelectedIndexChanged);
             // 
             // cboMSCD
             // 
@@ -263,7 +263,6 @@
             this.cboMSCD.Name = "cboMSCD";
             this.cboMSCD.Size = new System.Drawing.Size(324, 36);
             this.cboMSCD.TabIndex = 5;
-            this.cboMSCD.SelectedIndexChanged += new System.EventHandler(this.cboMSCD_SelectedIndexChanged_1);
             // 
             // btnFinish
             // 
@@ -280,7 +279,6 @@
             this.btnFinish.Size = new System.Drawing.Size(290, 69);
             this.btnFinish.TabIndex = 4;
             this.btnFinish.Text = "HOÀN TẤT";
-            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click_1);
             // 
             // rdoNu
             // 
@@ -297,7 +295,6 @@
             this.rdoNu.UncheckedState.BorderThickness = 2;
             this.rdoNu.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rdoNu.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdoNu.CheckedChanged += new System.EventHandler(this.rdoNu_CheckedChanged);
             // 
             // rdoNam
             // 
@@ -314,7 +311,6 @@
             this.rdoNam.UncheckedState.BorderThickness = 2;
             this.rdoNam.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rdoNam.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdoNam.CheckedChanged += new System.EventHandler(this.rdoNam_CheckedChanged);
             // 
             // dtpNgayVD
             // 
@@ -331,7 +327,6 @@
             this.dtpNgayVD.Size = new System.Drawing.Size(249, 54);
             this.dtpNgayVD.TabIndex = 2;
             this.dtpNgayVD.Value = new System.DateTime(2023, 11, 9, 0, 11, 2, 642);
-            this.dtpNgayVD.ValueChanged += new System.EventHandler(this.dtpNgayVD_ValueChanged);
             // 
             // dtpNgayVT
             // 
@@ -348,7 +343,6 @@
             this.dtpNgayVT.Size = new System.Drawing.Size(249, 54);
             this.dtpNgayVT.TabIndex = 2;
             this.dtpNgayVT.Value = new System.DateTime(2023, 11, 9, 0, 11, 2, 642);
-            this.dtpNgayVT.ValueChanged += new System.EventHandler(this.dtpNgayVT_ValueChanged);
             // 
             // bigLabel11
             // 
@@ -361,7 +355,6 @@
             this.bigLabel11.Size = new System.Drawing.Size(194, 27);
             this.bigLabel11.TabIndex = 0;
             this.bigLabel11.Text = "Ngày vào Đảng:";
-            this.bigLabel11.Click += new System.EventHandler(this.bigLabel11_Click);
             // 
             // bigLabel10
             // 
@@ -374,7 +367,6 @@
             this.bigLabel10.Size = new System.Drawing.Size(220, 27);
             this.bigLabel10.TabIndex = 0;
             this.bigLabel10.Text = "Ngày vào trường:";
-            this.bigLabel10.Click += new System.EventHandler(this.bigLabel10_Click);
             // 
             // dtpNgaySinh
             // 
@@ -391,7 +383,6 @@
             this.dtpNgaySinh.Size = new System.Drawing.Size(324, 54);
             this.dtpNgaySinh.TabIndex = 2;
             this.dtpNgaySinh.Value = new System.DateTime(2023, 11, 9, 0, 11, 2, 642);
-            this.dtpNgaySinh.ValueChanged += new System.EventHandler(this.dtpNgaySinh_ValueChanged);
             // 
             // bigLabel2
             // 
@@ -404,7 +395,6 @@
             this.bigLabel2.Size = new System.Drawing.Size(142, 27);
             this.bigLabel2.TabIndex = 0;
             this.bigLabel2.Text = "Ngày sinh:";
-            this.bigLabel2.Click += new System.EventHandler(this.bigLabel2_Click);
             // 
             // bigLabel5
             // 
@@ -417,7 +407,6 @@
             this.bigLabel5.Size = new System.Drawing.Size(38, 27);
             this.bigLabel5.TabIndex = 0;
             this.bigLabel5.Text = "Nữ";
-            this.bigLabel5.Click += new System.EventHandler(this.bigLabel5_Click);
             // 
             // bigLabel4
             // 
@@ -430,7 +419,6 @@
             this.bigLabel4.Size = new System.Drawing.Size(51, 27);
             this.bigLabel4.TabIndex = 0;
             this.bigLabel4.Text = "Nam";
-            this.bigLabel4.Click += new System.EventHandler(this.bigLabel4_Click);
             // 
             // bigLabel3
             // 
@@ -443,7 +431,6 @@
             this.bigLabel3.Size = new System.Drawing.Size(142, 27);
             this.bigLabel3.TabIndex = 0;
             this.bigLabel3.Text = "Giới tính:";
-            this.bigLabel3.Click += new System.EventHandler(this.bigLabel3_Click);
             // 
             // txtEmail
             // 
@@ -463,9 +450,8 @@
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(301, 54);
+            this.txtEmail.Size = new System.Drawing.Size(299, 54);
             this.txtEmail.TabIndex = 1;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // bigLabel9
             // 
@@ -478,29 +464,6 @@
             this.bigLabel9.Size = new System.Drawing.Size(90, 27);
             this.bigLabel9.TabIndex = 0;
             this.bigLabel9.Text = "Email:";
-            this.bigLabel9.Click += new System.EventHandler(this.bigLabel9_Click);
-            // 
-            // txtThamNien
-            // 
-            this.txtThamNien.BorderRadius = 10;
-            this.txtThamNien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtThamNien.DefaultText = "";
-            this.txtThamNien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtThamNien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtThamNien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThamNien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThamNien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThamNien.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThamNien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThamNien.Location = new System.Drawing.Point(723, 564);
-            this.txtThamNien.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtThamNien.Name = "txtThamNien";
-            this.txtThamNien.PasswordChar = '\0';
-            this.txtThamNien.PlaceholderText = "";
-            this.txtThamNien.SelectedText = "";
-            this.txtThamNien.Size = new System.Drawing.Size(301, 54);
-            this.txtThamNien.TabIndex = 1;
-            this.txtThamNien.TextChanged += new System.EventHandler(this.txtThamNien_TextChanged);
             // 
             // txtDanToc
             // 
@@ -514,15 +477,14 @@
             this.txtDanToc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDanToc.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDanToc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDanToc.Location = new System.Drawing.Point(723, 475);
+            this.txtDanToc.Location = new System.Drawing.Point(168, 475);
             this.txtDanToc.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDanToc.Name = "txtDanToc";
             this.txtDanToc.PasswordChar = '\0';
             this.txtDanToc.PlaceholderText = "";
             this.txtDanToc.SelectedText = "";
-            this.txtDanToc.Size = new System.Drawing.Size(301, 54);
+            this.txtDanToc.Size = new System.Drawing.Size(324, 54);
             this.txtDanToc.TabIndex = 1;
-            this.txtDanToc.TextChanged += new System.EventHandler(this.txtDanToc_TextChanged);
             // 
             // bigLabel17
             // 
@@ -535,7 +497,6 @@
             this.bigLabel17.Size = new System.Drawing.Size(64, 27);
             this.bigLabel17.TabIndex = 0;
             this.bigLabel17.Text = "Bậc:";
-            this.bigLabel17.Click += new System.EventHandler(this.bigLabel17_Click);
             // 
             // bigLabel19
             // 
@@ -543,12 +504,11 @@
             this.bigLabel19.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel19.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel19.Location = new System.Drawing.Point(545, 771);
+            this.bigLabel19.Location = new System.Drawing.Point(545, 591);
             this.bigLabel19.Name = "bigLabel19";
             this.bigLabel19.Size = new System.Drawing.Size(155, 27);
             this.bigLabel19.TabIndex = 0;
             this.bigLabel19.Text = "Tình trạng:";
-            this.bigLabel19.Click += new System.EventHandler(this.bigLabel19_Click);
             // 
             // bigLabel15
             // 
@@ -556,12 +516,11 @@
             this.bigLabel15.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel15.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel15.Location = new System.Drawing.Point(548, 591);
+            this.bigLabel15.Location = new System.Drawing.Point(546, 502);
             this.bigLabel15.Name = "bigLabel15";
             this.bigLabel15.Size = new System.Drawing.Size(142, 27);
             this.bigLabel15.TabIndex = 0;
             this.bigLabel15.Text = "Thâm niên:";
-            this.bigLabel15.Click += new System.EventHandler(this.bigLabel15_Click);
             // 
             // bigLabel13
             // 
@@ -569,12 +528,11 @@
             this.bigLabel13.BackColor = System.Drawing.Color.Transparent;
             this.bigLabel13.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel13.Location = new System.Drawing.Point(546, 502);
+            this.bigLabel13.Location = new System.Drawing.Point(41, 502);
             this.bigLabel13.Name = "bigLabel13";
             this.bigLabel13.Size = new System.Drawing.Size(116, 27);
             this.bigLabel13.TabIndex = 0;
             this.bigLabel13.Text = "Dân tộc:";
-            this.bigLabel13.Click += new System.EventHandler(this.bigLabel13_Click);
             // 
             // txtTonGiao
             // 
@@ -596,7 +554,6 @@
             this.txtTonGiao.SelectedText = "";
             this.txtTonGiao.Size = new System.Drawing.Size(324, 54);
             this.txtTonGiao.TabIndex = 1;
-            this.txtTonGiao.TextChanged += new System.EventHandler(this.txtTonGiao_TextChanged);
             // 
             // bigLabel18
             // 
@@ -609,7 +566,6 @@
             this.bigLabel18.Size = new System.Drawing.Size(155, 27);
             this.bigLabel18.TabIndex = 0;
             this.bigLabel18.Text = "Chuyên môn:";
-            this.bigLabel18.Click += new System.EventHandler(this.bigLabel18_Click);
             // 
             // bigLabel16
             // 
@@ -622,7 +578,6 @@
             this.bigLabel16.Size = new System.Drawing.Size(129, 27);
             this.bigLabel16.TabIndex = 0;
             this.bigLabel16.Text = "Mã số CD:";
-            this.bigLabel16.Click += new System.EventHandler(this.bigLabel16_Click);
             // 
             // bigLabel14
             // 
@@ -635,42 +590,6 @@
             this.bigLabel14.Size = new System.Drawing.Size(129, 27);
             this.bigLabel14.TabIndex = 0;
             this.bigLabel14.Text = "Tôn giáo:";
-            this.bigLabel14.Click += new System.EventHandler(this.bigLabel14_Click);
-            // 
-            // txtDonVi
-            // 
-            this.txtDonVi.BorderRadius = 10;
-            this.txtDonVi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDonVi.DefaultText = "";
-            this.txtDonVi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDonVi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDonVi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDonVi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDonVi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDonVi.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDonVi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDonVi.Location = new System.Drawing.Point(168, 475);
-            this.txtDonVi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtDonVi.Name = "txtDonVi";
-            this.txtDonVi.PasswordChar = '\0';
-            this.txtDonVi.PlaceholderText = "";
-            this.txtDonVi.SelectedText = "";
-            this.txtDonVi.Size = new System.Drawing.Size(324, 54);
-            this.txtDonVi.TabIndex = 1;
-            this.txtDonVi.TextChanged += new System.EventHandler(this.txtDonVi_TextChanged);
-            // 
-            // bigLabel12
-            // 
-            this.bigLabel12.AutoSize = true;
-            this.bigLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel12.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel12.Location = new System.Drawing.Point(28, 502);
-            this.bigLabel12.Name = "bigLabel12";
-            this.bigLabel12.Size = new System.Drawing.Size(103, 27);
-            this.bigLabel12.TabIndex = 0;
-            this.bigLabel12.Text = "Đơn vị:";
-            this.bigLabel12.Click += new System.EventHandler(this.bigLabel12_Click);
             // 
             // txtCCCD
             // 
@@ -692,7 +611,6 @@
             this.txtCCCD.SelectedText = "";
             this.txtCCCD.Size = new System.Drawing.Size(324, 54);
             this.txtCCCD.TabIndex = 1;
-            this.txtCCCD.TextChanged += new System.EventHandler(this.txtCCCD_TextChanged);
             // 
             // bigLabel8
             // 
@@ -705,7 +623,6 @@
             this.bigLabel8.Size = new System.Drawing.Size(77, 27);
             this.bigLabel8.TabIndex = 0;
             this.bigLabel8.Text = "CCCD:";
-            this.bigLabel8.Click += new System.EventHandler(this.bigLabel8_Click);
             // 
             // txtSDT
             // 
@@ -727,7 +644,6 @@
             this.txtSDT.SelectedText = "";
             this.txtSDT.Size = new System.Drawing.Size(324, 54);
             this.txtSDT.TabIndex = 1;
-            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             // 
             // bigLabel6
             // 
@@ -740,7 +656,6 @@
             this.bigLabel6.Size = new System.Drawing.Size(155, 27);
             this.bigLabel6.TabIndex = 0;
             this.bigLabel6.Text = "Điện thoại:";
-            this.bigLabel6.Click += new System.EventHandler(this.bigLabel6_Click);
             // 
             // txtDiaChi
             // 
@@ -762,7 +677,6 @@
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.Size = new System.Drawing.Size(856, 54);
             this.txtDiaChi.TabIndex = 1;
-            this.txtDiaChi.TextChanged += new System.EventHandler(this.txtDiaChi_TextChanged);
             // 
             // bigLabel7
             // 
@@ -775,7 +689,6 @@
             this.bigLabel7.Size = new System.Drawing.Size(116, 27);
             this.bigLabel7.TabIndex = 0;
             this.bigLabel7.Text = "Địa chỉ:";
-            this.bigLabel7.Click += new System.EventHandler(this.bigLabel7_Click);
             // 
             // txtHoTen
             // 
@@ -797,7 +710,6 @@
             this.txtHoTen.SelectedText = "";
             this.txtHoTen.Size = new System.Drawing.Size(324, 54);
             this.txtHoTen.TabIndex = 1;
-            this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
             // 
             // bigLabel1
             // 
@@ -810,7 +722,6 @@
             this.bigLabel1.Size = new System.Drawing.Size(103, 27);
             this.bigLabel1.TabIndex = 0;
             this.bigLabel1.Text = "Họ tên:";
-            this.bigLabel1.Click += new System.EventHandler(this.bigLabel1_Click);
             // 
             // guna2GradientPanel1
             // 
@@ -823,21 +734,22 @@
             this.guna2GradientPanel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1080, 984);
             this.guna2GradientPanel1.TabIndex = 3;
-            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
-            // guna2PictureBox2
+            // dtpThamNien
             // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::GUI.Properties.Resources.apps;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(41, 6);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 7;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
+            this.dtpThamNien.BackColor = System.Drawing.Color.Transparent;
+            this.dtpThamNien.BorderRadius = 10;
+            this.dtpThamNien.Checked = true;
+            this.dtpThamNien.FillColor = System.Drawing.Color.White;
+            this.dtpThamNien.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpThamNien.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpThamNien.Location = new System.Drawing.Point(700, 484);
+            this.dtpThamNien.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpThamNien.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpThamNien.Name = "dtpThamNien";
+            this.dtpThamNien.Size = new System.Drawing.Size(324, 54);
+            this.dtpThamNien.TabIndex = 2;
+            this.dtpThamNien.Value = new System.DateTime(2023, 11, 9, 0, 11, 2, 642);
             // 
             // frmAddTeacher
             // 
@@ -853,10 +765,10 @@
             this.Text = "frmAddTeacher";
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -887,7 +799,6 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private ReaLTaiizor.Controls.BigLabel bigLabel9;
-        private Guna.UI2.WinForms.Guna2TextBox txtThamNien;
         private Guna.UI2.WinForms.Guna2TextBox txtDanToc;
         private ReaLTaiizor.Controls.BigLabel bigLabel17;
         private ReaLTaiizor.Controls.BigLabel bigLabel15;
@@ -896,8 +807,6 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel18;
         private ReaLTaiizor.Controls.BigLabel bigLabel16;
         private ReaLTaiizor.Controls.BigLabel bigLabel14;
-        private Guna.UI2.WinForms.Guna2TextBox txtDonVi;
-        private ReaLTaiizor.Controls.BigLabel bigLabel12;
         private Guna.UI2.WinForms.Guna2TextBox txtCCCD;
         private ReaLTaiizor.Controls.BigLabel bigLabel8;
         private Guna.UI2.WinForms.Guna2TextBox txtSDT;
@@ -909,5 +818,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2ComboBox cboTrangThai;
         private ReaLTaiizor.Controls.BigLabel bigLabel19;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpThamNien;
     }
 }

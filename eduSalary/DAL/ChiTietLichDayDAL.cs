@@ -189,6 +189,57 @@ namespace DAL
         }
 
         //------------------ XÓA CHI TIẾT LỊCH DẠY
+        public bool removeCTLD(string pMaLich)
+        {
+            var ctlds = qlgv.CHITIETLICHDAYs.Where(t => t.MALICH == pMaLich).ToList();
+
+            if (ctlds != null)
+            {
+                foreach (var ctld in ctlds)
+                {
+                    qlgv.CHITIETLICHDAYs.DeleteOnSubmit(ctld);
+                }
+                qlgv.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        //------------------ XÓA CHI TIẾT LỊCH DẠY
+        public bool removeCTLD(string pMaLich, DateTime pNgayDay)
+        {
+            var ctlds = qlgv.CHITIETLICHDAYs.Where(t => t.MALICH == pMaLich && t.NGAYDAY == pNgayDay).ToList();
+            
+            if (ctlds != null)
+            {
+                foreach (var ctld in ctlds)
+                {
+                    qlgv.CHITIETLICHDAYs.DeleteOnSubmit(ctld);
+                }
+                qlgv.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        //------------------ XÓA CHI TIẾT LỊCH DẠY
+        public bool removeCTLD(string pMaLich, string pThu)
+        {
+            var ctlds = qlgv.CHITIETLICHDAYs.Where(t => t.MALICH == pMaLich && t.THU == pThu).ToList();
+
+            if (ctlds != null)
+            {
+                foreach (var ctld in ctlds)
+                {
+                    qlgv.CHITIETLICHDAYs.DeleteOnSubmit(ctld);
+                }
+                qlgv.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        //------------------ XÓA CHI TIẾT LỊCH DẠY
         public bool removeCTLD(string pMaLich, DateTime pNgayDay, int pTietDay)
         {
             CHITIETLICHDAY ctld = qlgv.CHITIETLICHDAYs.Where(t => t.MALICH == pMaLich && t.NGAYDAY == pNgayDay && t.TIETDAY == pTietDay).FirstOrDefault();

@@ -22,7 +22,7 @@ namespace GUI.GroupAminGUI
         XacNhanLichDayBLL xnld_bll = new XacNhanLichDayBLL();
         XacNhanLichDayDTO xnld_dto = new XacNhanLichDayDTO();
 
-        string pMaLich, pMaLP, pTenLP, pTenMH, pMaGV, pNamHoc;
+        string pMaLich, pMaLP, pTenLP, pTenMH, pMaGV, pNamHoc, pThu;
         DateTime pNgayDay, pThoiGianBatDau;
         int pTietDay, pMaMH;
 
@@ -43,6 +43,85 @@ namespace GUI.GroupAminGUI
             lbDetail.Click += LbDetail_Click;
             btnFinish.Click += BtnFinish_Click;
             btnRemove.Click += BtnRemove_Click;
+            btnClearAll.Click += BtnClearAll_Click;
+            btnRemoveLesson.Click += BtnRemoveLesson_Click;
+            btnRemoveLessonAll.Click += BtnRemoveLessonAll_Click;
+        }
+
+        private void BtnRemoveLessonAll_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("BẠN CÓ MUỐN CHẮC XÓA LỊCH DẠY CỦA GIÁO VIÊN NÀY KHÔNG KHÔNG?", "PHẦN MỀM TÍNH PHỤ TRỘI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                pMaLich = dgvDetailTeachingSchedule.CurrentRow.Cells[0].Value.ToString();
+                pThu = dgvDetailTeachingSchedule.CurrentRow.Cells[1].Value.ToString();
+                pNgayDay = DateTime.Parse(dgvDetailTeachingSchedule.CurrentRow.Cells[2].Value.ToString());
+                pTietDay = int.Parse(dgvDetailTeachingSchedule.CurrentRow.Cells[3].Value.ToString());
+
+                xnld_bll.removeXNLDThu(pMaLich, pNgayDay);
+
+                if (ctld_bll.removeCTLD(pMaLich, pThu))
+                {
+
+                    MessageBox.Show("ĐÃ XÓA THÀNH CÔNG LỊCH DẠY CỦA GIÁO VIÊN NÀY", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                    loadDataDetailTeaching();
+                    loadLesson();
+                }
+                else
+                {
+                    MessageBox.Show("CÓ LỖI! VUI LÒNG THỬ LẠI", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                }
+            }
+        }
+
+        private void BtnRemoveLesson_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("BẠN CÓ MUỐN CHẮC XÓA LỊCH DẠY CỦA GIÁO VIÊN NÀY KHÔNG KHÔNG?", "PHẦN MỀM TÍNH PHỤ TRỘI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                pMaLich = dgvDetailTeachingSchedule.CurrentRow.Cells[0].Value.ToString();
+                pNgayDay = DateTime.Parse(dgvDetailTeachingSchedule.CurrentRow.Cells[2].Value.ToString());
+                pTietDay = int.Parse(dgvDetailTeachingSchedule.CurrentRow.Cells[3].Value.ToString());
+
+                xnld_bll.removeXNLD(pMaLich, pTietDay, pNgayDay);
+
+                if (ctld_bll.removeCTLD(pMaLich, pNgayDay, pTietDay))
+                {
+
+                    MessageBox.Show("ĐÃ XÓA THÀNH CÔNG LỊCH DẠY CỦA GIÁO VIÊN NÀY", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                    loadDataDetailTeaching();
+                    loadLesson();
+                }
+                else
+                {
+                    MessageBox.Show("CÓ LỖI! VUI LÒNG THỬ LẠI", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                }
+            }
+        }
+
+        private void BtnClearAll_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("BẠN CÓ MUỐN CHẮC XÓA TOÀN BỘ LỊCH DẠY CỦA GIÁO VIÊN NÀY KHÔNG KHÔNG?", "PHẦN MỀM TÍNH PHỤ TRỘI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                pMaLich = dgvDetailTeachingSchedule.CurrentRow.Cells[0].Value.ToString();
+                pNgayDay = DateTime.Parse(dgvDetailTeachingSchedule.CurrentRow.Cells[2].Value.ToString());
+                pTietDay = int.Parse(dgvDetailTeachingSchedule.CurrentRow.Cells[3].Value.ToString());
+
+                xnld_bll.removeXNLD(pMaLich);
+
+                if (ctld_bll.removeCTLD(pMaLich))
+                {
+
+                    MessageBox.Show("ĐÃ XÓA THÀNH CÔNG TOÀN BỘ LỊCH DẠY CỦA GIÁO VIÊN NÀY", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                    loadDataDetailTeaching();
+                    loadLesson();
+                }
+                else
+                {
+                    MessageBox.Show("CÓ LỖI! VUI LÒNG THỬ LẠI", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                }
+            }
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)
@@ -54,7 +133,9 @@ namespace GUI.GroupAminGUI
                 pNgayDay = DateTime.Parse(dgvDetailTeachingSchedule.CurrentRow.Cells[2].Value.ToString());
                 pTietDay = int.Parse(dgvDetailTeachingSchedule.CurrentRow.Cells[3].Value.ToString());
 
-                if (ctld_bll.removeCTLD(pMaLich, pNgayDay, pTietDay))
+                xnld_bll.removeXNLD(pMaLich, pTietDay, pNgayDay);
+
+                if (ctld_bll.removeCTLD(pMaLich, pNgayDay))
                 {
 
                     MessageBox.Show("ĐÃ XÓA THÀNH CÔNG LỊCH DẠY CỦA GIÁO VIÊN NÀY", "PHẦN MỀM TÍNH PHỤ TRỘI");

@@ -36,6 +36,8 @@
             this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.cboTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.bigLabel19 = new ReaLTaiizor.Controls.BigLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboChuyenMon = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cboBac = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -54,7 +56,6 @@
             this.bigLabel3 = new ReaLTaiizor.Controls.BigLabel();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.bigLabel9 = new ReaLTaiizor.Controls.BigLabel();
-            this.txtThamNien = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDanToc = new Guna.UI2.WinForms.Guna2TextBox();
             this.bigLabel17 = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel15 = new ReaLTaiizor.Controls.BigLabel();
@@ -73,8 +74,7 @@
             this.bigLabel7 = new ReaLTaiizor.Controls.BigLabel();
             this.txtHoTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
-            this.cboTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.bigLabel19 = new ReaLTaiizor.Controls.BigLabel();
+            this.txtThamNien = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -208,6 +208,34 @@
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(1060, 974);
             this.guna2GradientPanel3.TabIndex = 0;
+            // 
+            // cboTrangThai
+            // 
+            this.cboTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.cboTrangThai.BorderRadius = 10;
+            this.cboTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTrangThai.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboTrangThai.ItemHeight = 30;
+            this.cboTrangThai.Location = new System.Drawing.Point(723, 762);
+            this.cboTrangThai.Name = "cboTrangThai";
+            this.cboTrangThai.Size = new System.Drawing.Size(299, 36);
+            this.cboTrangThai.TabIndex = 9;
+            // 
+            // bigLabel19
+            // 
+            this.bigLabel19.AutoSize = true;
+            this.bigLabel19.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel19.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel19.Location = new System.Drawing.Point(545, 771);
+            this.bigLabel19.Name = "bigLabel19";
+            this.bigLabel19.Size = new System.Drawing.Size(155, 27);
+            this.bigLabel19.TabIndex = 8;
+            this.bigLabel19.Text = "Tình trạng:";
             // 
             // panel1
             // 
@@ -464,27 +492,6 @@
             this.bigLabel9.Size = new System.Drawing.Size(90, 27);
             this.bigLabel9.TabIndex = 0;
             this.bigLabel9.Text = "Email:";
-            // 
-            // txtThamNien
-            // 
-            this.txtThamNien.BorderRadius = 10;
-            this.txtThamNien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtThamNien.DefaultText = "";
-            this.txtThamNien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtThamNien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtThamNien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThamNien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThamNien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThamNien.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThamNien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThamNien.Location = new System.Drawing.Point(723, 564);
-            this.txtThamNien.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtThamNien.Name = "txtThamNien";
-            this.txtThamNien.PasswordChar = '\0';
-            this.txtThamNien.PlaceholderText = "";
-            this.txtThamNien.SelectedText = "";
-            this.txtThamNien.Size = new System.Drawing.Size(301, 54);
-            this.txtThamNien.TabIndex = 1;
             // 
             // txtDanToc
             // 
@@ -765,33 +772,26 @@
             this.bigLabel1.TabIndex = 0;
             this.bigLabel1.Text = "Họ tên:";
             // 
-            // cboTrangThai
+            // txtThamNien
             // 
-            this.cboTrangThai.BackColor = System.Drawing.Color.Transparent;
-            this.cboTrangThai.BorderRadius = 10;
-            this.cboTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboTrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboTrangThai.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboTrangThai.ItemHeight = 30;
-            this.cboTrangThai.Location = new System.Drawing.Point(723, 762);
-            this.cboTrangThai.Name = "cboTrangThai";
-            this.cboTrangThai.Size = new System.Drawing.Size(299, 36);
-            this.cboTrangThai.TabIndex = 9;
-            // 
-            // bigLabel19
-            // 
-            this.bigLabel19.AutoSize = true;
-            this.bigLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel19.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel19.Location = new System.Drawing.Point(545, 771);
-            this.bigLabel19.Name = "bigLabel19";
-            this.bigLabel19.Size = new System.Drawing.Size(155, 27);
-            this.bigLabel19.TabIndex = 8;
-            this.bigLabel19.Text = "Tình trạng:";
+            this.txtThamNien.BorderRadius = 10;
+            this.txtThamNien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtThamNien.DefaultText = "";
+            this.txtThamNien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtThamNien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtThamNien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThamNien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThamNien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThamNien.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThamNien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThamNien.Location = new System.Drawing.Point(723, 564);
+            this.txtThamNien.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtThamNien.Name = "txtThamNien";
+            this.txtThamNien.PasswordChar = '\0';
+            this.txtThamNien.PlaceholderText = "";
+            this.txtThamNien.SelectedText = "";
+            this.txtThamNien.Size = new System.Drawing.Size(301, 54);
+            this.txtThamNien.TabIndex = 1;
             // 
             // frmEditTeacher
             // 
@@ -842,7 +842,6 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private ReaLTaiizor.Controls.BigLabel bigLabel9;
-        private Guna.UI2.WinForms.Guna2TextBox txtThamNien;
         private Guna.UI2.WinForms.Guna2TextBox txtDanToc;
         private ReaLTaiizor.Controls.BigLabel bigLabel17;
         private ReaLTaiizor.Controls.BigLabel bigLabel15;
@@ -863,5 +862,6 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
         private Guna.UI2.WinForms.Guna2ComboBox cboTrangThai;
         private ReaLTaiizor.Controls.BigLabel bigLabel19;
+        private Guna.UI2.WinForms.Guna2TextBox txtThamNien;
     }
 }

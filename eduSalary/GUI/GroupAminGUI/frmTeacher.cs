@@ -17,6 +17,7 @@ namespace GUI.GroupAminGUI
         GiaoVienBLL gv_bll = new GiaoVienBLL();
         ChiTietChucVuBLL ctcv_bll = new ChiTietChucVuBLL();
         TaiKhoanBLL tk_bll = new TaiKhoanBLL();
+        PhuTroiBLL pt_bll = new PhuTroiBLL();
 
         frmDetailedProfile fDetailedProfile;
         frmAddTeacher fAdd;
@@ -67,6 +68,8 @@ namespace GUI.GroupAminGUI
 
             tk_bll.removeTK(pMaGV);
             ctcv_bll.removeCTCV(pMaGV);
+            pt_bll.removePT(pMaGV);
+
 
             if (gv_bll.removeGV(pMaGV))
             {

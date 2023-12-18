@@ -252,14 +252,22 @@ namespace DAL
         //------------------ XÓA GIÁO VIÊN
         public bool removeGV(string pMaGV)
         {
-            GIAOVIEN gv = qlgv.GIAOVIENs.Where(t => t.MAGV == pMaGV).FirstOrDefault();
-            if (gv != null)
+            try
             {
-                qlgv.GIAOVIENs.DeleteOnSubmit(gv);
-                qlgv.SubmitChanges();
-                return true;
+                GIAOVIEN gv = qlgv.GIAOVIENs.Where(t => t.MAGV == pMaGV).FirstOrDefault();
+
+                if (gv != null)
+                {
+                    qlgv.GIAOVIENs.DeleteOnSubmit(gv);
+                    qlgv.SubmitChanges();
+                    return true;
+                }
+                return false;
             }
-            return false;
+            catch
+            {
+                return false;
+            }
         }
 
         //------------------ SỬA GIÁO VIÊN

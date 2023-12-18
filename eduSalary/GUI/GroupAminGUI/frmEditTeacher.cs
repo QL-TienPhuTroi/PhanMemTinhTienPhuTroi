@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
+using System.Text.RegularExpressions;
 
 namespace GUI.GroupAminGUI
 {
@@ -31,6 +32,103 @@ namespace GUI.GroupAminGUI
             this.Load += FrmEditTeacher_Load;
             btnFinish.Click += BtnFinish_Click;
             cboMSCD.SelectedIndexChanged += CboMSCD_SelectedIndexChanged;
+            dtpNgaySinh.ValueChanged += DtpNgaySinh_ValueChanged;
+            dtpNgayVT.ValueChanged += DtpNgayVT_ValueChanged;
+            dtpNgayVD.ValueChanged += DtpNgayVD_ValueChanged;
+
+            txtSDT.KeyPress += TxtSDT_KeyPress;
+            txtSDT.Validating += TxtSDT_Validating;
+
+            txtCCCD.KeyPress += TxtCCCD_KeyPress;
+            txtCCCD.Validating += TxtCCCD_Validating;
+
+            txtEmail.KeyPress += TxtEmail_KeyPress;
+            txtEmail.Validating += TxtEmail_Validating;
+        }
+
+        private void TxtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (!IsEmailValid(txtEmail.Text))
+            {
+                MessageBox.Show("Địa chỉ email không hợp lệ.", "Thông báo");
+                txtEmail.Focus();
+                e.Cancel = true;
+            }
+        }
+
+        private void TxtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != '@' && e.KeyChar != '.' && e.KeyChar != '_' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtCCCD_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtCCCD.Text.Length != 12)
+            {
+                MessageBox.Show("Số điện thoại phải có 12 chữ số.", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                txtCCCD.Focus();
+            }
+        }
+
+        private void TxtCCCD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtSDT_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtSDT.Text.Length != 10)
+            {
+                MessageBox.Show("Số điện thoại phải có 10 chữ số.", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                txtSDT.Focus();
+            }
+        }
+
+        private void TxtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void DtpNgayVD_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime maxDate = DateTime.Now;
+
+            if (dtpNgayVD.Value > maxDate)
+            {
+                MessageBox.Show("THỜI GIAN KHÔNG HỢP LỆ! ", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                dtpNgayVD.Value = maxDate;
+            }
+        }
+
+        private void DtpNgayVT_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime maxDate = DateTime.Now;
+
+            if (dtpNgayVT.Value > maxDate)
+            {
+                MessageBox.Show("THỜI GIAN KHÔNG HỢP LỆ! ", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                dtpNgayVT.Value = maxDate;
+            }
+        }
+
+        private void DtpNgaySinh_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime maxDate = DateTime.Now.AddYears(-21);
+
+            if (dtpNgaySinh.Value > maxDate)
+            {
+                MessageBox.Show("CHƯA ĐỦ TUỔI ĐỂ LÀM VIỆC! ", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                dtpNgaySinh.Value = maxDate;
+            }
         }
 
         private void CboMSCD_SelectedIndexChanged(object sender, EventArgs e)
@@ -160,6 +258,13 @@ namespace GUI.GroupAminGUI
             cboTrangThai.Items.Clear(); ;
             cboTrangThai.Items.Add("Đang dạy");
             cboTrangThai.Items.Add("Nghỉ dạy");
+        }
+
+        private bool IsEmailValid(string email)
+        {
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(email);
         }
     }
 }

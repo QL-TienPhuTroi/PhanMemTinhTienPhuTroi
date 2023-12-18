@@ -23,6 +23,30 @@ namespace BLL
             xnld_dal.addXNLD(xnld);
         }
 
+        //------------------ XÓA XÁC NHẬN LỊCH DẠY
+        public bool removeXNLDThu(string pMaLich, DateTime pNgayDay)
+        {
+            return xnld_dal.removeXNLDThu(pMaLich, pNgayDay);
+        }
+
+        //------------------ XÓA TXÁC NHẬN LỊCH DẠY
+        public bool removeXNLD(string pMaLich, int pTietDay, DateTime pNgayDay)
+        {
+           return xnld_dal.removeXNLD(pMaLich, pTietDay, pNgayDay);
+        }
+
+        //------------------ XÓA TXÁC NHẬN LỊCH DẠY
+        public bool removeXNLD(string pMaLich)
+        {
+            return xnld_dal.removeXNLD(pMaLich);
+        }
+
+        //------------------ XÓA TXÁC NHẬN LỊCH DẠY
+        public bool removeXNLD(string pMaLich, int pTietDay)
+        {
+            return xnld_dal.removeXNLD(pMaLich, pTietDay);
+        }
+
         //------------------ SỬA XÁC NHẬN LỊCH DẠY
         public void editXNLD(string pMaLich, int pTietDay, DateTime pNgayDay)
         {
