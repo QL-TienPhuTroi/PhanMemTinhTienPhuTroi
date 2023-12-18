@@ -49,6 +49,10 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnRemoveLesson = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRemoveLessonAll = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClearAll = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLapLichNgay = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetailTeachingSchedule)).BeginInit();
             this.pv.SuspendLayout();
@@ -68,13 +72,13 @@
             this.btnRemove.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRemove.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnRemove.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.btnRemove.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(718, 280);
+            this.btnRemove.Location = new System.Drawing.Point(506, 317);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(227, 57);
+            this.btnRemove.Size = new System.Drawing.Size(195, 57);
             this.btnRemove.TabIndex = 4;
-            this.btnRemove.Text = "XÓA LỊCH";
+            this.btnRemove.Text = "XÓA NGÀY";
             // 
             // btnFinish
             // 
@@ -89,13 +93,13 @@
             this.btnFinish.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnFinish.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnFinish.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(166)))), ((int)(((byte)(70)))));
-            this.btnFinish.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnFinish.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.btnFinish.ForeColor = System.Drawing.Color.White;
-            this.btnFinish.Location = new System.Drawing.Point(1025, 280);
+            this.btnFinish.Location = new System.Drawing.Point(1124, 317);
             this.btnFinish.Name = "btnFinish";
-            this.btnFinish.Size = new System.Drawing.Size(227, 57);
+            this.btnFinish.Size = new System.Drawing.Size(195, 57);
             this.btnFinish.TabIndex = 4;
-            this.btnFinish.Text = "LẬP LỊCH";
+            this.btnFinish.Text = "LẬP LỊCH CẢ NĂM";
             // 
             // guna2GradientPanel3
             // 
@@ -103,10 +107,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientPanel3.Controls.Add(this.dgvDetailTeachingSchedule);
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(0, 360);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(0, 393);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(1330, 490);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(1330, 457);
             this.guna2GradientPanel3.TabIndex = 3;
             // 
             // dgvDetailTeachingSchedule
@@ -140,7 +144,7 @@
             this.dgvDetailTeachingSchedule.RowHeadersVisible = false;
             this.dgvDetailTeachingSchedule.RowHeadersWidth = 51;
             this.dgvDetailTeachingSchedule.RowTemplate.Height = 24;
-            this.dgvDetailTeachingSchedule.Size = new System.Drawing.Size(1310, 480);
+            this.dgvDetailTeachingSchedule.Size = new System.Drawing.Size(1310, 447);
             this.dgvDetailTeachingSchedule.TabIndex = 1;
             this.dgvDetailTeachingSchedule.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDetailTeachingSchedule.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -207,7 +211,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pv.Controls.Add(this.cboLesson);
             this.pv.Controls.Add(this.txtMaLD);
+            this.pv.Controls.Add(this.btnClearAll);
+            this.pv.Controls.Add(this.btnRemoveLessonAll);
+            this.pv.Controls.Add(this.btnRemoveLesson);
             this.pv.Controls.Add(this.btnRemove);
+            this.pv.Controls.Add(this.btnLapLichNgay);
             this.pv.Controls.Add(this.btnFinish);
             this.pv.Controls.Add(this.guna2GradientPanel3);
             this.pv.Controls.Add(this.dtpThu);
@@ -352,6 +360,90 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1330, 45);
             this.guna2GradientPanel1.TabIndex = 2;
             // 
+            // btnRemoveLesson
+            // 
+            this.btnRemoveLesson.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveLesson.BorderRadius = 15;
+            this.btnRemoveLesson.CustomizableEdges.BottomLeft = false;
+            this.btnRemoveLesson.CustomizableEdges.TopRight = false;
+            this.btnRemoveLesson.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemoveLesson.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemoveLesson.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRemoveLesson.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRemoveLesson.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnRemoveLesson.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.btnRemoveLesson.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveLesson.Location = new System.Drawing.Point(305, 317);
+            this.btnRemoveLesson.Name = "btnRemoveLesson";
+            this.btnRemoveLesson.Size = new System.Drawing.Size(195, 57);
+            this.btnRemoveLesson.TabIndex = 4;
+            this.btnRemoveLesson.Text = "XÓA TIẾT/NGÀY";
+            // 
+            // btnRemoveLessonAll
+            // 
+            this.btnRemoveLessonAll.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveLessonAll.BorderRadius = 15;
+            this.btnRemoveLessonAll.CustomizableEdges.BottomLeft = false;
+            this.btnRemoveLessonAll.CustomizableEdges.TopRight = false;
+            this.btnRemoveLessonAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemoveLessonAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemoveLessonAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRemoveLessonAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRemoveLessonAll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnRemoveLessonAll.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.btnRemoveLessonAll.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveLessonAll.Location = new System.Drawing.Point(104, 317);
+            this.btnRemoveLessonAll.Name = "btnRemoveLessonAll";
+            this.btnRemoveLessonAll.Size = new System.Drawing.Size(195, 57);
+            this.btnRemoveLessonAll.TabIndex = 4;
+            this.btnRemoveLessonAll.Text = "XÓA TIẾT";
+            // 
+            // btnClearAll
+            // 
+            this.btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearAll.BorderRadius = 15;
+            this.btnClearAll.CustomizableEdges.BottomLeft = false;
+            this.btnClearAll.CustomizableEdges.TopRight = false;
+            this.btnClearAll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClearAll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClearAll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClearAll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClearAll.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.btnClearAll.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.btnClearAll.ForeColor = System.Drawing.Color.White;
+            this.btnClearAll.Location = new System.Drawing.Point(707, 317);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(195, 57);
+            this.btnClearAll.TabIndex = 4;
+            this.btnClearAll.Text = "XÓA TOÀN BỘ";
+            // 
+            // btnLapLichNgay
+            // 
+            this.btnLapLichNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLapLichNgay.BorderRadius = 15;
+            this.btnLapLichNgay.CustomizableEdges.BottomLeft = false;
+            this.btnLapLichNgay.CustomizableEdges.TopRight = false;
+            this.btnLapLichNgay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLapLichNgay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLapLichNgay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLapLichNgay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLapLichNgay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(166)))), ((int)(((byte)(70)))));
+            this.btnLapLichNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.btnLapLichNgay.ForeColor = System.Drawing.Color.White;
+            this.btnLapLichNgay.Location = new System.Drawing.Point(923, 317);
+            this.btnLapLichNgay.Name = "btnLapLichNgay";
+            this.btnLapLichNgay.Size = new System.Drawing.Size(195, 57);
+            this.btnLapLichNgay.TabIndex = 4;
+            this.btnLapLichNgay.Text = "LẬP LỊCH NGÀY";
+            // 
             // frmAddDetailTeaching
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -392,5 +484,9 @@
         private ReaLTaiizor.Controls.BigLabel lbDetail;
         private ReaLTaiizor.Controls.BigLabel lbTitle;
         private ReaLTaiizor.Controls.BigLabel lbLesson;
+        private Guna.UI2.WinForms.Guna2Button btnRemoveLesson;
+        private Guna.UI2.WinForms.Guna2Button btnClearAll;
+        private Guna.UI2.WinForms.Guna2Button btnRemoveLessonAll;
+        private Guna.UI2.WinForms.Guna2Button btnLapLichNgay;
     }
 }

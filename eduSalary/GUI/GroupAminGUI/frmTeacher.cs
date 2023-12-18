@@ -15,6 +15,9 @@ namespace GUI.GroupAminGUI
     public partial class frmTeacher : Form
     {
         GiaoVienBLL gv_bll = new GiaoVienBLL();
+        ChiTietChucVuBLL ctcv_bll = new ChiTietChucVuBLL();
+        TaiKhoanBLL tk_bll = new TaiKhoanBLL();
+
         frmDetailedProfile fDetailedProfile;
         frmAddTeacher fAdd;
         frmEditTeacher fEdit;
@@ -61,6 +64,9 @@ namespace GUI.GroupAminGUI
         {
             string pMaGV = dgvTeacher.CurrentRow.Cells[0].Value.ToString();
             string pTenGV = dgvTeacher.CurrentRow.Cells[1].Value.ToString();
+
+            tk_bll.removeTK(pMaGV);
+            ctcv_bll.removeCTCV(pMaGV);
 
             if (gv_bll.removeGV(pMaGV))
             {

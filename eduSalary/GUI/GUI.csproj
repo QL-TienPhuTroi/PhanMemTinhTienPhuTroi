@@ -335,6 +335,12 @@
     <Compile Include="GroupTeacherGUI\frmTeachingSchedule.Designer.cs">
       <DependentUpon>frmTeachingSchedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupTeacherGUI\frmUpdateTeacherDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupTeacherGUI\frmUpdateTeacherDetail.Designer.cs">
+      <DependentUpon>frmUpdateTeacherDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLoading.resx">
@@ -462,6 +468,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GroupTeacherGUI\frmTeachingSchedule.resx">
       <DependentUpon>frmTeachingSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupTeacherGUI\frmUpdateTeacherDetail.resx">
+      <DependentUpon>frmUpdateTeacherDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

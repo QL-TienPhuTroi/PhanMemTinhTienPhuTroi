@@ -142,6 +142,10 @@ namespace GUI.GroupTeacherGUI
         public string getName()
         {
             string[] names = pHoTen.Split(' ');
+            if (names.Length == 1)
+            {
+                return pHoTen;
+            }
             return names[names.Length - 2] + " " + names[names.Length - 1];
         }
 

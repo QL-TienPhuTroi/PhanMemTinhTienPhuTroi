@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GUI.Properties;
+using GUI.GroupAminGUI;
 
 namespace GUI.GroupTeacherGUI
 {
@@ -24,12 +25,22 @@ namespace GUI.GroupTeacherGUI
         ChucDanhBLL cd_bll = new ChucDanhBLL();
         BacLuongBLL bl_bll = new BacLuongBLL();
 
+        frmUpdateTeacherDetail fUpdateTeacherDetail;
+
         public frmProfile(string pCode)
         {
             InitializeComponent();
             pMaGV = pCode;
             this.Load += FrmProfile_Load;
             btnClose.Click += BtnClose_Click;
+            btnEdit.Click += BtnEdit_Click;
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            fUpdateTeacherDetail = new frmUpdateTeacherDetail(pMaGV);
+            fUpdateTeacherDetail.ShowDialog();
+            loadDataProfile();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)

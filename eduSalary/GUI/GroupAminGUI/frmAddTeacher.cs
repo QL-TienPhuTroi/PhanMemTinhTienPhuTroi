@@ -17,6 +17,13 @@ namespace GUI.GroupAminGUI
         GiaoVienBLL gv_bll = new GiaoVienBLL();
         GiaoVienDTO gv_dto = new GiaoVienDTO();
 
+        TaiKhoanBLL tk_bll = new TaiKhoanBLL();
+        TaiKhoanDTO tk_dto = new TaiKhoanDTO();
+
+        ChiTietChucVuBLL ctcv_bll = new ChiTietChucVuBLL();
+        ChiTietChucVuDTO ctcv_dto = new ChiTietChucVuDTO();
+
+
         BacLuongBLL bl_bll = new BacLuongBLL();
         ChucDanhBLL cd_bll = new ChucDanhBLL();
         ChuyenMonBLL cm_bll = new ChuyenMonBLL();
@@ -48,6 +55,7 @@ namespace GUI.GroupAminGUI
 
             try
             {
+                //------- THÊM GIÁO VIÊN
                 gv_dto.magv = pMaGV;
                 if(cboTrangThai.SelectedItem.ToString() == "Đang dạy")
                 {
@@ -82,6 +90,20 @@ namespace GUI.GroupAminGUI
                 gv_dto.macm = int.Parse(cboChuyenMon.SelectedValue.ToString());
 
                 gv_bll.addGV(gv_dto);
+
+                //------- THÊM TÀI KHOẢN
+                tk_dto.magv = pMaGV;
+                tk_dto.matkhau = "123123";
+                tk_dto.maqtc = 2;
+
+                tk_bll.addTK(tk_dto);
+
+                //------- THÊM CHI TIẾT CHỨC VỤ
+                ctcv_dto.magv = pMaGV;
+                ctcv_dto.macv = 4;
+
+                ctcv_bll.addCTCV(ctcv_dto);
+
                 MessageBox.Show("GIÁO VIÊN " + gv_dto.hoten.ToUpper() + " ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
                 this.Close();
             }

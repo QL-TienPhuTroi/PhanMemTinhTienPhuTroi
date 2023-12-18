@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProfile));
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnClose = new ReaLTaiizor.Controls.Button();
             this.lbNgayVaoDang = new ReaLTaiizor.Controls.CrownLabel();
             this.crownLabel44 = new ReaLTaiizor.Controls.CrownLabel();
@@ -77,7 +78,7 @@
             this.picAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.dungeonHeaderLabel2 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
             this.dungeonHeaderLabel1 = new ReaLTaiizor.Controls.DungeonHeaderLabel();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnEdit = new ReaLTaiizor.Controls.Button();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
@@ -87,6 +88,7 @@
             this.guna2CustomGradientPanel1.AutoScroll = true;
             this.guna2CustomGradientPanel1.BorderRadius = 10;
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientPanel1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnEdit);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnClose);
             this.guna2CustomGradientPanel1.Controls.Add(this.lbNgayVaoDang);
             this.guna2CustomGradientPanel1.Controls.Add(this.crownLabel44);
@@ -139,6 +141,15 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1580, 730);
             this.guna2CustomGradientPanel1.TabIndex = 2;
+            // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(1344, 686);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(137, 28);
+            this.guna2GradientPanel1.TabIndex = 55;
             // 
             // btnClose
             // 
@@ -714,14 +725,26 @@
             this.dungeonHeaderLabel1.TabIndex = 8;
             this.dungeonHeaderLabel1.Text = "THÔNG TIN GIẢNG DẠY";
             // 
-            // guna2GradientPanel1
+            // btnEdit
             // 
-            this.guna2GradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(1344, 686);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(137, 28);
-            this.guna2GradientPanel1.TabIndex = 55;
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.BackColor = System.Drawing.Color.White;
+            this.btnEdit.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.btnEdit.EnteredColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnEdit.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Image = null;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(127)))), ((int)(((byte)(100)))));
+            this.btnEdit.Location = new System.Drawing.Point(1083, 622);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.btnEdit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(127)))), ((int)(((byte)(100)))));
+            this.btnEdit.Size = new System.Drawing.Size(196, 58);
+            this.btnEdit.TabIndex = 54;
+            this.btnEdit.Text = "SỬA";
+            this.btnEdit.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // frmProfile
             // 
@@ -793,5 +816,6 @@
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel2;
         private ReaLTaiizor.Controls.DungeonHeaderLabel dungeonHeaderLabel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private ReaLTaiizor.Controls.Button btnEdit;
     }
 }

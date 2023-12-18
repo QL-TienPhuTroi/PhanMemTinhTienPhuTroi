@@ -67,3 +67,4 @@ C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmMainTeachers.resources
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmHomeTeacher.resources
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmTeachingSchedule.resources
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmUpdateTeacherDetail.resources
