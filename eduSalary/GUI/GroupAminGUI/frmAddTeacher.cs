@@ -75,7 +75,7 @@ namespace GUI.GroupAminGUI
         {
             if (txtCCCD.Text.Length != 12)
             {
-                MessageBox.Show("Số điện thoại phải có 12 chữ số.", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                MessageBox.Show("Số căn cước công dân phải có 12 chữ số.", "PHẦN MỀM TÍNH PHỤ TRỘI");
                 txtCCCD.Focus();
             }
         }

@@ -38,9 +38,9 @@
             this.bigLabel2 = new ReaLTaiizor.Controls.BigLabel();
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.cboMaCV = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.txtMaCV = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
@@ -111,7 +111,7 @@
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.AutoScroll = true;
-            this.guna2GradientPanel3.Controls.Add(this.cboMaCV);
+            this.guna2GradientPanel3.Controls.Add(this.txtMaCV);
             this.guna2GradientPanel3.Controls.Add(this.txtTenCV);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel2);
             this.guna2GradientPanel3.Controls.Add(this.panel1);
@@ -183,6 +183,19 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1080, 49);
             this.guna2GradientPanel2.TabIndex = 6;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::GUI.Properties.Resources.apps;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(41, 6);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 7;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // btnExit
             // 
             this.btnExit.Animated = true;
@@ -197,34 +210,27 @@
             this.btnExit.Size = new System.Drawing.Size(60, 49);
             this.btnExit.TabIndex = 2;
             // 
-            // guna2PictureBox2
+            // txtMaCV
             // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::GUI.Properties.Resources.apps;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(41, 6);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 7;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // cboMaCV
-            // 
-            this.cboMaCV.BackColor = System.Drawing.Color.Transparent;
-            this.cboMaCV.BorderRadius = 10;
-            this.cboMaCV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboMaCV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMaCV.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboMaCV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboMaCV.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboMaCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboMaCV.ItemHeight = 30;
-            this.cboMaCV.Location = new System.Drawing.Point(189, 38);
-            this.cboMaCV.Name = "cboMaCV";
-            this.cboMaCV.Size = new System.Drawing.Size(324, 36);
-            this.cboMaCV.TabIndex = 10;
+            this.txtMaCV.BorderRadius = 10;
+            this.txtMaCV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaCV.DefaultText = "";
+            this.txtMaCV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaCV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaCV.Enabled = false;
+            this.txtMaCV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaCV.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaCV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaCV.Location = new System.Drawing.Point(208, 26);
+            this.txtMaCV.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaCV.Name = "txtMaCV";
+            this.txtMaCV.PasswordChar = '\0';
+            this.txtMaCV.PlaceholderText = "";
+            this.txtMaCV.SelectedText = "";
+            this.txtMaCV.Size = new System.Drawing.Size(288, 54);
+            this.txtMaCV.TabIndex = 10;
             // 
             // frmEditPosition
             // 
@@ -261,6 +267,6 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2ControlBox btnExit;
-        private Guna.UI2.WinForms.Guna2ComboBox cboMaCV;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaCV;
     }
 }

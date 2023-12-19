@@ -52,7 +52,7 @@ namespace GUI.GroupAminGUI
         {
             lst_cv = cv_bll.getDataChucVuTheoMa(pMaCV);
 
-            cboMaCV.Text = lst_cv[0].macv.ToString();
+            txtMaCV.Text = lst_cv[0].macv.ToString();
             txtTenCV.Text = lst_cv[0].tencv;
         }
     }

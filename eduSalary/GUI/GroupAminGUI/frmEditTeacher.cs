@@ -151,13 +151,13 @@ namespace GUI.GroupAminGUI
                 }
                 gv_dto.hoten = txtHoTen.Text;
                 gv_dto.ngaysinh = DateTime.Parse(dtpNgaySinh.Value.ToString());
-                if (rdoNam.Checked)
+                if (gv_dto.gioitinh == "Nam")
                 {
-                    gv_dto.gioitinh = "Nam";
+                    rdoNam.Checked = true;
                 }
                 else
                 {
-                    gv_dto.gioitinh = "Nữ";
+                    rdoNu.Checked = true;
                 }
                 gv_dto.diachi = txtDiaChi.Text;
                 gv_dto.sodienthoai = txtSDT.Text;

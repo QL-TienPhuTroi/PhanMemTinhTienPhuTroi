@@ -54,17 +54,19 @@ namespace GUI.GroupAminGUI
         }
         private int createCode()
         {
-            Random random = new Random();
-            int startingNumber = 19;
+            int pCode;
+            int i = 1;
+
             while (true)
             {
-                int randomNumber = random.Next(1, 1000000 - startingNumber);
-                int pMaMH = startingNumber + randomNumber;
+                pCode = i;
 
-                if (!mh_bll.checkPK(pMaMH))
+                if (!mh_bll.checkPK(pCode))
                 {
-                    return pMaMH;
+                    return pCode;
                 }
+
+                i++;
             }
         }
     }

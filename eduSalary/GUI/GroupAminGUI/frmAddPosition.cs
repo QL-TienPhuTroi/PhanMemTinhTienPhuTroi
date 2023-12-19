@@ -49,17 +49,18 @@ namespace GUI.GroupAminGUI
         }
         private int createCode()
         {
-            Random random = new Random();
-            int startingNumber = 7;
+            int pCode;
+            int i = 1;
+
             while (true)
             {
-                int randomNumber = random.Next(1, 1000000 - startingNumber);
-                int pMaCV = startingNumber + randomNumber;
+                pCode = i;
 
-                if (!cv_bll.checkPK(pMaCV))
+                if (!cv_bll.checkPK(pCode))
                 {
-                    return pMaCV;
+                    return pCode;
                 }
+                i++;
             }
         }
         private void FrmAddPosition_Load(object sender, EventArgs e)
