@@ -39,7 +39,7 @@ namespace GUI.GroupAminGUI
 
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
-            
+            dgvExtraness.DataSource = pt_bll.getDataPhuTroiTheoMaGV(txtSearch.Text, cboYear.SelectedItem.ToString());
         }
 
         private void BtnClearText_Click(object sender, EventArgs e)

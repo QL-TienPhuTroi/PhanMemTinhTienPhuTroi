@@ -33,9 +33,9 @@ namespace DAL
     partial void InsertBACLUONG(BACLUONG instance);
     partial void UpdateBACLUONG(BACLUONG instance);
     partial void DeleteBACLUONG(BACLUONG instance);
-    partial void InsertTHOIGIANDAY(THOIGIANDAY instance);
-    partial void UpdateTHOIGIANDAY(THOIGIANDAY instance);
-    partial void DeleteTHOIGIANDAY(THOIGIANDAY instance);
+    partial void InsertXACNHANLICHDAY(XACNHANLICHDAY instance);
+    partial void UpdateXACNHANLICHDAY(XACNHANLICHDAY instance);
+    partial void DeleteXACNHANLICHDAY(XACNHANLICHDAY instance);
     partial void InsertBANGCAP(BANGCAP instance);
     partial void UpdateBANGCAP(BANGCAP instance);
     partial void DeleteBANGCAP(BANGCAP instance);
@@ -84,9 +84,9 @@ namespace DAL
     partial void InsertTAIKHOAN(TAIKHOAN instance);
     partial void UpdateTAIKHOAN(TAIKHOAN instance);
     partial void DeleteTAIKHOAN(TAIKHOAN instance);
-    partial void InsertXACNHANLICHDAY(XACNHANLICHDAY instance);
-    partial void UpdateXACNHANLICHDAY(XACNHANLICHDAY instance);
-    partial void DeleteXACNHANLICHDAY(XACNHANLICHDAY instance);
+    partial void InsertTHOIGIANDAY(THOIGIANDAY instance);
+    partial void UpdateTHOIGIANDAY(THOIGIANDAY instance);
+    partial void DeleteTHOIGIANDAY(THOIGIANDAY instance);
     #endregion
 		
 		public QLGVDataContext() : 
@@ -127,11 +127,11 @@ namespace DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<THOIGIANDAY> THOIGIANDAYs
+		public System.Data.Linq.Table<XACNHANLICHDAY> XACNHANLICHDAYs
 		{
 			get
 			{
-				return this.GetTable<THOIGIANDAY>();
+				return this.GetTable<XACNHANLICHDAY>();
 			}
 		}
 		
@@ -263,11 +263,11 @@ namespace DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<XACNHANLICHDAY> XACNHANLICHDAYs
+		public System.Data.Linq.Table<THOIGIANDAY> THOIGIANDAYs
 		{
 			get
 			{
-				return this.GetTable<XACNHANLICHDAY>();
+				return this.GetTable<THOIGIANDAY>();
 			}
 		}
 	}
@@ -475,132 +475,169 @@ namespace DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.THOIGIANDAY")]
-	public partial class THOIGIANDAY : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.XACNHANLICHDAY")]
+	public partial class XACNHANLICHDAY : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _MATG;
+		private string _MALICH;
 		
-		private System.Nullable<int> _TENTIET;
+		private System.DateTime _NGAYDAY;
 		
-		private System.Nullable<System.TimeSpan> _GIOBATDAU;
+		private int _TIETDAY;
 		
-		private System.Nullable<System.TimeSpan> _GIOKETTHUC;
+		private System.Nullable<bool> _HOANTHANH;
 		
-		private EntitySet<CHITIETLICHDAY> _CHITIETLICHDAYs;
+		private EntityRef<CHITIETLICHDAY> _CHITIETLICHDAY;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnMATGChanging(int value);
-    partial void OnMATGChanged();
-    partial void OnTENTIETChanging(System.Nullable<int> value);
-    partial void OnTENTIETChanged();
-    partial void OnGIOBATDAUChanging(System.Nullable<System.TimeSpan> value);
-    partial void OnGIOBATDAUChanged();
-    partial void OnGIOKETTHUCChanging(System.Nullable<System.TimeSpan> value);
-    partial void OnGIOKETTHUCChanged();
+    partial void OnMALICHChanging(string value);
+    partial void OnMALICHChanged();
+    partial void OnNGAYDAYChanging(System.DateTime value);
+    partial void OnNGAYDAYChanged();
+    partial void OnTIETDAYChanging(int value);
+    partial void OnTIETDAYChanged();
+    partial void OnHOANTHANHChanging(System.Nullable<bool> value);
+    partial void OnHOANTHANHChanged();
     #endregion
 		
-		public THOIGIANDAY()
+		public XACNHANLICHDAY()
 		{
-			this._CHITIETLICHDAYs = new EntitySet<CHITIETLICHDAY>(new Action<CHITIETLICHDAY>(this.attach_CHITIETLICHDAYs), new Action<CHITIETLICHDAY>(this.detach_CHITIETLICHDAYs));
+			this._CHITIETLICHDAY = default(EntityRef<CHITIETLICHDAY>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATG", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int MATG
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALICH", DbType="VarChar(12) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MALICH
 		{
 			get
 			{
-				return this._MATG;
+				return this._MALICH;
 			}
 			set
 			{
-				if ((this._MATG != value))
+				if ((this._MALICH != value))
 				{
-					this.OnMATGChanging(value);
+					if (this._CHITIETLICHDAY.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMALICHChanging(value);
 					this.SendPropertyChanging();
-					this._MATG = value;
-					this.SendPropertyChanged("MATG");
-					this.OnMATGChanged();
+					this._MALICH = value;
+					this.SendPropertyChanged("MALICH");
+					this.OnMALICHChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTIET", DbType="Int")]
-		public System.Nullable<int> TENTIET
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYDAY", DbType="Date NOT NULL", IsPrimaryKey=true)]
+		public System.DateTime NGAYDAY
 		{
 			get
 			{
-				return this._TENTIET;
+				return this._NGAYDAY;
 			}
 			set
 			{
-				if ((this._TENTIET != value))
+				if ((this._NGAYDAY != value))
 				{
-					this.OnTENTIETChanging(value);
+					if (this._CHITIETLICHDAY.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnNGAYDAYChanging(value);
 					this.SendPropertyChanging();
-					this._TENTIET = value;
-					this.SendPropertyChanged("TENTIET");
-					this.OnTENTIETChanged();
+					this._NGAYDAY = value;
+					this.SendPropertyChanged("NGAYDAY");
+					this.OnNGAYDAYChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIOBATDAU", DbType="Time")]
-		public System.Nullable<System.TimeSpan> GIOBATDAU
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIETDAY", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int TIETDAY
 		{
 			get
 			{
-				return this._GIOBATDAU;
+				return this._TIETDAY;
 			}
 			set
 			{
-				if ((this._GIOBATDAU != value))
+				if ((this._TIETDAY != value))
 				{
-					this.OnGIOBATDAUChanging(value);
+					if (this._CHITIETLICHDAY.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnTIETDAYChanging(value);
 					this.SendPropertyChanging();
-					this._GIOBATDAU = value;
-					this.SendPropertyChanged("GIOBATDAU");
-					this.OnGIOBATDAUChanged();
+					this._TIETDAY = value;
+					this.SendPropertyChanged("TIETDAY");
+					this.OnTIETDAYChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIOKETTHUC", DbType="Time")]
-		public System.Nullable<System.TimeSpan> GIOKETTHUC
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOANTHANH", DbType="Bit")]
+		public System.Nullable<bool> HOANTHANH
 		{
 			get
 			{
-				return this._GIOKETTHUC;
+				return this._HOANTHANH;
 			}
 			set
 			{
-				if ((this._GIOKETTHUC != value))
+				if ((this._HOANTHANH != value))
 				{
-					this.OnGIOKETTHUCChanging(value);
+					this.OnHOANTHANHChanging(value);
 					this.SendPropertyChanging();
-					this._GIOKETTHUC = value;
-					this.SendPropertyChanged("GIOKETTHUC");
-					this.OnGIOKETTHUCChanged();
+					this._HOANTHANH = value;
+					this.SendPropertyChanged("HOANTHANH");
+					this.OnHOANTHANHChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="THOIGIANDAY_CHITIETLICHDAY", Storage="_CHITIETLICHDAYs", ThisKey="MATG", OtherKey="TIETDAY")]
-		public EntitySet<CHITIETLICHDAY> CHITIETLICHDAYs
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CHITIETLICHDAY_XACNHANLICHDAY", Storage="_CHITIETLICHDAY", ThisKey="MALICH,NGAYDAY,TIETDAY", OtherKey="MALICH,NGAYDAY,TIETDAY", IsForeignKey=true)]
+		public CHITIETLICHDAY CHITIETLICHDAY
 		{
 			get
 			{
-				return this._CHITIETLICHDAYs;
+				return this._CHITIETLICHDAY.Entity;
 			}
 			set
 			{
-				this._CHITIETLICHDAYs.Assign(value);
+				CHITIETLICHDAY previousValue = this._CHITIETLICHDAY.Entity;
+				if (((previousValue != value) 
+							|| (this._CHITIETLICHDAY.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._CHITIETLICHDAY.Entity = null;
+						previousValue.XACNHANLICHDAY = null;
+					}
+					this._CHITIETLICHDAY.Entity = value;
+					if ((value != null))
+					{
+						value.XACNHANLICHDAY = this;
+						this._MALICH = value.MALICH;
+						this._NGAYDAY = value.NGAYDAY;
+						this._TIETDAY = value.TIETDAY;
+					}
+					else
+					{
+						this._MALICH = default(string);
+						this._NGAYDAY = default(System.DateTime);
+						this._TIETDAY = default(int);
+					}
+					this.SendPropertyChanged("CHITIETLICHDAY");
+				}
 			}
 		}
 		
@@ -622,18 +659,6 @@ namespace DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_CHITIETLICHDAYs(CHITIETLICHDAY entity)
-		{
-			this.SendPropertyChanging();
-			entity.THOIGIANDAY = this;
-		}
-		
-		private void detach_CHITIETLICHDAYs(CHITIETLICHDAY entity)
-		{
-			this.SendPropertyChanging();
-			entity.THOIGIANDAY = null;
 		}
 	}
 	
@@ -1049,6 +1074,8 @@ namespace DAL
 		
 		private string _MAGV;
 		
+		private string _NAMHOC;
+		
 		private EntityRef<CHUCVU> _CHUCVU;
 		
 		private EntityRef<GIAOVIEN> _GIAOVIEN;
@@ -1061,6 +1088,8 @@ namespace DAL
     partial void OnMACVChanged();
     partial void OnMAGVChanging(string value);
     partial void OnMAGVChanged();
+    partial void OnNAMHOCChanging(string value);
+    partial void OnNAMHOCChanged();
     #endregion
 		
 		public CHITIETCHUCVU()
@@ -1114,6 +1143,26 @@ namespace DAL
 					this._MAGV = value;
 					this.SendPropertyChanged("MAGV");
 					this.OnMAGVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NAMHOC", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string NAMHOC
+		{
+			get
+			{
+				return this._NAMHOC;
+			}
+			set
+			{
+				if ((this._NAMHOC != value))
+				{
+					this.OnNAMHOCChanging(value);
+					this.SendPropertyChanging();
+					this._NAMHOC = value;
+					this.SendPropertyChanged("NAMHOC");
+					this.OnNAMHOCChanged();
 				}
 			}
 		}
@@ -1223,9 +1272,9 @@ namespace DAL
 		
 		private EntityRef<XACNHANLICHDAY> _XACNHANLICHDAY;
 		
-		private EntityRef<THOIGIANDAY> _THOIGIANDAY;
-		
 		private EntityRef<LICHDAY> _LICHDAY;
+		
+		private EntityRef<THOIGIANDAY> _THOIGIANDAY;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1244,8 +1293,8 @@ namespace DAL
 		public CHITIETLICHDAY()
 		{
 			this._XACNHANLICHDAY = default(EntityRef<XACNHANLICHDAY>);
-			this._THOIGIANDAY = default(EntityRef<THOIGIANDAY>);
 			this._LICHDAY = default(EntityRef<LICHDAY>);
+			this._THOIGIANDAY = default(EntityRef<THOIGIANDAY>);
 			OnCreated();
 		}
 		
@@ -1366,40 +1415,6 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="THOIGIANDAY_CHITIETLICHDAY", Storage="_THOIGIANDAY", ThisKey="TIETDAY", OtherKey="MATG", IsForeignKey=true)]
-		public THOIGIANDAY THOIGIANDAY
-		{
-			get
-			{
-				return this._THOIGIANDAY.Entity;
-			}
-			set
-			{
-				THOIGIANDAY previousValue = this._THOIGIANDAY.Entity;
-				if (((previousValue != value) 
-							|| (this._THOIGIANDAY.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._THOIGIANDAY.Entity = null;
-						previousValue.CHITIETLICHDAYs.Remove(this);
-					}
-					this._THOIGIANDAY.Entity = value;
-					if ((value != null))
-					{
-						value.CHITIETLICHDAYs.Add(this);
-						this._TIETDAY = value.MATG;
-					}
-					else
-					{
-						this._TIETDAY = default(int);
-					}
-					this.SendPropertyChanged("THOIGIANDAY");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LICHDAY_CHITIETLICHDAY", Storage="_LICHDAY", ThisKey="MALICH", OtherKey="MALICH", IsForeignKey=true)]
 		public LICHDAY LICHDAY
 		{
@@ -1430,6 +1445,40 @@ namespace DAL
 						this._MALICH = default(string);
 					}
 					this.SendPropertyChanged("LICHDAY");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="THOIGIANDAY_CHITIETLICHDAY", Storage="_THOIGIANDAY", ThisKey="TIETDAY", OtherKey="MATG", IsForeignKey=true)]
+		public THOIGIANDAY THOIGIANDAY
+		{
+			get
+			{
+				return this._THOIGIANDAY.Entity;
+			}
+			set
+			{
+				THOIGIANDAY previousValue = this._THOIGIANDAY.Entity;
+				if (((previousValue != value) 
+							|| (this._THOIGIANDAY.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._THOIGIANDAY.Entity = null;
+						previousValue.CHITIETLICHDAYs.Remove(this);
+					}
+					this._THOIGIANDAY.Entity = value;
+					if ((value != null))
+					{
+						value.CHITIETLICHDAYs.Add(this);
+						this._TIETDAY = value.MATG;
+					}
+					else
+					{
+						this._TIETDAY = default(int);
+					}
+					this.SendPropertyChanged("THOIGIANDAY");
 				}
 			}
 		}
@@ -4140,169 +4189,132 @@ namespace DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.XACNHANLICHDAY")]
-	public partial class XACNHANLICHDAY : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.THOIGIANDAY")]
+	public partial class THOIGIANDAY : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _MALICH;
+		private int _MATG;
 		
-		private System.DateTime _NGAYDAY;
+		private System.Nullable<int> _TENTIET;
 		
-		private int _TIETDAY;
+		private System.Nullable<System.TimeSpan> _GIOBATDAU;
 		
-		private System.Nullable<bool> _HOANTHANH;
+		private System.Nullable<System.TimeSpan> _GIOKETTHUC;
 		
-		private EntityRef<CHITIETLICHDAY> _CHITIETLICHDAY;
+		private EntitySet<CHITIETLICHDAY> _CHITIETLICHDAYs;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnMALICHChanging(string value);
-    partial void OnMALICHChanged();
-    partial void OnNGAYDAYChanging(System.DateTime value);
-    partial void OnNGAYDAYChanged();
-    partial void OnTIETDAYChanging(int value);
-    partial void OnTIETDAYChanged();
-    partial void OnHOANTHANHChanging(System.Nullable<bool> value);
-    partial void OnHOANTHANHChanged();
+    partial void OnMATGChanging(int value);
+    partial void OnMATGChanged();
+    partial void OnTENTIETChanging(System.Nullable<int> value);
+    partial void OnTENTIETChanged();
+    partial void OnGIOBATDAUChanging(System.Nullable<System.TimeSpan> value);
+    partial void OnGIOBATDAUChanged();
+    partial void OnGIOKETTHUCChanging(System.Nullable<System.TimeSpan> value);
+    partial void OnGIOKETTHUCChanged();
     #endregion
 		
-		public XACNHANLICHDAY()
+		public THOIGIANDAY()
 		{
-			this._CHITIETLICHDAY = default(EntityRef<CHITIETLICHDAY>);
+			this._CHITIETLICHDAYs = new EntitySet<CHITIETLICHDAY>(new Action<CHITIETLICHDAY>(this.attach_CHITIETLICHDAYs), new Action<CHITIETLICHDAY>(this.detach_CHITIETLICHDAYs));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALICH", DbType="VarChar(12) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MALICH
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATG", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int MATG
 		{
 			get
 			{
-				return this._MALICH;
+				return this._MATG;
 			}
 			set
 			{
-				if ((this._MALICH != value))
+				if ((this._MATG != value))
 				{
-					if (this._CHITIETLICHDAY.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMALICHChanging(value);
+					this.OnMATGChanging(value);
 					this.SendPropertyChanging();
-					this._MALICH = value;
-					this.SendPropertyChanged("MALICH");
-					this.OnMALICHChanged();
+					this._MATG = value;
+					this.SendPropertyChanged("MATG");
+					this.OnMATGChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYDAY", DbType="Date NOT NULL", IsPrimaryKey=true)]
-		public System.DateTime NGAYDAY
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTIET", DbType="Int")]
+		public System.Nullable<int> TENTIET
 		{
 			get
 			{
-				return this._NGAYDAY;
+				return this._TENTIET;
 			}
 			set
 			{
-				if ((this._NGAYDAY != value))
+				if ((this._TENTIET != value))
 				{
-					if (this._CHITIETLICHDAY.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnNGAYDAYChanging(value);
+					this.OnTENTIETChanging(value);
 					this.SendPropertyChanging();
-					this._NGAYDAY = value;
-					this.SendPropertyChanged("NGAYDAY");
-					this.OnNGAYDAYChanged();
+					this._TENTIET = value;
+					this.SendPropertyChanged("TENTIET");
+					this.OnTENTIETChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIETDAY", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int TIETDAY
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIOBATDAU", DbType="Time")]
+		public System.Nullable<System.TimeSpan> GIOBATDAU
 		{
 			get
 			{
-				return this._TIETDAY;
+				return this._GIOBATDAU;
 			}
 			set
 			{
-				if ((this._TIETDAY != value))
+				if ((this._GIOBATDAU != value))
 				{
-					if (this._CHITIETLICHDAY.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnTIETDAYChanging(value);
+					this.OnGIOBATDAUChanging(value);
 					this.SendPropertyChanging();
-					this._TIETDAY = value;
-					this.SendPropertyChanged("TIETDAY");
-					this.OnTIETDAYChanged();
+					this._GIOBATDAU = value;
+					this.SendPropertyChanged("GIOBATDAU");
+					this.OnGIOBATDAUChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HOANTHANH", DbType="Bit")]
-		public System.Nullable<bool> HOANTHANH
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIOKETTHUC", DbType="Time")]
+		public System.Nullable<System.TimeSpan> GIOKETTHUC
 		{
 			get
 			{
-				return this._HOANTHANH;
+				return this._GIOKETTHUC;
 			}
 			set
 			{
-				if ((this._HOANTHANH != value))
+				if ((this._GIOKETTHUC != value))
 				{
-					this.OnHOANTHANHChanging(value);
+					this.OnGIOKETTHUCChanging(value);
 					this.SendPropertyChanging();
-					this._HOANTHANH = value;
-					this.SendPropertyChanged("HOANTHANH");
-					this.OnHOANTHANHChanged();
+					this._GIOKETTHUC = value;
+					this.SendPropertyChanged("GIOKETTHUC");
+					this.OnGIOKETTHUCChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CHITIETLICHDAY_XACNHANLICHDAY", Storage="_CHITIETLICHDAY", ThisKey="MALICH,NGAYDAY,TIETDAY", OtherKey="MALICH,NGAYDAY,TIETDAY", IsForeignKey=true)]
-		public CHITIETLICHDAY CHITIETLICHDAY
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="THOIGIANDAY_CHITIETLICHDAY", Storage="_CHITIETLICHDAYs", ThisKey="MATG", OtherKey="TIETDAY")]
+		public EntitySet<CHITIETLICHDAY> CHITIETLICHDAYs
 		{
 			get
 			{
-				return this._CHITIETLICHDAY.Entity;
+				return this._CHITIETLICHDAYs;
 			}
 			set
 			{
-				CHITIETLICHDAY previousValue = this._CHITIETLICHDAY.Entity;
-				if (((previousValue != value) 
-							|| (this._CHITIETLICHDAY.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._CHITIETLICHDAY.Entity = null;
-						previousValue.XACNHANLICHDAY = null;
-					}
-					this._CHITIETLICHDAY.Entity = value;
-					if ((value != null))
-					{
-						value.XACNHANLICHDAY = this;
-						this._MALICH = value.MALICH;
-						this._NGAYDAY = value.NGAYDAY;
-						this._TIETDAY = value.TIETDAY;
-					}
-					else
-					{
-						this._MALICH = default(string);
-						this._NGAYDAY = default(System.DateTime);
-						this._TIETDAY = default(int);
-					}
-					this.SendPropertyChanged("CHITIETLICHDAY");
-				}
+				this._CHITIETLICHDAYs.Assign(value);
 			}
 		}
 		
@@ -4324,6 +4336,18 @@ namespace DAL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_CHITIETLICHDAYs(CHITIETLICHDAY entity)
+		{
+			this.SendPropertyChanging();
+			entity.THOIGIANDAY = this;
+		}
+		
+		private void detach_CHITIETLICHDAYs(CHITIETLICHDAY entity)
+		{
+			this.SendPropertyChanging();
+			entity.THOIGIANDAY = null;
 		}
 	}
 }

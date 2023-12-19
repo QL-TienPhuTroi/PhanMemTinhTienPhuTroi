@@ -47,9 +47,9 @@ namespace BLL
             return gv_dal.getDataGiaoVienTheoMaChucDanh(pMaSoCD);
         }
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN THEO TÊN CHUYÊN MÔN
-        public List<GiaoVienDTO> getDataGiaoVienTheoCM(string pTenMH)
+        public List<GiaoVienDTO> getDataGiaoVienTheoCM(int pMaMH, string pNamHoc)
         {
-            return gv_dal.getDataGiaoVienTheoCM(pTenMH);
+            return gv_dal.getDataGiaoVienTheoCM(pMaMH, pNamHoc);
         }
 
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN KHÔNG TỒN TẠI TRONG CHỦ NHIỆM
@@ -98,6 +98,12 @@ namespace BLL
         public bool checkHP(string pMaGV)
         {
             return gv_dal.checkHP(pMaGV);
+        }
+
+        //------------------ LẤY ĐỊNH MỨC TIẾT DẠY
+        public decimal getDinhMucTietDay(string pMaGV, string pNamHoc)
+        {
+            return gv_dal.getDinhMucTietDay(pMaGV, pNamHoc);
         }
 
         //------------------ KIỂM TRA KHÓA CHÍNH

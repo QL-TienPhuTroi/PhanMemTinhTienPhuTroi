@@ -233,6 +233,7 @@
             // 
             this.dtpTGKT.BackColor = System.Drawing.Color.White;
             this.dtpTGKT.Checked = true;
+            this.dtpTGKT.Enabled = false;
             this.dtpTGKT.FillColor = System.Drawing.Color.White;
             this.dtpTGKT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTGKT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));

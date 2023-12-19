@@ -143,17 +143,19 @@ namespace DAL
             return lst_gv;
         }
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN THEO TÊN CHUYÊN MÔN
-        public List<GiaoVienDTO> getDataGiaoVienTheoCM(string pTenMH)
+        public List<GiaoVienDTO> getDataGiaoVienTheoCM(int pMaMH, string pNamHoc)
         {
-            var q = from gv in qlgv.GIAOVIENs
-                            join cm in qlgv.CHUYENMONs on gv.MACM equals cm.MACM
-                            join ctcv in qlgv.CHITIETCHUCVUs on gv.MAGV equals ctcv.MAGV
-                            where cm.TENCM == pTenMH && gv.TRANGTHAI == true && ctcv.MACV == 4
-                            select gv;
+            //var q = from gv in qlgv.GIAOVIENs
+            //                join cm in qlgv.CHUYENMONs on gv.MACM equals cm.MACM
+            //                join ctcv in qlgv.CHITIETCHUCVUs on gv.MAGV equals ctcv.MAGV
+            //                where cm.TENCM == pMaMH && gv.TRANGTHAI == true && ctcv.MACV == 3 || ctcv.MACV == 4 || ctcv.MACV == 5 || ctcv.MACV == 6
+            //        select gv;
             var giaoviens = from gv in qlgv.GIAOVIENs
                             join cm in qlgv.CHUYENMONs on gv.MACM equals cm.MACM
                             join ctcv in qlgv.CHITIETCHUCVUs on gv.MAGV equals ctcv.MAGV
-                            where cm.TENCM == pTenMH && gv.TRANGTHAI == true && ctcv.MACV == 4
+                            where cm.MACM == pMaMH && gv.TRANGTHAI == true 
+                            && (ctcv.MACV == 3 || ctcv.MACV == 4 || ctcv.MACV == 5 || ctcv.MACV == 6)
+                            && ctcv.NAMHOC == pNamHoc
                             select new GiaoVienDTO()
                             {
                                 magv = gv.MAGV,
@@ -316,6 +318,17 @@ namespace DAL
         {
             var query = from gv in qlgv.GIAOVIENs join ctcv in qlgv.CHITIETCHUCVUs on gv.MAGV equals ctcv.MAGV where ctcv.MAGV == pMaGV && ctcv.MACV == 2 select gv;
             return query.Any();
+        }
+
+        //------------------ LẤY ĐỊNH MỨC TIẾT DẠY
+        public decimal getDinhMucTietDay(string pMaGV, string pNamHoc)
+        {
+            var query = from gv in qlgv.GIAOVIENs
+                        join ctcv in qlgv.CHITIETCHUCVUs on gv.MAGV equals ctcv.MAGV
+                        join dmtd in qlgv.DINHMUCTIETDAYs on ctcv.MACV equals dmtd.MACV
+                        where gv.MAGV == pMaGV && ctcv.NAMHOC == pNamHoc
+                        select dmtd.SODINHMUCTIETDAY;
+            return query.FirstOrDefault();
         }
 
         //------------------ KIỂM TRA KHÓA CHÍNH

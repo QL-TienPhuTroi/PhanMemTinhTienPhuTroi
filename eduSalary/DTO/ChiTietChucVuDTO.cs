@@ -10,5 +10,6 @@ namespace DTO
     {
         public int macv { get; set; }
         public string magv { get; set; }
+        public string namhoc { get; set; }
     }
 }

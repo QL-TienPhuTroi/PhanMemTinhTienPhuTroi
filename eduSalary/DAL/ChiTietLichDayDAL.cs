@@ -96,6 +96,7 @@ namespace DAL
             return query.FirstOrDefault();
         }
 
+        //------------------ TÌM NGÀY ĐẦU TUẦN
         public DateTime FindStartOfWeek(DateTime ngayBatKy)
         {
             int daysToSubtract = ((int)ngayBatKy.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;

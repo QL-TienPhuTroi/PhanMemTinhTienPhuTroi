@@ -17,6 +17,7 @@ namespace GUI.GroupAminGUI
         MonHocBLL mh_bll = new MonHocBLL();
         GiaoVienBLL gv_bll = new GiaoVienBLL();
         LichDayBLL ld_bll = new LichDayBLL();
+        XacNhanLichDayBLL xnld_bll = new XacNhanLichDayBLL();
 
         LichDayDTO ld_dto = new LichDayDTO();
 
@@ -32,6 +33,7 @@ namespace GUI.GroupAminGUI
             pMaLP = _malp;
             pTenLP = _tenlp;
             pNamHoc = _namhoc;
+            loadDataMonHoc();
             this.Load += FrmAddTeaching_Load;
             cboMH.SelectedIndexChanged += CboMH_SelectedIndexChanged;
             dtpTGBD.ValueChanged += DtpTGBD_ValueChanged;
@@ -58,6 +60,8 @@ namespace GUI.GroupAminGUI
             if (r == DialogResult.Yes)
             {
                 pMaLich = dgvTeachingSchedule.CurrentRow.Cells[0].Value.ToString();
+
+                xnld_bll.removeXNLD(pMaLich);
 
                 if (ld_bll.removeLD(pMaLich))
                 {
@@ -105,8 +109,11 @@ namespace GUI.GroupAminGUI
 
         private void CboMH_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cboTenGV.Enabled = true;
-            loadDataGiaoVien(cboMH.Text);
+            if (cboMH.SelectedItem != null && cboMH.SelectedValue is int)
+            {
+                cboTenGV.Enabled = true;
+                loadDataGiaoVien((int)cboMH.SelectedValue);
+            }
         }
 
         private void FrmAddTeaching_Load(object sender, EventArgs e)
@@ -123,21 +130,21 @@ namespace GUI.GroupAminGUI
 
             if (monhoc != null)
             {
-                cboMH.DataSource = mh_bll.getDataMonHocKhongTonTai(pMaLP, pNamHoc);
+                cboMH.DataSource = monhoc;
                 cboMH.DisplayMember = "TENMH";
                 cboMH.ValueMember = "MAMH";
             }
         }
 
-        private void loadDataGiaoVien(string _tenmh)
+        private void loadDataGiaoVien(int _mamh)
         {
             if(!string.IsNullOrEmpty(cboMH.Text))
             {
-                var giaovien = gv_bll.getDataGiaoVienTheoCM(_tenmh);
+                var giaovien = gv_bll.getDataGiaoVienTheoCM(_mamh, pNamHoc);
 
                 if (giaovien != null)
                 {
-                    cboTenGV.DataSource = gv_bll.getDataGiaoVienTheoCM(_tenmh);
+                    cboTenGV.DataSource = giaovien;
                     cboTenGV.DisplayMember = "HOTEN";
                     cboTenGV.ValueMember = "MAGV";
                 }

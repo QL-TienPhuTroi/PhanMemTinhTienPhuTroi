@@ -35,6 +35,12 @@ namespace BLL
             return pt_dal.getDataPhuTroi(pNamHoc);
         }
 
+        //------------------ LẤY DỮ LIỆU PHỤ TRỘI THEO MAGV
+        public List<PhuTroiDTO> getDataPhuTroiTheoMaGV(string pMaGV, string pNamHoc)
+        {
+            return pt_dal.getDataPhuTroi(pMaGV, pNamHoc);
+        }
+
         //------------------ THÊM PHỤ TRỘI
         public void addPT(PhuTroiDTO pt, string pNamHoc)
         {

@@ -23,7 +23,8 @@ namespace DAL
                             select new ChiTietChucVuDTO()
                             {
                                 magv = ctcv.MAGV,
-                                macv = ctcv.MACV
+                                macv = ctcv.MACV,
+                                namhoc = ctcv.NAMHOC
                             };
 
             List<ChiTietChucVuDTO> lst_ctcv = chucvus.ToList();
@@ -38,12 +39,13 @@ namespace DAL
 
             ctcvs.MAGV = ctcv.magv;
             ctcvs.MACV = ctcv.macv;
+            ctcvs.NAMHOC = ctcv.namhoc;
 
             qlgv.CHITIETCHUCVUs.InsertOnSubmit(ctcvs);
             qlgv.SubmitChanges();
         }
 
-        //------------------ XÓA GIÁO VIÊN
+        //------------------ XÓA CHI TIẾT CHỨC VỤ
         public bool removeCTCV(string pMaGV)
         {
             CHITIETCHUCVU ctcvs = qlgv.CHITIETCHUCVUs.Where(t => t.MAGV == pMaGV).FirstOrDefault();
@@ -57,13 +59,14 @@ namespace DAL
             return false;
         }
 
-        //------------------ SỬA GIÁO VIÊN
+        //------------------ SỬA CHI TIẾT CHỨC VỤ
         public void editCTCV(ChiTietChucVuDTO ctcv)
         {
             CHITIETCHUCVU ctcvs = qlgv.CHITIETCHUCVUs.Where(t => t.MAGV == ctcv.magv).FirstOrDefault();
 
             ctcvs.MAGV = ctcv.magv;
             ctcvs.MACV = ctcv.macv;
+            ctcvs.NAMHOC = ctcv.namhoc;
 
 
             qlgv.SubmitChanges();

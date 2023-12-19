@@ -29,9 +29,12 @@ namespace GUI.GroupAminGUI
         ChucDanhBLL cd_bll = new ChucDanhBLL();
         ChuyenMonBLL cm_bll = new ChuyenMonBLL();
 
-        public frmAddTeacher()
+        string pNamHoc;
+
+        public frmAddTeacher(string _namhoc)
         {
             InitializeComponent();
+            pNamHoc = _namhoc;
             this.Load += FrmAddTeacher_Load;
             btnFinish.Click += BtnFinish_Click;
             cboMSCD.SelectedIndexChanged += CboMSCD_SelectedIndexChanged;
@@ -220,6 +223,7 @@ namespace GUI.GroupAminGUI
                 //------- THÊM CHI TIẾT CHỨC VỤ
                 ctcv_dto.magv = pMaGV;
                 ctcv_dto.macv = 4;
+                ctcv_dto.namhoc = pNamHoc;
 
                 ctcv_bll.addCTCV(ctcv_dto);
 

@@ -23,11 +23,12 @@ namespace GUI.GroupAminGUI
         frmAddTeacher fAdd;
         frmEditTeacher fEdit;
 
-        string pCode;
+        string pCode, pNamHoc;
 
-        public frmTeacher()
+        public frmTeacher(string _namhoc)
         {
             InitializeComponent();
+            pNamHoc = _namhoc;
             this.Load += FrmTeacher_Load;
             dgvTeacher.DoubleClick += DgvTeacher_DoubleClick;
             btnAdd.Click += BtnAdd_Click;
@@ -59,6 +60,7 @@ namespace GUI.GroupAminGUI
             fEdit = new frmEditTeacher(pCode);
             fEdit.ShowDialog();
             loadDataTeacher();
+            txtSearch.ResetText();
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)
@@ -84,9 +86,10 @@ namespace GUI.GroupAminGUI
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            fAdd = new frmAddTeacher();
+            fAdd = new frmAddTeacher(pNamHoc);
             fAdd.ShowDialog();
             loadDataTeacher();
+            txtSearch.ResetText();
         }
 
         private void BtnLoad_Click(object sender, EventArgs e)

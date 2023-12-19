@@ -19,13 +19,13 @@ namespace GUI.GroupAminGUI
         bool expand1 = true;
         bool expand2 = true;
 
-        string pCode, pPass, pHoTen;
+        string pCode, pPass, pHoTen, pNamHoc;
 
         GiaoVienBLL gv_bll = new GiaoVienBLL();
 
         frmHomeAdmin fHomeAdmin = new frmHomeAdmin();
 
-        frmTeacher fTeacher = new frmTeacher();
+        frmTeacher fTeacher;
         frmPosition fPosition = new frmPosition();
         frmCareerTitles fCareerTitles = new frmCareerTitles();
         frmSalaryGrade fSalaryGrade = new frmSalaryGrade();
@@ -80,6 +80,7 @@ namespace GUI.GroupAminGUI
 
             pCode = Code;
             pPass = Pass;
+            pNamHoc = lbNamHoc.Text;
             pHoTen = gv_bll.getNameGiaoVien(pCode); 
         }
 
@@ -129,6 +130,7 @@ namespace GUI.GroupAminGUI
         {
             lbFrmName.Text = "QUẢN LÝ GIÁO VIÊN";
             pnlBody.Controls.Clear();
+            fTeacher = new frmTeacher(pNamHoc);
             fTeacher.TopLevel = false;
             fTeacher.Dock = DockStyle.Fill;
             pnlBody.Controls.Add(fTeacher);
