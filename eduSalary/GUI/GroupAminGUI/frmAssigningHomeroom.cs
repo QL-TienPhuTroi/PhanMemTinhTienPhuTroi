@@ -106,15 +106,15 @@ namespace GUI.GroupAminGUI
             }
             else if (rdo10.Checked)
             {
-                classroom = lp_bll.getDataLopHocTheoKhoi("10");
+                classroom = lp_bll.getDataLopHocTheoKhoi(rdo10.Text.ToUpper());
             }
             else if (rdo11.Checked)
             {
-                classroom = lp_bll.getDataLopHocTheoKhoi("11");
+                classroom = lp_bll.getDataLopHocTheoKhoi(rdo11.Text.ToUpper());
             }
             else
             {
-                classroom = lp_bll.getDataLopHocTheoKhoi("12");
+                classroom = lp_bll.getDataLopHocTheoKhoi(rdo12.Text.ToUpper());
             }
 
             flpLopHoc.Controls.Clear();

@@ -18,6 +18,7 @@ namespace GUI.GroupAminGUI
         GiaoVienBLL gv_bll = new GiaoVienBLL();
         LichDayBLL ld_bll = new LichDayBLL();
         XacNhanLichDayBLL xnld_bll = new XacNhanLichDayBLL();
+        LopHocBLL lp_bll = new LopHocBLL();
 
         LichDayDTO ld_dto = new LichDayDTO();
 
@@ -48,7 +49,7 @@ namespace GUI.GroupAminGUI
             pMaGV = dgvTeachingSchedule.CurrentRow.Cells[1].Value.ToString();
             pTenMH = dgvTeachingSchedule.CurrentRow.Cells[2].Value.ToString();
             pThoiGianBatDau = DateTime.Parse(dgvTeachingSchedule.CurrentRow.Cells[4].Value.ToString());
-            pMaMH = int.Parse(cboMH.SelectedValue.ToString());
+            pMaMH = mh_bll.getMaMonHocTheoTenMH(pTenMH);
 
             fAddDetailTeaching = new frmAddDetailTeaching(pMaLich, pMaLP, pTenLP, pTenMH, pMaGV, pThoiGianBatDau, pMaMH, pNamHoc);
             fAddDetailTeaching.ShowDialog();
@@ -112,7 +113,8 @@ namespace GUI.GroupAminGUI
             if (cboMH.SelectedItem != null && cboMH.SelectedValue is int)
             {
                 cboTenGV.Enabled = true;
-                loadDataGiaoVien((int)cboMH.SelectedValue);
+                int _macm = mh_bll.findMaChuyenMonTheoMaMonHoc((int)cboMH.SelectedValue);
+                loadDataGiaoVien(_macm);
             }
         }
 
@@ -126,7 +128,9 @@ namespace GUI.GroupAminGUI
 
         private void loadDataMonHoc()
         {
-            var monhoc = mh_bll.getDataMonHocKhongTonTai(pMaLP, pNamHoc);
+            int _makhoi = lp_bll.getKhoi(pMaLP);
+
+            var monhoc = mh_bll.getDataMonHocKhongTonTai(pMaLP, pNamHoc, _makhoi);
 
             if (monhoc != null)
             {
@@ -136,11 +140,11 @@ namespace GUI.GroupAminGUI
             }
         }
 
-        private void loadDataGiaoVien(int _mamh)
+        private void loadDataGiaoVien(int _macm)
         {
             if(!string.IsNullOrEmpty(cboMH.Text))
             {
-                var giaovien = gv_bll.getDataGiaoVienTheoCM(_mamh, pNamHoc);
+                var giaovien = gv_bll.getDataGiaoVienTheoCM(_macm, pNamHoc);
 
                 if (giaovien != null)
                 {

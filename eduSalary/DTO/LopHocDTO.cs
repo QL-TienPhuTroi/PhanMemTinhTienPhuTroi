@@ -12,5 +12,6 @@ namespace DTO
         public string tenlp { get; set; }
         public int siso { get; set; }
         public bool khiemkhuyet { get; set; }
+        public int makhoi { get; set; }
     }
 }

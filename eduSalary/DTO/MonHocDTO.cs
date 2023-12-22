@@ -10,5 +10,8 @@ namespace DTO
     {
         public int mamh { get; set; }
         public string tenmh { get; set; }
+        public int tiettoida { get; set; }
+        public int macm { get; set; }
+        public int makhoi { get; set; }
     }
 }

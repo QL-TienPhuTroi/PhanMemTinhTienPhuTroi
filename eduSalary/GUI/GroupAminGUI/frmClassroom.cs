@@ -33,11 +33,6 @@ namespace GUI.GroupAminGUI
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
             dgvClassroom.DataSource = lp_bll.findDataLopHoc(txtSearch.Text);
-
-            dgvClassroom.Columns[0].HeaderText = "Mã lớp";
-            dgvClassroom.Columns[1].HeaderText = "Tên Lớp";
-            dgvClassroom.Columns[2].HeaderText = "Sĩ số";
-            dgvClassroom.Columns[3].HeaderText = "Khiếm khuyết";
         }
 
         private void DgvClassroom_DoubleClick(object sender, EventArgs e)
@@ -93,10 +88,12 @@ namespace GUI.GroupAminGUI
         {
             dgvClassroom.DataSource = lp_bll.getDataLopHoc();
 
+
             dgvClassroom.Columns[0].HeaderText = "Mã lớp";
-            dgvClassroom.Columns[1].HeaderText = "Tên lớp";
+            dgvClassroom.Columns[1].HeaderText = "Tên Lớp";
             dgvClassroom.Columns[2].HeaderText = "Sĩ số";
             dgvClassroom.Columns[3].HeaderText = "Khiếm khuyết";
+            dgvClassroom.Columns[4].HeaderText = "Mã khối";
         }
     }
 }

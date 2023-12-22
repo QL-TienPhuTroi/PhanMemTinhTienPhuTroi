@@ -19,13 +19,12 @@ namespace GUI.GroupAminGUI
         public frmAddPosition()
         {
             InitializeComponent();
-            this.Load += FrmAddPosition_Load;
             btnFinish.Click += BtnFinish_Click;
             txtMaCV.Enabled = false;
-            this.Load += FrmAddPosition_Load1;
+            this.Load += FrmAddPosition_Load;
         }
 
-        private void FrmAddPosition_Load1(object sender, EventArgs e)
+        private void FrmAddPosition_Load(object sender, EventArgs e)
         {
             txtMaCV.Text = createCode().ToString();
         }
@@ -62,10 +61,6 @@ namespace GUI.GroupAminGUI
                 }
                 i++;
             }
-        }
-        private void FrmAddPosition_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }

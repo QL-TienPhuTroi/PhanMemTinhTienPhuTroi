@@ -66,6 +66,9 @@ namespace DAL
     partial void InsertGIAOVIEN(GIAOVIEN instance);
     partial void UpdateGIAOVIEN(GIAOVIEN instance);
     partial void DeleteGIAOVIEN(GIAOVIEN instance);
+    partial void InsertKHOI(KHOI instance);
+    partial void UpdateKHOI(KHOI instance);
+    partial void DeleteKHOI(KHOI instance);
     partial void InsertLICHDAY(LICHDAY instance);
     partial void UpdateLICHDAY(LICHDAY instance);
     partial void DeleteLICHDAY(LICHDAY instance);
@@ -212,6 +215,14 @@ namespace DAL
 			get
 			{
 				return this.GetTable<GIAOVIEN>();
+			}
+		}
+		
+		public System.Data.Linq.Table<KHOI> KHOIs
+		{
+			get
+			{
+				return this.GetTable<KHOI>();
 			}
 		}
 		
@@ -1988,6 +1999,8 @@ namespace DAL
 		
 		private EntitySet<GIAOVIEN> _GIAOVIENs;
 		
+		private EntitySet<MONHOC> _MONHOCs;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2001,10 +2014,11 @@ namespace DAL
 		public CHUYENMON()
 		{
 			this._GIAOVIENs = new EntitySet<GIAOVIEN>(new Action<GIAOVIEN>(this.attach_GIAOVIENs), new Action<GIAOVIEN>(this.detach_GIAOVIENs));
+			this._MONHOCs = new EntitySet<MONHOC>(new Action<MONHOC>(this.attach_MONHOCs), new Action<MONHOC>(this.detach_MONHOCs));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MACM", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MACM", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int MACM
 		{
 			get
@@ -2057,6 +2071,19 @@ namespace DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CHUYENMON_MONHOC", Storage="_MONHOCs", ThisKey="MACM", OtherKey="MACM")]
+		public EntitySet<MONHOC> MONHOCs
+		{
+			get
+			{
+				return this._MONHOCs;
+			}
+			set
+			{
+				this._MONHOCs.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2084,6 +2111,18 @@ namespace DAL
 		}
 		
 		private void detach_GIAOVIENs(GIAOVIEN entity)
+		{
+			this.SendPropertyChanging();
+			entity.CHUYENMON = null;
+		}
+		
+		private void attach_MONHOCs(MONHOC entity)
+		{
+			this.SendPropertyChanging();
+			entity.CHUYENMON = this;
+		}
+		
+		private void detach_MONHOCs(MONHOC entity)
 		{
 			this.SendPropertyChanging();
 			entity.CHUYENMON = null;
@@ -2951,6 +2990,148 @@ namespace DAL
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KHOI")]
+	public partial class KHOI : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _MAKHOI;
+		
+		private string _TENKHOI;
+		
+		private EntitySet<LOPHOC> _LOPHOCs;
+		
+		private EntitySet<MONHOC> _MONHOCs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMAKHOIChanging(int value);
+    partial void OnMAKHOIChanged();
+    partial void OnTENKHOIChanging(string value);
+    partial void OnTENKHOIChanged();
+    #endregion
+		
+		public KHOI()
+		{
+			this._LOPHOCs = new EntitySet<LOPHOC>(new Action<LOPHOC>(this.attach_LOPHOCs), new Action<LOPHOC>(this.detach_LOPHOCs));
+			this._MONHOCs = new EntitySet<MONHOC>(new Action<MONHOC>(this.attach_MONHOCs), new Action<MONHOC>(this.detach_MONHOCs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAKHOI", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int MAKHOI
+		{
+			get
+			{
+				return this._MAKHOI;
+			}
+			set
+			{
+				if ((this._MAKHOI != value))
+				{
+					this.OnMAKHOIChanging(value);
+					this.SendPropertyChanging();
+					this._MAKHOI = value;
+					this.SendPropertyChanged("MAKHOI");
+					this.OnMAKHOIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENKHOI", DbType="NVarChar(10)")]
+		public string TENKHOI
+		{
+			get
+			{
+				return this._TENKHOI;
+			}
+			set
+			{
+				if ((this._TENKHOI != value))
+				{
+					this.OnTENKHOIChanging(value);
+					this.SendPropertyChanging();
+					this._TENKHOI = value;
+					this.SendPropertyChanged("TENKHOI");
+					this.OnTENKHOIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHOI_LOPHOC", Storage="_LOPHOCs", ThisKey="MAKHOI", OtherKey="MAKHOI")]
+		public EntitySet<LOPHOC> LOPHOCs
+		{
+			get
+			{
+				return this._LOPHOCs;
+			}
+			set
+			{
+				this._LOPHOCs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHOI_MONHOC", Storage="_MONHOCs", ThisKey="MAKHOI", OtherKey="MAKHOI")]
+		public EntitySet<MONHOC> MONHOCs
+		{
+			get
+			{
+				return this._MONHOCs;
+			}
+			set
+			{
+				this._MONHOCs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_LOPHOCs(LOPHOC entity)
+		{
+			this.SendPropertyChanging();
+			entity.KHOI = this;
+		}
+		
+		private void detach_LOPHOCs(LOPHOC entity)
+		{
+			this.SendPropertyChanging();
+			entity.KHOI = null;
+		}
+		
+		private void attach_MONHOCs(MONHOC entity)
+		{
+			this.SendPropertyChanging();
+			entity.KHOI = this;
+		}
+		
+		private void detach_MONHOCs(MONHOC entity)
+		{
+			this.SendPropertyChanging();
+			entity.KHOI = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LICHDAY")]
 	public partial class LICHDAY : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -3322,9 +3503,13 @@ namespace DAL
 		
 		private System.Nullable<bool> _KHIEMKHUYET;
 		
+		private System.Nullable<int> _MAKHOI;
+		
 		private EntitySet<CHUNHIEM> _CHUNHIEMs;
 		
 		private EntitySet<LICHDAY> _LICHDAYs;
+		
+		private EntityRef<KHOI> _KHOI;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3338,12 +3523,15 @@ namespace DAL
     partial void OnSISOChanged();
     partial void OnKHIEMKHUYETChanging(System.Nullable<bool> value);
     partial void OnKHIEMKHUYETChanged();
+    partial void OnMAKHOIChanging(System.Nullable<int> value);
+    partial void OnMAKHOIChanged();
     #endregion
 		
 		public LOPHOC()
 		{
 			this._CHUNHIEMs = new EntitySet<CHUNHIEM>(new Action<CHUNHIEM>(this.attach_CHUNHIEMs), new Action<CHUNHIEM>(this.detach_CHUNHIEMs));
 			this._LICHDAYs = new EntitySet<LICHDAY>(new Action<LICHDAY>(this.attach_LICHDAYs), new Action<LICHDAY>(this.detach_LICHDAYs));
+			this._KHOI = default(EntityRef<KHOI>);
 			OnCreated();
 		}
 		
@@ -3427,6 +3615,30 @@ namespace DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAKHOI", DbType="Int")]
+		public System.Nullable<int> MAKHOI
+		{
+			get
+			{
+				return this._MAKHOI;
+			}
+			set
+			{
+				if ((this._MAKHOI != value))
+				{
+					if (this._KHOI.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMAKHOIChanging(value);
+					this.SendPropertyChanging();
+					this._MAKHOI = value;
+					this.SendPropertyChanged("MAKHOI");
+					this.OnMAKHOIChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LOPHOC_CHUNHIEM", Storage="_CHUNHIEMs", ThisKey="MALP", OtherKey="MALP")]
 		public EntitySet<CHUNHIEM> CHUNHIEMs
 		{
@@ -3450,6 +3662,40 @@ namespace DAL
 			set
 			{
 				this._LICHDAYs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHOI_LOPHOC", Storage="_KHOI", ThisKey="MAKHOI", OtherKey="MAKHOI", IsForeignKey=true)]
+		public KHOI KHOI
+		{
+			get
+			{
+				return this._KHOI.Entity;
+			}
+			set
+			{
+				KHOI previousValue = this._KHOI.Entity;
+				if (((previousValue != value) 
+							|| (this._KHOI.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._KHOI.Entity = null;
+						previousValue.LOPHOCs.Remove(this);
+					}
+					this._KHOI.Entity = value;
+					if ((value != null))
+					{
+						value.LOPHOCs.Add(this);
+						this._MAKHOI = value.MAKHOI;
+					}
+					else
+					{
+						this._MAKHOI = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("KHOI");
+				}
 			}
 		}
 		
@@ -3508,7 +3754,17 @@ namespace DAL
 		
 		private string _TENMH;
 		
+		private System.Nullable<int> _TIETTOIDA;
+		
+		private System.Nullable<int> _MACM;
+		
+		private System.Nullable<int> _MAKHOI;
+		
 		private EntitySet<LICHDAY> _LICHDAYs;
+		
+		private EntityRef<CHUYENMON> _CHUYENMON;
+		
+		private EntityRef<KHOI> _KHOI;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3518,15 +3774,23 @@ namespace DAL
     partial void OnMAMHChanged();
     partial void OnTENMHChanging(string value);
     partial void OnTENMHChanged();
+    partial void OnTIETTOIDAChanging(System.Nullable<int> value);
+    partial void OnTIETTOIDAChanged();
+    partial void OnMACMChanging(System.Nullable<int> value);
+    partial void OnMACMChanged();
+    partial void OnMAKHOIChanging(System.Nullable<int> value);
+    partial void OnMAKHOIChanged();
     #endregion
 		
 		public MONHOC()
 		{
 			this._LICHDAYs = new EntitySet<LICHDAY>(new Action<LICHDAY>(this.attach_LICHDAYs), new Action<LICHDAY>(this.detach_LICHDAYs));
+			this._CHUYENMON = default(EntityRef<CHUYENMON>);
+			this._KHOI = default(EntityRef<KHOI>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAMH", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAMH", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int MAMH
 		{
 			get
@@ -3566,6 +3830,74 @@ namespace DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIETTOIDA", DbType="Int")]
+		public System.Nullable<int> TIETTOIDA
+		{
+			get
+			{
+				return this._TIETTOIDA;
+			}
+			set
+			{
+				if ((this._TIETTOIDA != value))
+				{
+					this.OnTIETTOIDAChanging(value);
+					this.SendPropertyChanging();
+					this._TIETTOIDA = value;
+					this.SendPropertyChanged("TIETTOIDA");
+					this.OnTIETTOIDAChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MACM", DbType="Int")]
+		public System.Nullable<int> MACM
+		{
+			get
+			{
+				return this._MACM;
+			}
+			set
+			{
+				if ((this._MACM != value))
+				{
+					if (this._CHUYENMON.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMACMChanging(value);
+					this.SendPropertyChanging();
+					this._MACM = value;
+					this.SendPropertyChanged("MACM");
+					this.OnMACMChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MAKHOI", DbType="Int")]
+		public System.Nullable<int> MAKHOI
+		{
+			get
+			{
+				return this._MAKHOI;
+			}
+			set
+			{
+				if ((this._MAKHOI != value))
+				{
+					if (this._KHOI.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMAKHOIChanging(value);
+					this.SendPropertyChanging();
+					this._MAKHOI = value;
+					this.SendPropertyChanged("MAKHOI");
+					this.OnMAKHOIChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MONHOC_LICHDAY", Storage="_LICHDAYs", ThisKey="MAMH", OtherKey="MAMH")]
 		public EntitySet<LICHDAY> LICHDAYs
 		{
@@ -3576,6 +3908,74 @@ namespace DAL
 			set
 			{
 				this._LICHDAYs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CHUYENMON_MONHOC", Storage="_CHUYENMON", ThisKey="MACM", OtherKey="MACM", IsForeignKey=true)]
+		public CHUYENMON CHUYENMON
+		{
+			get
+			{
+				return this._CHUYENMON.Entity;
+			}
+			set
+			{
+				CHUYENMON previousValue = this._CHUYENMON.Entity;
+				if (((previousValue != value) 
+							|| (this._CHUYENMON.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._CHUYENMON.Entity = null;
+						previousValue.MONHOCs.Remove(this);
+					}
+					this._CHUYENMON.Entity = value;
+					if ((value != null))
+					{
+						value.MONHOCs.Add(this);
+						this._MACM = value.MACM;
+					}
+					else
+					{
+						this._MACM = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("CHUYENMON");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KHOI_MONHOC", Storage="_KHOI", ThisKey="MAKHOI", OtherKey="MAKHOI", IsForeignKey=true)]
+		public KHOI KHOI
+		{
+			get
+			{
+				return this._KHOI.Entity;
+			}
+			set
+			{
+				KHOI previousValue = this._KHOI.Entity;
+				if (((previousValue != value) 
+							|| (this._KHOI.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._KHOI.Entity = null;
+						previousValue.MONHOCs.Remove(this);
+					}
+					this._KHOI.Entity = value;
+					if ((value != null))
+					{
+						value.MONHOCs.Add(this);
+						this._MAKHOI = value.MAKHOI;
+					}
+					else
+					{
+						this._MAKHOI = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("KHOI");
+				}
 			}
 		}
 		

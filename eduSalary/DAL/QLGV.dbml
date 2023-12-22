@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_GIAOVIEN" Class="QLGVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-QP6JP84;Initial Catalog=DB_GIAOVIEN;Persist Security Info=True;User ID=sa" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="DB_GIAOVIENConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-QP6JP84;Initial Catalog=DB_GIAOVIEN;Persist Security Info=True;User ID=sa" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="DB_GIAOVIENConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BACLUONG" Member="BACLUONGs">
     <Type Name="BACLUONG">
       <Column Name="MASOCD" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -86,9 +86,10 @@
   </Table>
   <Table Name="dbo.CHUYENMON" Member="CHUYENMONs">
     <Type Name="CHUYENMON">
-      <Column Name="MACM" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MACM" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TENCM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="CHUYENMON_GIAOVIEN" Member="GIAOVIENs" ThisKey="MACM" OtherKey="MACM" Type="GIAOVIEN" />
+      <Association Name="CHUYENMON_MONHOC" Member="MONHOCs" ThisKey="MACM" OtherKey="MACM" Type="MONHOC" />
     </Type>
   </Table>
   <Table Name="dbo.DINHMUCTIETDAY" Member="DINHMUCTIETDAYs">
@@ -128,6 +129,14 @@
       <Association Name="CHUYENMON_GIAOVIEN" Member="CHUYENMON" ThisKey="MACM" OtherKey="MACM" Type="CHUYENMON" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.KHOI" Member="KHOIs">
+    <Type Name="KHOI">
+      <Column Name="MAKHOI" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENKHOI" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="KHOI_LOPHOC" Member="LOPHOCs" ThisKey="MAKHOI" OtherKey="MAKHOI" Type="LOPHOC" />
+      <Association Name="KHOI_MONHOC" Member="MONHOCs" ThisKey="MAKHOI" OtherKey="MAKHOI" Type="MONHOC" />
+    </Type>
+  </Table>
   <Table Name="dbo.LICHDAY" Member="LICHDAYs">
     <Type Name="LICHDAY">
       <Column Name="MALICH" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -149,15 +158,22 @@
       <Column Name="TENLP" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="SISO" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="KHIEMKHUYET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MAKHOI" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="LOPHOC_CHUNHIEM" Member="CHUNHIEMs" ThisKey="MALP" OtherKey="MALP" Type="CHUNHIEM" />
       <Association Name="LOPHOC_LICHDAY" Member="LICHDAYs" ThisKey="MALP" OtherKey="MALP" Type="LICHDAY" />
+      <Association Name="KHOI_LOPHOC" Member="KHOI" ThisKey="MAKHOI" OtherKey="MAKHOI" Type="KHOI" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.MONHOC" Member="MONHOCs">
     <Type Name="MONHOC">
-      <Column Name="MAMH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MAMH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TENMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TIETTOIDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MACM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MAKHOI" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="MONHOC_LICHDAY" Member="LICHDAYs" ThisKey="MAMH" OtherKey="MAMH" Type="LICHDAY" />
+      <Association Name="CHUYENMON_MONHOC" Member="CHUYENMON" ThisKey="MACM" OtherKey="MACM" Type="CHUYENMON" IsForeignKey="true" />
+      <Association Name="KHOI_MONHOC" Member="KHOI" ThisKey="MAKHOI" OtherKey="MAKHOI" Type="KHOI" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.PHUTROI" Member="PHUTROIs">

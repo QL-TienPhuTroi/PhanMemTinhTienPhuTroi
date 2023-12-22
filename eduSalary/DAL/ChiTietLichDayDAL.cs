@@ -22,13 +22,14 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU CHI TIẾT LỊCH DẠY
         public List<ChiTietLichDayDTO> getDataChiTietLichDay()
         {
-            var chitietlichdays = from ctld in qlgv.CHITIETLICHDAYs select new ChiTietLichDayDTO()
-            {
-                malich = ctld.MALICH,
-                thu = ctld.THU,
-                ngayday = (DateTime)ctld.NGAYDAY,
-                tietday = (int)ctld.TIETDAY
-            };
+            var chitietlichdays = from ctld in qlgv.CHITIETLICHDAYs
+                                  select new ChiTietLichDayDTO()
+                                  {
+                                      malich = ctld.MALICH,
+                                      thu = ctld.THU,
+                                      ngayday = (DateTime)ctld.NGAYDAY,
+                                      tietday = (int)ctld.TIETDAY
+                                  };
 
             List<ChiTietLichDayDTO> lst_ctld = chitietlichdays.ToList();
 
@@ -38,13 +39,15 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU CHI TIẾT LỊCH DẠY THEO MÃ LỊCH
         public List<ChiTietLichDayDTO> getDataChiTietLichDay(string pMaLich)
         {
-            var chitietlichdays = from ctld in qlgv.CHITIETLICHDAYs where ctld.MALICH == pMaLich select new ChiTietLichDayDTO()
-            {
-                malich = ctld.MALICH,
-                thu = ctld.THU,
-                ngayday = (DateTime)ctld.NGAYDAY,
-                tietday = (int)ctld.TIETDAY
-            };
+            var chitietlichdays = from ctld in qlgv.CHITIETLICHDAYs
+                                  where ctld.MALICH == pMaLich
+                                  select new ChiTietLichDayDTO()
+                                  {
+                                      malich = ctld.MALICH,
+                                      thu = ctld.THU,
+                                      ngayday = (DateTime)ctld.NGAYDAY,
+                                      tietday = (int)ctld.TIETDAY
+                                  };
 
             chitietlichdays = chitietlichdays.OrderBy(ctld => ctld.thu);
 
@@ -109,7 +112,20 @@ namespace DAL
         //------------------ ĐẾM SỐ TIẾT TRONG 1 TUẦN CỦA GIÁO VIÊN
         public int getCountLessonInWeek(string pMaGV, DateTime pNgayDauTuan, string pNamHoc)
         {
-            var query = from ctld in qlgv.CHITIETLICHDAYs join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH where ld.MAGV == pMaGV && ctld.NGAYDAY >= pNgayDauTuan && ctld.NGAYDAY <= pNgayDauTuan.AddDays(6) && ld.NAMHOC == pNamHoc select ctld;
+            var query = from ctld in qlgv.CHITIETLICHDAYs 
+                        join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH 
+                        where ld.MAGV == pMaGV && ctld.NGAYDAY >= pNgayDauTuan && ctld.NGAYDAY <= pNgayDauTuan.AddDays(6) && ld.NAMHOC == pNamHoc 
+                        select ctld;
+            return query.Count();
+        }
+
+        //------------------ ĐẾM SỐ TIẾT TRONG 1 TUẦN CỦA GIÁO VIÊN DẠY MÔN HỌC CỤ THỂ
+        public int getCountLessonInWeek(string pMaGV, DateTime pNgayDauTuan, string pNamHoc, int pMaMH, string pMaLop)
+        {
+            var query = from ctld in qlgv.CHITIETLICHDAYs 
+                        join ld in qlgv.LICHDAYs on ctld.MALICH equals ld.MALICH 
+                        where ld.MAGV == pMaGV && ctld.NGAYDAY >= pNgayDauTuan && ctld.NGAYDAY <= pNgayDauTuan.AddDays(6) && ld.NAMHOC == pNamHoc && ld.MAMH == pMaMH && ld.MALP == pMaLop
+                        select ctld;
             return query.Count();
         }
 
@@ -141,7 +157,7 @@ namespace DAL
                         join xnld in qlgv.XACNHANLICHDAYs
                             on new { ctld.MALICH, ctld.TIETDAY, ctld.NGAYDAY }
                             equals new { xnld.MALICH, xnld.TIETDAY, xnld.NGAYDAY }
-                        where ld.MAGV == pMaGV && xnld.HOANTHANH == true && ld.NAMHOC == pNamHoc 
+                        where ld.MAGV == pMaGV && xnld.HOANTHANH == true && ld.NAMHOC == pNamHoc
                         select ctld;
             return query.Count();
         }
@@ -155,8 +171,8 @@ namespace DAL
                                   join mh in qlgv.MONHOCs on ld.MAMH equals mh.MAMH
                                   join lp in qlgv.LOPHOCs on ld.MALP equals lp.MALP
                                   join xnld in qlgv.XACNHANLICHDAYs
-                                    on new{ctld.MALICH, ctld.TIETDAY, ctld.NGAYDAY}
-                                    equals new {xnld.MALICH, xnld.TIETDAY, xnld.NGAYDAY}
+                                    on new { ctld.MALICH, ctld.TIETDAY, ctld.NGAYDAY }
+                                    equals new { xnld.MALICH, xnld.TIETDAY, xnld.NGAYDAY }
                                   where ctld.NGAYDAY == pNgayDay
                                   select new ChiTietLichDayLocDTO()
                                   {
@@ -184,7 +200,7 @@ namespace DAL
             ctlds.THU = ctld.thu;
             ctlds.NGAYDAY = ctld.ngayday;
             ctlds.TIETDAY = ctld.tietday;
-            
+
             qlgv.CHITIETLICHDAYs.InsertOnSubmit(ctlds);
             qlgv.SubmitChanges();
         }
@@ -210,7 +226,7 @@ namespace DAL
         public bool removeCTLD(string pMaLich, DateTime pNgayDay)
         {
             var ctlds = qlgv.CHITIETLICHDAYs.Where(t => t.MALICH == pMaLich && t.NGAYDAY == pNgayDay).ToList();
-            
+
             if (ctlds != null)
             {
                 foreach (var ctld in ctlds)

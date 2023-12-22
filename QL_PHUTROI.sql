@@ -79,6 +79,7 @@ CREATE TABLE LOPHOC
 	TENLP			NVARCHAR(20),
 	SISO			INT,
 	KHIEMKHUYET		BIT,
+	MAKHOI			INT,
 	CONSTRAINT PK_LOPHOC PRIMARY KEY(MALP)
 );
 
@@ -140,16 +141,26 @@ CREATE TABLE CHITIETBANGCAP
 --------------------- BẢNG CHUYÊN MÔN
 CREATE TABLE CHUYENMON
 (
-	MACM			INT NOT NULL IDENTITY(1,1),
+	MACM			INT,
 	TENCM			NVARCHAR(50),
 	CONSTRAINT PK_CHUYENMON PRIMARY KEY(MACM)
+);
+
+CREATE TABLE KHOI
+(
+	MAKHOI		INT,
+	TENKHOI		NVARCHAR(10),
+	CONSTRAINT PK_KHOI PRIMARY KEY(MAKHOI)
 );
 
 --------------------- BẢNG MÔN HỌC
 CREATE TABLE MONHOC
 (
-	MAMH			INT NOT NULL IDENTITY(1,1),
+	MAMH			INT,
 	TENMH			NVARCHAR(50),
+	TIETTOIDA		INT,
+	MACM			INT,
+	MAKHOI			INT,
 	CONSTRAINT PK_MONHOC PRIMARY KEY(MAMH)
 );
 
@@ -207,6 +218,10 @@ CREATE TABLE TAIKHOAN
 --------------------------------------------------- [ RÀNG BUỘC ] ---------------------------------------------------
 
 --------------------------------------------------------- KHÓA NGOẠI
+--------------------- BẢNG LỚP HỌC
+ALTER TABLE LOPHOC 
+ADD CONSTRAINT FK_LOPHOC_KHOI FOREIGN KEY(MAKHOI) REFERENCES KHOI(MAKHOI)
+
 --------------------- BẢNG BẬC LƯƠNG
 ALTER TABLE BACLUONG 
 ADD CONSTRAINT FK_BACLUONG_CHUCDANHNN FOREIGN KEY(MASOCD) REFERENCES CHUCDANHNN(MASOCD)
@@ -254,6 +269,11 @@ ADD CONSTRAINT FK_LICHDAY_GIAOVIEN FOREIGN KEY(MAGV) REFERENCES GIAOVIEN(MAGV),
 ALTER TABLE CHITIETLICHDAY
 ADD CONSTRAINT FK_CHITIETLICHDAY_LICHDAY FOREIGN KEY(MALICH) REFERENCES LICHDAY(MALICH),
 	CONSTRAINT FK_CHITIETLICHDAY_THOIGIANDAY FOREIGN KEY(TIETDAY) REFERENCES THOIGIANDAY(MATG)
+
+--------------------- BẢNG MÔN HỌC
+ALTER TABLE MONHOC
+ADD CONSTRAINT FK_MONHOC_KHOI FOREIGN KEY(MAKHOI) REFERENCES KHOI(MAKHOI),
+	CONSTRAINT FK_MONHOC_CHUYENMON FOREIGN KEY(MACM) REFERENCES CHUYENMON(MACM)
 
 --------------------- BẢNG XÁC NHẬN LỊCH DẠY
 ALTER TABLE XACNHANLICHDAY
@@ -339,48 +359,75 @@ VALUES
 (N'Kế toán')
 
 --------------------- BẢNG CHUYÊN MÔN
-INSERT INTO CHUYENMON(TENCM)
+INSERT INTO CHUYENMON(MACM, TENCM)
 VALUES 
-(N'Toán học'),
-(N'Ngữ văn'),
-(N'Vật lý'),
-(N'Hóa học'),
-(N'Sinh học'),
-(N'Lịch sử'),
-(N'Địa lý'),
-(N'GDCD'),
-(N'Tiếng Anh'),
-(N'Công nghệ'),
-(N'Tiếng Trung'),
-(N'Tin học'),
-(N'Thể dục'),
-(N'Âm nhạc'),
-(N'Hội họa'),
-(N'GDQP'),
-(N'Tiếng Nhật'),
-(N'Tiếng Đức')
+(1, N'Toán học'),
+(2, N'Ngữ văn'),
+(3, N'Vật lý'),
+(4, N'Hóa học'),
+(5, N'Sinh học'),
+(6, N'Lịch sử'),
+(7, N'Địa lý'),
+(8, N'GDCD'),
+(9, N'Tiếng Anh'),
+(10, N'Công nghệ'),
+(11, N'Tin học'),
+(12, N'Thể dục'),
+(13, N'Âm nhạc'),
+(14, N'GDQP')
+
+--------------------- BẢNG KHỐI
+INSERT INTO KHOI(MAKHOI, TENKHOI)
+VALUES 
+(1, N'KHỐI 10'),
+(2, N'KHỐI 11'),
+(3, N'KHỐI 12')
 
 --------------------- BẢNG MÔN HỌC
-INSERT INTO MONHOC(TENMH)
+INSERT INTO MONHOC(MAMH, TENMH, TIETTOIDA, MACM, MAKHOI)
 VALUES 
-(N'Toán học'),
-(N'Ngữ văn'),
-(N'Vật lý'),
-(N'Hóa học'),
-(N'Sinh học'),
-(N'Lịch sử'),
-(N'Địa lý'),
-(N'GDCD'),
-(N'Tiếng Anh'),
-(N'Công nghệ'),
-(N'Tiếng Trung'),
-(N'Tin học'),
-(N'Thể dục'),
-(N'Âm nhạc'),
-(N'Hội họa'),
-(N'GDPQ'),
-(N'Tiếng Nhật'),
-(N'Tiếng Đức')
+(1, N'Đại Số 10', 2, 1, 1),
+(2, N'Hình Học 10', 1, 1, 1),
+(3, N'Vật Lý 10', 2, 3, 1),
+(4, N'Hóa Học 10', 2, 4, 1),
+(5, N'Sinh Học 10', 1, 5, 1),
+(6, N'Ngữ Văn 10', 3, 2, 1),
+(7, N'Lịch Sử 10', 1, 6, 1),
+(8, N'Địa Lý 10', 2, 7, 1),
+(9, N'Tin Học 10', 2, 11, 1),
+(10, N'Công Nghệ 10', 1, 10, 1),
+(12, N'Giáo Dục Công Dân 10', 1, 8, 1),
+(13, N'Tiếng Anh 10', 3, 9, 1),
+(14, N'Giáo dục Quốc phong – An ninh 10', 1, 14, 1),
+(15, N'Thể dục 10', 2, 12, 1),
+(16, N'Đại số và giải tích 11', 2, 1, 2),
+(17, N'Hình học 11', 2, 1, 2),
+(18, N'Vật lý 11', 2, 3, 2),
+(19, N'Hóa học 11', 2, 4, 2),
+(20, N'Sinh học 11', 1, 5, 2),
+(21, N'Công nghệ 11', 1, 10, 2),
+(22, N'Ngữ văn 11', 4, 2, 2),
+(23, N'Lịch sử 11', 1, 6, 2),
+(24, N'Địa lý 11', 1, 7, 2),
+(25, N'Giáo dục công dân 11', 1, 8, 2),
+(26, N'Tin học 11', 2, 11, 2),
+(27, N'Tiếng anh 11', 3, 9, 2),
+(28, N'Giáo dục Quốc phòng và An ninh 11', 1, 14, 2),
+(29, N'Thể dục 11', 2, 12, 2),
+(30, N'Giải Tích 12', 2, 1, 3),
+(31, N'Hình Học 12', 2, 1, 3),
+(32, N'Vật Lý 12', 3, 3, 3),
+(33, N'Hóa Học 12', 3, 4, 3),
+(34, N'Sinh Học 12', 2, 5, 3),
+(35, N'Ngữ Văn 12', 3, 2, 3),
+(36, N'Lịch Sử 12', 2, 6, 3),
+(37, N'Địa Lý 12', 1, 7, 3),
+(38, N'Tin Học 12', 1, 11, 3),
+(39, N'Công Nghệ 12', 1, 10, 3),
+(40, N'Giáo Dục Công Dân 12', 1, 8, 3),
+(41, N'Tiếng Anh 12', 3, 9, 3),
+(42, N'Giáo Dục Quốc Phòng – An Ninh 12', 1, 14, 3),
+(43, N'Thể dục 12', 2, 12, 3)
 
 --------------------- BẢNG GIÁO VIÊN
 SET DATEFORMAT DMY
@@ -391,7 +438,7 @@ VALUES
 ('2001116218', 1, N'Tài Đại Duy Hùng', '02/07/2002', N'Nam', N'số 01 Công Xã Paris, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh', '0932123456', '0123456789', 'hungtdd@slr.edu.vn', '02/03/2021', '30/07/2019', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 2, 'V.07.05.15', 1, 4),
 ('2001128009', 1, N'Lê Hoàng Chương', '22/02/1985', N'Nam', N'số 2 Nguyễn Bỉnh Khiêm, Quận 1, Thành phố Hồ Chí Minh', '0765432109', '0123456789', 'chuonglh@slr.edu.vn', '27/06/2017', '12/10/2008', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 6, 'V.07.05.15', 3, 8),
 ('2001129533', 1, N'Lê Hoàng Anh', '28/09/1987', N'Nam', N'TL15, Phú Hiệp, Củ Chi, Thành phố Hồ Chí Minh', '0876543210', '0123456789', 'anhlh@slr.edu.vn', '13/11/2014', '13/05/2017', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 9, 'V.07.05.15', 9, 2),
-('2001135986', 1, N'Kiều Đạo Nhất San', '11/12/1991', N'Nam', N'Đường Nguyễn Huệ, quận 1, Thành phố Hồ Chí Minh', '0654321098', '0123456789', 'sankdn@slr.edu.vn', '28/10/2020', '19/01/1998', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 3, 'V.07.05.15', 1, 18),
+('2001135986', 1, N'Kiều Đạo Nhất San', '11/12/1991', N'Nam', N'Đường Nguyễn Huệ, quận 1, Thành phố Hồ Chí Minh', '0654321098', '0123456789', 'sankdn@slr.edu.vn', '28/10/2020', '19/01/1998', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 3, 'V.07.05.15', 1, 1),
 ('2001140172', 1, N'Trần Quốc Quy', '04/05/1989', N'Nam', N'2 Nguyễn Bỉnh Khiêm, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh', '0987654321', '0123456789', 'quytq@slr.edu.vn', '01/06/2018', '09/01/2015', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 5, 'V.07.05.15', 4, 6),
 ('2001150068', 1, N'Trần Thị Vân Anh', '23/08/1993', N'Nữ', N'số 2 Khu Him Lam, quận 7, Thành phố Hồ Chí Minh', '0210987654', '0123456789', 'anhttv@slr.edu.vn', '11/08/2016', '02/10/2016', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 7, 'V.07.05.15', 7, 7),
 ('2001161738', 1, N'Đỗ Quang Vinh', '18/02/1986', N'Nam', N'Số 19-25 Nguyễn Huệ, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh', '0432109876', '0123456789', 'vinhdq@slr.edu.vn', '20/04/2013', '24/07/2005', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 10, 'V.07.05.14', 6, 12),
@@ -402,9 +449,9 @@ VALUES
 ('2001202625', 1, N'Phùng Thanh Độ', '14/04/1980', N'Nam', N'55C, đường Nguyễn Thị Minh Khai, quận 1, thành phố Hồ Chí Minh', '0432109876', '0123456789', 'dopt@slr.edu.vn', '08/04/2009', '26/05/2000', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 14, 'V.07.05.13', 2, 5),
 ('2001286962', 1, N'Đặng Ngọc Bảo Châu', '27/07/1993', N'Nữ', N'48/10 Điện Biên Phủ, phường 22, quận Bình Thạnh, thành phố Hồ Chí Minh', '0876543210', '0123456789', 'chaudnb@slr.edu.vn', '06/01/2013', '25/07/2013', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 10, 'V.07.05.15', 9, 13),
 ('2001466041', 1, N'Huỳnh Gia Khương', '30/10/1987', N'Nam', N'51/4/27 Thành Thái, Phường 14, Quận 10, Thành phố Hồ Chí Minh', '0765432109', '0123456789', 'khuonghg@slr.edu.vn', '22/03/2012', '21/08/2007', N'Trường THPT Bình Sơn', N'Hoa', N'Không', 11, 'V.07.05.15', 7, 9),
-('2001570500', 1, N'Lâm Quốc Huy', '13/01/1991', N'Nam', N'346 Bến Vân Đồn, Phường 01, Quận 4, Thành phố Hồ Chí Minh', '0654321098', '0123456789', 'huylq@slr.edu.vn', '28/11/2017', '12/11/2015', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 6, 'V.07.05.15', 3, 16),
-('2001641485', 1, N'Đinh Sơn Tùng', '29/04/1988', N'Nam', N'số 53, đường số N8 Jamona City, Phường Phú Thuận, Quận 7, Thành phố Hồ Chí Minh', '0987654321', '0123456789', 'tungds@slr.edu.vn', '09/03/2014', '23/09/2000', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 9, 'V.07.05.15', 6, 15),
-('2001706433', 1, N'Đinh Thanh Hà', '12/07/1994', N'Nam', N'B70/2 Nguyễn Thần Hiến, Phường 18, Quận 4, Thành phố Hồ Chí Minh', '0210987654', '0123456789', 'hadt@slr.edu.vn', '24/01/2010', '09/11/2009', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 13, 'V.07.05.14', 8, 17),
+('2001570500', 1, N'Lâm Quốc Huy', '13/01/1991', N'Nam', N'346 Bến Vân Đồn, Phường 01, Quận 4, Thành phố Hồ Chí Minh', '0654321098', '0123456789', 'huylq@slr.edu.vn', '28/11/2017', '12/11/2015', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 6, 'V.07.05.15', 3, 2),
+('2001641485', 1, N'Đinh Sơn Tùng', '29/04/1988', N'Nam', N'số 53, đường số N8 Jamona City, Phường Phú Thuận, Quận 7, Thành phố Hồ Chí Minh', '0987654321', '0123456789', 'tungds@slr.edu.vn', '09/03/2014', '23/09/2000', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 9, 'V.07.05.15', 6, 4),
+('2001706433', 1, N'Đinh Thanh Hà', '12/07/1994', N'Nam', N'B70/2 Nguyễn Thần Hiến, Phường 18, Quận 4, Thành phố Hồ Chí Minh', '0210987654', '0123456789', 'hadt@slr.edu.vn', '24/01/2010', '09/11/2009', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 13, 'V.07.05.14', 8, 2),
 ('2001787274', 1, N'Trần Trung Kiên', '31/10/1978', N'Nam', N'207B Hoàng Văn Thụ, Phường 08, Quận Phú Nhuận, Thành phố Hồ Chí Minh', '0210654987', '0123456789', 'kientt@slr.edu.vn', '29/04/2010', '03/01/2005', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 13, 'V.07.05.13', 1, 10),
 ('2001802284', 1, N'Nguyễn Văn An', '01/01/1967', N'Nam', N'số 15 Nguyễn Lương Bằng, Phường Tân Phú, Quận 7, Thành phố Hồ Chí Minh', '0210987123', '0123456789', 'annv@slr.edu.vn', '02/07/2000', '09/02/1986', N'Trường THPT Bình Sơn', N'Kinh', N'Không', 23, 'V.07.05.13', 6, 1),
 ('2001878553', 1, N'Trần Bích Phượng', '12/05/1977', N'Nữ', N'Số 851-853 đường Lê Hồng Phong, Phường 12, Quận 10, Thành phố Hồ Chí Minh', '0210123654', '0123456789', 'phuongtb@slr.edu.vn', '06/12/2005', '15/09/1997', N'Trường THPT Bình Sơn', N'Không', N'Kinh', 17, 'V.07.05.13', 4, 6)
@@ -436,26 +483,26 @@ VALUES
 ('2001878553', '123123', 2)
 
 --------------------- BẢNG LỚP HỌC
-INSERT INTO LOPHOC(MALP, TENLP, SISO, KHIEMKHUYET)
+INSERT INTO LOPHOC(MALP, TENLP, SISO, KHIEMKHUYET, MAKHOI)
 VALUES
-('LP10016752', '10A1', 41, 0),
-('LP10012797', '10A2', 41, 0),
-('LP10012550', '10A3', 41, 0),
-('LP10014457', '10C1', 41, 1),
-('LP10017324', '10C2', 41, 1),
-('LP10015831', '10C3', 41, 1),
-('LP10019683', '11A1', 41, 0),
-('LP10015456', '11A2', 41, 0),
-('LP10011843', '11A3', 41, 0),
-('LP10019191', '11C1', 41, 0),
-('LP10013465', '11C2', 41, 0),
-('LP10013251', '11C3', 41, 0),
-('LP10015425', '12A1', 41, 1),
-('LP10016744', '12A2', 41, 0),
-('LP10015934', '12A3', 41, 0),
-('LP10019370', '12C1', 41, 0),
-('LP10012585', '12C2', 41, 0),
-('LP10014649', '12C3', 41, 0)
+('LP10016752', '10A1', 41, 0, 1),
+('LP10012797', '10A2', 41, 0, 1),
+('LP10012550', '10A3', 41, 0, 1),
+('LP10014457', '10C1', 41, 1, 1),
+('LP10017324', '10C2', 41, 1, 1),
+('LP10015831', '10C3', 41, 1, 1),
+('LP10019683', '11A1', 41, 0, 2),
+('LP10015456', '11A2', 41, 0, 2),
+('LP10011843', '11A3', 41, 0, 2),
+('LP10019191', '11C1', 41, 0, 2),
+('LP10013465', '11C2', 41, 0, 2),
+('LP10013251', '11C3', 41, 0, 2),
+('LP10015425', '12A1', 41, 1, 3),
+('LP10016744', '12A2', 41, 0, 3),
+('LP10015934', '12A3', 41, 0, 3),
+('LP10019370', '12C1', 41, 0, 3),
+('LP10012585', '12C2', 41, 0, 3),
+('LP10014649', '12C3', 41, 0, 3)
 
 --------------------- BẢNG CHI TIẾT CHỨC VỤ
 INSERT INTO CHITIETCHUCVU(MACV, MAGV, NAMHOC)

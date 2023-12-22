@@ -74,9 +74,6 @@ namespace GUI.GroupAminGUI
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
             dgvSubjects.DataSource = mh_bll.findDataMonHoc(txtSearch.Text);
-
-            dgvSubjects.Columns[0].HeaderText = "MSGV";
-            dgvSubjects.Columns[1].HeaderText = "Họ tên";
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
@@ -92,6 +89,9 @@ namespace GUI.GroupAminGUI
 
             dgvSubjects.Columns[0].HeaderText = "Mã môn học";
             dgvSubjects.Columns[1].HeaderText = "Tên môn học";
+            dgvSubjects.Columns[2].HeaderText = "Số tiết tối đa";
+            dgvSubjects.Columns[3].HeaderText = "Mã chuyên môn";
+            dgvSubjects.Columns[4].HeaderText = "Mã khối";
         }
     }
 }

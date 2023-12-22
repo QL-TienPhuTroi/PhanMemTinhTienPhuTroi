@@ -28,16 +28,19 @@ namespace BLL
         {
             return lp_dal.getDataLopHocTheoKhoi(pValue);
         }
+
+        //------------------ LẤY MÃ KHỐI CỦA LỚP
+        public int getKhoi(string pMaLP)
+        {
+            return lp_dal.getKhoi(pMaLP);
+        }
+
         //------------------ LẤY DỮ LIỆU LỚP HỌC THEO MÃ
         public List<LopHocDTO> getDataLopHocTheoMa(string pValue)
         {
             return lp_dal.getDataLopHocTheoMa(pValue);
         }
-        //------------------ KIỂM TRA LỚP KHUYÊT TẬT
-        public bool isDisabilities(string pMaLP)
-        {
-            return lp_dal.isDisabilities(pMaLP);
-        }
+
         //------------------ THÊM LỚP
         public void addLP(LopHocDTO lp)
         {

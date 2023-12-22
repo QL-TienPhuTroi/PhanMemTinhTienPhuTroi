@@ -19,13 +19,16 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU LỚP HỌC
         public List<LopHocDTO> getDataLopHoc()
         {
-            var lophocs = from lp in qlgv.LOPHOCs orderby lp.TENLP select new LopHocDTO()
-            {
-                malp = lp.MALP,
-                tenlp = lp.TENLP,
-                siso = (int)lp.SISO,
-                khiemkhuyet = (bool)lp.KHIEMKHUYET
-            };
+            var lophocs = from lp in qlgv.LOPHOCs
+                          orderby lp.TENLP
+                          select new LopHocDTO()
+                          {
+                              malp = lp.MALP,
+                              tenlp = lp.TENLP,
+                              siso = (int)lp.SISO,
+                              khiemkhuyet = (bool)lp.KHIEMKHUYET,
+                              makhoi = (int)lp.MAKHOI,
+                          };
 
             List<LopHocDTO> lst_lp = lophocs.ToList();
 
@@ -35,18 +38,33 @@ namespace DAL
         //------------------ LẤY DỮ LIỆU LỚP HỌC THEO KHỐI
         public List<LopHocDTO> getDataLopHocTheoKhoi(string pValue)
         {
-            var lophocs = from lp in qlgv.LOPHOCs orderby lp.TENLP where lp.TENLP.Contains(pValue) select new LopHocDTO()
-            {
-                malp = lp.MALP,
-                tenlp = lp.TENLP,
-                siso = (int)lp.SISO,
-                khiemkhuyet = (bool)lp.KHIEMKHUYET
-            };
+            var lophocs = from lp in qlgv.LOPHOCs
+                          join khoi in qlgv.KHOIs on lp.MAKHOI equals khoi.MAKHOI
+                          orderby lp.TENLP
+                          where khoi.TENKHOI == pValue
+                          select new LopHocDTO()
+                          {
+                              malp = lp.MALP,
+                              tenlp = lp.TENLP,
+                              siso = (int)lp.SISO,
+                              makhoi = (int)lp.MAKHOI
+                          };
 
             List<LopHocDTO> lst_lp = lophocs.ToList();
 
             return lst_lp;
         }
+
+        //------------------ LẤY MÃ KHỐI CỦA LỚP
+        public int getKhoi(string pMaLP)
+        {
+            var lophocs = from lp in qlgv.LOPHOCs
+                          where lp.MALP == pMaLP
+                          select lp.MAKHOI;
+
+            return (int)lophocs.FirstOrDefault();
+        }
+
         //------------------ LẤY DỮ LIỆU LỚP HỌC THEO MÃ
         public List<LopHocDTO> getDataLopHocTheoMa(string pValue)
         {
@@ -57,20 +75,15 @@ namespace DAL
                               malp = lp.MALP,
                               tenlp = lp.TENLP,
                               siso = (int)lp.SISO,
-                              khiemkhuyet = (bool)lp.KHIEMKHUYET
+                              khiemkhuyet = (bool)lp.KHIEMKHUYET,
+                              makhoi = (int)lp.MAKHOI
                           };
 
             List<LopHocDTO> lst_lp = lophocs.ToList();
 
             return lst_lp;
         }
-        //------------------ KIỂM TRA LỚP KHUYÊT TẬT
-        public bool isDisabilities(string pMaLP)
-        {
-            var query = from lp in qlgv.LOPHOCs where lp.MALP == pMaLP && lp.KHIEMKHUYET == true select lp;
 
-            return query.Any();
-        }
         //------------------ THÊM LỚP
         public void addLP(LopHocDTO lp)
         {
@@ -80,7 +93,8 @@ namespace DAL
             lps.TENLP = lp.tenlp;
             lps.SISO = lp.siso;
             lps.KHIEMKHUYET = lp.khiemkhuyet;
-            
+            lps.MAKHOI = lp.makhoi;
+
 
             qlgv.LOPHOCs.InsertOnSubmit(lps);
             qlgv.SubmitChanges();
@@ -108,6 +122,7 @@ namespace DAL
             lps.TENLP = lp.tenlp;
             lps.SISO = lp.siso;
             lps.KHIEMKHUYET = lp.khiemkhuyet;
+            lps.MAKHOI = lp.makhoi;
 
             qlgv.SubmitChanges();
         }
@@ -115,15 +130,16 @@ namespace DAL
         public List<LopHocDTO> findDataLopHoc(string pValue)
         {
             var lophocs = from lp in qlgv.LOPHOCs
-                            where lp.MALP.Contains(pValue) || lp.TENLP.Contains(pValue) || lp.SISO.ToString().Contains(pValue) || lp.KHIEMKHUYET.ToString().Contains(pValue)
+                          where lp.MALP.Contains(pValue) || lp.TENLP.Contains(pValue) || lp.SISO.ToString().Contains(pValue)
 
-                            select new LopHocDTO()
-                            {
-                                malp = lp.MALP,
-                                tenlp = lp.TENLP,
-                                siso = (int)lp.SISO,
-                                khiemkhuyet = (bool)lp.KHIEMKHUYET,
-                            };
+                          select new LopHocDTO()
+                          {
+                              malp = lp.MALP,
+                              tenlp = lp.TENLP,
+                              siso = (int)lp.SISO,
+                              khiemkhuyet = (bool)lp.KHIEMKHUYET,
+                              makhoi = (int)lp.MAKHOI,
+                          };
 
             List<LopHocDTO> lst_lp = lophocs.ToList();
 

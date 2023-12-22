@@ -54,6 +54,7 @@
     <Compile Include="DinhMucTietDayDTO.cs" />
     <Compile Include="GiaoVienDTO.cs" />
     <Compile Include="GiaoVienLocDTO.cs" />
+    <Compile Include="KhoiDTO.cs" />
     <Compile Include="LichDayDTO.cs" />
     <Compile Include="LichDayLocDTO.cs" />
     <Compile Include="LichGiangDayDTO.cs" />

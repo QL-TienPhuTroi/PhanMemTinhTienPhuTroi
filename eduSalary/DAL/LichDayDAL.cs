@@ -117,14 +117,21 @@ namespace DAL
         //------------------ XÓA LỊCH DẠY
         public bool removeLD(string pMaLich)
         {
-            LICHDAY ld = qlgv.LICHDAYs.Where(t => t.MALICH == pMaLich).FirstOrDefault();
-            if (ld != null)
+            try
             {
-                qlgv.LICHDAYs.DeleteOnSubmit(ld);
-                qlgv.SubmitChanges();
-                return true;
+                LICHDAY ld = qlgv.LICHDAYs.Where(t => t.MALICH == pMaLich).FirstOrDefault();
+                if (ld != null)
+                {
+                    qlgv.LICHDAYs.DeleteOnSubmit(ld);
+                    qlgv.SubmitChanges();
+                    return true;
+                }
+                return false;
             }
-            return false;
+            catch (Exception e)
+            {
+                return false;
+            }
         }
 
         //------------------ SỬA LỊCH DẠY

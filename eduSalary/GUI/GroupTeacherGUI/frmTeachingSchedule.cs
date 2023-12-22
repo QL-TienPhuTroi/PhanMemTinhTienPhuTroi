@@ -106,7 +106,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T2T1.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -118,7 +118,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T2T2.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -130,7 +130,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T2T3.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -142,7 +142,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T2T4.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -154,11 +154,71 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T2T5.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
                                 T2T5.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 6)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T2T6.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T2T6.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 7)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T2T7.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T2T7.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 8)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T2T8.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T2T8.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 9)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T2T9.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T2T9.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 10)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T2T10.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T2T10.Controls.Add(lb);
                             }
                         }
 
@@ -170,7 +230,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T3T1.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -182,7 +242,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T3T2.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -194,7 +254,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T3T3.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -206,7 +266,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T3T4.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -218,11 +278,71 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T3T5.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
                                 T3T5.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 6)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T3T6.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T3T6.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 7)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T3T7.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T3T7.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 8)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T3T8.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T3T8.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 9)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T3T9.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T3T9.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 10)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T3T10.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T3T10.Controls.Add(lb);
                             }
                         }
 
@@ -234,7 +354,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T4T1.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -246,7 +366,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T4T2.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -258,7 +378,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T4T3.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -270,7 +390,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T4T4.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -282,11 +402,71 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T4T5.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
                                 T4T5.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 6)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T4T6.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T4T6.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 7)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T4T7.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T4T7.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 8)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T4T8.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T4T8.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 9)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T4T9.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T4T9.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 10)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T4T10.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T4T10.Controls.Add(lb);
                             }
                         }
 
@@ -298,7 +478,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T5T1.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -310,7 +490,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T5T2.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -322,7 +502,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T5T3.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -334,7 +514,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T5T4.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -346,11 +526,71 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T5T5.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
                                 T5T5.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 6)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T5T6.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T5T6.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 7)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T5T7.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T5T7.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 8)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T5T8.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T5T8.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 9)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T5T9.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T5T9.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 10)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T5T10.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T5T10.Controls.Add(lb);
                             }
                         }
 
@@ -362,7 +602,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T6T1.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -374,7 +614,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T6T2.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -386,7 +626,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T6T3.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -398,7 +638,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T6T4.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -410,11 +650,71 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T6T5.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
                                 T6T5.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 6)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T6T6.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T6T6.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 7)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T6T7.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T6T7.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 8)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T6T8.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T6T8.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 9)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T6T9.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T6T9.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 10)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T6T10.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T6T10.Controls.Add(lb);
                             }
                         }
 
@@ -426,7 +726,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T7T1.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -438,7 +738,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T7T2.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -450,7 +750,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T7T3.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -462,7 +762,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T7T4.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -474,11 +774,71 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T7T5.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
                                 T7T5.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 6)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T7T6.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T7T6.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 7)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T7T7.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T7T7.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 8)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T7T8.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T7T8.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 9)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T7T9.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T7T9.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 10)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T7T10.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T7T10.Controls.Add(lb);
                             }
                         }
 
@@ -490,7 +850,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T8T1.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -502,7 +862,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T8T2.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -514,7 +874,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T8T3.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -526,7 +886,7 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T8T4.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
@@ -538,11 +898,71 @@ namespace GUI.GroupTeacherGUI
                                 Label lb = new Label();
                                 lb.AutoSize = false;
                                 lb.Size = new Size(T2T1.Width, T2T1.Height);
-                                lb.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
                                 T8T5.Controls.Clear();
                                 lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
                                 T8T5.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 6)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T8T6.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T8T6.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 7)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T8T7.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T8T7.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 8)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T8T8.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T8T8.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 9)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T8T9.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T8T9.Controls.Add(lb);
+                            }
+
+                            if (lgd_dto[j].tietday == 10)
+                            {
+                                Label lb = new Label();
+                                lb.AutoSize = false;
+                                lb.Size = new Size(T2T1.Width, T2T1.Height);
+                                lb.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+
+                                T8T10.Controls.Clear();
+                                lb.Text = lgd_dto[j].tenmh + " - " + lgd_dto[j].tenlp + "\nTiết: " + lgd_dto[j].tietday;
+                                T8T10.Controls.Add(lb);
                             }
                         }
                     }
@@ -557,42 +977,77 @@ namespace GUI.GroupTeacherGUI
             T2T3.Controls.Clear();
             T2T4.Controls.Clear();
             T2T5.Controls.Clear();
+            T2T6.Controls.Clear();
+            T2T7.Controls.Clear();
+            T2T8.Controls.Clear();
+            T2T9.Controls.Clear();
+            T2T10.Controls.Clear();
 
             T3T1.Controls.Clear();
             T3T2.Controls.Clear();
             T3T3.Controls.Clear();
             T3T4.Controls.Clear();
             T3T5.Controls.Clear();
+            T3T6.Controls.Clear();
+            T3T7.Controls.Clear();
+            T3T8.Controls.Clear();
+            T3T9.Controls.Clear();
+            T3T10.Controls.Clear();
 
             T4T1.Controls.Clear();
             T4T2.Controls.Clear();
             T4T3.Controls.Clear();
             T4T4.Controls.Clear();
             T4T5.Controls.Clear();
+            T4T6.Controls.Clear();
+            T4T7.Controls.Clear();
+            T4T8.Controls.Clear();
+            T4T9.Controls.Clear();
+            T4T10.Controls.Clear();
 
             T5T1.Controls.Clear();
             T5T2.Controls.Clear();
             T5T3.Controls.Clear();
             T5T4.Controls.Clear();
             T5T5.Controls.Clear();
+            T5T6.Controls.Clear();
+            T5T7.Controls.Clear();
+            T5T8.Controls.Clear();
+            T5T9.Controls.Clear();
+            T5T10.Controls.Clear();
 
             T6T1.Controls.Clear();
             T6T2.Controls.Clear();
             T6T3.Controls.Clear();
             T6T4.Controls.Clear();
             T6T5.Controls.Clear();
+            T6T6.Controls.Clear();
+            T6T7.Controls.Clear();
+            T6T8.Controls.Clear();
+            T6T9.Controls.Clear();
+            T6T10.Controls.Clear();
 
             T7T1.Controls.Clear();
             T7T2.Controls.Clear();
             T7T3.Controls.Clear();
             T7T4.Controls.Clear();
             T7T5.Controls.Clear();
+            T7T6.Controls.Clear();
+            T7T7.Controls.Clear();
+            T7T8.Controls.Clear();
+            T7T9.Controls.Clear();
+            T7T10.Controls.Clear();
 
             T8T1.Controls.Clear();
             T8T2.Controls.Clear();
             T8T3.Controls.Clear();
             T8T4.Controls.Clear();
             T8T5.Controls.Clear();
+            T8T6.Controls.Clear();
+            T8T7.Controls.Clear();
+            T8T8.Controls.Clear();
+            T8T9.Controls.Clear();
+            T8T10.Controls.Clear();
         }
     }
 }

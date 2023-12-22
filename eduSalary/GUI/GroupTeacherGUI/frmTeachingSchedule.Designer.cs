@@ -31,75 +31,75 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTeachingSchedule));
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel82 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T8T10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T8T5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel81 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T5T10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T5T5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel80 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T6T10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T6T5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel79 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T3T10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T3T5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel78 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T7T10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T7T5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel77 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T4T10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T4T5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel76 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T2T10 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T2T5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel75 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T8T9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T8T4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel74 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T5T9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T5T4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel73 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T6T9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T6T4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel72 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T3T9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T3T4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel71 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T7T9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T7T4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel70 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T4T9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T4T4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel69 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T2T9 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T2T4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel68 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T8T8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T8T3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel67 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T5T8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T5T3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel66 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T6T8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T6T3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel65 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T3T8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T3T3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel64 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T7T8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T7T3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel63 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T4T8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T4T3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel62 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T2T8 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T2T3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel61 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T8T7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T8T2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel60 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T5T7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T5T2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel59 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T6T7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T6T2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel58 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T3T7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T3T2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel57 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T7T7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T7T2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel56 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T4T7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T4T2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel55 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T2T7 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T2T2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel54 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T8T6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T8T1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel53 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T5T6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T5T1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel52 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T7T6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T7T1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel51 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T4T6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T4T1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel50 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T6T6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T6T1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel49 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T3T6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T3T1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel48 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.T2T6 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.T2T1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel12 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.Date7 = new ReaLTaiizor.Controls.BigLabel();
@@ -166,75 +166,75 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2GradientPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel82);
+            this.guna2GradientPanel2.Controls.Add(this.T8T10);
             this.guna2GradientPanel2.Controls.Add(this.T8T5);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel81);
+            this.guna2GradientPanel2.Controls.Add(this.T5T10);
             this.guna2GradientPanel2.Controls.Add(this.T5T5);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel80);
+            this.guna2GradientPanel2.Controls.Add(this.T6T10);
             this.guna2GradientPanel2.Controls.Add(this.T6T5);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel79);
+            this.guna2GradientPanel2.Controls.Add(this.T3T10);
             this.guna2GradientPanel2.Controls.Add(this.T3T5);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel78);
+            this.guna2GradientPanel2.Controls.Add(this.T7T10);
             this.guna2GradientPanel2.Controls.Add(this.T7T5);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel77);
+            this.guna2GradientPanel2.Controls.Add(this.T4T10);
             this.guna2GradientPanel2.Controls.Add(this.T4T5);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel76);
+            this.guna2GradientPanel2.Controls.Add(this.T2T10);
             this.guna2GradientPanel2.Controls.Add(this.T2T5);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel75);
+            this.guna2GradientPanel2.Controls.Add(this.T8T9);
             this.guna2GradientPanel2.Controls.Add(this.T8T4);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel74);
+            this.guna2GradientPanel2.Controls.Add(this.T5T9);
             this.guna2GradientPanel2.Controls.Add(this.T5T4);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel73);
+            this.guna2GradientPanel2.Controls.Add(this.T6T9);
             this.guna2GradientPanel2.Controls.Add(this.T6T4);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel72);
+            this.guna2GradientPanel2.Controls.Add(this.T3T9);
             this.guna2GradientPanel2.Controls.Add(this.T3T4);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel71);
+            this.guna2GradientPanel2.Controls.Add(this.T7T9);
             this.guna2GradientPanel2.Controls.Add(this.T7T4);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel70);
+            this.guna2GradientPanel2.Controls.Add(this.T4T9);
             this.guna2GradientPanel2.Controls.Add(this.T4T4);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel69);
+            this.guna2GradientPanel2.Controls.Add(this.T2T9);
             this.guna2GradientPanel2.Controls.Add(this.T2T4);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel68);
+            this.guna2GradientPanel2.Controls.Add(this.T8T8);
             this.guna2GradientPanel2.Controls.Add(this.T8T3);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel67);
+            this.guna2GradientPanel2.Controls.Add(this.T5T8);
             this.guna2GradientPanel2.Controls.Add(this.T5T3);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel66);
+            this.guna2GradientPanel2.Controls.Add(this.T6T8);
             this.guna2GradientPanel2.Controls.Add(this.T6T3);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel65);
+            this.guna2GradientPanel2.Controls.Add(this.T3T8);
             this.guna2GradientPanel2.Controls.Add(this.T3T3);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel64);
+            this.guna2GradientPanel2.Controls.Add(this.T7T8);
             this.guna2GradientPanel2.Controls.Add(this.T7T3);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel63);
+            this.guna2GradientPanel2.Controls.Add(this.T4T8);
             this.guna2GradientPanel2.Controls.Add(this.T4T3);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel62);
+            this.guna2GradientPanel2.Controls.Add(this.T2T8);
             this.guna2GradientPanel2.Controls.Add(this.T2T3);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel61);
+            this.guna2GradientPanel2.Controls.Add(this.T8T7);
             this.guna2GradientPanel2.Controls.Add(this.T8T2);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel60);
+            this.guna2GradientPanel2.Controls.Add(this.T5T7);
             this.guna2GradientPanel2.Controls.Add(this.T5T2);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel59);
+            this.guna2GradientPanel2.Controls.Add(this.T6T7);
             this.guna2GradientPanel2.Controls.Add(this.T6T2);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel58);
+            this.guna2GradientPanel2.Controls.Add(this.T3T7);
             this.guna2GradientPanel2.Controls.Add(this.T3T2);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel57);
+            this.guna2GradientPanel2.Controls.Add(this.T7T7);
             this.guna2GradientPanel2.Controls.Add(this.T7T2);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel56);
+            this.guna2GradientPanel2.Controls.Add(this.T4T7);
             this.guna2GradientPanel2.Controls.Add(this.T4T2);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel55);
+            this.guna2GradientPanel2.Controls.Add(this.T2T7);
             this.guna2GradientPanel2.Controls.Add(this.T2T2);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel54);
+            this.guna2GradientPanel2.Controls.Add(this.T8T6);
             this.guna2GradientPanel2.Controls.Add(this.T8T1);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel53);
+            this.guna2GradientPanel2.Controls.Add(this.T5T6);
             this.guna2GradientPanel2.Controls.Add(this.T5T1);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel52);
+            this.guna2GradientPanel2.Controls.Add(this.T7T6);
             this.guna2GradientPanel2.Controls.Add(this.T7T1);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel51);
+            this.guna2GradientPanel2.Controls.Add(this.T4T6);
             this.guna2GradientPanel2.Controls.Add(this.T4T1);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel50);
+            this.guna2GradientPanel2.Controls.Add(this.T6T6);
             this.guna2GradientPanel2.Controls.Add(this.T6T1);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel49);
+            this.guna2GradientPanel2.Controls.Add(this.T3T6);
             this.guna2GradientPanel2.Controls.Add(this.T3T1);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel48);
+            this.guna2GradientPanel2.Controls.Add(this.T2T6);
             this.guna2GradientPanel2.Controls.Add(this.T2T1);
             this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel12);
             this.guna2GradientPanel2.Controls.Add(this.guna2GradientPanel11);
@@ -251,16 +251,16 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1580, 663);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
-            // guna2GradientPanel82
+            // T8T10
             // 
-            this.guna2GradientPanel82.BorderRadius = 7;
-            this.guna2GradientPanel82.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel82.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel82.Location = new System.Drawing.Point(1356, 610);
-            this.guna2GradientPanel82.Name = "guna2GradientPanel82";
-            this.guna2GradientPanel82.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel82.TabIndex = 1;
+            this.T8T10.BorderRadius = 7;
+            this.T8T10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T8T10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T8T10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T8T10.Location = new System.Drawing.Point(1356, 610);
+            this.T8T10.Name = "T8T10";
+            this.T8T10.Size = new System.Drawing.Size(196, 58);
+            this.T8T10.TabIndex = 1;
             // 
             // T8T5
             // 
@@ -273,16 +273,16 @@
             this.T8T5.Size = new System.Drawing.Size(196, 58);
             this.T8T5.TabIndex = 1;
             // 
-            // guna2GradientPanel81
+            // T5T10
             // 
-            this.guna2GradientPanel81.BorderRadius = 7;
-            this.guna2GradientPanel81.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel81.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel81.Location = new System.Drawing.Point(765, 610);
-            this.guna2GradientPanel81.Name = "guna2GradientPanel81";
-            this.guna2GradientPanel81.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel81.TabIndex = 1;
+            this.T5T10.BorderRadius = 7;
+            this.T5T10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T5T10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T5T10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T5T10.Location = new System.Drawing.Point(765, 610);
+            this.T5T10.Name = "T5T10";
+            this.T5T10.Size = new System.Drawing.Size(196, 58);
+            this.T5T10.TabIndex = 1;
             // 
             // T5T5
             // 
@@ -295,16 +295,16 @@
             this.T5T5.Size = new System.Drawing.Size(196, 58);
             this.T5T5.TabIndex = 1;
             // 
-            // guna2GradientPanel80
+            // T6T10
             // 
-            this.guna2GradientPanel80.BorderRadius = 7;
-            this.guna2GradientPanel80.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel80.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel80.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel80.Location = new System.Drawing.Point(962, 610);
-            this.guna2GradientPanel80.Name = "guna2GradientPanel80";
-            this.guna2GradientPanel80.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel80.TabIndex = 1;
+            this.T6T10.BorderRadius = 7;
+            this.T6T10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T6T10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T6T10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T6T10.Location = new System.Drawing.Point(962, 610);
+            this.T6T10.Name = "T6T10";
+            this.T6T10.Size = new System.Drawing.Size(196, 58);
+            this.T6T10.TabIndex = 1;
             // 
             // T6T5
             // 
@@ -317,16 +317,16 @@
             this.T6T5.Size = new System.Drawing.Size(196, 58);
             this.T6T5.TabIndex = 1;
             // 
-            // guna2GradientPanel79
+            // T3T10
             // 
-            this.guna2GradientPanel79.BorderRadius = 7;
-            this.guna2GradientPanel79.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel79.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel79.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel79.Location = new System.Drawing.Point(371, 610);
-            this.guna2GradientPanel79.Name = "guna2GradientPanel79";
-            this.guna2GradientPanel79.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel79.TabIndex = 1;
+            this.T3T10.BorderRadius = 7;
+            this.T3T10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T3T10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T3T10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T3T10.Location = new System.Drawing.Point(371, 610);
+            this.T3T10.Name = "T3T10";
+            this.T3T10.Size = new System.Drawing.Size(196, 58);
+            this.T3T10.TabIndex = 1;
             // 
             // T3T5
             // 
@@ -339,16 +339,16 @@
             this.T3T5.Size = new System.Drawing.Size(196, 58);
             this.T3T5.TabIndex = 1;
             // 
-            // guna2GradientPanel78
+            // T7T10
             // 
-            this.guna2GradientPanel78.BorderRadius = 7;
-            this.guna2GradientPanel78.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel78.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel78.Location = new System.Drawing.Point(1159, 610);
-            this.guna2GradientPanel78.Name = "guna2GradientPanel78";
-            this.guna2GradientPanel78.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel78.TabIndex = 1;
+            this.T7T10.BorderRadius = 7;
+            this.T7T10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T7T10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T7T10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T7T10.Location = new System.Drawing.Point(1159, 610);
+            this.T7T10.Name = "T7T10";
+            this.T7T10.Size = new System.Drawing.Size(196, 58);
+            this.T7T10.TabIndex = 1;
             // 
             // T7T5
             // 
@@ -361,16 +361,16 @@
             this.T7T5.Size = new System.Drawing.Size(196, 58);
             this.T7T5.TabIndex = 1;
             // 
-            // guna2GradientPanel77
+            // T4T10
             // 
-            this.guna2GradientPanel77.BorderRadius = 7;
-            this.guna2GradientPanel77.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel77.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel77.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel77.Location = new System.Drawing.Point(568, 610);
-            this.guna2GradientPanel77.Name = "guna2GradientPanel77";
-            this.guna2GradientPanel77.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel77.TabIndex = 1;
+            this.T4T10.BorderRadius = 7;
+            this.T4T10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T4T10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T4T10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T4T10.Location = new System.Drawing.Point(568, 610);
+            this.T4T10.Name = "T4T10";
+            this.T4T10.Size = new System.Drawing.Size(196, 58);
+            this.T4T10.TabIndex = 1;
             // 
             // T4T5
             // 
@@ -383,16 +383,16 @@
             this.T4T5.Size = new System.Drawing.Size(196, 58);
             this.T4T5.TabIndex = 1;
             // 
-            // guna2GradientPanel76
+            // T2T10
             // 
-            this.guna2GradientPanel76.BorderRadius = 7;
-            this.guna2GradientPanel76.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel76.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel76.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel76.Location = new System.Drawing.Point(174, 610);
-            this.guna2GradientPanel76.Name = "guna2GradientPanel76";
-            this.guna2GradientPanel76.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel76.TabIndex = 1;
+            this.T2T10.BorderRadius = 7;
+            this.T2T10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T2T10.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T2T10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T2T10.Location = new System.Drawing.Point(174, 610);
+            this.T2T10.Name = "T2T10";
+            this.T2T10.Size = new System.Drawing.Size(196, 58);
+            this.T2T10.TabIndex = 1;
             // 
             // T2T5
             // 
@@ -405,16 +405,16 @@
             this.T2T5.Size = new System.Drawing.Size(196, 58);
             this.T2T5.TabIndex = 1;
             // 
-            // guna2GradientPanel75
+            // T8T9
             // 
-            this.guna2GradientPanel75.BorderRadius = 7;
-            this.guna2GradientPanel75.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel75.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel75.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel75.Location = new System.Drawing.Point(1356, 551);
-            this.guna2GradientPanel75.Name = "guna2GradientPanel75";
-            this.guna2GradientPanel75.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel75.TabIndex = 1;
+            this.T8T9.BorderRadius = 7;
+            this.T8T9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T8T9.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T8T9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T8T9.Location = new System.Drawing.Point(1356, 551);
+            this.T8T9.Name = "T8T9";
+            this.T8T9.Size = new System.Drawing.Size(196, 58);
+            this.T8T9.TabIndex = 1;
             // 
             // T8T4
             // 
@@ -427,16 +427,16 @@
             this.T8T4.Size = new System.Drawing.Size(196, 58);
             this.T8T4.TabIndex = 1;
             // 
-            // guna2GradientPanel74
+            // T5T9
             // 
-            this.guna2GradientPanel74.BorderRadius = 7;
-            this.guna2GradientPanel74.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel74.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel74.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel74.Location = new System.Drawing.Point(765, 551);
-            this.guna2GradientPanel74.Name = "guna2GradientPanel74";
-            this.guna2GradientPanel74.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel74.TabIndex = 1;
+            this.T5T9.BorderRadius = 7;
+            this.T5T9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T5T9.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T5T9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T5T9.Location = new System.Drawing.Point(765, 551);
+            this.T5T9.Name = "T5T9";
+            this.T5T9.Size = new System.Drawing.Size(196, 58);
+            this.T5T9.TabIndex = 1;
             // 
             // T5T4
             // 
@@ -449,16 +449,16 @@
             this.T5T4.Size = new System.Drawing.Size(196, 58);
             this.T5T4.TabIndex = 1;
             // 
-            // guna2GradientPanel73
+            // T6T9
             // 
-            this.guna2GradientPanel73.BorderRadius = 7;
-            this.guna2GradientPanel73.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel73.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel73.Location = new System.Drawing.Point(962, 551);
-            this.guna2GradientPanel73.Name = "guna2GradientPanel73";
-            this.guna2GradientPanel73.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel73.TabIndex = 1;
+            this.T6T9.BorderRadius = 7;
+            this.T6T9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T6T9.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T6T9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T6T9.Location = new System.Drawing.Point(962, 551);
+            this.T6T9.Name = "T6T9";
+            this.T6T9.Size = new System.Drawing.Size(196, 58);
+            this.T6T9.TabIndex = 1;
             // 
             // T6T4
             // 
@@ -471,16 +471,16 @@
             this.T6T4.Size = new System.Drawing.Size(196, 58);
             this.T6T4.TabIndex = 1;
             // 
-            // guna2GradientPanel72
+            // T3T9
             // 
-            this.guna2GradientPanel72.BorderRadius = 7;
-            this.guna2GradientPanel72.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel72.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel72.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel72.Location = new System.Drawing.Point(371, 551);
-            this.guna2GradientPanel72.Name = "guna2GradientPanel72";
-            this.guna2GradientPanel72.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel72.TabIndex = 1;
+            this.T3T9.BorderRadius = 7;
+            this.T3T9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T3T9.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T3T9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T3T9.Location = new System.Drawing.Point(371, 551);
+            this.T3T9.Name = "T3T9";
+            this.T3T9.Size = new System.Drawing.Size(196, 58);
+            this.T3T9.TabIndex = 1;
             // 
             // T3T4
             // 
@@ -493,16 +493,16 @@
             this.T3T4.Size = new System.Drawing.Size(196, 58);
             this.T3T4.TabIndex = 1;
             // 
-            // guna2GradientPanel71
+            // T7T9
             // 
-            this.guna2GradientPanel71.BorderRadius = 7;
-            this.guna2GradientPanel71.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel71.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel71.Location = new System.Drawing.Point(1159, 551);
-            this.guna2GradientPanel71.Name = "guna2GradientPanel71";
-            this.guna2GradientPanel71.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel71.TabIndex = 1;
+            this.T7T9.BorderRadius = 7;
+            this.T7T9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T7T9.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T7T9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T7T9.Location = new System.Drawing.Point(1159, 551);
+            this.T7T9.Name = "T7T9";
+            this.T7T9.Size = new System.Drawing.Size(196, 58);
+            this.T7T9.TabIndex = 1;
             // 
             // T7T4
             // 
@@ -515,16 +515,16 @@
             this.T7T4.Size = new System.Drawing.Size(196, 58);
             this.T7T4.TabIndex = 1;
             // 
-            // guna2GradientPanel70
+            // T4T9
             // 
-            this.guna2GradientPanel70.BorderRadius = 7;
-            this.guna2GradientPanel70.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel70.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel70.Location = new System.Drawing.Point(568, 551);
-            this.guna2GradientPanel70.Name = "guna2GradientPanel70";
-            this.guna2GradientPanel70.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel70.TabIndex = 1;
+            this.T4T9.BorderRadius = 7;
+            this.T4T9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T4T9.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T4T9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T4T9.Location = new System.Drawing.Point(568, 551);
+            this.T4T9.Name = "T4T9";
+            this.T4T9.Size = new System.Drawing.Size(196, 58);
+            this.T4T9.TabIndex = 1;
             // 
             // T4T4
             // 
@@ -537,16 +537,16 @@
             this.T4T4.Size = new System.Drawing.Size(196, 58);
             this.T4T4.TabIndex = 1;
             // 
-            // guna2GradientPanel69
+            // T2T9
             // 
-            this.guna2GradientPanel69.BorderRadius = 7;
-            this.guna2GradientPanel69.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel69.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel69.Location = new System.Drawing.Point(174, 551);
-            this.guna2GradientPanel69.Name = "guna2GradientPanel69";
-            this.guna2GradientPanel69.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel69.TabIndex = 1;
+            this.T2T9.BorderRadius = 7;
+            this.T2T9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T2T9.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T2T9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T2T9.Location = new System.Drawing.Point(174, 551);
+            this.T2T9.Name = "T2T9";
+            this.T2T9.Size = new System.Drawing.Size(196, 58);
+            this.T2T9.TabIndex = 1;
             // 
             // T2T4
             // 
@@ -559,16 +559,16 @@
             this.T2T4.Size = new System.Drawing.Size(196, 58);
             this.T2T4.TabIndex = 1;
             // 
-            // guna2GradientPanel68
+            // T8T8
             // 
-            this.guna2GradientPanel68.BorderRadius = 7;
-            this.guna2GradientPanel68.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel68.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel68.Location = new System.Drawing.Point(1356, 492);
-            this.guna2GradientPanel68.Name = "guna2GradientPanel68";
-            this.guna2GradientPanel68.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel68.TabIndex = 1;
+            this.T8T8.BorderRadius = 7;
+            this.T8T8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T8T8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T8T8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T8T8.Location = new System.Drawing.Point(1356, 492);
+            this.T8T8.Name = "T8T8";
+            this.T8T8.Size = new System.Drawing.Size(196, 58);
+            this.T8T8.TabIndex = 1;
             // 
             // T8T3
             // 
@@ -581,16 +581,16 @@
             this.T8T3.Size = new System.Drawing.Size(196, 58);
             this.T8T3.TabIndex = 1;
             // 
-            // guna2GradientPanel67
+            // T5T8
             // 
-            this.guna2GradientPanel67.BorderRadius = 7;
-            this.guna2GradientPanel67.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel67.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel67.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel67.Location = new System.Drawing.Point(765, 492);
-            this.guna2GradientPanel67.Name = "guna2GradientPanel67";
-            this.guna2GradientPanel67.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel67.TabIndex = 1;
+            this.T5T8.BorderRadius = 7;
+            this.T5T8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T5T8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T5T8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T5T8.Location = new System.Drawing.Point(765, 492);
+            this.T5T8.Name = "T5T8";
+            this.T5T8.Size = new System.Drawing.Size(196, 58);
+            this.T5T8.TabIndex = 1;
             // 
             // T5T3
             // 
@@ -603,16 +603,16 @@
             this.T5T3.Size = new System.Drawing.Size(196, 58);
             this.T5T3.TabIndex = 1;
             // 
-            // guna2GradientPanel66
+            // T6T8
             // 
-            this.guna2GradientPanel66.BorderRadius = 7;
-            this.guna2GradientPanel66.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel66.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel66.Location = new System.Drawing.Point(962, 492);
-            this.guna2GradientPanel66.Name = "guna2GradientPanel66";
-            this.guna2GradientPanel66.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel66.TabIndex = 1;
+            this.T6T8.BorderRadius = 7;
+            this.T6T8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T6T8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T6T8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T6T8.Location = new System.Drawing.Point(962, 492);
+            this.T6T8.Name = "T6T8";
+            this.T6T8.Size = new System.Drawing.Size(196, 58);
+            this.T6T8.TabIndex = 1;
             // 
             // T6T3
             // 
@@ -625,16 +625,16 @@
             this.T6T3.Size = new System.Drawing.Size(196, 58);
             this.T6T3.TabIndex = 1;
             // 
-            // guna2GradientPanel65
+            // T3T8
             // 
-            this.guna2GradientPanel65.BorderRadius = 7;
-            this.guna2GradientPanel65.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel65.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel65.Location = new System.Drawing.Point(371, 492);
-            this.guna2GradientPanel65.Name = "guna2GradientPanel65";
-            this.guna2GradientPanel65.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel65.TabIndex = 1;
+            this.T3T8.BorderRadius = 7;
+            this.T3T8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T3T8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T3T8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T3T8.Location = new System.Drawing.Point(371, 492);
+            this.T3T8.Name = "T3T8";
+            this.T3T8.Size = new System.Drawing.Size(196, 58);
+            this.T3T8.TabIndex = 1;
             // 
             // T3T3
             // 
@@ -647,16 +647,16 @@
             this.T3T3.Size = new System.Drawing.Size(196, 58);
             this.T3T3.TabIndex = 1;
             // 
-            // guna2GradientPanel64
+            // T7T8
             // 
-            this.guna2GradientPanel64.BorderRadius = 7;
-            this.guna2GradientPanel64.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel64.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel64.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel64.Location = new System.Drawing.Point(1159, 492);
-            this.guna2GradientPanel64.Name = "guna2GradientPanel64";
-            this.guna2GradientPanel64.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel64.TabIndex = 1;
+            this.T7T8.BorderRadius = 7;
+            this.T7T8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T7T8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T7T8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T7T8.Location = new System.Drawing.Point(1159, 492);
+            this.T7T8.Name = "T7T8";
+            this.T7T8.Size = new System.Drawing.Size(196, 58);
+            this.T7T8.TabIndex = 1;
             // 
             // T7T3
             // 
@@ -669,16 +669,16 @@
             this.T7T3.Size = new System.Drawing.Size(196, 58);
             this.T7T3.TabIndex = 1;
             // 
-            // guna2GradientPanel63
+            // T4T8
             // 
-            this.guna2GradientPanel63.BorderRadius = 7;
-            this.guna2GradientPanel63.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel63.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel63.Location = new System.Drawing.Point(568, 492);
-            this.guna2GradientPanel63.Name = "guna2GradientPanel63";
-            this.guna2GradientPanel63.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel63.TabIndex = 1;
+            this.T4T8.BorderRadius = 7;
+            this.T4T8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T4T8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T4T8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T4T8.Location = new System.Drawing.Point(568, 492);
+            this.T4T8.Name = "T4T8";
+            this.T4T8.Size = new System.Drawing.Size(196, 58);
+            this.T4T8.TabIndex = 1;
             // 
             // T4T3
             // 
@@ -691,16 +691,16 @@
             this.T4T3.Size = new System.Drawing.Size(196, 58);
             this.T4T3.TabIndex = 1;
             // 
-            // guna2GradientPanel62
+            // T2T8
             // 
-            this.guna2GradientPanel62.BorderRadius = 7;
-            this.guna2GradientPanel62.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel62.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel62.Location = new System.Drawing.Point(174, 492);
-            this.guna2GradientPanel62.Name = "guna2GradientPanel62";
-            this.guna2GradientPanel62.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel62.TabIndex = 1;
+            this.T2T8.BorderRadius = 7;
+            this.T2T8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T2T8.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T2T8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T2T8.Location = new System.Drawing.Point(174, 492);
+            this.T2T8.Name = "T2T8";
+            this.T2T8.Size = new System.Drawing.Size(196, 58);
+            this.T2T8.TabIndex = 1;
             // 
             // T2T3
             // 
@@ -713,16 +713,16 @@
             this.T2T3.Size = new System.Drawing.Size(196, 58);
             this.T2T3.TabIndex = 1;
             // 
-            // guna2GradientPanel61
+            // T8T7
             // 
-            this.guna2GradientPanel61.BorderRadius = 7;
-            this.guna2GradientPanel61.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel61.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel61.Location = new System.Drawing.Point(1356, 433);
-            this.guna2GradientPanel61.Name = "guna2GradientPanel61";
-            this.guna2GradientPanel61.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel61.TabIndex = 1;
+            this.T8T7.BorderRadius = 7;
+            this.T8T7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T8T7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T8T7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T8T7.Location = new System.Drawing.Point(1356, 433);
+            this.T8T7.Name = "T8T7";
+            this.T8T7.Size = new System.Drawing.Size(196, 58);
+            this.T8T7.TabIndex = 1;
             // 
             // T8T2
             // 
@@ -735,16 +735,16 @@
             this.T8T2.Size = new System.Drawing.Size(196, 58);
             this.T8T2.TabIndex = 1;
             // 
-            // guna2GradientPanel60
+            // T5T7
             // 
-            this.guna2GradientPanel60.BorderRadius = 7;
-            this.guna2GradientPanel60.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel60.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel60.Location = new System.Drawing.Point(765, 433);
-            this.guna2GradientPanel60.Name = "guna2GradientPanel60";
-            this.guna2GradientPanel60.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel60.TabIndex = 1;
+            this.T5T7.BorderRadius = 7;
+            this.T5T7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T5T7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T5T7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T5T7.Location = new System.Drawing.Point(765, 433);
+            this.T5T7.Name = "T5T7";
+            this.T5T7.Size = new System.Drawing.Size(196, 58);
+            this.T5T7.TabIndex = 1;
             // 
             // T5T2
             // 
@@ -757,16 +757,16 @@
             this.T5T2.Size = new System.Drawing.Size(196, 58);
             this.T5T2.TabIndex = 1;
             // 
-            // guna2GradientPanel59
+            // T6T7
             // 
-            this.guna2GradientPanel59.BorderRadius = 7;
-            this.guna2GradientPanel59.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel59.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel59.Location = new System.Drawing.Point(962, 433);
-            this.guna2GradientPanel59.Name = "guna2GradientPanel59";
-            this.guna2GradientPanel59.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel59.TabIndex = 1;
+            this.T6T7.BorderRadius = 7;
+            this.T6T7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T6T7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T6T7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T6T7.Location = new System.Drawing.Point(962, 433);
+            this.T6T7.Name = "T6T7";
+            this.T6T7.Size = new System.Drawing.Size(196, 58);
+            this.T6T7.TabIndex = 1;
             // 
             // T6T2
             // 
@@ -779,16 +779,16 @@
             this.T6T2.Size = new System.Drawing.Size(196, 58);
             this.T6T2.TabIndex = 1;
             // 
-            // guna2GradientPanel58
+            // T3T7
             // 
-            this.guna2GradientPanel58.BorderRadius = 7;
-            this.guna2GradientPanel58.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel58.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel58.Location = new System.Drawing.Point(371, 433);
-            this.guna2GradientPanel58.Name = "guna2GradientPanel58";
-            this.guna2GradientPanel58.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel58.TabIndex = 1;
+            this.T3T7.BorderRadius = 7;
+            this.T3T7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T3T7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T3T7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T3T7.Location = new System.Drawing.Point(371, 433);
+            this.T3T7.Name = "T3T7";
+            this.T3T7.Size = new System.Drawing.Size(196, 58);
+            this.T3T7.TabIndex = 1;
             // 
             // T3T2
             // 
@@ -801,16 +801,16 @@
             this.T3T2.Size = new System.Drawing.Size(196, 58);
             this.T3T2.TabIndex = 1;
             // 
-            // guna2GradientPanel57
+            // T7T7
             // 
-            this.guna2GradientPanel57.BorderRadius = 7;
-            this.guna2GradientPanel57.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel57.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel57.Location = new System.Drawing.Point(1159, 433);
-            this.guna2GradientPanel57.Name = "guna2GradientPanel57";
-            this.guna2GradientPanel57.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel57.TabIndex = 1;
+            this.T7T7.BorderRadius = 7;
+            this.T7T7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T7T7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T7T7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T7T7.Location = new System.Drawing.Point(1159, 433);
+            this.T7T7.Name = "T7T7";
+            this.T7T7.Size = new System.Drawing.Size(196, 58);
+            this.T7T7.TabIndex = 1;
             // 
             // T7T2
             // 
@@ -823,16 +823,16 @@
             this.T7T2.Size = new System.Drawing.Size(196, 58);
             this.T7T2.TabIndex = 1;
             // 
-            // guna2GradientPanel56
+            // T4T7
             // 
-            this.guna2GradientPanel56.BorderRadius = 7;
-            this.guna2GradientPanel56.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel56.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel56.Location = new System.Drawing.Point(568, 433);
-            this.guna2GradientPanel56.Name = "guna2GradientPanel56";
-            this.guna2GradientPanel56.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel56.TabIndex = 1;
+            this.T4T7.BorderRadius = 7;
+            this.T4T7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T4T7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T4T7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T4T7.Location = new System.Drawing.Point(568, 433);
+            this.T4T7.Name = "T4T7";
+            this.T4T7.Size = new System.Drawing.Size(196, 58);
+            this.T4T7.TabIndex = 1;
             // 
             // T4T2
             // 
@@ -845,16 +845,16 @@
             this.T4T2.Size = new System.Drawing.Size(196, 58);
             this.T4T2.TabIndex = 1;
             // 
-            // guna2GradientPanel55
+            // T2T7
             // 
-            this.guna2GradientPanel55.BorderRadius = 7;
-            this.guna2GradientPanel55.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel55.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel55.Location = new System.Drawing.Point(174, 433);
-            this.guna2GradientPanel55.Name = "guna2GradientPanel55";
-            this.guna2GradientPanel55.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel55.TabIndex = 1;
+            this.T2T7.BorderRadius = 7;
+            this.T2T7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T2T7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T2T7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T2T7.Location = new System.Drawing.Point(174, 433);
+            this.T2T7.Name = "T2T7";
+            this.T2T7.Size = new System.Drawing.Size(196, 58);
+            this.T2T7.TabIndex = 1;
             // 
             // T2T2
             // 
@@ -867,16 +867,16 @@
             this.T2T2.Size = new System.Drawing.Size(196, 58);
             this.T2T2.TabIndex = 1;
             // 
-            // guna2GradientPanel54
+            // T8T6
             // 
-            this.guna2GradientPanel54.BorderRadius = 7;
-            this.guna2GradientPanel54.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel54.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel54.Location = new System.Drawing.Point(1356, 374);
-            this.guna2GradientPanel54.Name = "guna2GradientPanel54";
-            this.guna2GradientPanel54.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel54.TabIndex = 1;
+            this.T8T6.BorderRadius = 7;
+            this.T8T6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T8T6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T8T6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T8T6.Location = new System.Drawing.Point(1356, 374);
+            this.T8T6.Name = "T8T6";
+            this.T8T6.Size = new System.Drawing.Size(196, 58);
+            this.T8T6.TabIndex = 1;
             // 
             // T8T1
             // 
@@ -889,16 +889,16 @@
             this.T8T1.Size = new System.Drawing.Size(196, 58);
             this.T8T1.TabIndex = 1;
             // 
-            // guna2GradientPanel53
+            // T5T6
             // 
-            this.guna2GradientPanel53.BorderRadius = 7;
-            this.guna2GradientPanel53.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel53.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel53.Location = new System.Drawing.Point(765, 374);
-            this.guna2GradientPanel53.Name = "guna2GradientPanel53";
-            this.guna2GradientPanel53.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel53.TabIndex = 1;
+            this.T5T6.BorderRadius = 7;
+            this.T5T6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T5T6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T5T6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T5T6.Location = new System.Drawing.Point(765, 374);
+            this.T5T6.Name = "T5T6";
+            this.T5T6.Size = new System.Drawing.Size(196, 58);
+            this.T5T6.TabIndex = 1;
             // 
             // T5T1
             // 
@@ -911,16 +911,16 @@
             this.T5T1.Size = new System.Drawing.Size(196, 58);
             this.T5T1.TabIndex = 1;
             // 
-            // guna2GradientPanel52
+            // T7T6
             // 
-            this.guna2GradientPanel52.BorderRadius = 7;
-            this.guna2GradientPanel52.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel52.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel52.Location = new System.Drawing.Point(1159, 374);
-            this.guna2GradientPanel52.Name = "guna2GradientPanel52";
-            this.guna2GradientPanel52.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel52.TabIndex = 1;
+            this.T7T6.BorderRadius = 7;
+            this.T7T6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T7T6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T7T6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T7T6.Location = new System.Drawing.Point(1159, 374);
+            this.T7T6.Name = "T7T6";
+            this.T7T6.Size = new System.Drawing.Size(196, 58);
+            this.T7T6.TabIndex = 1;
             // 
             // T7T1
             // 
@@ -933,16 +933,16 @@
             this.T7T1.Size = new System.Drawing.Size(196, 58);
             this.T7T1.TabIndex = 1;
             // 
-            // guna2GradientPanel51
+            // T4T6
             // 
-            this.guna2GradientPanel51.BorderRadius = 7;
-            this.guna2GradientPanel51.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel51.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel51.Location = new System.Drawing.Point(568, 374);
-            this.guna2GradientPanel51.Name = "guna2GradientPanel51";
-            this.guna2GradientPanel51.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel51.TabIndex = 1;
+            this.T4T6.BorderRadius = 7;
+            this.T4T6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T4T6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T4T6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T4T6.Location = new System.Drawing.Point(568, 374);
+            this.T4T6.Name = "T4T6";
+            this.T4T6.Size = new System.Drawing.Size(196, 58);
+            this.T4T6.TabIndex = 1;
             // 
             // T4T1
             // 
@@ -955,16 +955,16 @@
             this.T4T1.Size = new System.Drawing.Size(196, 58);
             this.T4T1.TabIndex = 1;
             // 
-            // guna2GradientPanel50
+            // T6T6
             // 
-            this.guna2GradientPanel50.BorderRadius = 7;
-            this.guna2GradientPanel50.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel50.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel50.Location = new System.Drawing.Point(962, 374);
-            this.guna2GradientPanel50.Name = "guna2GradientPanel50";
-            this.guna2GradientPanel50.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel50.TabIndex = 1;
+            this.T6T6.BorderRadius = 7;
+            this.T6T6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T6T6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T6T6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T6T6.Location = new System.Drawing.Point(962, 374);
+            this.T6T6.Name = "T6T6";
+            this.T6T6.Size = new System.Drawing.Size(196, 58);
+            this.T6T6.TabIndex = 1;
             // 
             // T6T1
             // 
@@ -977,16 +977,16 @@
             this.T6T1.Size = new System.Drawing.Size(196, 58);
             this.T6T1.TabIndex = 1;
             // 
-            // guna2GradientPanel49
+            // T3T6
             // 
-            this.guna2GradientPanel49.BorderRadius = 7;
-            this.guna2GradientPanel49.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel49.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel49.Location = new System.Drawing.Point(371, 374);
-            this.guna2GradientPanel49.Name = "guna2GradientPanel49";
-            this.guna2GradientPanel49.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel49.TabIndex = 1;
+            this.T3T6.BorderRadius = 7;
+            this.T3T6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T3T6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T3T6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T3T6.Location = new System.Drawing.Point(371, 374);
+            this.T3T6.Name = "T3T6";
+            this.T3T6.Size = new System.Drawing.Size(196, 58);
+            this.T3T6.TabIndex = 1;
             // 
             // T3T1
             // 
@@ -999,16 +999,16 @@
             this.T3T1.Size = new System.Drawing.Size(196, 58);
             this.T3T1.TabIndex = 1;
             // 
-            // guna2GradientPanel48
+            // T2T6
             // 
-            this.guna2GradientPanel48.BorderRadius = 7;
-            this.guna2GradientPanel48.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel48.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
-            this.guna2GradientPanel48.Location = new System.Drawing.Point(174, 374);
-            this.guna2GradientPanel48.Name = "guna2GradientPanel48";
-            this.guna2GradientPanel48.Size = new System.Drawing.Size(196, 58);
-            this.guna2GradientPanel48.TabIndex = 1;
+            this.T2T6.BorderRadius = 7;
+            this.T2T6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T2T6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(255)))));
+            this.T2T6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(99)))));
+            this.T2T6.Location = new System.Drawing.Point(174, 374);
+            this.T2T6.Name = "T2T6";
+            this.T2T6.Size = new System.Drawing.Size(196, 58);
+            this.T2T6.TabIndex = 1;
             // 
             // T2T1
             // 
@@ -1611,41 +1611,41 @@
         private Guna.UI2.WinForms.Guna2GradientPanel T8T1;
         private Guna.UI2.WinForms.Guna2GradientPanel T7T1;
         private Guna.UI2.WinForms.Guna2GradientPanel T6T1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel82;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel81;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel80;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel79;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel78;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel77;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel76;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel75;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel74;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel73;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel72;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel71;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel70;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel69;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel68;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel67;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel66;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel65;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel64;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel63;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel62;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel61;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel60;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel59;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel58;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel57;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel56;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel55;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel54;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel53;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel52;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel51;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel50;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel49;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel48;
+        private Guna.UI2.WinForms.Guna2GradientPanel T8T10;
+        private Guna.UI2.WinForms.Guna2GradientPanel T5T10;
+        private Guna.UI2.WinForms.Guna2GradientPanel T6T10;
+        private Guna.UI2.WinForms.Guna2GradientPanel T3T10;
+        private Guna.UI2.WinForms.Guna2GradientPanel T7T10;
+        private Guna.UI2.WinForms.Guna2GradientPanel T4T10;
+        private Guna.UI2.WinForms.Guna2GradientPanel T2T10;
+        private Guna.UI2.WinForms.Guna2GradientPanel T8T9;
+        private Guna.UI2.WinForms.Guna2GradientPanel T5T9;
+        private Guna.UI2.WinForms.Guna2GradientPanel T6T9;
+        private Guna.UI2.WinForms.Guna2GradientPanel T3T9;
+        private Guna.UI2.WinForms.Guna2GradientPanel T7T9;
+        private Guna.UI2.WinForms.Guna2GradientPanel T4T9;
+        private Guna.UI2.WinForms.Guna2GradientPanel T2T9;
+        private Guna.UI2.WinForms.Guna2GradientPanel T8T8;
+        private Guna.UI2.WinForms.Guna2GradientPanel T5T8;
+        private Guna.UI2.WinForms.Guna2GradientPanel T6T8;
+        private Guna.UI2.WinForms.Guna2GradientPanel T3T8;
+        private Guna.UI2.WinForms.Guna2GradientPanel T7T8;
+        private Guna.UI2.WinForms.Guna2GradientPanel T4T8;
+        private Guna.UI2.WinForms.Guna2GradientPanel T2T8;
+        private Guna.UI2.WinForms.Guna2GradientPanel T8T7;
+        private Guna.UI2.WinForms.Guna2GradientPanel T5T7;
+        private Guna.UI2.WinForms.Guna2GradientPanel T6T7;
+        private Guna.UI2.WinForms.Guna2GradientPanel T3T7;
+        private Guna.UI2.WinForms.Guna2GradientPanel T7T7;
+        private Guna.UI2.WinForms.Guna2GradientPanel T4T7;
+        private Guna.UI2.WinForms.Guna2GradientPanel T2T7;
+        private Guna.UI2.WinForms.Guna2GradientPanel T8T6;
+        private Guna.UI2.WinForms.Guna2GradientPanel T5T6;
+        private Guna.UI2.WinForms.Guna2GradientPanel T7T6;
+        private Guna.UI2.WinForms.Guna2GradientPanel T4T6;
+        private Guna.UI2.WinForms.Guna2GradientPanel T6T6;
+        private Guna.UI2.WinForms.Guna2GradientPanel T3T6;
+        private Guna.UI2.WinForms.Guna2GradientPanel T2T6;
         private Guna.UI2.WinForms.Guna2Button btnNext;
         private Guna.UI2.WinForms.Guna2Button btnBack;
         private Guna.UI2.WinForms.Guna2Button btnPresent;

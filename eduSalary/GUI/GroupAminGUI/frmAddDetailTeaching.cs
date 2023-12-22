@@ -21,6 +21,7 @@ namespace GUI.GroupAminGUI
         ChiTietLichDayDTO ctld_dto = new ChiTietLichDayDTO();
         XacNhanLichDayBLL xnld_bll = new XacNhanLichDayBLL();
         XacNhanLichDayDTO xnld_dto = new XacNhanLichDayDTO();
+        MonHocBLL mh_bll = new MonHocBLL();
 
         ChuNhiemBLL cn_bll = new ChuNhiemBLL();
         BacLuongBLL bl_bll = new BacLuongBLL();
@@ -179,11 +180,56 @@ namespace GUI.GroupAminGUI
                 DateTime pNgayDauTuan = ctld_bll.FindStartOfWeek(pNgayDay);
                 int pSoTietDay = (int)ctld_bll.getCountLessonInWeek(pMaGV, pNgayDauTuan, pNamHoc);
                 int pSoDinhMucTietDay = (int)gv_bll.getDinhMucTietDay(pMaGV, pNamHoc);
+                int pSoTietToiDaMH = (int)mh_bll.getSoTietToiDa(pMaMH);
+                int pSoTietPhanMH = (int)ctld_bll.getCountLessonInWeek(pMaGV, pNgayDauTuan, pNamHoc, pMaMH, pMaLP);
 
-                if (pSoTietDay >= pSoDinhMucTietDay)
+                if(pSoTietPhanMH < pSoTietToiDaMH)
                 {
-                    DialogResult r = MessageBox.Show("BẠN ĐÃ PHÂN CHO GIÁO VIÊN NÀY " + pSoTietDay + " TIẾT TRÊN TUẦN ĐÃ VƯỢT QUA ĐỊNH MỨC TIẾT DẠY CỦA GIÁO VIÊN NÀY LÀ " + pSoDinhMucTietDay + " TIẾT, BẠN CÓ CHẮC VẪN MUỐN PHÂN LỊCH CHO GIÁO VIÊN NÀY?", "PHẦN MỀM TÍNH PHỤ TRỘI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (r == DialogResult.Yes)
+                    if (pSoTietDay >= pSoDinhMucTietDay)
+                    {
+                        DialogResult r = MessageBox.Show("BẠN ĐÃ PHÂN CHO GIÁO VIÊN NÀY " + pSoTietDay + " TIẾT TRÊN TUẦN ĐÃ VƯỢT QUA ĐỊNH MỨC TIẾT DẠY CỦA GIÁO VIÊN NÀY LÀ " + pSoDinhMucTietDay + " TIẾT, BẠN CÓ CHẮC VẪN MUỐN PHÂN LỊCH CHO GIÁO VIÊN NÀY?", "PHẦN MỀM TÍNH PHỤ TRỘI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (r == DialogResult.Yes)
+                        {
+                            if (ctld_bll.checkTrungMon(pMaMH, pNgayDay, pTietDay))
+                            {
+                                MessageBox.Show("MÔN " + pTenMH.ToUpper() + " ĐÃ ĐƯỢC PHÂN LỊCH VÀO TIẾT " + pTietDay + " CỦA LỚP " + pTenLP + " NÀY RỒI!", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                            }
+                            else if (ctld_bll.checkTrungLichCungLop(pMaLP, pNgayDay, pTietDay))
+                            {
+                                MessageBox.Show("KHÔNG THỂ THÊM LỊCH DẠY MÔN " + pTenMH.ToUpper() + " DO TRÙNG LỊCH VỚI MÔN " + _tenmhcl.ToUpper(), "PHẦN MỀM TÍNH PHỤ TRỘI");
+                            }
+                            else if (ctld_bll.checkTrungLichKhacLop(pMaGV, pNgayDay, pTietDay))
+                            {
+                                MessageBox.Show("KHÔNG THỂ THÊM LỊCH DẠY DO GIÁO VIÊN " + gv_bll.getNameGiaoVien(pMaGV).ToUpper() + " ĐANG DẠY MÔN " + _tenmhkl.ToUpper() + " Ở LỚP " + _tenlp.ToUpper(), "PHẦN MỀM TÍNH PHỤ TRỘI");
+                            }
+                            else
+                            {
+                                for (int i = 0; i <= 36; i++)
+                                {
+                                    ctld_dto.malich = pMaLich;
+                                    ctld_dto.thu = GetDayOfWeek(pNgayDay);
+                                    ctld_dto.ngayday = pNgayDay.AddDays(i * 7);
+                                    ctld_dto.tietday = pTietDay;
+
+                                    ctld_bll.addCTLD(ctld_dto);
+
+                                    if (!xnld_bll.checkPK(ctld_dto.malich, ctld_dto.ngayday, ctld_dto.tietday))
+                                    {
+                                        xnld_dto.malich = pMaLich;
+                                        xnld_dto.ngayday = ctld_dto.ngayday;
+                                        xnld_dto.tietday = ctld_dto.tietday;
+                                        xnld_dto.hoanthanh = false;
+
+                                        xnld_bll.addXNLD(xnld_dto);
+                                    }
+                                }
+                                MessageBox.Show("LỊCH DẠY ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                                loadDataDetailTeaching();
+                                loadLesson();
+                            }
+                        }
+                    }
+                    else
                     {
                         if (ctld_bll.checkTrungMon(pMaMH, pNgayDay, pTietDay))
                         {
@@ -222,48 +268,13 @@ namespace GUI.GroupAminGUI
                             loadDataDetailTeaching();
                             loadLesson();
                         }
-                    }                    
+                    }
                 }
                 else
                 {
-                    if (ctld_bll.checkTrungMon(pMaMH, pNgayDay, pTietDay))
-                    {
-                        MessageBox.Show("MÔN " + pTenMH.ToUpper() + " ĐÃ ĐƯỢC PHÂN LỊCH VÀO TIẾT " + pTietDay + " CỦA LỚP " + pTenLP + " NÀY RỒI!", "PHẦN MỀM TÍNH PHỤ TRỘI");
-                    }
-                    else if (ctld_bll.checkTrungLichCungLop(pMaLP, pNgayDay, pTietDay))
-                    {
-                        MessageBox.Show("KHÔNG THỂ THÊM LỊCH DẠY MÔN " + pTenMH.ToUpper() + " DO TRÙNG LỊCH VỚI MÔN " + _tenmhcl.ToUpper(), "PHẦN MỀM TÍNH PHỤ TRỘI");
-                    }
-                    else if (ctld_bll.checkTrungLichKhacLop(pMaGV, pNgayDay, pTietDay))
-                    {
-                        MessageBox.Show("KHÔNG THỂ THÊM LỊCH DẠY DO GIÁO VIÊN " + gv_bll.getNameGiaoVien(pMaGV).ToUpper() + " ĐANG DẠY MÔN " + _tenmhkl.ToUpper() + " Ở LỚP " + _tenlp.ToUpper(), "PHẦN MỀM TÍNH PHỤ TRỘI");
-                    }
-                    else
-                    {
-                        for (int i = 0; i <= 36; i++)
-                        {
-                            ctld_dto.malich = pMaLich;
-                            ctld_dto.thu = GetDayOfWeek(pNgayDay);
-                            ctld_dto.ngayday = pNgayDay.AddDays(i * 7);
-                            ctld_dto.tietday = pTietDay;
-
-                            ctld_bll.addCTLD(ctld_dto);
-
-                            if (!xnld_bll.checkPK(ctld_dto.malich, ctld_dto.ngayday, ctld_dto.tietday))
-                            {
-                                xnld_dto.malich = pMaLich;
-                                xnld_dto.ngayday = ctld_dto.ngayday;
-                                xnld_dto.tietday = ctld_dto.tietday;
-                                xnld_dto.hoanthanh = false;
-
-                                xnld_bll.addXNLD(xnld_dto);
-                            }
-                        }
-                        MessageBox.Show("LỊCH DẠY ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
-                        loadDataDetailTeaching();
-                        loadLesson();
-                    }
+                    MessageBox.Show("KHÔNG THỂ PHÂN LỊCH DO SỐ TIẾT DẠY CỦA MÔN " + pTenMH.ToUpper() + " ĐÃ ĐỦ CHO MỘT TUẦN", "PHẦN MỀM TÍNH PHỤ TRỘI");
                 }
+
                 calExtraness();
             }
             catch (Exception ex)

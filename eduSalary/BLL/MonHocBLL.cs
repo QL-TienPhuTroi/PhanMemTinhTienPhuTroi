@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using DAL;
+using System.IO;
 
 namespace BLL
 {
@@ -24,9 +25,9 @@ namespace BLL
         }
 
         //------------------ LẤY DỮ LIỆU MÔN HỌC KHÔNG TỒN TẠI TRONG LỊCH DẠY
-        public List<MonHocDTO> getDataMonHocKhongTonTai(string pMaLP, string pNamHoc)
+        public List<MonHocDTO> getDataMonHocKhongTonTai(string pMaLP, string pNamHoc, int pMaKhoi)
         {
-            return mh_dal.getDataMonHocKhongTonTai(pMaLP, pNamHoc);
+            return mh_dal.getDataMonHocKhongTonTai(pMaLP, pNamHoc, pMaKhoi);
         }
         public bool checkPK(int pMaMH)
         {
@@ -58,6 +59,24 @@ namespace BLL
         public List<MonHocDTO> findDataMonHoc(string pValue)
         {
             return mh_dal.findDataMonHoc(pValue);
+        }
+
+        //------------------ TÌM MÃ CHUYÊN MÔN THEO MÃ MÔN HỌC
+        public int findMaChuyenMonTheoMaMonHoc(int pMaMH)
+        {
+            return mh_dal.findMaChuyenMonTheoMaMonHoc(pMaMH);
+        }
+
+        //------------------ LẤY SỐ TIẾT TỐI ĐA CỦA MÔN HỌC
+        public int getSoTietToiDa(int pMaMH)
+        {
+            return mh_dal.getSoTietToiDa(pMaMH);
+        }
+
+        //------------------ LẤY MÃ MÔN HỌC THEO TÊN MÔN HỌC
+        public int getMaMonHocTheoTenMH(string tenMH)
+        {
+            return mh_dal.getMaMonHocTheoTenMH(tenMH);
         }
     }
 }

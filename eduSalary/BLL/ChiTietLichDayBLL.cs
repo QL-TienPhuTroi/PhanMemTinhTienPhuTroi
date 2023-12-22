@@ -77,6 +77,12 @@ namespace BLL
             return ctld_dal.getCountLessonInWeek(pMaGV, pNgayDauTuan, pNamHoc);
         }
 
+        //------------------ ĐẾM SỐ TIẾT TRONG 1 TUẦN CỦA GIÁO VIÊN DẠY MÔN HỌC CỤ THỂ
+        public int getCountLessonInWeek(string pMaGV, DateTime pNgayDauTuan, string pNamHoc, int pMaMH, string pMaLop)
+        {
+            return ctld_dal.getCountLessonInWeek(pMaGV, pNgayDauTuan, pNamHoc, pMaMH, pMaLop);
+        }
+
         //------------------ ĐẾM SỐ TIẾT ĐÃ DẠY TRONG 1 NĂM HỌC CỦA GIÁO VIÊN
         public int getCountLessonTeachingInWeek(string pMaGV, DateTime pNgayDauTuan, string pNamHoc)
         {

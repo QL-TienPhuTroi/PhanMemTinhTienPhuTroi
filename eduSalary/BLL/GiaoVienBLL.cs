@@ -47,9 +47,9 @@ namespace BLL
             return gv_dal.getDataGiaoVienTheoMaChucDanh(pMaSoCD);
         }
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN THEO TÊN CHUYÊN MÔN
-        public List<GiaoVienDTO> getDataGiaoVienTheoCM(int pMaMH, string pNamHoc)
+        public List<GiaoVienDTO> getDataGiaoVienTheoCM(int pMaCM, string pNamHoc)
         {
-            return gv_dal.getDataGiaoVienTheoCM(pMaMH, pNamHoc);
+            return gv_dal.getDataGiaoVienTheoCM(pMaCM, pNamHoc);
         }
 
         //------------------ LẤY DỮ LIỆU GIÁO VIÊN KHÔNG TỒN TẠI TRONG CHỦ NHIỆM
