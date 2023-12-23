@@ -24,7 +24,16 @@ namespace GUI.GroupAminGUI
             this.Load += FrmAddSubject_Load;
             btnFinish.Click += BtnFinish_Click;
             this.Load += FrmAddSubject_Load1;
+            txtTietToiDa.KeyPress += TxtTietToiDa_KeyPress;
 
+        }
+
+        private void TxtTietToiDa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
 
         private void FrmAddSubject_Load1(object sender, EventArgs e)

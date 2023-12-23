@@ -396,9 +396,9 @@ VALUES
 (8, N'Địa Lý 10', 2, 7, 1),
 (9, N'Tin Học 10', 2, 11, 1),
 (10, N'Công Nghệ 10', 1, 10, 1),
-(12, N'Giáo Dục Công Dân 10', 1, 8, 1),
+(12, N'GDCD 10', 1, 8, 1),
 (13, N'Tiếng Anh 10', 3, 9, 1),
-(14, N'Giáo dục Quốc phong – An ninh 10', 1, 14, 1),
+(14, N'GDQP-AN 10', 1, 14, 1),
 (15, N'Thể dục 10', 2, 12, 1),
 (16, N'Đại số và giải tích 11', 2, 1, 2),
 (17, N'Hình học 11', 2, 1, 2),
@@ -409,10 +409,10 @@ VALUES
 (22, N'Ngữ văn 11', 4, 2, 2),
 (23, N'Lịch sử 11', 1, 6, 2),
 (24, N'Địa lý 11', 1, 7, 2),
-(25, N'Giáo dục công dân 11', 1, 8, 2),
+(25, N'GDCD 11', 1, 8, 2),
 (26, N'Tin học 11', 2, 11, 2),
 (27, N'Tiếng anh 11', 3, 9, 2),
-(28, N'Giáo dục Quốc phòng và An ninh 11', 1, 14, 2),
+(28, N'GDQP-AN 11', 1, 14, 2),
 (29, N'Thể dục 11', 2, 12, 2),
 (30, N'Giải Tích 12', 2, 1, 3),
 (31, N'Hình Học 12', 2, 1, 3),
@@ -424,9 +424,9 @@ VALUES
 (37, N'Địa Lý 12', 1, 7, 3),
 (38, N'Tin Học 12', 1, 11, 3),
 (39, N'Công Nghệ 12', 1, 10, 3),
-(40, N'Giáo Dục Công Dân 12', 1, 8, 3),
+(40, N'GDCD 12', 1, 8, 3),
 (41, N'Tiếng Anh 12', 3, 9, 3),
-(42, N'Giáo Dục Quốc Phòng – An Ninh 12', 1, 14, 3),
+(42, N'GDQP-AN 12', 1, 14, 3),
 (43, N'Thể dục 12', 2, 12, 3)
 
 --------------------- BẢNG GIÁO VIÊN
@@ -531,3 +531,50 @@ VALUES
 (2, '2001878553', '2023-2024')
 
 
+----------------------------------- TEST QUERY
+--set dateformat dmy
+--update XACNHANLICHDAY
+--set HOANTHANH = 1
+--where NGAYDAY < '24/12/2023'
+
+
+
+--set dateformat dmy
+--update XACNHANLICHDAY
+--set HOANTHANH = 1
+--where MALICH = '3010290843' AND NGAYDAY < '16/05/2024'
+
+--set dateformat dmy
+--update XACNHANLICHDAY
+--set HOANTHANH = 1
+--where MALICH = '3010453947' AND NGAYDAY < '19/05/2024'
+
+--set dateformat dmy
+--update XACNHANLICHDAY
+--set HOANTHANH = 1
+--where MALICH = '3010703793' AND NGAYDAY < '19/05/2024'
+
+--set dateformat dmy
+--update XACNHANLICHDAY
+--set HOANTHANH = 1
+--where MALICH = '3010761566' AND NGAYDAY < '19/05/2024'
+
+--set dateformat dmy
+--update XACNHANLICHDAY
+--set HOANTHANH = 1
+--where MALICH = '3010905021' AND NGAYDAY < '19/05/2024'
+
+--set dateformat dmy
+--update XACNHANLICHDAY
+--set HOANTHANH = 1
+--where MALICH = '3010171460' AND NGAYDAY < '19/05/2024'
+
+--set dateformat dmy
+--update XACNHANLICHDAY
+--set HOANTHANH = 1
+--where MALICH = '3010172102' AND NGAYDAY < '19/05/2024'
+
+--set dateformat dmy
+--update XACNHANLICHDAY
+--set HOANTHANH = 1
+--where MALICH = '3010204615' AND NGAYDAY < '19/05/2024'

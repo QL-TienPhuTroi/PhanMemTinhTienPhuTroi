@@ -57,84 +57,14 @@ C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmSubject.resources
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmTeacher.resources
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmTeachingAssignment.resources
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmHomeTeacher.resources
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmMainTeachers.resources
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmProfile.resources
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmTeachingSchedule.resources
+C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmUpdateTeacherDetail.resources
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.Properties.Resources.resources
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.exe
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.pdb
-C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmMainTeachers.resources
-C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmHomeTeacher.resources
-C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmTeachingSchedule.resources
-C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmUpdateTeacherDetail.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.frmLoading.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.frmLogin.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddCareerTitles.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddCertificate.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddClassroom.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddDetailTeaching.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddLessonNorms.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddPosition.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddSalaryGrade.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddSubject.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddTeacher.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddTeaching.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAssigningHomeroom.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmCareerTitles.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmCertificate.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmClassroom.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmConfirmLesson.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmDetailedProfile.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmDetailLesson.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmEditCareerTitles.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmEditCertificate.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmEditClassroom.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmEditHomerooms.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmEditLessonNorms.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmEditPosition.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmEditSalaryGrade.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmEditSubject.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmEditTeacher.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmAddHomerooms.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmExtraness.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmHomeAdmin.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmLessonNorms.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmMainAdmin.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmPosition.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmSalaryGrade.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmSubject.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmTeacher.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupAminGUI.frmTeachingAssignment.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmHomeTeacher.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmMainTeachers.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmProfile.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmTeachingSchedule.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.GroupTeacherGUI.frmUpdateTeacherDetail.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.Properties.Resources.resources
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\GUI.exe.config
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\GUI.exe
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\GUI.pdb
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\BLL.dll
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\DTO.dll
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\Guna.UI2.dll
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\MetroFramework.Design.dll
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\MetroFramework.dll
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\MetroFramework.Fonts.dll
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\Newtonsoft.Json.dll
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\ReaLTaiizor.dll
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\UI.dll
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\DAL.dll
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\BLL.pdb
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\DTO.pdb
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\Newtonsoft.Json.xml
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\ReaLTaiizor.xml
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\UI.pdb
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\DAL.pdb
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\bin\Debug\DAL.dll.config
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.csproj.CopyComplete
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.exe
-D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\GUI\obj\Debug\GUI.pdb

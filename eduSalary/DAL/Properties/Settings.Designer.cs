@@ -26,7 +26,7 @@ namespace DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-95L9KMOL;Initial Catalog=DB_GIAOVIEN;Persist Security Info=Tru" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QP6JP84;Initial Catalog=DB_GIAOVIEN;Persist Security Info=Tru" +
             "e;User ID=sa;Password=123")]
         public string DB_GIAOVIENConnectionString1 {
             get {

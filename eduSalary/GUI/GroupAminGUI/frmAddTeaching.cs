@@ -84,18 +84,25 @@ namespace GUI.GroupAminGUI
 
             try
             {
-                ld_dto.malich = pMaLich;
-                ld_dto.magv = cboTenGV.SelectedValue.ToString();
-                ld_dto.mamh = int.Parse(cboMH.SelectedValue.ToString());
-                ld_dto.malp = pMaLP;
-                ld_dto.thoigianbatdau = dtpTGBD.Value;
-                ld_dto.thoigianketthuc = dtpTGKT.Value;
-                ld_dto.namhoc = pNamHoc;
+                if (cboMH.Items.Count > 0 && cboTenGV.Items.Count > 0)
+                {
+                    ld_dto.malich = pMaLich;
+                    ld_dto.magv = cboTenGV.SelectedValue.ToString();
+                    ld_dto.mamh = int.Parse(cboMH.SelectedValue.ToString());
+                    ld_dto.malp = pMaLP;
+                    ld_dto.thoigianbatdau = dtpTGBD.Value;
+                    ld_dto.thoigianketthuc = dtpTGKT.Value;
+                    ld_dto.namhoc = pNamHoc;
 
-                ld_bll.addLD(ld_dto);
-                MessageBox.Show("LỊCH DẠY ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
-                loadDataTeachingSchedule();
-                loadDataMonHoc();
+                    ld_bll.addLD(ld_dto);
+                    MessageBox.Show("LỊCH DẠY ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                    loadDataTeachingSchedule();
+                    loadDataMonHoc();
+                }
+                else
+                {
+                    MessageBox.Show("KIỂM TRA LẠI DỮ LIỆU MÔN HỌC HOẶC GIÁO VIÊN!", "PHẦN MỀM TÍNH PHỤ TRỘI");
+                }
             }
             catch (Exception ex)
             {
@@ -115,6 +122,10 @@ namespace GUI.GroupAminGUI
                 cboTenGV.Enabled = true;
                 int _macm = mh_bll.findMaChuyenMonTheoMaMonHoc((int)cboMH.SelectedValue);
                 loadDataGiaoVien(_macm);
+            }
+            if (cboMH.SelectedItem == null)
+            {
+                cboTenGV.Items.Clear();
             }
         }
 

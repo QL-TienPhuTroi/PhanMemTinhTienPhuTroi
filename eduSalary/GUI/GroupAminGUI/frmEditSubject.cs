@@ -29,6 +29,15 @@ namespace GUI.GroupAminGUI
             this.Load += FrmEditSubject_Load;
             btnFinish.Click += BtnFinish_Click;
             txtMaMH.Enabled = false;
+            txtTietToiDa.KeyPress += TxtTietToiDa_KeyPress;
+        }
+
+        private void TxtTietToiDa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
 
         private void BtnFinish_Click(object sender, EventArgs e)

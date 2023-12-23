@@ -169,7 +169,7 @@ namespace GUI.GroupAminGUI
         }
 
         private void BtnFinish_Click(object sender, EventArgs e)
-        {
+            {
             try
             {
                 DateTime pNgayDay = dtpThu.Value;
@@ -230,12 +230,8 @@ namespace GUI.GroupAminGUI
                         }
                     }
                     else
-                    {
-                        if (ctld_bll.checkTrungMon(pMaMH, pNgayDay, pTietDay))
-                        {
-                            MessageBox.Show("MÔN " + pTenMH.ToUpper() + " ĐÃ ĐƯỢC PHÂN LỊCH VÀO TIẾT " + pTietDay + " CỦA LỚP " + pTenLP + " NÀY RỒI!", "PHẦN MỀM TÍNH PHỤ TRỘI");
-                        }
-                        else if (ctld_bll.checkTrungLichCungLop(pMaLP, pNgayDay, pTietDay))
+                    {                        
+                        if (ctld_bll.checkTrungLichCungLop(pMaLP, pNgayDay, pTietDay))
                         {
                             MessageBox.Show("KHÔNG THỂ THÊM LỊCH DẠY MÔN " + pTenMH.ToUpper() + " DO TRÙNG LỊCH VỚI MÔN " + _tenmhcl.ToUpper(), "PHẦN MỀM TÍNH PHỤ TRỘI");
                         }

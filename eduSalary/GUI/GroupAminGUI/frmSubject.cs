@@ -21,12 +21,11 @@ namespace GUI.GroupAminGUI
         public frmSubject()
         {
             InitializeComponent();
-            btnEdit.Click += BtnEdit_Click;
             this.Load += FrmSubject_Load; ;
             dgvSubjects.DoubleClick += DgvSubjects_DoubleClick; ;
-            btnAdd.Click += BtnAdd_Click; ;
-            btnRemove.Click += BtnRemove_Click; ;
+            btnAdd.Click += BtnAdd_Click;
             btnEdit.Click += BtnEdit_Click;
+            btnRemove.Click += BtnRemove_Click; ;
             txtSearch.TextChanged += TxtSearch_TextChanged; ;
         }
 
