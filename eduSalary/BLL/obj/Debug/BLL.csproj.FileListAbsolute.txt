@@ -22,3 +22,15 @@ C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.dll
 C:\Users\admin\OneDrive - Ho Chi Minh city University of Industry and Trade\HUFI\NAM4\HOCKY1\DOAN\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.pdb
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\BLL.dll
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\BLL.pdb
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\DAL.dll
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\DTO.dll
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\DAL.pdb
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\DAL.dll.config
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\bin\Debug\DTO.pdb
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.dll
+D:\Ki1Nam4\DoAnChuyenNganh\New folder\PhanMemTinhTienPhuTroi\eduSalary\BLL\obj\Debug\BLL.pdb

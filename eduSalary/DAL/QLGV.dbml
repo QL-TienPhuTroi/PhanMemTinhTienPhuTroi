@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_GIAOVIEN" Class="QLGVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-QP6JP84;Initial Catalog=DB_GIAOVIEN;Persist Security Info=True;User ID=sa" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="DB_GIAOVIENConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-95L9KMOL;Initial Catalog=DB_GIAOVIEN;Persist Security Info=True;User ID=sa" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="DB_GIAOVIENConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BACLUONG" Member="BACLUONGs">
     <Type Name="BACLUONG">
       <Column Name="MASOCD" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

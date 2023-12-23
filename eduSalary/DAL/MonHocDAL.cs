@@ -33,7 +33,15 @@ namespace DAL
 
             return lst_mh;
         }
+        //------------------ LẤY MÃ KHỐI CỦA MÔN HỌC
+        public int getKhoi(int pMaMH)
+        {
+            var monhocs = from mh in qlgv.MONHOCs
+                          where mh.MAMH == pMaMH
+                          select mh.MAKHOI;
 
+            return (int)monhocs.FirstOrDefault();
+        }
         //------------------ LẤY DỮ LIỆU MÔN HỌC KHÔNG TỒN TẠI TRONG LỊCH DẠY
         public List<MonHocDTO> getDataMonHocKhongTonTai(string pMaLP, string pNamHoc, int pMaKhoi)
         {
@@ -83,7 +91,6 @@ namespace DAL
             }
             return false;
         }
-
         //------------------ SỬA MÔN HỌC
         public void editMH(MonHocDTO mh)
         {
@@ -164,6 +171,15 @@ namespace DAL
                           select mh.MAMH;
 
             return (int)monhocs.FirstOrDefault();
+        }
+        //------------------ LẤY MÃ CHUYÊN MÔN CỦA MÔN HỌC
+        public int getChuyenMon(int pMaCM)
+        {
+            var chuyenmons = from cm in qlgv.CHUYENMONs
+                          where cm.MACM == pMaCM
+                             select cm.MACM;
+
+            return (int)chuyenmons.FirstOrDefault();
         }
     }
 }

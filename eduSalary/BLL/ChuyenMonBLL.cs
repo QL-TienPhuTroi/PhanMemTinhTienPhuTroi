@@ -24,5 +24,11 @@ namespace BLL
         {
             return cm_dal.getDataChuyenMonTheoMa(pMaCM);
         }
+        //------------------ LẤY DỮ LIỆU CHUYÊN MÔN THEO MÃ
+        public string getDataCHuyenMonTheoMaCM(int pMaCM)
+        {
+            return cm_dal.getDataCHuyenMonTheoMaCM(pMaCM);
+        }
+
     }
 }

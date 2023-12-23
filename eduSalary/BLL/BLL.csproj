@@ -57,6 +57,7 @@
     <Compile Include="ChuyenMonBLL.cs" />
     <Compile Include="DinhMucTietDayBLL.cs" />
     <Compile Include="GiaoVienBLL.cs" />
+    <Compile Include="KhoiBLL.cs" />
     <Compile Include="LichDayBLL.cs" />
     <Compile Include="LopHocBLL.cs" />
     <Compile Include="MonHocBLL.cs" />

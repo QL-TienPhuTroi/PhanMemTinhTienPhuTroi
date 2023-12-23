@@ -93,7 +93,7 @@ namespace DAL
     #endregion
 		
 		public QLGVDataContext() : 
-				base(global::DAL.Properties.Settings.Default.DB_GIAOVIENConnectionString, mappingSource)
+				base(global::DAL.Properties.Settings.Default.DB_GIAOVIENConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

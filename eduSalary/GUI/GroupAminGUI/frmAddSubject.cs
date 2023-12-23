@@ -16,6 +16,8 @@ namespace GUI.GroupAminGUI
     {
         MonHocBLL mh_bll = new MonHocBLL();
         MonHocDTO mh_dto = new MonHocDTO();
+        ChuyenMonBLL cm_bll = new ChuyenMonBLL();
+        KhoiBLL kh_bll = new KhoiBLL();
         public frmAddSubject()
         {
             InitializeComponent();
@@ -37,7 +39,10 @@ namespace GUI.GroupAminGUI
             {
                 mh_dto.mamh = pMaMH;
                 mh_dto.tenmh = txtTenMH.Text;
-                
+                mh_dto.tiettoida = int.Parse(txtTietToiDa.Text);
+                mh_dto.macm = int.Parse(cboMaCM.SelectedValue.ToString());
+                mh_dto.makhoi = int.Parse(cboMaKhoi.SelectedValue.ToString());
+
                 mh_bll.addMH(mh_dto);
                 MessageBox.Show("MÔN HỌC " + mh_dto.tenmh.ToUpper() + " ĐÃ ĐƯỢC THÊM THÀNH CÔNG!", "PHẦN MỀM TÍNH PHỤ TRỘI");
                 this.Close();
@@ -50,7 +55,21 @@ namespace GUI.GroupAminGUI
 
         private void FrmAddSubject_Load(object sender, EventArgs e)
         {
+            loadDataChuyenMon();
+            loadDataKhoi();
             txtMaMH.Enabled = false;
+        }
+        private void loadDataChuyenMon()
+        {
+            cboMaCM.DataSource = cm_bll.getDataChuyenMon();
+            cboMaCM.DisplayMember = "TENCM";
+            cboMaCM.ValueMember = "MACM";
+        }
+        private void loadDataKhoi()
+        {
+            cboMaKhoi.DataSource = kh_bll.getDataKhoi();
+            cboMaKhoi.DisplayMember = "TENKHOI";
+            cboMaKhoi.ValueMember = "MAKHOI";
         }
         private int createCode()
         {

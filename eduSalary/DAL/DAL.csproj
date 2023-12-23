@@ -55,6 +55,7 @@
     <Compile Include="ChuyenMonDAL.cs" />
     <Compile Include="DInhMucTietDayDAL.cs" />
     <Compile Include="GiaoVienDAL.cs" />
+    <Compile Include="KhoiDAL.cs" />
     <Compile Include="LichDayDAL.cs" />
     <Compile Include="LopHocDAL.cs" />
     <Compile Include="MonHocDAL.cs" />

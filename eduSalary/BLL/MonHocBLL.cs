@@ -78,5 +78,15 @@ namespace BLL
         {
             return mh_dal.getMaMonHocTheoTenMH(tenMH);
         }
+        //------------------ LẤY MÃ KHỐI CỦA MÔN HỌC
+        public int getKhoi(int pMaMH)
+        {
+            return mh_dal.getKhoi(pMaMH);
+        }
+        //------------------ LẤY MÃ CHUYÊN MÔN CỦA MÔN HỌC
+        public int getChuyenMon(int pMaCM)
+        {
+            return mh_dal.getChuyenMon(pMaCM);
+        }
     }
 }

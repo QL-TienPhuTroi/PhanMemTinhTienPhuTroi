@@ -103,14 +103,20 @@ namespace DAL
         //------------------ XÓA LỚP
         public bool removeLP(string pMaLP)
         {
-            LOPHOC lp = qlgv.LOPHOCs.Where(t => t.MALP == pMaLP).FirstOrDefault();
-            if (lp != null)
-            {
-                qlgv.LOPHOCs.DeleteOnSubmit(lp);
-                qlgv.SubmitChanges();
-                return true;
+            try {
+                LOPHOC lp = qlgv.LOPHOCs.Where(t => t.MALP == pMaLP).FirstOrDefault();
+                if (lp != null)
+                {
+                    qlgv.LOPHOCs.DeleteOnSubmit(lp);
+                    qlgv.SubmitChanges();
+                    return true;
+                }
+                return false;
             }
-            return false;
+            catch(Exception ex)
+            {
+                return false;
+            }
         }
 
         //------------------ SỬA LỚP

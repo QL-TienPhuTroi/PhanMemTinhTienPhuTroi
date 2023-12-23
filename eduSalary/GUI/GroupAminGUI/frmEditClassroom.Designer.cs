@@ -35,6 +35,11 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.rdoKhong = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.rdoCo = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
+            this.bigLabel6 = new ReaLTaiizor.Controls.BigLabel();
+            this.bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnFinish = new Guna.UI2.WinForms.Guna2Button();
             this.txtSiSo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -43,11 +48,8 @@
             this.bigLabel1 = new ReaLTaiizor.Controls.BigLabel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.rdoKhong = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.rdoCo = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.bigLabel5 = new ReaLTaiizor.Controls.BigLabel();
-            this.bigLabel6 = new ReaLTaiizor.Controls.BigLabel();
-            this.bigLabel4 = new ReaLTaiizor.Controls.BigLabel();
+            this.cboKhoi = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.bigLabel16 = new ReaLTaiizor.Controls.BigLabel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -143,6 +145,8 @@
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.AutoScroll = true;
+            this.guna2GradientPanel3.Controls.Add(this.cboKhoi);
+            this.guna2GradientPanel3.Controls.Add(this.bigLabel16);
             this.guna2GradientPanel3.Controls.Add(this.rdoKhong);
             this.guna2GradientPanel3.Controls.Add(this.rdoCo);
             this.guna2GradientPanel3.Controls.Add(this.bigLabel5);
@@ -161,6 +165,74 @@
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(1042, 324);
             this.guna2GradientPanel3.TabIndex = 0;
+            // 
+            // rdoKhong
+            // 
+            this.rdoKhong.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.rdoKhong.CheckedState.BorderThickness = 0;
+            this.rdoKhong.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.rdoKhong.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoKhong.Location = new System.Drawing.Point(882, 136);
+            this.rdoKhong.Name = "rdoKhong";
+            this.rdoKhong.Size = new System.Drawing.Size(28, 27);
+            this.rdoKhong.TabIndex = 20;
+            this.rdoKhong.Text = "Nữ";
+            this.rdoKhong.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.rdoKhong.UncheckedState.BorderThickness = 2;
+            this.rdoKhong.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdoKhong.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // rdoCo
+            // 
+            this.rdoCo.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.rdoCo.CheckedState.BorderThickness = 0;
+            this.rdoCo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.rdoCo.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoCo.Location = new System.Drawing.Point(738, 136);
+            this.rdoCo.Name = "rdoCo";
+            this.rdoCo.Size = new System.Drawing.Size(28, 27);
+            this.rdoCo.TabIndex = 21;
+            this.rdoCo.Text = "Nam";
+            this.rdoCo.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
+            this.rdoCo.UncheckedState.BorderThickness = 2;
+            this.rdoCo.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdoCo.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // bigLabel5
+            // 
+            this.bigLabel5.AutoSize = true;
+            this.bigLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel5.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel5.Location = new System.Drawing.Point(916, 139);
+            this.bigLabel5.Name = "bigLabel5";
+            this.bigLabel5.Size = new System.Drawing.Size(77, 27);
+            this.bigLabel5.TabIndex = 17;
+            this.bigLabel5.Text = "Không";
+            // 
+            // bigLabel6
+            // 
+            this.bigLabel6.AutoSize = true;
+            this.bigLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel6.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel6.Location = new System.Drawing.Point(772, 139);
+            this.bigLabel6.Name = "bigLabel6";
+            this.bigLabel6.Size = new System.Drawing.Size(38, 27);
+            this.bigLabel6.TabIndex = 18;
+            this.bigLabel6.Text = "Có";
+            // 
+            // bigLabel4
+            // 
+            this.bigLabel4.AutoSize = true;
+            this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel4.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel4.Location = new System.Drawing.Point(514, 136);
+            this.bigLabel4.Name = "bigLabel4";
+            this.bigLabel4.Size = new System.Drawing.Size(181, 27);
+            this.bigLabel4.TabIndex = 19;
+            this.bigLabel4.Text = "Khiếm khuyết:";
             // 
             // panel1
             // 
@@ -278,73 +350,33 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1062, 49);
             this.guna2GradientPanel2.TabIndex = 9;
             // 
-            // rdoKhong
+            // cboKhoi
             // 
-            this.rdoKhong.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.rdoKhong.CheckedState.BorderThickness = 0;
-            this.rdoKhong.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.rdoKhong.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdoKhong.Location = new System.Drawing.Point(882, 136);
-            this.rdoKhong.Name = "rdoKhong";
-            this.rdoKhong.Size = new System.Drawing.Size(28, 27);
-            this.rdoKhong.TabIndex = 20;
-            this.rdoKhong.Text = "Nữ";
-            this.rdoKhong.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.rdoKhong.UncheckedState.BorderThickness = 2;
-            this.rdoKhong.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdoKhong.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.cboKhoi.BackColor = System.Drawing.Color.Transparent;
+            this.cboKhoi.BorderRadius = 10;
+            this.cboKhoi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboKhoi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboKhoi.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboKhoi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboKhoi.Font = new System.Drawing.Font("Consolas", 13.8F);
+            this.cboKhoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboKhoi.ItemHeight = 30;
+            this.cboKhoi.Location = new System.Drawing.Point(139, 211);
+            this.cboKhoi.Name = "cboKhoi";
+            this.cboKhoi.Size = new System.Drawing.Size(324, 36);
+            this.cboKhoi.TabIndex = 23;
             // 
-            // rdoCo
+            // bigLabel16
             // 
-            this.rdoCo.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.rdoCo.CheckedState.BorderThickness = 0;
-            this.rdoCo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.rdoCo.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdoCo.Location = new System.Drawing.Point(738, 136);
-            this.rdoCo.Name = "rdoCo";
-            this.rdoCo.Size = new System.Drawing.Size(28, 27);
-            this.rdoCo.TabIndex = 21;
-            this.rdoCo.Text = "Nam";
-            this.rdoCo.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(65)))), ((int)(((byte)(102)))));
-            this.rdoCo.UncheckedState.BorderThickness = 2;
-            this.rdoCo.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdoCo.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // bigLabel5
-            // 
-            this.bigLabel5.AutoSize = true;
-            this.bigLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel5.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel5.Location = new System.Drawing.Point(916, 139);
-            this.bigLabel5.Name = "bigLabel5";
-            this.bigLabel5.Size = new System.Drawing.Size(77, 27);
-            this.bigLabel5.TabIndex = 17;
-            this.bigLabel5.Text = "Không";
-            // 
-            // bigLabel6
-            // 
-            this.bigLabel6.AutoSize = true;
-            this.bigLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel6.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel6.Location = new System.Drawing.Point(772, 139);
-            this.bigLabel6.Name = "bigLabel6";
-            this.bigLabel6.Size = new System.Drawing.Size(38, 27);
-            this.bigLabel6.TabIndex = 18;
-            this.bigLabel6.Text = "Có";
-            // 
-            // bigLabel4
-            // 
-            this.bigLabel4.AutoSize = true;
-            this.bigLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bigLabel4.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bigLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bigLabel4.Location = new System.Drawing.Point(514, 136);
-            this.bigLabel4.Name = "bigLabel4";
-            this.bigLabel4.Size = new System.Drawing.Size(181, 27);
-            this.bigLabel4.TabIndex = 19;
-            this.bigLabel4.Text = "Khiếm khuyết:";
+            this.bigLabel16.AutoSize = true;
+            this.bigLabel16.BackColor = System.Drawing.Color.Transparent;
+            this.bigLabel16.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bigLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bigLabel16.Location = new System.Drawing.Point(28, 220);
+            this.bigLabel16.Name = "bigLabel16";
+            this.bigLabel16.Size = new System.Drawing.Size(77, 27);
+            this.bigLabel16.TabIndex = 22;
+            this.bigLabel16.Text = "Khối:";
             // 
             // frmEditClassroom
             // 
@@ -389,5 +421,7 @@
         private ReaLTaiizor.Controls.BigLabel bigLabel5;
         private ReaLTaiizor.Controls.BigLabel bigLabel6;
         private ReaLTaiizor.Controls.BigLabel bigLabel4;
+        private Guna.UI2.WinForms.Guna2ComboBox cboKhoi;
+        private ReaLTaiizor.Controls.BigLabel bigLabel16;
     }
 }
